@@ -7,4 +7,16 @@ Allow: /
 User-agent: OAI-AdsBot
 Allow: /
 
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 Sitemap: https://www.yapayzekadareklam.com/sitemap.xml
