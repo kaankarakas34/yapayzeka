@@ -16,6 +16,7 @@ const pages = {
   'hakkimizda': ['Hakkımızda | Yapay Zekâda Reklam', 'Yapay Zekâda Reklam markasının yaklaşımı, uzmanlık alanları ve şeffaf çalışma ilkeleri.'],
   'iletisim': ['Yapay Zekâ Reklam Danışmanlığı | İletişim', 'Markanız için uygun AI reklam kanalını, gerekli hazırlıkları ve ilk kontrollü test planını birlikte çıkaralım.'],
   'blog': ['AI Reklamcılığı Kaynakları | Yapay Zekâda Reklam', 'ChatGPT Ads, GEO, context hints, ölçümleme ve yapay zekâ reklam platformları hakkında güncel rehberler.'],
+  'yapay-zeka-gorunurluk-analizi': ['Ücretsiz Yapay Zekâ Görünürlük Analizi | GEO & LLM Testi', 'Web sitenizin ChatGPT, Perplexity, Gemini ve Claude gibi yapay zekâ motorlarında ne kadar önerildiğini ve kaynak gösterildiğini ücretsiz analiz edin.'],
   'gizlilik': ['Gizlilik Politikası | Yapay Zekâda Reklam', 'Yapay Zekâda Reklam gizlilik politikası.'],
   'kvkk': ['KVKK Aydınlatma Metni | Yapay Zekâda Reklam', 'Yapay Zekâda Reklam KVKK aydınlatma metni.'],
   'cerez-politikasi': ['Çerez Politikası | Yapay Zekâda Reklam', 'Yapay Zekâda Reklam çerez politikası.'],

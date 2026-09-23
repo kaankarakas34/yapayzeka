@@ -1,4 +1,5 @@
 import { useState, type FormEvent, type ReactNode } from 'react'
+import { AuditModule } from './AuditModule'
 
 const updated = '2026 Güncellemesi'
 const Arrow = () => <span aria-hidden="true">↗</span>
@@ -41,7 +42,7 @@ function Header() {
         <a href="/geo-yapay-zeka-gorunurlugu/">GEO Görünürlük</a>
         <a href="/yapay-zeka-platformlarinda-reklam/">AI Platformları</a>
         <a href="/blog/">Kaynaklar</a>
-        <a className="nav-cta" href="/iletisim/">
+        <a className="nav-cta" href="/yapay-zeka-gorunurluk-analizi/">
           Ön Analiz Al <Arrow />
         </a>
       </nav>
@@ -334,7 +335,7 @@ function Home() {
           </p>
 
           <div className="hero-bottom-actions">
-            <a className="button primary" href="/iletisim/">
+            <a className="button primary" href="/yapay-zeka-gorunurluk-analizi/">
               Ücretsiz Görünürlük Analizi Al <Arrow />
             </a>
             <a className="button secondary" href="https://wa.me/905363197697">
@@ -864,6 +865,16 @@ function Legal({ title }: { title: string }) {
   )
 }
 
+function AuditPage() {
+  return (
+    <Layout>
+      <main>
+        <AuditModule />
+      </main>
+    </Layout>
+  )
+}
+
 function App() {
   const path = location.pathname.replace(/\/+$/, '') || '/'
   if (path === '/') return <Home />
@@ -871,6 +882,7 @@ function App() {
   if (path === '/blog/yapay-zeka-ile-reklam-verme-nasil-yapilir') return <PillarGuide />
   if (path === '/iletisim') return <Contact />
   if (path === '/blog') return <Blog />
+  if (path === '/yapay-zeka-gorunurluk-analizi' || path === '/analiz') return <AuditPage />
   if (path === '/gizlilik' || path === '/kvkk' || path === '/cerez-politikasi') {
     return <Legal title={path === '/kvkk' ? 'KVKK Aydınlatma Metni' : path === '/gizlilik' ? 'Gizlilik Politikası' : 'Çerez Politikası'} />
   }
