@@ -71,17 +71,85 @@ button, input, textarea, select {
 .brand-logo {
   display: flex;
   align-items: center;
-  transition: opacity 0.15s;
+  gap: 12px;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
 }
 
 .brand-logo:hover {
   opacity: 0.92;
 }
 
-.main-logo-img {
-  height: 40px;
-  width: auto;
+.brand-logo-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: #171717;
+  border: 1.5px solid rgba(16, 163, 127, 0.5);
+  box-shadow: 0 0 16px rgba(16, 163, 127, 0.25);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.brand-logo-img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
   display: block;
+}
+
+.brand-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.15;
+}
+
+.brand-logo-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-logo-title {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.brand-logo-accent {
+  color: var(--chat-green);
+}
+
+.brand-logo-pill {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--chat-green);
+  background: rgba(16, 163, 127, 0.15);
+  border: 1px solid rgba(16, 163, 127, 0.35);
+  padding: 2px 7px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.brand-logo-bottom {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+
+.brand-logo-dot {
+  color: var(--chat-green);
+  font-size: 0.55rem;
 }
 
 .chatgpt-model-selector:hover {

@@ -9,13 +9,29 @@ const SendIcon = () => (
   </svg>
 )
 
+const BrandLogo = () => (
+  <a className="brand-logo" href="/" title="ChatGPT Ads Marketing - By Overseas Marketing">
+    <div className="brand-logo-badge">
+      <img src="/images/chatgpt-green.webp" alt="ChatGPT" className="brand-logo-img" width="30" height="30" />
+    </div>
+    <div className="brand-logo-text">
+      <div className="brand-logo-top">
+        <span className="brand-logo-title">CHATGPT <span className="brand-logo-accent">ADS</span></span>
+        <span className="brand-logo-pill">MARKETING</span>
+      </div>
+      <div className="brand-logo-bottom">
+        <span>BY OVERSEAS MARKETING</span>
+        <span className="brand-logo-dot">●</span>
+      </div>
+    </div>
+  </a>
+)
+
 function Header() {
   const [open, setOpen] = useState(false)
   return (
     <header className="site-header">
-      <a className="brand-logo" href="/" title="ChatGPT Ads Marketing - By Overseas Marketing">
-        <img src="/images/logo.svg" alt="ChatGPT Ads Marketing" className="main-logo-img" width="230" height="44" />
-      </a>
+      <BrandLogo />
       <button className="menu-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="main-nav">
         Menü
       </button>
@@ -46,9 +62,9 @@ function Footer() {
       </div>
       <div className="footer-grid">
         <div>
-          <a href="/" style={{ display: 'inline-block', marginBottom: '0.8rem' }}>
-            <img src="/images/logo.svg" alt="ChatGPT Ads Marketing" width="200" height="38" />
-          </a>
+          <div style={{ marginBottom: '1rem' }}>
+            <BrandLogo />
+          </div>
           <p>ChatGPT Ads yönetimi, AI reklam stratejisi ve GEO (Generative Engine Optimization) danışmanlığı.</p>
           <a href="tel:+905363197697">0536 319 76 97</a>
         </div>
