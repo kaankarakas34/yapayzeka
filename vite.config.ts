@@ -55,6 +55,8 @@ export default defineConfig({
         'yapay-zeka-gorunurluk-analizi/index.html',
         'chatgpt-reklamlari/index.html',
         'chatgpt-reklam-verme/index.html',
+        'chatgpt-reklam-fiyatlari/index.html',
+        'chatgpt-reklamlari-turkiye/index.html',
         'yapay-zeka-platformlarinda-reklam/index.html',
         'geo-yapay-zeka-gorunurlugu/index.html',
         'yapay-zeka-ile-reklam-uretimi/index.html',

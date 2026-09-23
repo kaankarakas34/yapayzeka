@@ -1,0 +1,6 @@
+{
+  "name": "AuraGEO - Yapay Zeka ve GEO Görünürlük Analizi",
+  "description": "Web sitenizin ChatGPT, Perplexity ve Google AI aramalarındaki yapay zeka görünürlüğünü, kaynak gösterilme oranını ve SEO/GEO performansını test edin.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -228,10 +228,10 @@ export function AuditModule() {
             <span className="audit-badge">
               <Sparkles className="w-4 h-4 text-emerald-400" /> ÜCRETSİZ GEO & LLM TESTİ
             </span>
-            <h1 className="audit-hero-title">
+            <h2 className="audit-hero-title">
               Markanız Yapay Zekâ Aramalarında <br />
               <span className="text-emerald-400">Ne Kadar Tavsiye Ediliyor?</span>
-            </h1>
+            </h2>
             <p className="audit-hero-desc">
               Web sitenizi ChatGPT, Perplexity, Gemini ve Claude gibi küresel büyük dil modelleri ve yapay zekâ arama motorları üzerinden test edin. Rakiplerinizin nasıl alıntılandığını ve eksiklerinizi anında görün.
             </p>
@@ -379,7 +379,7 @@ export function AuditModule() {
           <div className="results-top-bar">
             <div>
               <span className="results-badge">DENETİM TAMAMLANDI</span>
-              <h1 className="results-heading">{formData.companyName} İçin Yapay Zekâ Görünürlük Raporu</h1>
+              <h2 className="results-heading">{formData.companyName} İçin Yapay Zekâ Görünürlük Raporu</h2>
               <p className="results-sub">{formData.website} · Test Edilen: ChatGPT, Perplexity, Gemini, Claude</p>
             </div>
             <button onClick={handleReset} className="results-reset-btn">

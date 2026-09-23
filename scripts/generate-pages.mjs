@@ -3,6 +3,8 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises'
 const pages = {
   'chatgpt-reklamlari': ['ChatGPT’de Reklam Verme | ChatGPT Ads Yönetimi', 'ChatGPT Ads kampanyalarınızı stratejiden ölçümlemeye yönetin. ChatGPT de reklam ver arayışınızda hesap, context hints ve GEO optimizasyonu.'],
   'chatgpt-reklam-verme': ['ChatGPT’de Reklam Ver: 2026 Adım Adım Rehber', 'ChatGPT’de reklam nasıl verilir? ChatGPT de reklam verme, Ads Manager, context hints, bütçe, Pixel ve GEO optimizasyonunu öğrenin.'],
+  'chatgpt-reklam-fiyatlari': ['ChatGPT Reklam Fiyatları 2026: TBM, Bütçe ve Yönetim Ücreti', 'ChatGPT reklam maliyetleri nasıl hesaplanır? TBM, CPM, minimum bütçe önerileri, ajans yönetim modelleri ve yatırım getirisi (ROAS) analizi.'],
+  'chatgpt-reklamlari-turkiye': ['ChatGPT Reklamları Türkiye: Erişim, Kurulum ve Uygunluk Rehberi', 'OpenAI Ads Manager Beta Türkiye durumu: Self-servis panel erişimi, tüzel kişilik, vergi ve faturalandırma gereksinimleri ve Türkçe kampanya yönetimi.'],
   'yapay-zeka-platformlarinda-reklam': ['Yapay Zekâya Reklam Vermek | AI Reklam Platformları', 'ChatGPT, Google AI Mode, Copilot ve gelişen AI reklam platformlarında kanal seçimi, kurulum ve ölçümleme hizmeti.'],
   'geo-yapay-zeka-gorunurlugu': ['GEO Ajansı | Yapay Zekâ Aramalarında Görünürlük', 'ChatGPT, Gemini, Copilot ve Perplexity yanıtlarında markanızın anlaşılmasını ve kaynak olma ihtimalini güçlendiren GEO hizmeti.'],
   'yapay-zeka-ile-reklam-uretimi': ['Yapay Zekâ ile Reklam Üretimi | AI Kreatif Ajansı', 'AI destekli reklam metni, görsel, kısa video ve kreatif varyasyon üretimi. Marka dili, insan kontrolü ve performans testi.'],
@@ -24,8 +26,8 @@ const pages = {
 const source = await readFile('index.html', 'utf8')
 for (const [slug, [title, description]] of Object.entries(pages)) {
   const url = `https://www.yapayzekadareklam.com/${slug}/`
-  const isService = slug.startsWith('hizmetler/') || ['chatgpt-reklamlari','geo-yapay-zeka-gorunurlugu','yapay-zeka-ile-reklam-uretimi'].includes(slug)
-  const isArticle = slug.startsWith('blog/') || slug === 'chatgpt-reklam-verme'
+  const isService = slug.startsWith('hizmetler/') || ['chatgpt-reklamlari','geo-yapay-zeka-gorunurlugu','yapay-zeka-ile-reklam-uretimi','yapay-zeka-platformlarinda-reklam'].includes(slug)
+  const isArticle = slug.startsWith('blog/') || ['chatgpt-reklam-verme','chatgpt-reklam-fiyatlari','chatgpt-reklamlari-turkiye'].includes(slug)
   const primarySchema = {
     '@type': isArticle ? 'Article' : isService ? 'Service' : 'WebPage',
     name: title,
