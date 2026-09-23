@@ -1,22 +1,20 @@
-# Yapay Zekâda Reklam
+# Yapay Zekâda Reklam (ChatGPT Ads & GEO Ajansı)
 
-Yapay zekâ ve reklam odağındaki web sitesi için Vite, React ve TypeScript başlangıç deposu.
+ChatGPT Ads yönetimi, yapay zekâ reklam stratejisi ve GEO (Generative Engine Optimization) odaklı web sitesi.
 
-## Başlangıç
+- **Canlı Yayın:** [https://yapayzekadareklam.vercel.app](https://yapayzekadareklam.vercel.app)
+- **Teknoloji:** Vite, React 19, TypeScript
+- **Tasarım:** OpenAI Brand Guidelines & ChatGPT UI Design System
+
+## Geliştirme
 
 ```bash
 npm install
 npm run dev
 ```
 
-Üretim derlemesi:
+## Üretim Derlemesi
 
 ```bash
 npm run build
 ```
-
-## Tasarım kaynakları
-
-Arayüz çalışmaları sırasında aşağıdaki küratörlü kaynak listesi referans alınacaktır:
-
-- [Design Resources for Developers](https://github.com/bradtraversy/design-resources-for-developers)
