@@ -1,0 +1,44 @@
+<svg width="290" height="56" viewBox="0 0 290 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- ChatGPT Icon Glow -->
+    <filter id="chatgpt-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#10a37f" flood-opacity="0.35" />
+    </filter>
+    <linearGradient id="badge-bg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#171717" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left Icon: Circle / Squircle Badge with Glow & Ring -->
+  <g filter="url(#chatgpt-glow)">
+    <!-- Outer Ring -->
+    <rect x="3" y="4" width="48" height="48" rx="16" fill="url(#badge-bg)" stroke="#10a37f" stroke-width="1.5" stroke-opacity="0.6" />
+    <!-- Inner Accent -->
+    <rect x="9" y="10" width="36" height="36" rx="11" fill="#10a37f" />
+    <!-- ChatGPT Spiral Symbol -->
+    <path fill="#ffffff" transform="translate(15.5, 16.5) scale(0.95)" d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1683a.071.071 0 0 1 .038.052v5.5826a4.5045 4.5045 0 0 1-4.4945 4.4947zm-9.66-4.5089a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1401-2.0299zm-1.282-10.4287a4.485 4.485 0 0 1 2.3418-1.9729v5.6678a.7901.7901 0 0 0 .3927.6814l5.8428 3.3732-2.02 1.1636a.0757.0757 0 0 1-.071 0l-4.8303-2.7913a4.4944 4.4944 0 0 1-1.656-6.1228zm14.3414 4.542l-5.8428-3.3732 2.02-1.1635a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6861 8.1065v-5.6726a.7901.7901 0 0 0-.3927-.6885zm3.2678-2.6133l-.142-.0852-4.783-2.7582a.7712.7712 0 0 0-.7806 0l-5.8428 3.3685v-2.3324a.0804.0804 0 0 1 .0332-.0615l4.9818-2.8763a4.4992 4.4992 0 0 1 6.5334 4.7451zm-7.6974 5.9287l-2.7866-1.6141 2.7866-1.6094 2.7866 1.6094z"/>
+  </g>
+
+  <!-- Typography Right Side -->
+  <g transform="translate(62, 0)">
+    <!-- Top Row: "CHATGPT REKLAM" + "MARKETING" Badge -->
+    <text x="0" y="27" fill="#ffffff" font-family="'Inter', -apple-system, sans-serif" font-size="19" font-weight="800" letter-spacing="-0.02em">
+      CHATGPT <tspan fill="#10a37f">ADS</tspan>
+    </text>
+
+    <!-- Rounded Pill Badge "MARKETING" -->
+    <g transform="translate(142, 10)">
+      <rect x="0" y="0" width="76" height="21" rx="6" fill="#10a37f" fill-opacity="0.16" stroke="#10a37f" stroke-opacity="0.35" stroke-width="1" />
+      <text x="8" y="14.5" fill="#10a37f" font-family="'Inter', -apple-system, sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.08em">MARKETING</text>
+    </g>
+
+    <!-- Bottom Row: "BY OVERSEAS MARKETING" + Green Dot -->
+    <text x="0" y="44" fill="#9ca3af" font-family="'Inter', -apple-system, sans-serif" font-size="9" font-weight="700" letter-spacing="0.18em">
+      BY OVERSEAS MARKETING
+    </text>
+
+    <!-- Green Dot -->
+    <circle cx="152" cy="41" r="3" fill="#10a37f" />
+  </g>
+</svg>

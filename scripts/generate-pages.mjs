@@ -1,8 +1,8 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 
 const pages = {
-  'chatgpt-reklamlari': ['ChatGPT Reklam Ajansı | ChatGPT Ads Yönetimi', 'ChatGPT Ads kampanyalarınızı stratejiden ölçümlemeye yönetin. Hesap, context hints, reklam üretimi, landing page ve optimizasyon.'],
-  'chatgpt-reklam-verme': ['ChatGPT’ye Reklam Verme: 2026 Adım Adım Rehber', 'ChatGPT’de reklam nasıl verilir? Ads Manager, context hints, reklamlar, bütçe, Pixel ve optimizasyon adımlarını öğrenin.'],
+  'chatgpt-reklamlari': ['ChatGPT’de Reklam Verme | ChatGPT Ads Yönetimi', 'ChatGPT Ads kampanyalarınızı stratejiden ölçümlemeye yönetin. ChatGPT de reklam ver arayışınızda hesap, context hints ve GEO optimizasyonu.'],
+  'chatgpt-reklam-verme': ['ChatGPT’de Reklam Ver: 2026 Adım Adım Rehber', 'ChatGPT’de reklam nasıl verilir? ChatGPT de reklam verme, Ads Manager, context hints, bütçe, Pixel ve GEO optimizasyonunu öğrenin.'],
   'yapay-zeka-platformlarinda-reklam': ['Yapay Zekâya Reklam Vermek | AI Reklam Platformları', 'ChatGPT, Google AI Mode, Copilot ve gelişen AI reklam platformlarında kanal seçimi, kurulum ve ölçümleme hizmeti.'],
   'geo-yapay-zeka-gorunurlugu': ['GEO Ajansı | Yapay Zekâ Aramalarında Görünürlük', 'ChatGPT, Gemini, Copilot ve Perplexity yanıtlarında markanızın anlaşılmasını ve kaynak olma ihtimalini güçlendiren GEO hizmeti.'],
   'yapay-zeka-ile-reklam-uretimi': ['Yapay Zekâ ile Reklam Üretimi | AI Kreatif Ajansı', 'AI destekli reklam metni, görsel, kısa video ve kreatif varyasyon üretimi. Marka dili, insan kontrolü ve performans testi.'],
@@ -49,9 +49,9 @@ for (const [slug, [title, description]] of Object.entries(pages)) {
     .replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
     .replace(/<meta\s+name="description"\s+content="[\s\S]*?"\s*\/>/, `<meta name="description" content="${description}" />`)
     .replace('<link rel="canonical" href="https://www.yapayzekadareklam.com/" />', `<link rel="canonical" href="${url}" />`)
-    .replace('<meta property="og:url" content="https://www.yapayzekadareklam.com/" />', `<meta property="og:url" content="${url}" />`)
-    .replace('<meta property="og:title" content="Yapay Zekâ Reklam Ajansı | Yapay Zekâda Reklam" />', `<meta property="og:title" content="${title}" />`)
-    .replace('<meta property="og:description" content="Yapay zekâ ile reklam verin; Google, Meta ve ChatGPT Ads kampanyalarını GEO görünürlüğüyle birlikte yönetin." />', `<meta property="og:description" content="${description}" />`)
+    .replace(/<meta property="og:url" content=".*?" \/>/, `<meta property="og:url" content="${url}" />`)
+    .replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${title}" />`)
+    .replace(/<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${description}" />`)
     .replace(/<script id="page-schema" type="application\/ld\+json">[\s\S]*?<\/script>/, `<script id="page-schema" type="application/ld+json">${JSON.stringify(schema)}</script>`)
     .replace(/\s*<script id="faq-schema" type="application\/ld\+json">[\s\S]*?<\/script>/, '')
   await mkdir(slug, { recursive: true })
