@@ -86,6 +86,7 @@ export interface AuditResult {
 }
 
 export function AuditModule() {
+  const containerRef = React.useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState<'form' | 'scanning' | 'result'>('form');
   const [formData, setFormData] = useState<AuditFormData>({
     fullName: '',
@@ -99,6 +100,12 @@ export function AuditModule() {
   const [result, setResult] = useState<AuditResult | null>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [scanningStep, setScanningStep] = useState<number>(0);
+
+  const scrollToModule = () => {
+    setTimeout(() => {
+      containerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 60);
+  };
 
   const validate = (): boolean => {
     const newErrors: Partial<Record<keyof AuditFormData, string>> = {};
@@ -144,6 +151,7 @@ export function AuditModule() {
     setStatus('scanning');
     setErrorMsg(null);
     setScanningStep(0);
+    scrollToModule();
 
     // Simulate scanning animation progression
     const stepInterval = setInterval(() => {
@@ -177,7 +185,7 @@ export function AuditModule() {
       if (resJson.success && resJson.data) {
         setResult(resJson.data);
         setStatus('result');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        scrollToModule();
       } else {
         throw new Error(resJson.error || 'Analiz sonucu alınamadı.');
       }
@@ -186,13 +194,14 @@ export function AuditModule() {
       console.error(err);
       setErrorMsg(err.message || 'Bir hata oluştu.');
       setStatus('form');
+      scrollToModule();
     }
   };
 
   const handleReset = () => {
     setStatus('form');
     setResult(null);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    scrollToModule();
   };
 
   const scanningSteps = [
@@ -204,7 +213,7 @@ export function AuditModule() {
   ];
 
   return (
-    <div className="audit-module-wrapper">
+    <div ref={containerRef} className="audit-module-wrapper">
       {errorMsg && (
         <div className="audit-error-banner">
           <span>{errorMsg}</span>

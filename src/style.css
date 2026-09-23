@@ -1443,6 +1443,7 @@ button, input, textarea, select {
   max-width: 1040px;
   margin: 0 auto;
   padding: 2.5rem 1.5rem 5rem;
+  scroll-margin-top: 80px;
 }
 
 .audit-error-banner {
