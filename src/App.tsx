@@ -171,6 +171,59 @@ const VoiceModeIcon = () => (
   </div>
 )
 
+const aiLogos = [
+  { name: 'ChatGPT', logo: '/images/logos/chatgpt.svg', provider: 'OpenAI' },
+  { name: 'Google Gemini', logo: '/images/logos/gemini.svg', provider: 'Google' },
+  { name: 'Claude', logo: '/images/logos/claude.svg', provider: 'Anthropic' },
+  { name: 'Perplexity', logo: '/images/logos/perplexity.svg', provider: 'Perplexity AI' },
+  { name: 'DeepSeek', logo: '/images/logos/deepseek.svg', provider: 'DeepSeek' },
+  { name: 'Kimi', logo: '/images/logos/kimi.svg', provider: 'Moonshot AI' },
+  { name: 'Manus', logo: '/images/logos/manus.svg', provider: 'Manus AI' },
+  { name: 'Grok', logo: '/images/logos/grok.svg', provider: 'xAI' },
+  { name: 'Copilot', logo: '/images/logos/copilot.svg', provider: 'Microsoft' },
+  { name: 'Meta AI', logo: '/images/logos/meta-ai.svg', provider: 'Meta' },
+  { name: 'Hugging Face', logo: '/images/logos/huggingface.svg', provider: 'Hugging Face' },
+  { name: 'Qwen', logo: '/images/logos/qwen.svg', provider: 'Alibaba Cloud' },
+]
+
+function AILogoMarquee() {
+  return (
+    <section className="ai-marquee-section" aria-label="Yapay Zekâ ve Dil Modelleri Ekosistemi">
+      <div className="ai-marquee-header">
+        <span className="ai-marquee-badge">TÜM YAPAY ZEKÂ MODELLERİNDE REKLAM & GEO</span>
+        <h2 className="ai-marquee-title">
+          Tüm Büyük Dil Modelleri ve Yapay Zekâ Arama Motorlarında Markanızı Konumlandırıyoruz
+        </h2>
+        <p className="ai-marquee-sub">
+          Müşterilerinizin kullandığı 12 küresel yapay zekâ platformunda tavsiye edilme, context hints ve sponsorlu görünürlük altyapısı.
+        </p>
+      </div>
+
+      <div className="ai-marquee-viewport">
+        <div className="ai-marquee-track">
+          {/* Çift set kesintisiz sonsuz döngü (infinite seamless loop) sağlar */}
+          {[...aiLogos, ...aiLogos].map((item, idx) => (
+            <div key={`${item.name}-${idx}`} className="ai-logo-card">
+              <div className="ai-logo-icon-wrap">
+                <img
+                  src={item.logo}
+                  alt={`${item.name} Logo`}
+                  className="ai-logo-img"
+                  loading="lazy"
+                />
+              </div>
+              <div className="ai-logo-meta">
+                <span className="ai-logo-name">{item.name}</span>
+                <span className="ai-logo-provider">{item.provider}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function Home() {
   const [promptText, setPromptText] = useState('')
 
@@ -289,6 +342,9 @@ function Home() {
             </a>
           </div>
         </section>
+
+        {/* Kayan AI Logoları Slider (Hero'nun hemen altında) */}
+        <AILogoMarquee />
 
         {/* ChatGPT Conversation Simulated Feature */}
         <section className="conversation-section section-pad">
