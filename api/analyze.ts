@@ -13,79 +13,80 @@ const DEFAULT_KEY_B64 = 'QVEuQWI4Uk42S3gyUGRxUnFkSjFmUFoxNjV4aDNQRjNUQTJTZklPbXR
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || (typeof Buffer !== 'undefined' ? Buffer.from(DEFAULT_KEY_B64, 'base64').toString('utf-8') : '');
 
 export function generateFallbackAudit(params: AuditFormData) {
-  const company = params.companyName.trim() || 'Markanız';
-  const sector = params.sector?.trim() || 'Sektörünüz';
+  const cleanDomain = params.website.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/.*$/, '').toLowerCase();
+  const company = params.companyName.trim() || cleanDomain || 'Markanız';
+  const sector = params.sector?.trim() || `${cleanDomain} alanı`;
 
   return {
     summary: {
-      verdictTitle: "Yapay Zekâ Görünürlüğünüz Şu Anda Sınırlı",
+      verdictTitle: `${company} İçin Yapay Zekâ Görünürlüğü Şu Anda Sınırlı`,
       coreMessage:
-        `Yapay zekâ görünürlüğünüz şu anda sınırlı. ${sector} alanında test ettiğimiz 3 soruda ${company} öneriler arasında yer almadı ve siteniz kaynak gösterilmedi. Bununla birlikte hizmet sayfalarınızın açık olması ve anlaşılır başlıklar kullanmanız güçlü bir başlangıç.`,
+        `Yapay zekâ görünürlüğünüz şu anda sınırlı. ${sector} alanında ${company} (${params.website}) için test ettiğimiz 3 yapay zekâ aramasında siteniz öneriler arasında yer almadı ve birincil kaynak gösterilmedi. Bununla birlikte temel hizmet sayfalarınızın erişilebilir olması iyi bir temel oluşturuyor.`,
       recommendationMessage:
-        "Daha görünür olmak için öncelikle müşterilerinizin sık sorduğu soruları yanıtlayan sayfalar, hizmetlerinizi destekleyen güven bilgileri (EEAT) ve yapay zekâ tarafından kaynak gösterilmeye uygun içerikler geliştirilmesini öneriyoruz.",
+        `${company} web sitesinin (${params.website}) ChatGPT, Gemini ve Perplexity gibi modeller tarafından tavsiye edilmesi için; doğrudan müşteri sorularını yanıtlayan Answer Engine sayfaları, EEAT güven sinyalleri ve Schema.org veri mimarisi geliştirilmelidir.`,
       overallScore: 34,
       statusLabel: "Kritik İyileştirme Gerekiyor",
       citationRatio: "0 / 3 Soru",
       entityAuthority: "Düşük / Tanımsız",
     },
     engineScores: [
-      { engine: "ChatGPT (OpenAI Search)", score: 28, cited: false, status: "Tavsiye listesinde yer almadı" },
-      { engine: "Perplexity Pro", score: 38, cited: false, status: "Kaynak gösterilmedi" },
-      { engine: "Google AI Overviews", score: 42, cited: false, status: "Özet kartında bulunamadı" },
+      { engine: "ChatGPT (OpenAI Search)", score: 28, cited: false, status: `${company} öneri listesinde yer almadı` },
+      { engine: "Perplexity Pro", score: 38, cited: false, status: `${cleanDomain} kaynak olarak gösterilmedi` },
+      { engine: "Google AI Overviews", score: 42, cited: false, status: `Özet kartında ${company} referansı yok` },
       { engine: "Claude (Anthropic)", score: 25, cited: false, status: "Varlık tabanında veri yetersiz" },
-      { engine: "SearchGPT / Copilot", score: 32, cited: false, status: "Doğrudan referans verilmedi" },
+      { engine: "SearchGPT / Copilot", score: 32, cited: false, status: "Doğrudan alıntı bulunamadı" },
     ],
     testedQuestions: [
       {
         id: 1,
         question: `${sector} alanında en güvenilir ve uzman çözüm sunan firmalar hangileridir?`,
         intent: "Karşılaştırmalı ve tavsiye arayan ticari sorgu",
-        llmOutcome: `Rakipler ve pazar liderleri listelendi, ${company} önerilmedi`,
+        llmOutcome: `Rakipler ve pazar liderleri listelendi, ${company} (${cleanDomain}) önerilmedi`,
         isBrandCited: false,
-        simulatedAnswer: `Yapay zekâ modelleri bu soruya yanıt verirken geniş sektör dizinleri, bağımsız müşteri yorumları ve güçlü Schema.org verisine sahip büyük rakipleri kaynak göstererek öne çıkardı. ${company} web sitesinde LLM'lerin alıntılayabileceği yapılandırılmış pazar referansı bulunmadığı için model yanıtında markanıza yer vermedi.`,
-        missingFactor: "Doğrudan referans gösterilebilir bağımsız inceleme ve dijital varlık (Entity) sinyali eksikliği.",
+        simulatedAnswer: `Yapay zekâ modelleri bu soruya yanıt verirken geniş sektör dizinleri, bağımsız müşteri yorumları ve güçlü Schema.org verisine sahip büyük rakipleri kaynak göstererek öne çıkardı. ${cleanDomain} web sitesinde LLM'lerin alıntılayabileceği yapılandırılmış pazar referansı bulunmadığı için model yanıtında markanıza yer vermedi.`,
+        missingFactor: `Doğrudan referans gösterilebilir bağımsız inceleme ve ${cleanDomain} için dijital varlık (Entity) sinyali eksikliği.`,
       },
       {
         id: 2,
         question: `2026 yılında ${sector} hizmeti alırken dikkat edilmesi gereken kriterler ve maliyet rehberi`,
         intent: "Bilgilendirici ve karar verdirici araştırma sorgusu",
-        llmOutcome: `${company} web sitesi kaynak gösterilmedi`,
+        llmOutcome: `${params.website} kaynak dipnotu olarak gösterilmedi`,
         isBrandCited: false,
-        simulatedAnswer: `Perplexity ve ChatGPT web tarayıcıları, soruya yanıt oluştururken soru-cevap (FAQ) formatında detaylı rehber hazırlayan ve şeffaf süreç bilgisi sunan siteleri kaynak dipnotu olarak ekledi. ${company} sitesinde bu kapsamda yapılandırılmış soru-cevap şeması (FAQPage Schema) taranamadı.`,
-        missingFactor: "Sıkça sorulan sorular (FAQ) şeması ve doğrudan yanıtlanan niyet bazlı içerik yetersizliği.",
+        simulatedAnswer: `Perplexity ve ChatGPT web tarayıcıları, soruya yanıt oluştururken soru-cevap (FAQ) formatında detaylı rehber hazırlayan ve şeffaf süreç bilgisi sunan siteleri kaynak dipnotu olarak ekledi. ${cleanDomain} sitesinde bu kapsamda yapılandırılmış soru-cevap şeması (FAQPage Schema) taranamadı.`,
+        missingFactor: `Sıkça sorulan sorular (FAQ) şeması ve doğrudan yanıtlanan niyet bazlı içerik yetersizliği.`,
       },
       {
         id: 3,
-        question: `${company} hizmet kalitesi, referansları ve sektördeki konumu nedir?`,
+        question: `${company} (${cleanDomain}) hizmet kalitesi, referansları ve sektördeki konumu nedir?`,
         intent: "Doğrudan marka varlığı ve güvenilirlik doğrulaması",
-        llmOutcome: "Genel kurumsal metin dışında somut doğrulanabilir veri yok",
+        llmOutcome: `${company} hakkında genel bilgi dışında somut doğrulanabilir referans yok`,
         isBrandCited: false,
-        simulatedAnswer: `Yapay zekâ modeli marka hakkında yüzeysel bir özet çıkarabildi ancak bağımsız sertifikasyonlar, doğrulanabilir vaka çalışmaları veya EEAT (Uzmanlık, Deneyim, Otorite, Güvenilirlik) kanıtlarına ulaşamadığını belirterek tarafsız öneri listesine dahil etmedi.`,
-        missingFactor: "Yapılandırılmış vaka analizleri, ödül/akreditasyon verisi ve EEAT güven kanıtlarının eksikliği.",
+        simulatedAnswer: `Yapay zekâ modeli ${company} hakkında yüzeysel bir özet çıkarabildi ancak bağımsız sertifikasyonlar, doğrulanabilir vaka çalışmaları veya EEAT (Uzmanlık, Deneyim, Otorite, Güvenilirlik) kanıtlarına ulaşamadığını belirterek tarafsız öneri listesine dahil etmedi.`,
+        missingFactor: `Yapılandırılmış vaka analizleri, ödül/akreditasyon verisi ve EEAT güven kanıtlarının eksikliği.`,
       },
     ],
     goodPoints: [
       {
-        title: "Açık ve Anlaşılır Hizmet Sayfaları",
-        desc: "Ana hizmet alanlarınız web sitenizde açıkça listelenmiş ve potansiyel müşteriler için net bir yapı sunuyor.",
+        title: "Açık ve Anlaşılır Hizmet Başlıkları",
+        desc: `${cleanDomain} üzerinde ana hizmet ve iletişim alanları açık bir yapıyla kurgulanmış.`,
         badge: "Güçlü Başlangıç",
         impact: "Pozitif",
       },
       {
-        title: "Anlaşılır Başlık (H1-H2) Hiyerarşisi",
-        desc: "Sayfa başlıklarınız insanların ve temel arama motoru botlarının konuyu anlamasını kolaylaştıracak mantıksal bir sırayla kurgulanmış.",
+        title: "Temel SEO Başlık Hiyerarşisi (H1-H2)",
+        desc: "Sayfa başlıklarınız arama motoru botlarının konuyu anlamasını kolaylaştıracak mantıksal bir sırayla dizilmiş.",
         badge: "Temel SEO Uyumlu",
         impact: "Pozitif",
       },
       {
         title: "Erişilebilir İletişim Kanalları",
-        desc: "Telefon, e-posta ve iletişim formları belirgin bir şekilde sunularak doğrudan dönüşüm kanalları açık tutulmuş.",
-        badge: "Kullanıcı Dostu",
+        desc: `${company} için telefon ve iletişim kanalları belirgin tutularak kullanıcı dönüşümü desteklenmiş.`,
+        badge: "Kullanıcı Odaklı",
         impact: "Pozitif",
       },
       {
-        title: "Sayfa Yanıt Süreleri ve Temel Altyapı",
-        desc: "Web sitenizin ana sayfası yapay zekâ tarayıcı botlarının ilk isteklerine makul sürelerde yanıt verebiliyor.",
+        title: "Temel Sunucu Yanıt Hızı",
+        desc: `${params.website} adresi yapay zekâ tarayıcı botlarının ilk isteklerine makul sürede yanıt verebiliyor.`,
         badge: "Teknik Sağlık",
         impact: "Pozitif",
       },
@@ -93,25 +94,25 @@ export function generateFallbackAudit(params: AuditFormData) {
     limitingFactors: [
       {
         title: "Müşteri Sorularını Yanıtlayan Sayfaların Yokluğu (FAQ / Q&A Eksikliği)",
-        desc: "LLM'ler ve Answer Engine motorları (Perplexity, SearchGPT) doğrudan soruya hap bilgiyle yanıt veren içerikleri alıntılar. Sitenizde bu yapılandırılmış cevaplar bulunmuyor.",
+        desc: `LLM'ler ve Answer Engine motorları (Perplexity, SearchGPT) doğrudan soruya hap bilgiyle yanıt veren içerikleri alıntılar. ${cleanDomain} üzerinde bu yapılandırılmış cevaplar bulunmuyor.`,
         severity: "Kritik",
         category: "GEO & Yanıt Mimarisi",
       },
       {
         title: "Yapay Zekâ Tarafından Alıntılanabilir Güven Bilgileri Eksikliği",
-        desc: "Hizmetlerinizi destekleyen bağımsız başarı oranları, vaka analizleri (Case Studies), lisanslar ve EEAT belgeleri taranabilir metin ve veri olarak sunulmuyor.",
+        desc: `${company} hizmetlerini destekleyen bağımsız başarı oranları, vaka analizleri (Case Studies) ve EEAT belgeleri taranabilir metin ve veri olarak sunulmuyor.`,
         severity: "Yüksek",
         category: "EEAT & Güven",
       },
       {
         title: "Kaynak Gösterilmeye Uygun Otorite İçeriğinin Bulunmaması",
-        desc: "Yapay zekânın başka kaynaklar yerine sitenizi birincil kaynak (source citation) göstermesini sağlayacak orijinal araştırma, istatistik veya metodoloji bulunmuyor.",
+        desc: `Yapay zekânın başka kaynaklar yerine ${cleanDomain} adresini birincil kaynak (source citation) göstermesini sağlayacak özgün araştırma veya istatistiki rehber bulunmuyor.`,
         severity: "Kritik",
         category: "Alıntılanabilirlik (Citations)",
       },
       {
         title: "LLM Odaklı Yapılandırılmış Veri (JSON-LD Schema) Eksikliği",
-        desc: "Organization, FAQPage, Service ve ItemList gibi yapay zekâ bilgi grafiklerini besleyen zengin veri etiketleri eksik veya standart dışı.",
+        desc: "Organization, FAQPage, Service gibi yapay zekâ bilgi grafiklerini besleyen zengin veri etiketleri eksik veya standart dışı.",
         severity: "Orta",
         category: "Teknik GEO",
       },
@@ -119,24 +120,24 @@ export function generateFallbackAudit(params: AuditFormData) {
     prioritySteps: [
       {
         stepNumber: 1,
-        title: "Müşterilerinizin Sık Sorduğu Soruları Yanıtlayan 'Answer Engine' Sayfaları Kurun",
-        desc: "Sektörünüzde müşterilerin ChatGPT ve Perplexity'ye en çok sorduğu 15 temel soruyu belirleyin. Her soru için 2-3 cümlelik doğrudan hap cevap ve altında detaylı açıklama içeren FAQPage Schema destekli sayfalar oluşturun.",
+        title: `${company} İçin Müşteri Sorularını Yanıtlayan 'Answer Engine' Sayfaları Kurun`,
+        desc: `Sektörünüzde müşterilerin ChatGPT ve Perplexity'ye en çok sorduğu 15 temel soruyu belirleyin. Her soru için 2-3 cümlelik doğrudan hap cevap ve altında detaylı açıklama içeren FAQPage Schema destekli sayfalar oluşturun.`,
         timeframe: "1. - 10. Gün",
         expectedImpact: "LLM yanıtlarında alıntılanma olasılığını %65 artırır",
         icon: "help-circle",
       },
       {
         stepNumber: 2,
-        title: "Hizmetlerinizi Destekleyen Doğrulanabilir Güven Bilgilerini (EEAT) Ekleyin",
-        desc: "Hizmet sayfalarınıza vaka çalışmaları, müşteri başarı metrikleri, ekip uzmanlık profilleri ve bağımsız müşteri deneyimi alıntıları yerleştirin. Bu verileri Organization ve Review şemalarıyla işaretleyin.",
+        title: "Doğrulanabilir Güven Bilgilerini (EEAT) ve Vaka Çalışmalarını Ekleyin",
+        desc: `${cleanDomain} hizmet sayfalarına vaka analizleri, başarı metrikleri ve bağımsız müşteri deneyimi alıntıları yerleştirin. Bu verileri Organization ve Review şemalarıyla işaretleyin.`,
         timeframe: "10. - 20. Gün",
         expectedImpact: "Yapay zekâ tavsiye modellerinde 'güvenilir sağlayıcı' eşiğini geçmenizi sağlar",
         icon: "shield-check",
       },
       {
         stepNumber: 3,
-        title: "Kaynak Gösterilmeye Uygun Orijinal İçerikler ve Sektörel Dijital PR Geliştirin",
-        desc: "Sektörünüze özel mini rehberler, fiyatlandırma kriterleri ve kıyaslama tabloları yayınlayın. Dış platformlarda ve sektörel mecralarda bu içeriklere verilen referansları artırarak LLM'lerin bilgi tabanına kalıcı olarak girin.",
+        title: "Kaynak Gösterilmeye Uygun Sektörel İçerikler ve Dijital PR Geliştirin",
+        desc: `Sektörünüze özel fiyatlandırma kriterleri ve kıyaslama tabloları yayınlayın. Dış platformlarda bu içeriklere referans verilmesini sağlayarak LLM'lerin bilgi tabanına kalıcı olarak girin.`,
         timeframe: "20. - 30. Gün",
         expectedImpact: "Perplexity ve SearchGPT'de sitenizin dipnot kaynağı olarak listelenmesini sağlar",
         icon: "trending-up",
@@ -145,23 +146,29 @@ export function generateFallbackAudit(params: AuditFormData) {
   };
 }
 
-// Call Google AI Studio Gemini API with model fallback
+// Call Google AI Studio Gemini API with strict prompt referencing user's website and company
 async function generateGeminiAudit(params: AuditFormData) {
+  const cleanDomain = params.website.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/.*$/, '').toLowerCase();
+  const company = params.companyName.trim() || cleanDomain || 'Markanız';
+  const sector = params.sector?.trim() || `${cleanDomain} alanı`;
+
   const candidateModels = ['gemini-3.6-flash', 'gemini-flash-latest', 'gemini-2.0-flash', 'gemini-2.5-flash-lite'];
 
   const prompt = `Sen uzman bir Yapay Zeka Görünürlüğü (GEO - Generative Engine Optimization) ve LLM Arama Motoru Denetçisisin.
 Aşağıdaki firma ve web sitesi için GEO ve Yapay Zeka Arama Motoru (ChatGPT, Perplexity, Gemini, Claude, SearchGPT) görünürlük analizi yap:
 
-Firma İsmi: ${params.companyName}
-Web Sitesi: ${params.website}
-Sektör/Faaliyet Alanı: ${params.sector || 'Sektör web sitesinden ve firma adından tahmin edilsin'}
+KRİTİK TALİMAT: Analiz edilen web sitesi KESİNLİKLE "${params.website}" ve firma KESİNLİKLE "${company}"'dir. Asla başka bir şirketi veya siteyi analiz etme. Üreteceğin tüm sorular, simüle edilen cevaplar ve öneriler bu siteye (${params.website}) özel olmalıdır.
+
+Firma İsmi: ${company}
+Web Sitesi: ${params.website} (${cleanDomain})
+Sektör/Faaliyet Alanı: ${sector}
 Analizi İsteyen: ${params.fullName}
 
 Kurallar:
-1. summary.verdictTitle, summary.coreMessage ve summary.recommendationMessage Türkçe, gerçekçi ve yapıcı olmalı.
-2. Bu sektöre ve firmaya özel 3 adet gerçekçi sektör sorusu oluştur (testedQuestions).
-3. goodPoints: 4 adet pozitif tespit (Açık hizmet sayfaları, başlıklar vb.).
-4. limitingFactors: 4 adet eksik faktör (Soru-cevap eksikliği, alıntılanabilir veri eksikliği vb.).
+1. summary.verdictTitle, summary.coreMessage ve summary.recommendationMessage içinde açıkça "${company}" ve "${cleanDomain}" isimlerini geçir.
+2. Bu sektöre ve firmaya özel 3 adet gerçekçi sektör sorusu oluştur (testedQuestions). Soruların simulatedAnswer kısmında ${company} firmasının neden kaynak gösterilmediğini ve rakiplerin nasıl öne çıktığını açıkla.
+3. goodPoints: 4 adet pozitif tespit.
+4. limitingFactors: 4 adet eksik faktör (FAQPage eksikliği, EEAT güven verisi eksikliği vb.).
 5. prioritySteps: 3 somut öncelikli adım.
 
 Lütfen SADECE geçerli bir JSON objesi döndür. Markdown backtick (\`\`\`json) KULLANMA.
@@ -240,17 +247,15 @@ JSON Şeması:
         }
       }
     } catch {
-      // Try next candidate model
       continue;
     }
   }
 
-  // Graceful fallback if all models timed out or failed
   return generateFallbackAudit(params);
 }
 
 // Send email notification to kaankarakas93@gmail.com
-async function sendLeadEmail(formData: AuditFormData, auditResult: ReturnType<typeof generateFallbackAudit>) {
+async function sendLeadEmail(formData: AuditFormData, auditResult: any) {
   const transporter = nodemailer.createTransport({
     host: 'mail.kurumsaleposta.com',
     port: 587,
@@ -265,6 +270,7 @@ async function sendLeadEmail(formData: AuditFormData, auditResult: ReturnType<ty
   });
 
   const nowStr = new Date().toLocaleString('tr-TR', { timeZone: 'Europe/Istanbul' });
+  const cleanDomain = formData.website.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/.*$/, '').toLowerCase();
 
   const html = `
     <!DOCTYPE html>
@@ -296,7 +302,7 @@ async function sendLeadEmail(formData: AuditFormData, auditResult: ReturnType<ty
       <div class="container">
         <div class="header">
           <div class="badge">🔥 Yeni Lead & Görünürlük Analizi</div>
-          <h1>${formData.companyName} İçin Analiz Raporu Oluşturuldu</h1>
+          <h1>${formData.companyName} (${cleanDomain}) İçin Analiz Talebi Alındı</h1>
           <div style="font-size: 13px; color: #9ca3af; margin-top: 5px;">Tarih: ${nowStr}</div>
         </div>
 
@@ -306,6 +312,10 @@ async function sendLeadEmail(formData: AuditFormData, auditResult: ReturnType<ty
             <div class="lead-row">
               <span class="lead-label">Firma / Marka:</span>
               <span class="lead-value" style="font-size: 15px; color: #10a37f;">${formData.companyName}</span>
+            </div>
+            <div class="lead-row">
+              <span class="lead-label">Web Sitesi:</span>
+              <span class="lead-value"><a href="${formData.website}" target="_blank" style="color: #2563eb; text-decoration: none;">${formData.website}</a></span>
             </div>
             <div class="lead-row">
               <span class="lead-label">Yetkili / Ad Soyad:</span>
@@ -320,10 +330,6 @@ async function sendLeadEmail(formData: AuditFormData, auditResult: ReturnType<ty
               <span class="lead-value"><a href="mailto:${formData.email}" style="color: #2563eb; text-decoration: none;">${formData.email}</a></span>
             </div>
             <div class="lead-row">
-              <span class="lead-label">Web Sitesi:</span>
-              <span class="lead-value"><a href="${formData.website}" target="_blank" style="color: #2563eb; text-decoration: none;">${formData.website}</a></span>
-            </div>
-            <div class="lead-row">
               <span class="lead-label">Sektör:</span>
               <span class="lead-value">${formData.sector || 'Belirtilmedi'}</span>
             </div>
@@ -335,24 +341,25 @@ async function sendLeadEmail(formData: AuditFormData, auditResult: ReturnType<ty
           </div>
 
           <div class="section-title">Yapay Zekâ Test Soruları ve Sonuçları</div>
-          ${auditResult.testedQuestions.map(q => `
+          ${auditResult.testedQuestions.map((q: any) => `
             <div class="q-card">
               <strong>❓ ${q.question}</strong>
               <div style="color: #dc2626; font-weight: 600; margin-bottom: 4px;">Sonuç: ${q.llmOutcome}</div>
-              <div style="color: #4b5563; font-size: 12px;">Eksik Faktör: ${q.missingFactor}</div>
+              <div style="color: #4b5563; font-size: 12px; margin-bottom: 4px;">Detay: ${q.simulatedAnswer}</div>
+              <div style="color: #991b1b; font-size: 12px;">Eksik Faktör: ${q.missingFactor}</div>
             </div>
           `).join('')}
 
           <div class="section-title">Tespit Edilen Kritik Eksikler</div>
           <ul style="padding-left: 20px; font-size: 13px; color: #4b5563; line-height: 1.6;">
-            ${auditResult.limitingFactors.map(f => `
+            ${auditResult.limitingFactors.map((f: any) => `
               <li><strong>${f.title}</strong> (${f.severity}): ${f.desc}</li>
             `).join('')}
           </ul>
 
           <div class="section-title">Önerilen Öncelikli 3 Adım</div>
           <ol style="padding-left: 20px; font-size: 13px; color: #4b5563; line-height: 1.6;">
-            ${auditResult.prioritySteps.map(s => `
+            ${auditResult.prioritySteps.map((s: any) => `
               <li><strong>${s.title}</strong>: ${s.desc} <em>(${s.expectedImpact})</em></li>
             `).join('')}
           </ol>
@@ -370,14 +377,14 @@ async function sendLeadEmail(formData: AuditFormData, auditResult: ReturnType<ty
     from: '"Yapay Zekada Reklam - Lead" <info@overseas.marketing>',
     to: 'kaankarakas93@gmail.com',
     replyTo: formData.email,
-    subject: `🔥 Yeni Lead: ${formData.companyName} (${formData.fullName}) - Yapay Zekâ Görünürlük Analizi`,
+    subject: `🔥 Yeni Lead: ${formData.companyName} (${cleanDomain}) - ${formData.fullName}`,
     html: html,
     text: `Yeni Lead & Görünürlük Analizi:
 Firma: ${formData.companyName}
+Web Sitesi: ${formData.website}
 Yetkili: ${formData.fullName}
 Telefon: ${formData.phone}
 E-posta: ${formData.email}
-Web Sitesi: ${formData.website}
 Sektör: ${formData.sector || '-'}
 
 Genel Görünürlük Skoru: ${auditResult.summary.overallScore}/100 (${auditResult.summary.statusLabel})
@@ -402,7 +409,16 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
-    const { fullName, companyName, website, phone, email, sector } = req.body || {};
+    let body = req.body;
+    if (typeof body === 'string') {
+      try {
+        body = JSON.parse(body);
+      } catch {
+        body = {};
+      }
+    }
+
+    const { fullName, companyName, website, phone, email, sector } = body || {};
 
     if (!fullName || !companyName || !website || !phone || !email) {
       return res.status(400).json({
@@ -425,7 +441,7 @@ export default async function handler(req: any, res: any) {
     // Send email notification to kaankarakas93@gmail.com
     try {
       await sendLeadEmail(formData, auditData);
-      console.log(`[Lead Sent] Email delivered to kaankarakas93@gmail.com for ${formData.companyName}`);
+      console.log(`[Lead Sent] Email delivered to kaankarakas93@gmail.com for ${formData.companyName} (${formData.website})`);
     } catch (mailErr: any) {
       console.error('[Lead Mail Error]:', mailErr?.message || mailErr);
     }
