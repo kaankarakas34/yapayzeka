@@ -42,7 +42,7 @@ function Header() {
         <a href="/geo-yapay-zeka-gorunurlugu/">GEO Görünürlük</a>
         <a href="/yapay-zeka-platformlarinda-reklam/">AI Platformları</a>
         <a href="/blog/">Kaynaklar</a>
-        <a className="nav-cta" href="/yapay-zeka-gorunurluk-analizi/">
+        <a className="nav-cta" href="/#ucretsiz-analiz">
           Ön Analiz Al <Arrow />
         </a>
       </nav>
@@ -335,7 +335,7 @@ function Home() {
           </p>
 
           <div className="hero-bottom-actions">
-            <a className="button primary" href="/yapay-zeka-gorunurluk-analizi/">
+            <a className="button primary" href="#ucretsiz-analiz">
               Ücretsiz Görünürlük Analizi Al <Arrow />
             </a>
             <a className="button secondary" href="https://wa.me/905363197697">
@@ -346,6 +346,11 @@ function Home() {
 
         {/* Kayan AI Logoları Slider (Hero'nun hemen altında) */}
         <AILogoMarquee />
+
+        {/* Yapay Zekâ Görünürlük Analizi Modülü */}
+        <section id="ucretsiz-analiz" className="audit-home-section">
+          <AuditModule />
+        </section>
 
         {/* ChatGPT Conversation Simulated Feature */}
         <section className="conversation-section section-pad">
