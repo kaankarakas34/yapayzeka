@@ -1,4 +1,4 @@
-import { useState, type FormEvent, type ReactNode } from 'react'
+import { useState, useRef, useEffect, type FormEvent, type ReactNode } from 'react'
 import { AuditModule } from './AuditModule'
 
 const updated = '2026 Güncellemesi'
@@ -9,6 +9,255 @@ const SendIcon = () => (
     <polyline points="5 12 12 5 19 12"></polyline>
   </svg>
 )
+
+const ChevronDownIcon = ({ open }: { open?: boolean }) => (
+  <svg className={`mega-chevron ${open ? 'rotated' : ''}`} width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <polyline points="6 9 12 15 18 9"></polyline>
+  </svg>
+)
+
+const PhoneCallIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+  </svg>
+)
+
+const SparklesNavIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.636 5.636l2.122 2.122m8.484 8.484l2.122 2.122M5.636 18.364l2.122-2.122m8.484-8.484l2.122-2.122" />
+  </svg>
+)
+
+const BotNavIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+    <circle cx="12" cy="5" r="2"></circle>
+    <path d="M12 7v4"></path>
+    <line x1="8" y1="16" x2="8.01" y2="16"></line>
+    <line x1="16" y1="16" x2="16.01" y2="16"></line>
+  </svg>
+)
+
+const TargetNavIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="10"></circle>
+    <circle cx="12" cy="12" r="6"></circle>
+    <circle cx="12" cy="12" r="2"></circle>
+  </svg>
+)
+
+const LayersNavIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+    <polyline points="2 17 12 22 22 17"></polyline>
+    <polyline points="2 12 12 17 22 12"></polyline>
+  </svg>
+)
+
+const WandNavIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="m19 11-4-4"></path>
+    <path d="m2 22 10-10"></path>
+    <path d="M14 2v4"></path>
+    <path d="M18 6h4"></path>
+    <path d="M3 3l3 3"></path>
+  </svg>
+)
+
+const GlobeNavIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="10"></circle>
+    <line x1="2" y1="12" x2="22" y2="12"></line>
+    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+  </svg>
+)
+
+const TrendingNavIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+    <polyline points="17 6 23 6 23 12"></polyline>
+  </svg>
+)
+
+const ShareNavIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+)
+
+const BookNavIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+  </svg>
+)
+
+const TagNavIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+    <line x1="7" y1="7" x2="7.01" y2="7"></line>
+  </svg>
+)
+
+const ShieldNavIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+    <path d="m9 12 2 2 4-4"></path>
+  </svg>
+)
+
+const CodeNavIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <polyline points="16 18 22 12 16 6"></polyline>
+    <polyline points="8 6 2 12 8 18"></polyline>
+  </svg>
+)
+
+const LightbulbNavIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M9 18h6"></path>
+    <path d="M10 22h4"></path>
+    <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5.76.76 1.23 1.52 1.41 2.5h6.18z"></path>
+  </svg>
+)
+
+const CloseNavIcon = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <line x1="18" y1="6" x2="6" y2="18"></line>
+    <line x1="6" y1="6" x2="18" y2="18"></line>
+  </svg>
+)
+
+const HamburgerNavIcon = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <line x1="3" y1="7" x2="21" y2="7"></line>
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="17" x2="21" y2="17"></line>
+  </svg>
+)
+
+const servicesMenu = {
+  column1: [
+    {
+      title: 'ChatGPT Ads Yönetimi',
+      desc: 'Konuşma anında sponsorlu yerleşim, context hints ve CAPI entegrasyonu',
+      href: '/chatgpt-reklamlari/',
+      badge: 'Öne Çıkan',
+      icon: <BotNavIcon />,
+    },
+    {
+      title: 'Yapay Zekada Reklam Ajansı',
+      desc: '360° AI reklam stratejisi, bütçe yönetimi ve performans optimizasyonu',
+      href: '/yapay-zekada-reklam-ajansi/',
+      icon: <TargetNavIcon />,
+    },
+    {
+      title: 'AI Platformlarında Reklam',
+      desc: 'ChatGPT, Copilot, Perplexity ve çoklu LLM kanallarında reklam',
+      href: '/yapay-zeka-platformlarinda-reklam/',
+      icon: <LayersNavIcon />,
+    },
+    {
+      title: 'Yapay Zekâ ile Reklam Üretimi',
+      desc: 'Görsel, video ve metin kreatiflerinin AI ile yüksek hızda üretimi',
+      href: '/yapay-zeka-ile-reklam-uretimi/',
+      icon: <WandNavIcon />,
+    },
+  ],
+  column2: [
+    {
+      title: 'GEO Organik Görünürlük',
+      desc: 'LLM modellerinde markanızı kaynak ve tavsiye edilen otorite yapma',
+      href: '/geo-yapay-zeka-gorunurlugu/',
+      badge: 'Popüler',
+      icon: <GlobeNavIcon />,
+    },
+    {
+      title: 'Yapay Zekâ ile Google Ads',
+      desc: 'Performance Max ve akıllı teklif stratejileriyle maksimum ROAS',
+      href: '/hizmetler/yapay-zeka-google-ads/',
+      icon: <TrendingNavIcon />,
+    },
+    {
+      title: 'Yapay Zekâ ile Meta Ads',
+      desc: 'Advantage+ kitle modelleri ve dinamik AI kreatif testleri',
+      href: '/hizmetler/meta-reklam/',
+      icon: <ShareNavIcon />,
+    },
+    {
+      title: 'Sosyal Medya Reklam Yönetimi',
+      desc: 'Veri odaklı sosyal medya kampanya yönetimi ve büyüme',
+      href: '/hizmetler/sosyal-medya-reklami/',
+      icon: <SparklesNavIcon />,
+    },
+  ],
+  spotlight: {
+    badge: '⚡ Canlı Denetim',
+    title: 'Ücretsiz AI Görünürlük Analizi',
+    desc: 'Markanız ChatGPT ve yapay zekâ yanıtlarında müşterilerinize ne kadar tavsiye ediliyor? Anında 5 parametreyle test edin.',
+    cta: 'Analizi Başlat',
+    href: '/yapay-zeka-gorunurluk-analizi/',
+  },
+}
+
+const guidesMenu = {
+  column1: [
+    {
+      title: "ChatGPT'de Reklam Nasıl Verilir?",
+      desc: 'Ads Manager hesap açılışı, şirket doğrulaması ve ilk kampanya adımları',
+      href: '/chatgpt-reklam-verme/',
+      badge: 'Rehber',
+      icon: <BookNavIcon />,
+    },
+    {
+      title: 'ChatGPT Reklam Fiyatları 2026',
+      desc: 'Tahmini CPM, CPC maliyetleri ve minimum bütçe planlaması',
+      href: '/chatgpt-reklam-fiyatlari/',
+      badge: '2026',
+      icon: <TagNavIcon />,
+    },
+    {
+      title: 'Türkiye Erişimi & Şirket Kurulumu',
+      desc: "Türkiye'den OpenAI Ads Manager self servis erişim adımları",
+      href: '/chatgpt-reklamlari-turkiye/',
+      icon: <ShieldNavIcon />,
+    },
+    {
+      title: 'Yapay Zekada Reklam Kılavuzu',
+      desc: "A'dan Z'ye yeni nesil yapay zekâ reklamcılığı stratejileri",
+      href: '/blog/yapay-zekada-reklam-nasil-verilir/',
+      icon: <LightbulbNavIcon />,
+    },
+  ],
+  column2: [
+    {
+      title: 'Context Hints Hazırlama Kılavuzu',
+      desc: 'Doğru bağlam ipuçlarıyla satın alma karar anında yer alma teknikleri',
+      href: '/blog/chatgpt-ads-context-hints/',
+      icon: <TargetNavIcon />,
+    },
+    {
+      title: 'Dönüşüm Ölçümü & OpenAI CAPI',
+      desc: 'Pixel ve sunucu taraflı Conversions API kurulum mimarisi',
+      href: '/blog/chatgpt-reklam-olcumu/',
+      icon: <CodeNavIcon />,
+    },
+    {
+      title: 'ChatGPT Ads ile GEO Farkı',
+      desc: 'Sponsorlu reklam ile organik tavsiye arasındaki kritik ayrımlar',
+      href: '/blog/chatgpt-ads-geo-farki/',
+      icon: <LayersNavIcon />,
+    },
+    {
+      title: 'ChatGPT Reklam Maliyeti Hesabı',
+      desc: 'Bütçenizi doğru kanallara paylaştırma ve ROI projeksiyonu',
+      href: '/blog/chatgpt-reklam-maliyeti/',
+      icon: <TagNavIcon />,
+    },
+  ],
+}
 
 const BrandLogo = () => (
   <a className="brand-logo" href="/" title="ChatGPT Ads Marketing - By Overseas Marketing">
@@ -29,27 +278,384 @@ const BrandLogo = () => (
 )
 
 function Header() {
-  const [open, setOpen] = useState(false)
+  const [activeMega, setActiveMega] = useState<'services' | 'guides' | null>(null)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [mobileAccordion, setMobileAccordion] = useState<{ services: boolean; guides: boolean }>({
+    services: true,
+    guides: false,
+  })
+  const closeTimerRef = useRef<number | null>(null)
+
+  const handleMouseEnter = (menu: 'services' | 'guides') => {
+    if (closeTimerRef.current) clearTimeout(closeTimerRef.current)
+    setActiveMega(menu)
+  }
+
+  const handleMouseLeave = () => {
+    closeTimerRef.current = window.setTimeout(() => {
+      setActiveMega(null)
+    }, 180)
+  }
+
+  const closeAll = () => {
+    setActiveMega(null)
+    setMobileOpen(false)
+  }
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeAll()
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [])
+
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [mobileOpen])
+
   return (
-    <header className="site-header">
-      <BrandLogo />
-      <button className="menu-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="main-nav">
-        Menü
-      </button>
-      <nav id="main-nav" className={open ? 'nav open' : 'nav'}>
-        <a href="/yapay-zekada-reklam-ajansi/">Reklam Ajansı</a>
-        <a href="/chatgpt-reklamlari/">ChatGPT Ads Yönetimi</a>
-        <a href="/chatgpt-reklam-verme/">ChatGPT’de Reklam</a>
-        <a href="/blog/yapay-zekada-reklam-nasil-verilir/">Nasıl Reklam Verilir?</a>
-        <a href="/chatgpt-reklam-fiyatlari/">Reklam Fiyatları</a>
-        <a href="/chatgpt-reklamlari-turkiye/">Türkiye Erişimi</a>
-        <a href="/geo-yapay-zeka-gorunurlugu/">GEO Görünürlük</a>
-        <a href="/blog/">Kaynaklar</a>
-        <a className="nav-cta" href="/#ucretsiz-analiz">
-          Ön Analiz Al <Arrow />
-        </a>
-      </nav>
-    </header>
+    <>
+      <header className="site-header">
+        <div className="header-inner">
+          <BrandLogo />
+
+          {/* Masaüstü Navigasyon (Düzenli Mega Menü Mimarisi) */}
+          <nav className="desktop-nav" aria-label="Ana Menü">
+            {/* 1. Hizmetlerimiz (Mega Menu) */}
+            <div 
+              className={`nav-item has-mega ${activeMega === 'services' ? 'active' : ''}`}
+              onMouseEnter={() => handleMouseEnter('services')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button 
+                type="button" 
+                className="nav-link-btn"
+                aria-expanded={activeMega === 'services'}
+                onClick={() => setActiveMega(activeMega === 'services' ? null : 'services')}
+              >
+                <span>Hizmetlerimiz</span>
+                <ChevronDownIcon open={activeMega === 'services'} />
+              </button>
+
+              <div className="mega-menu-panel services-panel">
+                <div className="mega-menu-container">
+                  <div className="mega-col">
+                    <span className="mega-col-heading">AI SPONSORLU REKLAM</span>
+                    <div className="mega-items-list">
+                      {servicesMenu.column1.map((item) => (
+                        <a key={item.href} href={item.href} className="mega-card" onClick={closeAll}>
+                          <div className="mega-card-icon">{item.icon}</div>
+                          <div className="mega-card-body">
+                            <div className="mega-card-title-row">
+                              <span className="mega-card-title">{item.title}</span>
+                              {item.badge && <span className="mega-badge">{item.badge}</span>}
+                            </div>
+                            <span className="mega-card-desc">{item.desc}</span>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mega-col">
+                    <span className="mega-col-heading">ORGANİK AI & PERFORMANS</span>
+                    <div className="mega-items-list">
+                      {servicesMenu.column2.map((item) => (
+                        <a key={item.href} href={item.href} className="mega-card" onClick={closeAll}>
+                          <div className="mega-card-icon">{item.icon}</div>
+                          <div className="mega-card-body">
+                            <div className="mega-card-title-row">
+                              <span className="mega-card-title">{item.title}</span>
+                              {item.badge && <span className="mega-badge alt">{item.badge}</span>}
+                            </div>
+                            <span className="mega-card-desc">{item.desc}</span>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mega-col mega-spotlight-col">
+                    <div className="mega-spotlight-card">
+                      <div className="mega-spotlight-badge">{servicesMenu.spotlight.badge}</div>
+                      <h4 className="mega-spotlight-title">{servicesMenu.spotlight.title}</h4>
+                      <p className="mega-spotlight-desc">{servicesMenu.spotlight.desc}</p>
+                      <a href={servicesMenu.spotlight.href} className="mega-spotlight-btn" onClick={closeAll}>
+                        {servicesMenu.spotlight.cta} <Arrow />
+                      </a>
+                      <div className="mega-spotlight-stats">
+                        <span>● Anlık OpenAI Yanıt Denetimi</span>
+                        <span>● 60 Saniyede Detaylı Rapor</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 2. Rehberler & Fiyatlar (Mega Menu) */}
+            <div 
+              className={`nav-item has-mega ${activeMega === 'guides' ? 'active' : ''}`}
+              onMouseEnter={() => handleMouseEnter('guides')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button 
+                type="button" 
+                className="nav-link-btn"
+                aria-expanded={activeMega === 'guides'}
+                onClick={() => setActiveMega(activeMega === 'guides' ? null : 'guides')}
+              >
+                <span>Rehberler & Fiyatlar</span>
+                <ChevronDownIcon open={activeMega === 'guides'} />
+              </button>
+
+              <div className="mega-menu-panel guides-panel">
+                <div className="mega-menu-container">
+                  <div className="mega-col">
+                    <span className="mega-col-heading">CHATGPT ADS KILAVUZLARI</span>
+                    <div className="mega-items-list">
+                      {guidesMenu.column1.map((item) => (
+                        <a key={item.href} href={item.href} className="mega-card" onClick={closeAll}>
+                          <div className="mega-card-icon">{item.icon}</div>
+                          <div className="mega-card-body">
+                            <div className="mega-card-title-row">
+                              <span className="mega-card-title">{item.title}</span>
+                              {item.badge && <span className="mega-badge">{item.badge}</span>}
+                            </div>
+                            <span className="mega-card-desc">{item.desc}</span>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mega-col">
+                    <span className="mega-col-heading">TEKNİK OPTİMİZASYON & STRATEJİ</span>
+                    <div className="mega-items-list">
+                      {guidesMenu.column2.map((item) => (
+                        <a key={item.href} href={item.href} className="mega-card" onClick={closeAll}>
+                          <div className="mega-card-icon">{item.icon}</div>
+                          <div className="mega-card-body">
+                            <div className="mega-card-title-row">
+                              <span className="mega-card-title">{item.title}</span>
+                            </div>
+                            <span className="mega-card-desc">{item.desc}</span>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="mega-panel-bottom-bar">
+                  <span>💡 ChatGPT ve yapay zekâ reklam stratejileri hakkında tüm derinlemesine analizler:</span>
+                  <a href="/blog/" className="mega-bottom-link" onClick={closeAll}>
+                    Tüm Blog ve Rehber Yazılarını İnceleyin →
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* 3. AI Görünürlük Analizi (Doğrudan Link + Rozet) */}
+            <a href="/yapay-zeka-gorunurluk-analizi/" className="nav-direct-link highlight-pill-link" onClick={closeAll}>
+              <span className="pulse-dot"></span>
+              <span>AI Görünürlük Analizi</span>
+              <span className="pill-badge">Ücretsiz</span>
+            </a>
+
+            {/* 4. Blog */}
+            <a href="/blog/" className="nav-direct-link" onClick={closeAll}>
+              Blog
+            </a>
+
+            {/* 5. Hakkımızda */}
+            <a href="/hakkimizda/" className="nav-direct-link" onClick={closeAll}>
+              Hakkımızda
+            </a>
+          </nav>
+
+          {/* Sağ Aksiyonlar */}
+          <div className="header-actions">
+            <a href="tel:+905363197697" className="header-phone-link" title="Bizi Arayın: 0536 319 76 97">
+              <PhoneCallIcon />
+              <span className="phone-text">0536 319 76 97</span>
+            </a>
+
+            <a href="/iletisim/" className="header-contact-link">
+              İletişim
+            </a>
+
+            <a href="/#ucretsiz-analiz" className="nav-cta-btn">
+              <span>Ön Analiz Al</span>
+              <Arrow />
+            </a>
+
+            {/* Mobil Menü Butonu */}
+            <button 
+              type="button"
+              className="mobile-toggle-btn"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label={mobileOpen ? 'Menüyü Kapat' : 'Menüyü Aç'}
+              aria-expanded={mobileOpen}
+            >
+              {mobileOpen ? <CloseNavIcon /> : <HamburgerNavIcon />}
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Mega menü açıkken arkadaki hafif backdrop */}
+      {activeMega && (
+        <div 
+          className="mega-backdrop" 
+          onClick={closeAll} 
+          onMouseEnter={handleMouseLeave}
+          aria-hidden="true" 
+        />
+      )}
+
+      {/* Mobil Menü Çekmecesi (Drawer) */}
+      <div className={`mobile-nav-drawer ${mobileOpen ? 'open' : ''}`}>
+        <div className="mobile-nav-header">
+          <BrandLogo />
+          <button 
+            type="button" 
+            className="mobile-close-btn"
+            onClick={() => setMobileOpen(false)}
+            aria-label="Kapat"
+          >
+            <CloseNavIcon />
+          </button>
+        </div>
+
+        <div className="mobile-nav-content">
+          {/* Hizmetlerimiz Akordeon */}
+          <div className="mobile-section">
+            <button 
+              type="button" 
+              className="mobile-section-trigger"
+              onClick={() => setMobileAccordion(p => ({ ...p, services: !p.services }))}
+            >
+              <span className="mobile-trigger-title">Hizmetlerimiz</span>
+              <ChevronDownIcon open={mobileAccordion.services} />
+            </button>
+            {mobileAccordion.services && (
+              <div className="mobile-section-body">
+                <span className="mobile-group-title">AI Sponsorlu Reklam</span>
+                {servicesMenu.column1.map(item => (
+                  <a key={item.href} href={item.href} className="mobile-link-card" onClick={closeAll}>
+                    <div className="mobile-link-icon">{item.icon}</div>
+                    <div className="mobile-link-text">
+                      <div className="mobile-link-title-row">
+                        <strong>{item.title}</strong>
+                        {item.badge && <span className="mega-badge">{item.badge}</span>}
+                      </div>
+                      <p>{item.desc}</p>
+                    </div>
+                  </a>
+                ))}
+
+                <span className="mobile-group-title" style={{ marginTop: '0.9rem' }}>Organik AI & Performans</span>
+                {servicesMenu.column2.map(item => (
+                  <a key={item.href} href={item.href} className="mobile-link-card" onClick={closeAll}>
+                    <div className="mobile-link-icon">{item.icon}</div>
+                    <div className="mobile-link-text">
+                      <div className="mobile-link-title-row">
+                        <strong>{item.title}</strong>
+                        {item.badge && <span className="mega-badge alt">{item.badge}</span>}
+                      </div>
+                      <p>{item.desc}</p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Rehberler & Fiyatlar Akordeon */}
+          <div className="mobile-section">
+            <button 
+              type="button" 
+              className="mobile-section-trigger"
+              onClick={() => setMobileAccordion(p => ({ ...p, guides: !p.guides }))}
+            >
+              <span className="mobile-trigger-title">Rehberler & Fiyatlar</span>
+              <ChevronDownIcon open={mobileAccordion.guides} />
+            </button>
+            {mobileAccordion.guides && (
+              <div className="mobile-section-body">
+                <span className="mobile-group-title">ChatGPT Ads Kılavuzları</span>
+                {guidesMenu.column1.map(item => (
+                  <a key={item.href} href={item.href} className="mobile-link-card" onClick={closeAll}>
+                    <div className="mobile-link-icon">{item.icon}</div>
+                    <div className="mobile-link-text">
+                      <div className="mobile-link-title-row">
+                        <strong>{item.title}</strong>
+                        {item.badge && <span className="mega-badge">{item.badge}</span>}
+                      </div>
+                      <p>{item.desc}</p>
+                    </div>
+                  </a>
+                ))}
+
+                <span className="mobile-group-title" style={{ marginTop: '0.9rem' }}>Teknik & Strateji</span>
+                {guidesMenu.column2.map(item => (
+                  <a key={item.href} href={item.href} className="mobile-link-card" onClick={closeAll}>
+                    <div className="mobile-link-icon">{item.icon}</div>
+                    <div className="mobile-link-text">
+                      <div className="mobile-link-title-row">
+                        <strong>{item.title}</strong>
+                      </div>
+                      <p>{item.desc}</p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Doğrudan Sayfalar */}
+          <div className="mobile-direct-links">
+            <a href="/yapay-zeka-gorunurluk-analizi/" className="mobile-direct-item highlight" onClick={closeAll}>
+              <span className="pulse-dot"></span>
+              <strong>AI Görünürlük Analizi</strong>
+              <span className="pill-badge">Ücretsiz Araç</span>
+            </a>
+            <a href="/blog/" className="mobile-direct-item" onClick={closeAll}>
+              Blog & Tüm Makaleler
+            </a>
+            <a href="/hakkimizda/" className="mobile-direct-item" onClick={closeAll}>
+              Hakkımızda
+            </a>
+            <a href="/iletisim/" className="mobile-direct-item" onClick={closeAll}>
+              İletişim & Teklif İste
+            </a>
+          </div>
+
+          {/* Alt Hızlı Aksiyonlar */}
+          <div className="mobile-nav-footer">
+            <a href="tel:+905363197697" className="mobile-call-btn">
+              <PhoneCallIcon />
+              <span>0536 319 76 97 (Hemen Arayın)</span>
+            </a>
+            <a href="/#ucretsiz-analiz" className="mobile-cta-btn" onClick={closeAll}>
+              <span>Ön Analiz Al & Başlayalım</span>
+              <Arrow />
+            </a>
+            <p className="mobile-brand-note">
+              Overseas Marketing bünyesinde bağımsız ChatGPT Ads & GEO danışmanlığı.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
   )
 }
 
@@ -221,6 +827,380 @@ function AILogoMarquee() {
             </div>
           ))}
         </div>
+      </div>
+    </section>
+  )
+}
+
+const businessSectors = [
+  {
+    id: 'b2b',
+    name: 'B2B Yazılım & SaaS',
+    shortName: 'B2B SaaS',
+    icon: '🏢',
+    score: 98,
+    color: '#10a37f',
+    colorRgb: '16, 163, 127',
+    badge: 'Maksimum Dönüşüm & ROAS',
+    query: '50 kişilik şirketimiz için muhasebe ve e-fatura entegrasyonlu en iyi CRM yazılımı hangisi? Karşılaştırmalı maliyet çıkarır mısın?',
+    adBrand: 'CloudDesk AI · B2B Satış & CRM Otomasyonu',
+    adDescription: 'Türkiye mevzuatına tam uyumlu, 100+ kurumsal entegrasyon ve 14 gün ücretsiz demo. Satın alma aşamasındaki 3.000+ işletmenin tercihi.',
+    adCta: 'Ücretsiz Demoyu Başlat',
+    intentSummary: 'Kullanıcılar satın alma kararından hemen önce yapay zekâya derin kıyaslama yaptırır. Karar anında beliren sponsorlu yerleşim, geleneksel arama motorlarından 3 kat daha hızlı sözleşmeye döner.',
+    contextHintSnippet: 'Context Hints: "B2B SaaS, CRM arayışı, satış ekibi otomasyonu, kurumsal ERP entegrasyonu isteyen KOBİ ve kurumsal yöneticiler"',
+    metrics: [
+      { label: 'Dönüşüm Oranı', value: '%4.8', note: 'Klasik reklamlardan 2.8x yüksek' },
+      { label: 'Karar Verici Lead', value: '%92', note: 'Doğrudan bütçe onay yetkilisi' },
+      { label: 'Satış Döngüsü', value: '-65%', note: '14 günden 3-5 güne kısalma' },
+    ],
+  },
+  {
+    id: 'consulting',
+    name: 'Profesyonel Danışmanlık',
+    shortName: 'Danışmanlık',
+    icon: '💼',
+    score: 95,
+    color: '#00f0ff',
+    colorRgb: '0, 240, 255',
+    badge: 'Yüksek Sepet & Güven Odaklı',
+    query: 'İngiltere ve Amerika\'da şirket kuruluşu, vergi planlaması ve ticari banka hesabı için en güvenilir danışmanlık firması kim?',
+    adBrand: 'GlobalNova · Uluslararası Şirket & Vergi Yönetimi',
+    adDescription: 'Londra ve Delaware merkezli şirket kuruluşu, çifte vergilendirmeyi önleme ve global banka hesabı açılışı. 24 saatte ücretsiz ön uygunluk denetimi.',
+    adCta: 'Ücretsiz Ön Danışmanlık Al',
+    intentSummary: 'Hukuk, finans, dış ticaret ve teknoloji danışmanlığı yüksek güven gerektirir. Modelden tavsiye isteyen üst düzey yöneticiler doğrudan sponsorlu uzmanla eşleşir.',
+    contextHintSnippet: 'Context Hints: "Yurtdışı şirket açılışı, global vergi planlaması, kurumsal danışmanlık arayan şirket sahipleri"',
+    metrics: [
+      { label: 'Ortalama Sözleşme', value: '5.000$+', note: 'Yüksek bütçeli kurumsal talep' },
+      { label: 'Güven Endeksi', value: '%96', note: 'Sponsorlu tavsiye kabulü' },
+      { label: 'Toplantı Alma Oranı', value: '%16.4', note: 'Doğrudan takvime rezervasyon' },
+    ],
+  },
+  {
+    id: 'ecommerce',
+    name: 'Nitelikli E-Ticaret & Niş',
+    shortName: 'E-Ticaret & Niş',
+    icon: '🛍️',
+    score: 92,
+    color: '#c084fc',
+    colorRgb: '192, 132, 252',
+    badge: 'Karşılaştırmalı Alışveriş',
+    query: 'Evcil hayvan tüyü için en güçlü hepa filtreli ve lazerli robot süpürge tavsiyesi verir misin? En sessiz modeller neler?',
+    adBrand: 'AeroClean Pro Max · Evcil Hayvan Lazerli Akıllı Robot',
+    adDescription: '8500 Pa ultra emiş gücü, dolaşmayan fırça mimarisi ve 2 yıl resmi Türkiye garantisi. Bu haftaya özel ilk siparişte 1.500 ₺ anında indirim.',
+    adCta: 'Teknik Özellikleri İncele',
+    intentSummary: 'Tüketiciler yüzlerce ürün arasında kararsız kaldığında teknik özellikleri yapay zekâya kıyaslatır. Ürün kartınız tam bu kararsızlık anında tek çözüm olarak belirir.',
+    contextHintSnippet: 'Context Hints: "Evcil hayvan sahipleri, lazerli robot süpürge tavsiyesi, hepa filtre arayan tüketiciler"',
+    metrics: [
+      { label: 'ROAS Beklentisi', value: '450%+', note: 'Spesifik problem-çözüm eşleşmesi' },
+      { label: 'Ortalama Sepet', value: '18.500 ₺', note: 'Teknolojik & premium tüketim' },
+      { label: 'İade Oranı', value: '<%1.2', note: 'Bilinçli alıcı profili' },
+    ],
+  },
+  {
+    id: 'health',
+    name: 'Sağlık Turizmi & Regüle',
+    shortName: 'Sağlık & Regüle',
+    icon: '🏥',
+    score: 88,
+    color: '#fbbf24',
+    colorRgb: '251, 191, 36',
+    badge: 'Politika Uyumlu Global Lead',
+    query: 'What are the all-on-4 dental implant costs and VIP clinic options in Istanbul with FDA-certified materials?',
+    adBrand: 'VeraDental Istanbul · VIP Dental Implant & Aesthetic Clinic',
+    adDescription: 'FDA & CE onaylı implantlar, 5 yıldızlı otel konaklama ve havalimanı VIP transfer dahil her şey dahil tedavi paketleri.',
+    adCta: 'Get Free Treatment Plan',
+    intentSummary: 'Yurtdışından Türkiye\'ye tedavi planlayan yüksek bütçeli hastalar OpenAI politikalarına %100 uyumlu kurgularla en düşük rekabet ortamında karşılanır.',
+    contextHintSnippet: 'Context Hints: "Dental tourism Turkey, all-on-4 implants Istanbul, VIP clinic treatment abroad, UK/EU patients"',
+    metrics: [
+      { label: 'Yabancı Hasta Talebi', value: '3.500€+', note: 'Yüksek döviz girdili nitelikli lead' },
+      { label: 'WhatsApp Başlatma', value: '%22', note: 'Anında hasta koordinatörü teması' },
+      { label: 'OpenAI Uyum', value: '%100', note: 'Politika onaylı lisanslı kampanya' },
+    ],
+  },
+  {
+    id: 'education',
+    name: 'Akademi & Kurumsal Eğitim',
+    shortName: 'Eğitim & Akademi',
+    icon: '🎓',
+    score: 90,
+    color: '#38bdf8',
+    colorRgb: '56, 189, 248',
+    badge: 'Kariyer & Yetkinlik',
+    query: 'Yapay zekâ ve makine öğrenimi alanında uluslararası sertifika veren, canlı mentorluk içeren en iyi eğitim programı nedir?',
+    adBrand: 'AI Leadership Academy · 12 Haftalık İleri Düzey Program',
+    adDescription: 'Silikon Vadisi müfredatı, haftalık birebir mentorluk ve global geçerli CPD sertifikası. Yeni dönem kayıtları için son 10 kontenjan.',
+    adCta: 'Müfredatı ve Kontenjanı Gör',
+    intentSummary: 'Kariyer basamağını yükseltmek ve bütçe ayırmak isteyen profesyoneller doğru programı ChatGPT ile araştırırken doğrudan kayıt formunuza yönlendirilir.',
+    contextHintSnippet: 'Context Hints: "Yapay zekâ eğitimi, machine learning bootcamp, kurumsal veri bilimi sertifikasyonu"',
+    metrics: [
+      { label: 'Müfredat İndirme', value: '%18.2', note: 'Yüksek kaliteli aday veri tabanı' },
+      { label: 'Kayıt Dönüşümü', value: '%6.5', note: 'Telefonla danışmanlık satışı' },
+      { label: 'CAC Avantajı', value: '-%35', note: 'Google Ads\'e kıyasla maliyet' },
+    ],
+  },
+]
+
+function SuitableBusinessesNeonSection() {
+  const [activeTab, setActiveTab] = useState(0)
+  const current = businessSectors[activeTab]
+
+  return (
+    <section className="neon-suitable-section" id="hangi-isletmeler-uygun">
+      {/* Hareketli Arka Plan Neon Ambient Işıkları */}
+      <div 
+        className="neon-ambient-glow glow-1" 
+        style={{ background: `radial-gradient(circle, rgba(${current.colorRgb}, 0.22) 0%, transparent 70%)` }} 
+      />
+      <div 
+        className="neon-ambient-glow glow-2" 
+        style={{ background: `radial-gradient(circle, rgba(${current.colorRgb}, 0.12) 0%, transparent 65%)` }} 
+      />
+
+      <div className="neon-container">
+        {/* Bölüm Başlığı */}
+        <div className="neon-header">
+          <div 
+            className="neon-badge-pulse" 
+            style={{ 
+              borderColor: `rgba(${current.colorRgb}, 0.45)`, 
+              color: current.color, 
+              boxShadow: `0 0 20px rgba(${current.colorRgb}, 0.25)` 
+            }}
+          >
+            <span className="neon-dot-blinking" style={{ background: current.color, boxShadow: `0 0 10px ${current.color}` }} />
+            <span>AI HEDEFLEME & KARAR ANI UYUM ANALİZİ</span>
+          </div>
+
+          <h2 className="neon-main-title">
+            ChatGPT Reklamları <span className="neon-gradient-text" style={{ textShadow: `0 0 35px rgba(${current.colorRgb}, 0.45)` }}>Hangi İşletmeler İçin</span> Uygundur?
+          </h2>
+
+          <p className="neon-main-subtitle">
+            ChatGPT kullanıcısı klasik arama motoru gibi anahtar kelime aramaz; doğrudan <strong>satın alma, kıyaslama ve tavsiye</strong> ister. Karar anı niyeti yüksek olan sektörler en yüksek dönüşüm ve ROAS oranına ulaşır.
+          </p>
+        </div>
+
+        {/* Neon Kategori Seçici (Interactive Switcher) */}
+        <div className="neon-tabs-bar" role="tablist" aria-label="Sektör Uygunluğu">
+          {businessSectors.map((sector, index) => {
+            const isActive = index === activeTab
+            return (
+              <button
+                key={sector.id}
+                type="button"
+                role="tab"
+                aria-selected={isActive}
+                onClick={() => setActiveTab(index)}
+                className={`neon-tab-item ${isActive ? 'active' : ''}`}
+                style={isActive ? {
+                  borderColor: sector.color,
+                  boxShadow: `0 0 25px rgba(${sector.colorRgb}, 0.3), inset 0 0 15px rgba(${sector.colorRgb}, 0.15)`,
+                  color: '#ffffff'
+                } : {}}
+              >
+                <span className="neon-tab-icon">{sector.icon}</span>
+                <span className="neon-tab-label">{sector.name}</span>
+                <span 
+                  className="neon-tab-score-pill"
+                  style={isActive ? { background: sector.color, color: '#090a0d', boxShadow: `0 0 10px ${sector.color}` } : {}}
+                >
+                  %{sector.score}
+                </span>
+              </button>
+            )
+          })}
+        </div>
+
+        {/* Canlı Karar Anı Vitrini (Neon Simulation & Analysis Showcase) */}
+        <div 
+          className="neon-showcase-grid" 
+          style={{ 
+            borderColor: `rgba(${current.colorRgb}, 0.35)`, 
+            boxShadow: `0 20px 60px -20px rgba(${current.colorRgb}, 0.25)` 
+          }}
+        >
+          {/* Sol Kolon: Canlı ChatGPT Karar Anı Simülatörü */}
+          <div className="neon-simulator-card">
+            <div className="sim-header">
+              <div className="sim-dots">
+                <span className="sim-dot red" />
+                <span className="sim-dot yellow" />
+                <span className="sim-dot green" />
+              </div>
+              <div className="sim-title">
+                <span className="sim-icon">⚡</span>
+                <span>OpenAI Ads Engine Beta · Karar Anı Önizleme</span>
+              </div>
+              <div className="sim-live-badge" style={{ color: current.color }}>
+                ● CANLI TEST
+              </div>
+            </div>
+
+            <div className="sim-body">
+              {/* Kullanıcı Sorusu */}
+              <div className="sim-message user">
+                <div className="sim-user-avatar">SEN</div>
+                <div className="sim-bubble user-bubble">
+                  {current.query}
+                </div>
+              </div>
+
+              {/* Bot Sponsorlu Reklam Yanıtı */}
+              <div className="sim-message bot">
+                <div className="sim-bot-avatar" style={{ background: current.color, boxShadow: `0 0 15px ${current.color}` }}>
+                  <img src="/images/chatgpt-green.webp" alt="ChatGPT" width="18" height="18" />
+                </div>
+                <div className="sim-bot-content">
+                  {/* Sponsorlu Reklam Kartı */}
+                  <div 
+                    className="sim-ad-box" 
+                    style={{ 
+                      borderColor: `rgba(${current.colorRgb}, 0.6)`, 
+                      boxShadow: `0 0 30px rgba(${current.colorRgb}, 0.18)` 
+                    }}
+                  >
+                    <div className="sim-ad-top">
+                      <span 
+                        className="sim-ad-badge" 
+                        style={{ 
+                          background: `rgba(${current.colorRgb}, 0.2)`, 
+                          color: current.color, 
+                          borderColor: current.color 
+                        }}
+                      >
+                        SPONSORLU / AD
+                      </span>
+                      <span className="sim-ad-match" style={{ color: current.color }}>
+                        ✓ %{current.score} Karar Anı Eşleşmesi
+                      </span>
+                    </div>
+
+                    <h4 className="sim-ad-title">{current.adBrand}</h4>
+                    <p className="sim-ad-desc">{current.adDescription}</p>
+
+                    <div className="sim-ad-action-row">
+                      <a 
+                        href="/iletisim/" 
+                        className="sim-ad-cta-btn" 
+                        style={{ 
+                          background: current.color, 
+                          boxShadow: `0 0 20px rgba(${current.colorRgb}, 0.5)` 
+                        }}
+                      >
+                        <span>{current.adCta}</span>
+                        <Arrow />
+                      </a>
+                      <span className="sim-ad-verified">🛡️ Doğrulanmış OpenAI Reklamvereni</span>
+                    </div>
+                  </div>
+
+                  <p className="sim-model-organic-note">
+                    ChatGPT bu reklamı konuşma bağlamınıza göre listeledi. Sponsorlu içerikler organik model yanıtını değiştirmez.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Sağ Kolon: Neden Kazandırır & Context Hints Detayı */}
+          <div className="neon-analysis-card">
+            <div className="analysis-header-row">
+              <div 
+                className="analysis-badge" 
+                style={{ 
+                  background: `rgba(${current.colorRgb}, 0.15)`, 
+                  color: current.color, 
+                  borderColor: `rgba(${current.colorRgb}, 0.4)` 
+                }}
+              >
+                {current.badge}
+              </div>
+              <div className="analysis-score-wrap">
+                <span className="score-num" style={{ color: current.color, textShadow: `0 0 20px ${current.color}` }}>
+                  %{current.score}
+                </span>
+                <span className="score-label">Uygunluk Skoru</span>
+              </div>
+            </div>
+
+            {/* Neon Bar */}
+            <div className="neon-meter-track">
+              <div 
+                className="neon-meter-fill" 
+                style={{ 
+                  width: `${current.score}%`, 
+                  background: `linear-gradient(90deg, rgba(${current.colorRgb}, 0.5), ${current.color})`, 
+                  boxShadow: `0 0 15px ${current.color}` 
+                }} 
+              />
+            </div>
+
+            <div className="analysis-section">
+              <h4 className="analysis-subheading">Neden Bu Sektör Kazandırır?</h4>
+              <p className="analysis-text">{current.intentSummary}</p>
+            </div>
+
+            <div className="analysis-section">
+              <h4 className="analysis-subheading">Örnek Context Hints (Bağlam İpucu)</h4>
+              <div className="neon-code-box" style={{ borderColor: `rgba(${current.colorRgb}, 0.3)` }}>
+                <code>{current.contextHintSnippet}</code>
+              </div>
+            </div>
+
+            {/* Metrikler */}
+            <div className="neon-metrics-grid">
+              {current.metrics.map((m) => (
+                <div key={m.label} className="neon-metric-item">
+                  <span className="metric-val" style={{ color: current.color }}>{m.value}</span>
+                  <span className="metric-lbl">{m.label}</span>
+                  <span className="metric-note">{m.note}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="analysis-footer-cta">
+              <a 
+                href={`/iletisim/?sektor=${encodeURIComponent(current.name)}`} 
+                className="neon-action-button"
+                style={{ 
+                  background: `linear-gradient(135deg, ${current.color}, rgba(${current.colorRgb}, 0.8))`,
+                  boxShadow: `0 6px 25px rgba(${current.colorRgb}, 0.4)`
+                }}
+              >
+                <span>{current.shortName} İçin Reklam Planı İsteyin</span>
+                <Arrow />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Alt Kısım: 4'lü Özet Karşılaştırma Neon Kartları */}
+        <div className="neon-cards-summary-grid">
+          {businessSectors.slice(0, 4).map((sec, i) => (
+            <div 
+              key={sec.id} 
+              className={`neon-mini-card ${i === activeTab ? 'active-mini' : ''}`}
+              onClick={() => setActiveTab(i)}
+              style={i === activeTab ? { borderColor: sec.color, boxShadow: `0 0 25px rgba(${sec.colorRgb}, 0.25)` } : {}}
+            >
+              <div className="mini-card-top">
+                <span className="mini-card-icon" style={{ background: `rgba(${sec.colorRgb}, 0.15)`, color: sec.color }}>
+                  {sec.icon}
+                </span>
+                <span className="mini-card-score" style={{ color: sec.color }}>
+                  %{sec.score} Uyum
+                </span>
+              </div>
+              <h4 className="mini-card-title">{sec.name}</h4>
+              <p className="mini-card-desc">{sec.intentSummary.slice(0, 105)}...</p>
+              <div className="mini-card-link" style={{ color: sec.color }}>
+                Detaylı İncele →
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   )
@@ -404,9 +1384,22 @@ function Home() {
             <p>
               Türkiye'den kampanya başlatırken işletmenin faturalandırılacağı tüzel kişilik, vergi levhası doğrulaması, hedef coğrafya ve OpenAI reklam politikalarına (Sağlık, finans, alkol vb. kısıtlamalar) uygunluk ayrıca incelenir. Ajansımız bu süreçte işletme uygunluğunuzu ve hesap açılışınızı uçtan uca yürütür.
             </p>
-            <div style={{ marginTop: '1.5rem' }}>
-              <a href="/chatgpt-reklamlari-turkiye/" className="text-link" style={{ fontSize: '1rem', fontWeight: 600 }}>
-                ChatGPT Reklamları Türkiye Rehberini İnceleyin <Arrow />
+            <div className="turkey-guide-cta-wrapper">
+              <a href="/chatgpt-reklamlari-turkiye/" className="turkey-guide-neon-btn">
+                <div className="btn-glow-layer" />
+                <div className="btn-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                </div>
+                <div className="btn-text-group">
+                  <span className="btn-micro-badge">TÜRKİYE ŞİRKET DOĞRULAMA & ERİŞİM REHBERİ</span>
+                  <span className="btn-main-text">ChatGPT Reklamları Türkiye Rehberini İnceleyin</span>
+                </div>
+                <div className="btn-arrow-circle">
+                  <Arrow />
+                </div>
               </a>
             </div>
           </div>
@@ -494,33 +1487,8 @@ function Home() {
           </div>
         </section>
 
-        {/* 5. BÖLÜM: Hangi İşletmeler İçin Uygundur? */}
-        <section className="section-pad">
-          <div className="section-header">
-            <span className="section-tag">Uygunluk Kriterleri</span>
-            <h2>ChatGPT Reklamları Hangi İşletmeler İçin Uygundur?</h2>
-            <p>Her işletme için doğru kanal olmayabilir. Yüksek arama niyeti taşıyan sektörler en yüksek dönüşümü alır.</p>
-          </div>
-
-          <div className="service-grid">
-            <div className="service-card">
-              <h3>B2B Yazılım & Kurumsal Hizmetler</h3>
-              <p>Kullanıcıların "X problemine en uygun yazılım hangisi?", "CRM maliyetleri neler?" gibi doğrudan satın alma araştırması yaptığı B2B çözümler.</p>
-            </div>
-            <div className="service-card">
-              <h3>Uzmanlık & Profesyonel Danışmanlık</h3>
-              <p>Hukuk, finans, dış ticaret, yönetim ve teknoloji danışmanlığı gibi güven ve uzmanlık odaklı yüksek sepet tutarlı hizmetler.</p>
-            </div>
-            <div className="service-card">
-              <h3>Nitelikli E-Ticaret & Özel Ürünler</h3>
-              <p>Karşılaştırmalı alışveriş yapılan, teknik özellikleri sorgulanan ve doğrudan tavsiye aranan niş tüketici ürünleri.</p>
-            </div>
-            <div className="service-card">
-              <h3>Regüle Sektörler & Uygunluk Denetimi</h3>
-              <p>Sağlık, medikal, finansal araçlar gibi regülasyona tabi alanlarda OpenAI reklam politikalarına uyumluluk testi zorunludur.</p>
-            </div>
-          </div>
-        </section>
+        {/* 5. BÖLÜM: Hangi İşletmeler İçin Uygundur? (Ultra Modern Hareketli Neon Tasarım) */}
+        <SuitableBusinessesNeonSection />
 
         {/* 6. BÖLÜM: ChatGPT Reklam Maliyeti Nasıl Hesaplanır? */}
         <section className="section-pad" style={{ background: 'var(--chat-dark)', borderTop: '1px solid var(--chat-border)', borderBottom: '1px solid var(--chat-border)' }}>
