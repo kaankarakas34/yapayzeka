@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, type FormEvent, type ReactNode } from 'react'
+import { useState, useEffect, type FormEvent, type ReactNode } from 'react'
 import { AuditModule } from './AuditModule'
 
 const updated = '2026 Güncellemesi'
@@ -7,12 +7,6 @@ const SendIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <line x1="12" y1="19" x2="12" y2="5"></line>
     <polyline points="5 12 12 5 19 12"></polyline>
-  </svg>
-)
-
-const ChevronDownIcon = ({ open }: { open?: boolean }) => (
-  <svg className={`mega-chevron ${open ? 'rotated' : ''}`} width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <polyline points="6 9 12 15 18 9"></polyline>
   </svg>
 )
 
@@ -123,141 +117,35 @@ const LightbulbNavIcon = () => (
   </svg>
 )
 
-const CloseNavIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+
+const ChatGptSidebarIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect width="18" height="18" x="3" y="3" rx="3"></rect>
+    <line x1="9" y1="3" x2="9" y2="21"></line>
+  </svg>
+)
+
+const PlusMiniIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <line x1="12" y1="5" x2="12" y2="19"></line>
+    <line x1="5" y1="12" x2="19" y2="12"></line>
+  </svg>
+)
+
+
+const SearchIcon = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="11" cy="11" r="8"></circle>
+    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+)
+
+const XIcon = () => (
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <line x1="18" y1="6" x2="6" y2="18"></line>
     <line x1="6" y1="6" x2="18" y2="18"></line>
   </svg>
 )
-
-const HamburgerNavIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <line x1="3" y1="7" x2="21" y2="7"></line>
-    <line x1="3" y1="12" x2="21" y2="12"></line>
-    <line x1="3" y1="17" x2="21" y2="17"></line>
-  </svg>
-)
-
-const servicesMenu = {
-  column1: [
-    {
-      title: 'ChatGPT Ads Yönetimi',
-      desc: 'Konuşma anında sponsorlu yerleşim, context hints ve CAPI entegrasyonu',
-      href: '/chatgpt-reklamlari/',
-      badge: 'Öne Çıkan',
-      icon: <BotNavIcon />,
-    },
-    {
-      title: 'Yapay Zekada Reklam Ajansı',
-      desc: '360° AI reklam stratejisi, bütçe yönetimi ve performans optimizasyonu',
-      href: '/yapay-zekada-reklam-ajansi/',
-      icon: <TargetNavIcon />,
-    },
-    {
-      title: 'AI Platformlarında Reklam',
-      desc: 'ChatGPT, Copilot, Perplexity ve çoklu LLM kanallarında reklam',
-      href: '/yapay-zeka-platformlarinda-reklam/',
-      icon: <LayersNavIcon />,
-    },
-    {
-      title: 'Yapay Zekâ ile Reklam Üretimi',
-      desc: 'Görsel, video ve metin kreatiflerinin AI ile yüksek hızda üretimi',
-      href: '/yapay-zeka-ile-reklam-uretimi/',
-      icon: <WandNavIcon />,
-    },
-  ],
-  column2: [
-    {
-      title: 'GEO Organik Görünürlük',
-      desc: 'LLM modellerinde markanızı kaynak ve tavsiye edilen otorite yapma',
-      href: '/geo-yapay-zeka-gorunurlugu/',
-      badge: 'Popüler',
-      icon: <GlobeNavIcon />,
-    },
-    {
-      title: 'Yapay Zekâ ile Google Ads',
-      desc: 'Performance Max ve akıllı teklif stratejileriyle maksimum ROAS',
-      href: '/hizmetler/yapay-zeka-google-ads/',
-      icon: <TrendingNavIcon />,
-    },
-    {
-      title: 'Yapay Zekâ ile Meta Ads',
-      desc: 'Advantage+ kitle modelleri ve dinamik AI kreatif testleri',
-      href: '/hizmetler/meta-reklam/',
-      icon: <ShareNavIcon />,
-    },
-    {
-      title: 'Sosyal Medya Reklam Yönetimi',
-      desc: 'Veri odaklı sosyal medya kampanya yönetimi ve büyüme',
-      href: '/hizmetler/sosyal-medya-reklami/',
-      icon: <SparklesNavIcon />,
-    },
-  ],
-  spotlight: {
-    badge: '⚡ Canlı Denetim',
-    title: 'Ücretsiz AI Görünürlük Analizi',
-    desc: 'Markanız ChatGPT ve yapay zekâ yanıtlarında müşterilerinize ne kadar tavsiye ediliyor? Anında 5 parametreyle test edin.',
-    cta: 'Analizi Başlat',
-    href: '/yapay-zeka-gorunurluk-analizi/',
-  },
-}
-
-const guidesMenu = {
-  column1: [
-    {
-      title: "ChatGPT'de Reklam Nasıl Verilir?",
-      desc: 'Ads Manager hesap açılışı, şirket doğrulaması ve ilk kampanya adımları',
-      href: '/chatgpt-reklam-verme/',
-      badge: 'Rehber',
-      icon: <BookNavIcon />,
-    },
-    {
-      title: 'ChatGPT Reklam Fiyatları 2026',
-      desc: 'Tahmini CPM, CPC maliyetleri ve minimum bütçe planlaması',
-      href: '/chatgpt-reklam-fiyatlari/',
-      badge: '2026',
-      icon: <TagNavIcon />,
-    },
-    {
-      title: 'Türkiye Erişimi & Şirket Kurulumu',
-      desc: "Türkiye'den OpenAI Ads Manager self servis erişim adımları",
-      href: '/chatgpt-reklamlari-turkiye/',
-      icon: <ShieldNavIcon />,
-    },
-    {
-      title: 'Yapay Zekada Reklam Kılavuzu',
-      desc: "A'dan Z'ye yeni nesil yapay zekâ reklamcılığı stratejileri",
-      href: '/blog/yapay-zekada-reklam-nasil-verilir/',
-      icon: <LightbulbNavIcon />,
-    },
-  ],
-  column2: [
-    {
-      title: 'Context Hints Hazırlama Kılavuzu',
-      desc: 'Doğru bağlam ipuçlarıyla satın alma karar anında yer alma teknikleri',
-      href: '/blog/chatgpt-ads-context-hints/',
-      icon: <TargetNavIcon />,
-    },
-    {
-      title: 'Dönüşüm Ölçümü & OpenAI CAPI',
-      desc: 'Pixel ve sunucu taraflı Conversions API kurulum mimarisi',
-      href: '/blog/chatgpt-reklam-olcumu/',
-      icon: <CodeNavIcon />,
-    },
-    {
-      title: 'ChatGPT Ads ile GEO Farkı',
-      desc: 'Sponsorlu reklam ile organik tavsiye arasındaki kritik ayrımlar',
-      href: '/blog/chatgpt-ads-geo-farki/',
-      icon: <LayersNavIcon />,
-    },
-    {
-      title: 'ChatGPT Reklam Maliyeti Hesabı',
-      desc: 'Bütçenizi doğru kanallara paylaştırma ve ROI projeksiyonu',
-      href: '/blog/chatgpt-reklam-maliyeti/',
-      icon: <TagNavIcon />,
-    },
-  ],
-}
 
 const BrandLogo = () => (
   <a className="brand-logo" href="/" title="ChatGPT Ads Marketing - By Overseas Marketing">
@@ -277,385 +165,501 @@ const BrandLogo = () => (
   </a>
 )
 
-function Header() {
-  const [activeMega, setActiveMega] = useState<'services' | 'guides' | null>(null)
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const [mobileAccordion, setMobileAccordion] = useState<{ services: boolean; guides: boolean }>({
-    services: true,
-    guides: false,
-  })
-  const closeTimerRef = useRef<number | null>(null)
+interface SidebarItemData {
+  title: string
+  desc: string
+  href: string
+  badge?: string
+  icon?: ReactNode
+  category: 'ads' | 'guides' | 'direct' | 'prices' | 'geo'
+  pulse?: boolean
+}
 
-  const handleMouseEnter = (menu: 'services' | 'guides') => {
-    if (closeTimerRef.current) clearTimeout(closeTimerRef.current)
-    setActiveMega(menu)
-  }
+const sidebarServices: SidebarItemData[] = [
+  {
+    title: 'ChatGPT Ads Yönetimi',
+    desc: 'Konuşma anında sponsorlu yerleşim & CAPI',
+    href: '/chatgpt-reklamlari/',
+    badge: 'Öne Çıkan',
+    icon: <BotNavIcon />,
+    category: 'ads',
+  },
+  {
+    title: 'GEO Organik Görünürlük',
+    desc: 'LLM yanıtlarında markanızı tavsiye edilen kaynak yapma',
+    href: '/geo-yapay-zeka-gorunurlugu/',
+    badge: 'Popüler',
+    icon: <GlobeNavIcon />,
+    category: 'geo',
+  },
+  {
+    title: 'Yapay Zekada Reklam Ajansı',
+    desc: '360° AI reklam stratejisi ve bütçe yönetimi',
+    href: '/yapay-zekada-reklam-ajansi/',
+    icon: <TargetNavIcon />,
+    category: 'ads',
+  },
+  {
+    title: 'AI Platformlarında Reklam',
+    desc: 'ChatGPT, Copilot, Perplexity ve LLM kanalları',
+    href: '/yapay-zeka-platformlarinda-reklam/',
+    icon: <LayersNavIcon />,
+    category: 'ads',
+  },
+  {
+    title: 'Yapay Zekâ ile Reklam Üretimi',
+    desc: 'Görsel, video ve metin kreatiflerinin üretimi',
+    href: '/yapay-zeka-ile-reklam-uretimi/',
+    icon: <WandNavIcon />,
+    category: 'ads',
+  },
+  {
+    title: 'Yapay Zekâ ile Google Ads',
+    desc: 'Performance Max ve akıllı teklif optimizasyonu',
+    href: '/hizmetler/yapay-zeka-google-ads/',
+    icon: <TrendingNavIcon />,
+    category: 'ads',
+  },
+  {
+    title: 'Yapay Zekâ ile Meta Ads',
+    desc: 'Advantage+ kitle ve dinamik test stratejileri',
+    href: '/hizmetler/meta-reklam/',
+    icon: <ShareNavIcon />,
+    category: 'ads',
+  },
+  {
+    title: 'Sosyal Medya Reklam Yönetimi',
+    desc: 'Veri odaklı sosyal medya kampanya yönetimi',
+    href: '/hizmetler/sosyal-medya-reklami/',
+    icon: <SparklesNavIcon />,
+    category: 'ads',
+  },
+]
 
-  const handleMouseLeave = () => {
-    closeTimerRef.current = window.setTimeout(() => {
-      setActiveMega(null)
-    }, 180)
-  }
+const sidebarGuides: SidebarItemData[] = [
+  {
+    title: "ChatGPT'de Reklam Nasıl Verilir?",
+    desc: 'Ads Manager hesap açılışı & kampanya adımları',
+    href: '/chatgpt-reklam-verme/',
+    badge: 'Rehber',
+    icon: <BookNavIcon />,
+    category: 'guides',
+  },
+  {
+    title: 'ChatGPT Reklam Fiyatları 2026',
+    desc: 'Tahmini CPM, CPC maliyetleri ve minimum bütçe',
+    href: '/chatgpt-reklam-fiyatlari/',
+    badge: '2026',
+    icon: <TagNavIcon />,
+    category: 'prices',
+  },
+  {
+    title: 'Türkiye Erişimi & Şirket Kurulumu',
+    desc: "Türkiye'den Ads Manager self servis erişim rehberi",
+    href: '/chatgpt-reklamlari-turkiye/',
+    icon: <ShieldNavIcon />,
+    category: 'guides',
+  },
+  {
+    title: 'Yapay Zekada Reklam Kılavuzu',
+    desc: "A'dan Z'ye yeni nesil yapay zekâ reklamcılığı",
+    href: '/blog/yapay-zekada-reklam-nasil-verilir/',
+    icon: <LightbulbNavIcon />,
+    category: 'guides',
+  },
+  {
+    title: 'Context Hints Hazırlama Kılavuzu',
+    desc: 'Karar anı doğru bağlam ipuçları teknikleri',
+    href: '/blog/chatgpt-ads-context-hints/',
+    icon: <TargetNavIcon />,
+    category: 'guides',
+  },
+  {
+    title: 'Dönüşüm Ölçümü & OpenAI CAPI',
+    desc: 'Pixel ve sunucu taraflı Conversions API kurulumu',
+    href: '/blog/chatgpt-reklam-olcumu/',
+    icon: <CodeNavIcon />,
+    category: 'guides',
+  },
+  {
+    title: 'ChatGPT Ads ile GEO Farkı',
+    desc: 'Sponsorlu reklam ile organik tavsiye ayrımları',
+    href: '/blog/chatgpt-ads-geo-farki/',
+    icon: <LayersNavIcon />,
+    category: 'geo',
+  },
+  {
+    title: 'ChatGPT Reklam Maliyeti Hesabı',
+    desc: 'Bütçe paylaştırma ve ROAS projeksiyonu',
+    href: '/blog/chatgpt-reklam-maliyeti/',
+    icon: <TagNavIcon />,
+    category: 'prices',
+  },
+]
 
-  const closeAll = () => {
-    setActiveMega(null)
-    setMobileOpen(false)
-  }
+const sidebarDirect: SidebarItemData[] = [
+  {
+    title: 'AI Görünürlük Analizörü',
+    desc: 'Markanız AI yanıtlarında nasıl tavsiye ediliyor?',
+    href: '/yapay-zeka-gorunurluk-analizi/',
+    badge: 'Canlı Araç',
+    category: 'direct',
+    pulse: true,
+  },
+  {
+    title: 'Blog & Makaleler',
+    desc: 'Yapay zekâ reklamcılık ve GEO rehberleri',
+    href: '/blog/',
+    icon: <BookNavIcon />,
+    category: 'direct',
+  },
+  {
+    title: 'Hakkımızda',
+    desc: 'Overseas Marketing ekibi ve metodolojimiz',
+    href: '/hakkimizda/',
+    icon: <ShieldNavIcon />,
+    category: 'direct',
+  },
+  {
+    title: 'İletişim & Teklif İste',
+    desc: 'Özel kampanya stratejisi ve toplantı planlama',
+    href: '/iletisim/',
+    icon: <PhoneCallIcon />,
+    category: 'direct',
+  },
+]
+
+function ChatGptSidebar({
+  isOpen,
+  onToggle,
+  onClose,
+}: {
+  isOpen: boolean
+  onToggle: () => void
+  onClose: () => void
+}) {
+  const [searchQuery, setSearchQuery] = useState('')
+  const [activeFilter, setActiveFilter] = useState<'all' | 'ads' | 'prices' | 'geo' | 'guides'>('all')
+  const [currentPath, setCurrentPath] = useState('/')
 
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') closeAll()
+    if (typeof window !== 'undefined') {
+      setCurrentPath(window.location.pathname.replace(/\/+$/, '') || '/')
     }
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
   }, [])
 
-  useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
+  const filterItem = (item: SidebarItemData) => {
+    if (activeFilter !== 'all') {
+      if (item.category !== activeFilter && !(activeFilter === 'guides' && item.category === 'guides')) {
+        return false
+      }
     }
-    return () => {
-      document.body.style.overflow = ''
+    if (!searchQuery.trim()) return true
+    const q = searchQuery.toLowerCase().trim()
+    return (
+      item.title.toLowerCase().includes(q) ||
+      item.desc.toLowerCase().includes(q) ||
+      (item.badge && item.badge.toLowerCase().includes(q))
+    )
+  }
+
+  const filteredServices = sidebarServices.filter(filterItem)
+  const filteredGuides = sidebarGuides.filter(filterItem)
+  const filteredDirect = sidebarDirect.filter(filterItem)
+  const hasResults = filteredServices.length > 0 || filteredGuides.length > 0 || filteredDirect.length > 0
+
+  const handleLinkClick = () => {
+    if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+      onClose()
     }
-  }, [mobileOpen])
+  }
+
+  const isItemActive = (href: string) => {
+    const cleanHref = href.replace(/\/+$/, '') || '/'
+    return cleanHref === currentPath
+  }
 
   return (
-    <>
-      <header className="site-header">
-        <div className="header-inner">
-          <BrandLogo />
-
-          {/* Masaüstü Navigasyon (Düzenli Mega Menü Mimarisi) */}
-          <nav className="desktop-nav" aria-label="Ana Menü">
-            {/* 1. Hizmetlerimiz (Mega Menu) */}
-            <div 
-              className={`nav-item has-mega ${activeMega === 'services' ? 'active' : ''}`}
-              onMouseEnter={() => handleMouseEnter('services')}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button 
-                type="button" 
-                className="nav-link-btn"
-                aria-expanded={activeMega === 'services'}
-                onClick={() => setActiveMega(activeMega === 'services' ? null : 'services')}
-              >
-                <span>Hizmetlerimiz</span>
-                <ChevronDownIcon open={activeMega === 'services'} />
-              </button>
-
-              <div className="mega-menu-panel services-panel">
-                <div className="mega-menu-container">
-                  <div className="mega-col">
-                    <span className="mega-col-heading">AI SPONSORLU REKLAM</span>
-                    <div className="mega-items-list">
-                      {servicesMenu.column1.map((item) => (
-                        <a key={item.href} href={item.href} className="mega-card" onClick={closeAll}>
-                          <div className="mega-card-icon">{item.icon}</div>
-                          <div className="mega-card-body">
-                            <div className="mega-card-title-row">
-                              <span className="mega-card-title">{item.title}</span>
-                              {item.badge && <span className="mega-badge">{item.badge}</span>}
-                            </div>
-                            <span className="mega-card-desc">{item.desc}</span>
-                          </div>
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="mega-col">
-                    <span className="mega-col-heading">ORGANİK AI & PERFORMANS</span>
-                    <div className="mega-items-list">
-                      {servicesMenu.column2.map((item) => (
-                        <a key={item.href} href={item.href} className="mega-card" onClick={closeAll}>
-                          <div className="mega-card-icon">{item.icon}</div>
-                          <div className="mega-card-body">
-                            <div className="mega-card-title-row">
-                              <span className="mega-card-title">{item.title}</span>
-                              {item.badge && <span className="mega-badge alt">{item.badge}</span>}
-                            </div>
-                            <span className="mega-card-desc">{item.desc}</span>
-                          </div>
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="mega-col mega-spotlight-col">
-                    <div className="mega-spotlight-card">
-                      <div className="mega-spotlight-badge">{servicesMenu.spotlight.badge}</div>
-                      <h4 className="mega-spotlight-title">{servicesMenu.spotlight.title}</h4>
-                      <p className="mega-spotlight-desc">{servicesMenu.spotlight.desc}</p>
-                      <a href={servicesMenu.spotlight.href} className="mega-spotlight-btn" onClick={closeAll}>
-                        {servicesMenu.spotlight.cta} <Arrow />
-                      </a>
-                      <div className="mega-spotlight-stats">
-                        <span>● Anlık OpenAI Yanıt Denetimi</span>
-                        <span>● 60 Saniyede Detaylı Rapor</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <aside className={`chatgpt-sidebar ${isOpen ? 'open' : 'closed'}`} aria-label="ChatGPT Tarzı Sol Menü">
+      <div className="chatgpt-sidebar-inner">
+        {/* Sidebar Üst Başlık & Marka */}
+        <div className="chatgpt-sidebar-header">
+          <a href="/" className="sidebar-brand-lockup" title="ChatGPT Ads Marketing">
+            <div className="sidebar-brand-icon">
+              <img src="/images/chatgpt-green.webp" alt="ChatGPT" width="22" height="22" />
             </div>
-
-            {/* 2. Rehberler & Fiyatlar (Mega Menu) */}
-            <div 
-              className={`nav-item has-mega ${activeMega === 'guides' ? 'active' : ''}`}
-              onMouseEnter={() => handleMouseEnter('guides')}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button 
-                type="button" 
-                className="nav-link-btn"
-                aria-expanded={activeMega === 'guides'}
-                onClick={() => setActiveMega(activeMega === 'guides' ? null : 'guides')}
-              >
-                <span>Rehberler & Fiyatlar</span>
-                <ChevronDownIcon open={activeMega === 'guides'} />
-              </button>
-
-              <div className="mega-menu-panel guides-panel">
-                <div className="mega-menu-container">
-                  <div className="mega-col">
-                    <span className="mega-col-heading">CHATGPT ADS KILAVUZLARI</span>
-                    <div className="mega-items-list">
-                      {guidesMenu.column1.map((item) => (
-                        <a key={item.href} href={item.href} className="mega-card" onClick={closeAll}>
-                          <div className="mega-card-icon">{item.icon}</div>
-                          <div className="mega-card-body">
-                            <div className="mega-card-title-row">
-                              <span className="mega-card-title">{item.title}</span>
-                              {item.badge && <span className="mega-badge">{item.badge}</span>}
-                            </div>
-                            <span className="mega-card-desc">{item.desc}</span>
-                          </div>
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="mega-col">
-                    <span className="mega-col-heading">TEKNİK OPTİMİZASYON & STRATEJİ</span>
-                    <div className="mega-items-list">
-                      {guidesMenu.column2.map((item) => (
-                        <a key={item.href} href={item.href} className="mega-card" onClick={closeAll}>
-                          <div className="mega-card-icon">{item.icon}</div>
-                          <div className="mega-card-body">
-                            <div className="mega-card-title-row">
-                              <span className="mega-card-title">{item.title}</span>
-                            </div>
-                            <span className="mega-card-desc">{item.desc}</span>
-                          </div>
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <div className="mega-panel-bottom-bar">
-                  <span>💡 ChatGPT ve yapay zekâ reklam stratejileri hakkında tüm derinlemesine analizler:</span>
-                  <a href="/blog/" className="mega-bottom-link" onClick={closeAll}>
-                    Tüm Blog ve Rehber Yazılarını İnceleyin →
-                  </a>
-                </div>
+            <div className="sidebar-brand-meta">
+              <div className="sidebar-brand-title-row">
+                <strong>ChatGPT Ads</strong>
+                <span className="sidebar-model-badge">v4.0</span>
               </div>
+              <small>By Overseas Marketing</small>
             </div>
-
-            {/* 3. AI Görünürlük Analizi (Doğrudan Link + Rozet) */}
-            <a href="/yapay-zeka-gorunurluk-analizi/" className="nav-direct-link highlight-pill-link" onClick={closeAll}>
-              <span className="pulse-dot"></span>
-              <span>AI Görünürlük Analizi</span>
-              <span className="pill-badge">Ücretsiz</span>
-            </a>
-
-            {/* 4. Blog */}
-            <a href="/blog/" className="nav-direct-link" onClick={closeAll}>
-              Blog
-            </a>
-
-            {/* 5. Hakkımızda */}
-            <a href="/hakkimizda/" className="nav-direct-link" onClick={closeAll}>
-              Hakkımızda
-            </a>
-          </nav>
-
-          {/* Sağ Aksiyonlar */}
-          <div className="header-actions">
-            <a href="tel:+905363197697" className="header-phone-link" title="Bizi Arayın: 0536 319 76 97">
-              <PhoneCallIcon />
-              <span className="phone-text">0536 319 76 97</span>
-            </a>
-
-            <a href="/iletisim/" className="header-contact-link">
-              İletişim
-            </a>
-
-            <a href="/#ucretsiz-analiz" className="nav-cta-btn">
-              <span>Ön Analiz Al</span>
-              <Arrow />
-            </a>
-
-            {/* Mobil Menü Butonu */}
-            <button 
-              type="button"
-              className="mobile-toggle-btn"
-              onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label={mobileOpen ? 'Menüyü Kapat' : 'Menüyü Aç'}
-              aria-expanded={mobileOpen}
-            >
-              {mobileOpen ? <CloseNavIcon /> : <HamburgerNavIcon />}
-            </button>
-          </div>
-        </div>
-      </header>
-
-      {/* Mega menü açıkken arkadaki hafif backdrop */}
-      {activeMega && (
-        <div 
-          className="mega-backdrop" 
-          onClick={closeAll} 
-          onMouseEnter={handleMouseLeave}
-          aria-hidden="true" 
-        />
-      )}
-
-      {/* Mobil Menü Çekmecesi (Drawer) */}
-      <div className={`mobile-nav-drawer ${mobileOpen ? 'open' : ''}`}>
-        <div className="mobile-nav-header">
-          <BrandLogo />
-          <button 
-            type="button" 
-            className="mobile-close-btn"
-            onClick={() => setMobileOpen(false)}
-            aria-label="Kapat"
+          </a>
+          <button
+            type="button"
+            className="sidebar-close-btn"
+            onClick={onToggle}
+            title={isOpen ? 'Kenar Çubuğunu Daralt (Ctrl+B)' : 'Kenar Çubuğunu Aç'}
+            aria-label="Kenar Çubuğunu Kapat"
           >
-            <CloseNavIcon />
+            <ChatGptSidebarIcon />
           </button>
         </div>
 
-        <div className="mobile-nav-content">
-          {/* Hizmetlerimiz Akordeon */}
-          <div className="mobile-section">
-            <button 
-              type="button" 
-              className="mobile-section-trigger"
-              onClick={() => setMobileAccordion(p => ({ ...p, services: !p.services }))}
-            >
-              <span className="mobile-trigger-title">Hizmetlerimiz</span>
-              <ChevronDownIcon open={mobileAccordion.services} />
-            </button>
-            {mobileAccordion.services && (
-              <div className="mobile-section-body">
-                <span className="mobile-group-title">AI Sponsorlu Reklam</span>
-                {servicesMenu.column1.map(item => (
-                  <a key={item.href} href={item.href} className="mobile-link-card" onClick={closeAll}>
-                    <div className="mobile-link-icon">{item.icon}</div>
-                    <div className="mobile-link-text">
-                      <div className="mobile-link-title-row">
-                        <strong>{item.title}</strong>
-                        {item.badge && <span className="mega-badge">{item.badge}</span>}
-                      </div>
-                      <p>{item.desc}</p>
-                    </div>
-                  </a>
-                ))}
-
-                <span className="mobile-group-title" style={{ marginTop: '0.9rem' }}>Organik AI & Performans</span>
-                {servicesMenu.column2.map(item => (
-                  <a key={item.href} href={item.href} className="mobile-link-card" onClick={closeAll}>
-                    <div className="mobile-link-icon">{item.icon}</div>
-                    <div className="mobile-link-text">
-                      <div className="mobile-link-title-row">
-                        <strong>{item.title}</strong>
-                        {item.badge && <span className="mega-badge alt">{item.badge}</span>}
-                      </div>
-                      <p>{item.desc}</p>
-                    </div>
-                  </a>
-                ))}
+        {/* ChatGPT "+ Yeni Sohbet" Tarzı Buton */}
+        <div className="sidebar-action-wrap">
+          <a href="/yapay-zeka-gorunurluk-analizi/" className="chatgpt-new-btn" onClick={handleLinkClick}>
+            <div className="new-btn-left">
+              <div className="new-btn-icon-circle">
+                <PlusMiniIcon />
               </div>
+              <div className="new-btn-text">
+                <strong>Yeni Ön Analiz Başlat</strong>
+                <span>60 saniyede ücretsiz AI denetimi</span>
+              </div>
+            </div>
+            <span className="new-btn-badge">Ücretsiz</span>
+          </a>
+        </div>
+
+        {/* Canlı Filtreleme & Arama */}
+        <div className="sidebar-search-wrap">
+          <div className="sidebar-search-input-box">
+            <SearchIcon />
+            <input
+              type="text"
+              placeholder="Menüde veya rehberlerde ara..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              aria-label="Menüde ara"
+            />
+            {searchQuery && (
+              <button
+                type="button"
+                className="sidebar-search-clear"
+                onClick={() => setSearchQuery('')}
+                aria-label="Aramayı temizle"
+              >
+                <XIcon />
+              </button>
             )}
           </div>
+        </div>
 
-          {/* Rehberler & Fiyatlar Akordeon */}
-          <div className="mobile-section">
-            <button 
-              type="button" 
-              className="mobile-section-trigger"
-              onClick={() => setMobileAccordion(p => ({ ...p, guides: !p.guides }))}
-            >
-              <span className="mobile-trigger-title">Rehberler & Fiyatlar</span>
-              <ChevronDownIcon open={mobileAccordion.guides} />
-            </button>
-            {mobileAccordion.guides && (
-              <div className="mobile-section-body">
-                <span className="mobile-group-title">ChatGPT Ads Kılavuzları</span>
-                {guidesMenu.column1.map(item => (
-                  <a key={item.href} href={item.href} className="mobile-link-card" onClick={closeAll}>
-                    <div className="mobile-link-icon">{item.icon}</div>
-                    <div className="mobile-link-text">
-                      <div className="mobile-link-title-row">
-                        <strong>{item.title}</strong>
-                        {item.badge && <span className="mega-badge">{item.badge}</span>}
-                      </div>
-                      <p>{item.desc}</p>
-                    </div>
-                  </a>
-                ))}
+        {/* Hızlı Kategori Hapları */}
+        <div className="sidebar-quick-pills">
+          <button
+            type="button"
+            className={`quick-pill ${activeFilter === 'all' ? 'active' : ''}`}
+            onClick={() => setActiveFilter('all')}
+          >
+            Tümü
+          </button>
+          <button
+            type="button"
+            className={`quick-pill ${activeFilter === 'ads' ? 'active' : ''}`}
+            onClick={() => setActiveFilter(activeFilter === 'ads' ? 'all' : 'ads')}
+          >
+            ⚡ Ads
+          </button>
+          <button
+            type="button"
+            className={`quick-pill ${activeFilter === 'prices' ? 'active' : ''}`}
+            onClick={() => setActiveFilter(activeFilter === 'prices' ? 'all' : 'prices')}
+          >
+            📊 Fiyatlar
+          </button>
+          <button
+            type="button"
+            className={`quick-pill ${activeFilter === 'geo' ? 'active' : ''}`}
+            onClick={() => setActiveFilter(activeFilter === 'geo' ? 'all' : 'geo')}
+          >
+            🌐 GEO
+          </button>
+          <button
+            type="button"
+            className={`quick-pill ${activeFilter === 'guides' ? 'active' : ''}`}
+            onClick={() => setActiveFilter(activeFilter === 'guides' ? 'all' : 'guides')}
+          >
+            🎯 Rehber
+          </button>
+        </div>
 
-                <span className="mobile-group-title" style={{ marginTop: '0.9rem' }}>Teknik & Strateji</span>
-                {guidesMenu.column2.map(item => (
-                  <a key={item.href} href={item.href} className="mobile-link-card" onClick={closeAll}>
-                    <div className="mobile-link-icon">{item.icon}</div>
-                    <div className="mobile-link-text">
-                      <div className="mobile-link-title-row">
-                        <strong>{item.title}</strong>
-                      </div>
-                      <p>{item.desc}</p>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            )}
+        {/* Kaydırılabilir ChatGPT Menü Listesi */}
+        <div className="chatgpt-sidebar-scroll">
+          {!hasResults ? (
+            <div className="sidebar-no-results">
+              <p>"{searchQuery}" için sonuç bulunamadı.</p>
+              <button type="button" onClick={() => { setSearchQuery(''); setActiveFilter('all') }}>
+                Filtreleri Temizle
+              </button>
+            </div>
+          ) : (
+            <>
+              {/* Grup 1: AI Reklam Yönetimi & Hizmetler */}
+              {filteredServices.length > 0 && (
+                <div className="sidebar-nav-section">
+                  <span className="sidebar-static-label">AI REKLAM VE AJANS HİZMETLERİ</span>
+                  <div className="sidebar-links-list">
+                    {filteredServices.map((item) => {
+                      const active = isItemActive(item.href)
+                      return (
+                        <a
+                          key={item.href}
+                          href={item.href}
+                          className={`sidebar-nav-item ${active ? 'active' : ''}`}
+                          onClick={handleLinkClick}
+                        >
+                          <span className="sidebar-item-icon">{item.icon}</span>
+                          <div className="sidebar-item-content">
+                            <div className="sidebar-item-row">
+                              <span className="sidebar-item-name">{item.title}</span>
+                              {item.badge && <span className="mega-badge">{item.badge}</span>}
+                            </div>
+                            <span className="sidebar-item-desc">{item.desc}</span>
+                          </div>
+                        </a>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {/* Grup 2: Rehberler, Maliyet & Teknik */}
+              {filteredGuides.length > 0 && (
+                <div className="sidebar-nav-section">
+                  <span className="sidebar-static-label">REHBERLER, MALİYET & TEKNİK</span>
+                  <div className="sidebar-links-list">
+                    {filteredGuides.map((item) => {
+                      const active = isItemActive(item.href)
+                      return (
+                        <a
+                          key={item.href}
+                          href={item.href}
+                          className={`sidebar-nav-item ${active ? 'active' : ''}`}
+                          onClick={handleLinkClick}
+                        >
+                          <span className="sidebar-item-icon">{item.icon}</span>
+                          <div className="sidebar-item-content">
+                            <div className="sidebar-item-row">
+                              <span className="sidebar-item-name">{item.title}</span>
+                              {item.badge && <span className="mega-badge">{item.badge}</span>}
+                            </div>
+                            <span className="sidebar-item-desc">{item.desc}</span>
+                          </div>
+                        </a>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {/* Grup 3: Hızlı Araçlar & Kurumsal */}
+              {filteredDirect.length > 0 && (
+                <div className="sidebar-nav-section">
+                  <span className="sidebar-static-label">HIZLI ERİŞİM & KURUMSAL</span>
+                  <div className="sidebar-links-list">
+                    {filteredDirect.map((item) => {
+                      const active = isItemActive(item.href)
+                      return (
+                        <a
+                          key={item.href}
+                          href={item.href}
+                          className={`sidebar-nav-item ${item.pulse ? 'highlight' : ''} ${active ? 'active' : ''}`}
+                          onClick={handleLinkClick}
+                        >
+                          <span className={`sidebar-item-icon ${item.pulse ? 'pulse-dot-wrap' : ''}`}>
+                            {item.pulse ? <span className="pulse-dot"></span> : item.icon}
+                          </span>
+                          <div className="sidebar-item-content">
+                            <div className="sidebar-item-row">
+                              <span className="sidebar-item-name">{item.title}</span>
+                              {item.badge && <span className="pill-badge">{item.badge}</span>}
+                            </div>
+                            <span className="sidebar-item-desc">{item.desc}</span>
+                          </div>
+                        </a>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
+            </>
+          )}
+        </div>
+
+        {/* ChatGPT Profil / Hesap Kartı Stili Alt Bar */}
+        <div className="chatgpt-sidebar-footer">
+          <div className="sidebar-account-box">
+            <div className="account-avatar">OM</div>
+            <div className="account-info">
+              <span className="account-name">Overseas Marketing</span>
+              <span className="account-desc">OpenAI Ads Danışmanlığı</span>
+            </div>
           </div>
-
-          {/* Doğrudan Sayfalar */}
-          <div className="mobile-direct-links">
-            <a href="/yapay-zeka-gorunurluk-analizi/" className="mobile-direct-item highlight" onClick={closeAll}>
-              <span className="pulse-dot"></span>
-              <strong>AI Görünürlük Analizi</strong>
-              <span className="pill-badge">Ücretsiz Araç</span>
-            </a>
-            <a href="/blog/" className="mobile-direct-item" onClick={closeAll}>
-              Blog & Tüm Makaleler
-            </a>
-            <a href="/hakkimizda/" className="mobile-direct-item" onClick={closeAll}>
-              Hakkımızda
-            </a>
-            <a href="/iletisim/" className="mobile-direct-item" onClick={closeAll}>
-              İletişim & Teklif İste
-            </a>
-          </div>
-
-          {/* Alt Hızlı Aksiyonlar */}
-          <div className="mobile-nav-footer">
-            <a href="tel:+905363197697" className="mobile-call-btn">
+          <div className="sidebar-footer-cta-row">
+            <a href="tel:+905363197697" className="sidebar-phone-btn" title="Hemen Arayın: 0536 319 76 97">
               <PhoneCallIcon />
-              <span>0536 319 76 97 (Hemen Arayın)</span>
+              <span>0536 319 76 97</span>
             </a>
-            <a href="/#ucretsiz-analiz" className="mobile-cta-btn" onClick={closeAll}>
-              <span>Ön Analiz Al & Başlayalım</span>
+            <a href="/#ucretsiz-analiz" className="sidebar-cta-btn" onClick={handleLinkClick}>
+              <span>Ön Analiz Al</span>
               <Arrow />
             </a>
-            <p className="mobile-brand-note">
-              Overseas Marketing bünyesinde bağımsız ChatGPT Ads & GEO danışmanlığı.
-            </p>
           </div>
         </div>
       </div>
-    </>
+    </aside>
+  )
+}
+
+function ChatGptTopBar({
+  sidebarOpen,
+  onToggle,
+}: {
+  sidebarOpen: boolean
+  onToggle: () => void
+}) {
+  return (
+    <header className="chatgpt-topbar">
+      <div className="topbar-left">
+        <button
+          type="button"
+          className="topbar-sidebar-toggle"
+          onClick={onToggle}
+          title={sidebarOpen ? 'Menüyü Daralt (Ctrl+B)' : 'ChatGPT Menüsünü Aç (Ctrl+B)'}
+          aria-label={sidebarOpen ? 'Menüyü Daralt' : 'ChatGPT Menüsünü Aç'}
+        >
+          <ChatGptSidebarIcon />
+        </button>
+
+        <a href="/" className="topbar-model-selector" title="ChatGPT Ads Marketing">
+          <div className="model-selector-icon">
+            <img src="/images/chatgpt-green.webp" alt="ChatGPT" width="18" height="18" />
+          </div>
+          <span className="model-selector-title">ChatGPT Ads</span>
+          <span className="model-selector-version">v4.0</span>
+          <span className="model-selector-dot" title="2026 Güncellemesi Çevrimiçi">●</span>
+        </a>
+      </div>
+
+      <div className="topbar-right">
+        <a href="tel:+905363197697" className="topbar-phone-link" title="Bizi Arayın: 0536 319 76 97">
+          <PhoneCallIcon />
+          <span className="topbar-phone-text">0536 319 76 97</span>
+        </a>
+
+        <a href="/iletisim/" className="topbar-contact-link">
+          İletişim
+        </a>
+
+        <a href="/yapay-zeka-gorunurluk-analizi/" className="topbar-cta-btn">
+          <span>Ön Analiz Al</span>
+          <Arrow />
+        </a>
+      </div>
+    </header>
   )
 }
 
@@ -713,13 +717,87 @@ function Footer() {
   )
 }
 
-const Layout = ({ children }: { children: ReactNode }) => (
-  <>
-    <Header />
-    {children}
-    <Footer />
-  </>
-)
+function Layout({ children }: { children: ReactNode }) {
+  const [sidebarOpen, setSidebarOpen] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('chatgpt_sidebar_open')
+      if (saved !== null) return saved === 'true'
+      return window.innerWidth >= 1024
+    }
+    return true
+  })
+
+  const toggleSidebar = () => {
+    setSidebarOpen((prev) => {
+      const next = !prev
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('chatgpt_sidebar_open', String(next))
+      }
+      return next
+    })
+  }
+
+  const closeSidebar = () => {
+    setSidebarOpen(false)
+    if (typeof window !== 'undefined' && window.innerWidth >= 1024) {
+      localStorage.setItem('chatgpt_sidebar_open', 'false')
+    }
+  }
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && window.innerWidth < 1024) {
+        closeSidebar()
+      }
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'b') {
+        e.preventDefault()
+        toggleSidebar()
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [])
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+      if (sidebarOpen) {
+        document.body.style.overflow = 'hidden'
+      } else {
+        document.body.style.overflow = ''
+      }
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [sidebarOpen])
+
+  return (
+    <div className={`chatgpt-app-container ${sidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
+      <ChatGptSidebar
+        isOpen={sidebarOpen}
+        onToggle={toggleSidebar}
+        onClose={closeSidebar}
+      />
+      <div className="chatgpt-main-wrapper">
+        <ChatGptTopBar
+          sidebarOpen={sidebarOpen}
+          onToggle={toggleSidebar}
+        />
+        <div className="chatgpt-page-content">
+          {children}
+        </div>
+        <Footer />
+      </div>
+      {sidebarOpen && (
+        <div
+          className="chatgpt-backdrop"
+          onClick={closeSidebar}
+          aria-hidden="true"
+        />
+      )}
+    </div>
+  )
+}
 
 const faqs = [
   ['ChatGPT\'de doğrudan reklam vermek mümkün mü? Reklam nasıl verilir?', 'Evet. Uygun reklamverenler ChatGPT reklamlarını OpenAI Ads Manager Beta üzerinden oluşturup yönetebilir. OpenAI’nin 23 Eylül 2026’da kontrol edilen ülke listesinde Türkiye self servis erişime açık görünmektedir. Hesap ve kampanya uygunluğu, işletme ülkesi ve reklam politikaları ayrıca değerlendirilir. ChatGPT’nin kullanıcı sohbet ekranında "reklam ver" düğmesi aramak yerine ads.openai.com reklamveren paneli kullanılır.'],
@@ -796,17 +874,7 @@ const aiLogos = [
 
 function AILogoMarquee() {
   return (
-    <section className="ai-marquee-section" aria-label="Yapay Zekâ ve Dil Modelleri Ekosistemi">
-      <div className="ai-marquee-header">
-        <span className="ai-marquee-badge">TÜM YAPAY ZEKÂ MODELLERİNDE REKLAM & GEO</span>
-        <h2 className="ai-marquee-title">
-          Tüm Büyük Dil Modelleri ve Yapay Zekâ Arama Motorlarında Markanızı Konumlandırıyoruz
-        </h2>
-        <p className="ai-marquee-sub">
-          Müşterilerinizin kullandığı 12 küresel yapay zekâ platformunda tavsiye edilme, context hints ve sponsorlu görünürlük altyapısı.
-        </p>
-      </div>
-
+    <section className="ai-marquee-section" aria-label="Yapay Zekâ Ekosistemi Logo Slider">
       <div className="ai-marquee-viewport">
         <div className="ai-marquee-track">
           {/* Çift set kesintisiz sonsuz döngü (infinite seamless loop) sağlar */}
@@ -1206,6 +1274,360 @@ function SuitableBusinessesNeonSection() {
   )
 }
 
+const UserFormIcon = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+    <circle cx="12" cy="7" r="4"></circle>
+  </svg>
+)
+
+const MailFormIcon = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+  </svg>
+)
+
+const GlobeFormIcon = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="10"></circle>
+    <line x1="2" y1="12" x2="22" y2="12"></line>
+    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+  </svg>
+)
+
+const WhatsAppIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+  </svg>
+)
+
+const CheckCircleIcon = () => (
+  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#10a37f" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+  </svg>
+)
+
+interface LeadContactFormProps {
+  id?: string
+  title?: string
+  subtitle?: string
+  defaultService?: string
+  defaultQuestion?: string
+  isContactPage?: boolean
+}
+
+function LeadContactForm({
+  id = 'ucretsiz-analiz',
+  title = 'Markanız İçin ChatGPT ve Yapay Zekâ Reklam Planı İsteyin',
+  subtitle = 'Sektörünüzü, web sitenizi ve hedefinizi iletin; ChatGPT arama niyetleri, rakip varlığı ve uygun test bütçesiyle 60 dakikada ön analiz hazırlayalım.',
+  defaultService = "ChatGPT'de Reklam Verme & Ads",
+  defaultQuestion = '',
+  isContactPage = false,
+}: LeadContactFormProps) {
+  const [selectedService, setSelectedService] = useState(defaultService)
+  const [selectedBudget, setSelectedBudget] = useState('Danışmak İstiyorum')
+  const [submitted, setSubmitted] = useState(false)
+  const [whatsAppUrl, setWhatsAppUrl] = useState('')
+
+  const serviceOptions = [
+    { label: 'ChatGPT Ads Yönetimi', value: "ChatGPT'de Reklam Verme & Ads" },
+    { label: 'GEO Organik Görünürlük', value: 'GEO (Organik AI Görünürlüğü)' },
+    { label: 'AI Platformlarında Reklam', value: 'ChatGPT, Copilot, Perplexity Reklamları' },
+    { label: 'Yapay Zekâ ile Reklam Üretimi', value: 'AI ile Reklam Kreatifi Üretimi' },
+    { label: 'Google & Meta AI Ads', value: 'Google & Meta AI Kampanya Yönetimi' },
+  ]
+
+  const budgetOptions = [
+    'Danışmak İstiyorum',
+    '20.000 ₺ - 50.000 ₺',
+    '50.000 ₺ - 150.000 ₺',
+    '150.000 ₺+',
+  ]
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const fd = new FormData(e.currentTarget)
+    const name = fd.get('name') as string
+    const email = fd.get('email') as string
+    const phone = fd.get('phone') as string
+    const company = (fd.get('company') as string) || '-'
+    const message = (fd.get('message') as string) || '-'
+
+    const formattedMessage = [
+      '🚀 *Yapay Zekâda Reklam & ChatGPT Ön Analiz Talebi*',
+      '--------------------------------',
+      `👤 *Ad Soyad:* ${name}`,
+      `📧 *E-posta:* ${email}`,
+      `📞 *Telefon:* ${phone}`,
+      `🏢 *Şirket / Site:* ${company}`,
+      `🎯 *Hizmet:* ${selectedService}`,
+      `💰 *Bütçe Aralığı:* ${selectedBudget}`,
+      `💬 *Not / Mesaj:* ${message}`,
+      '--------------------------------',
+      'yapayzekadareklam.com üzerinden gönderildi.'
+    ].join('\n')
+
+    const waUrl = `https://wa.me/905363197697?text=${encodeURIComponent(formattedMessage)}`
+    setWhatsAppUrl(waUrl)
+    setSubmitted(true)
+
+    if (typeof window !== 'undefined') {
+      window.open(waUrl, '_blank')
+    }
+  }
+
+  return (
+    <section id={id} className={`lead-form-section ${isContactPage ? 'is-contact-page' : ''}`}>
+      <div className="lead-form-container">
+        {/* Başlık ve Rozet */}
+        <div className="lead-form-header">
+          <div className="lead-form-badge">
+            <span className="pulse-dot"></span>
+            <span>Ücretsiz Ön Değerlendirme & Teklif</span>
+          </div>
+          <h2 className="lead-form-title">{title}</h2>
+          <p className="lead-form-subtitle">{subtitle}</p>
+        </div>
+
+        {submitted ? (
+          <div className="lead-form-success">
+            <div className="success-icon-wrap">
+              <CheckCircleIcon />
+            </div>
+            <h3>Talebiniz Başarıyla Hazırlandı!</h3>
+            <p>
+              Mesajınız oluşturuldu ve doğrudan WhatsApp danışman hattımıza iletildi.
+              Görüşme penceresi açılmadıysa aşağıdaki butona tıklayarak WhatsApp görüşmesini başlatabilirsiniz:
+            </p>
+            <div className="success-actions">
+              <a href={whatsAppUrl} target="_blank" rel="noopener noreferrer" className="button primary success-wa-btn">
+                <WhatsAppIcon /> WhatsApp'ta Hemen Görüşün
+              </a>
+              <button
+                type="button"
+                className="button secondary"
+                onClick={() => setSubmitted(false)}
+              >
+                Yeni Form Gönder
+              </button>
+            </div>
+            <div className="success-meta">
+              <span>● Ortalama geri dönüş süremiz: 45 dakika</span>
+              <span>● Acil görüşmeler için: <strong>0536 319 76 97</strong></span>
+            </div>
+          </div>
+        ) : (
+          <div className="lead-form-grid">
+            {/* Sol Taraf: Güven Unsurları ve Doğrudan İletişim */}
+            <div className="lead-form-sidebar">
+              <div className="sidebar-perk-card">
+                <h4>Ön Analizde Neler Sunuyoruz?</h4>
+                <ul className="perks-list">
+                  <li>
+                    <span className="perk-bullet">⚡</span>
+                    <div>
+                      <strong>ChatGPT Arama Niyet Analizi:</strong>
+                      <span>Sektörünüzde müşterilerin ChatGPT'de aradığı satın alma sorguları.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span className="perk-bullet">🌐</span>
+                    <div>
+                      <strong>GEO Görünürlük Durumu:</strong>
+                      <span>Markanızın şu anki LLM yanıtlarında tavsiye edilme skoru.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span className="perk-bullet">📊</span>
+                    <div>
+                      <strong>Net Test Bütçesi & Yol Haritası:</strong>
+                      <span>OpenAI Ads Manager kurulum adımları ve tahmini TBM (CPC) maliyetleri.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span className="perk-bullet">🛡️</span>
+                    <div>
+                      <strong>KVKK & Müşteri Gizliliği:</strong>
+                      <span>Bilgileriniz yalnızca analiz ve teklif hazırlığı amacıyla korunur.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Hızlı Danışma Butonları */}
+              <div className="direct-contact-box">
+                <span className="direct-box-title">Form doldurmak yerine doğrudan görüşün:</span>
+                <p>Yapay zekâ reklam uzmanımızla WhatsApp veya telefon üzerinden anında görüşebilirsiniz:</p>
+                <div className="direct-buttons-row">
+                  <a href="https://wa.me/905363197697" target="_blank" rel="noopener noreferrer" className="direct-wa-btn">
+                    <WhatsAppIcon />
+                    <div>
+                      <small>WhatsApp İle Hemen Yazın</small>
+                      <strong>0536 319 76 97</strong>
+                    </div>
+                  </a>
+                  <a href="tel:+905363197697" className="direct-phone-btn">
+                    <PhoneCallIcon />
+                    <div>
+                      <small>Doğrudan Arayın</small>
+                      <strong>0536 319 76 97</strong>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Sağ Taraf: İnteraktif Form */}
+            <form className="lead-form-element" onSubmit={handleSubmit}>
+              <div className="form-fields-grid">
+                {/* 1. Ad Soyad */}
+                <div className="form-group">
+                  <label htmlFor="form-name">
+                    <UserFormIcon />
+                    <span>Ad Soyad *</span>
+                  </label>
+                  <input
+                    id="form-name"
+                    name="name"
+                    type="text"
+                    required
+                    placeholder="Adınız ve Soyadınız"
+                    autoComplete="name"
+                  />
+                </div>
+
+                {/* 2. İş E-postası */}
+                <div className="form-group">
+                  <label htmlFor="form-email">
+                    <MailFormIcon />
+                    <span>İş E-postası *</span>
+                  </label>
+                  <input
+                    id="form-email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="ornek@sirketiniz.com"
+                    autoComplete="email"
+                  />
+                </div>
+
+                {/* 3. Telefon Numarası */}
+                <div className="form-group">
+                  <label htmlFor="form-phone">
+                    <PhoneCallIcon />
+                    <span>Telefon Numarası *</span>
+                  </label>
+                  <input
+                    id="form-phone"
+                    name="phone"
+                    type="tel"
+                    required
+                    placeholder="05XX XXX XX XX"
+                    autoComplete="tel"
+                  />
+                </div>
+
+                {/* 4. Şirket / Web Sitesi */}
+                <div className="form-group">
+                  <label htmlFor="form-company">
+                    <GlobeFormIcon />
+                    <span>Şirket / Web Sitesi</span>
+                  </label>
+                  <input
+                    id="form-company"
+                    name="company"
+                    type="text"
+                    placeholder="sirketiniz.com"
+                    autoComplete="organization"
+                  />
+                </div>
+
+                {/* 5. İlgilendiğiniz Hizmet (Pills) */}
+                <div className="form-group full-width">
+                  <label>
+                    <TargetNavIcon />
+                    <span>Öncelikli Hizmet veya Hedefiniz</span>
+                  </label>
+                  <div className="pill-selector-group">
+                    {serviceOptions.map((opt) => (
+                      <button
+                        key={opt.value}
+                        type="button"
+                        className={`pill-select-btn ${selectedService === opt.value ? 'active' : ''}`}
+                        onClick={() => setSelectedService(opt.value)}
+                      >
+                        {opt.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 6. Planlanan Aylık Reklam Bütçesi (Pills) */}
+                <div className="form-group full-width">
+                  <label>
+                    <TagNavIcon />
+                    <span>Planlanan Reklam / Test Bütçesi</span>
+                  </label>
+                  <div className="pill-selector-group">
+                    {budgetOptions.map((b) => (
+                      <button
+                        key={b}
+                        type="button"
+                        className={`pill-select-btn ${selectedBudget === b ? 'active' : ''}`}
+                        onClick={() => setSelectedBudget(b)}
+                      >
+                        {b}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 7. Not veya Özel Soru */}
+                <div className="form-group full-width">
+                  <label htmlFor="form-message">
+                    <span>Projeniz veya Merak Ettiğiniz Detaylar</span>
+                  </label>
+                  <textarea
+                    id="form-message"
+                    name="message"
+                    rows={3}
+                    defaultValue={defaultQuestion}
+                    placeholder="ChatGPT reklamları, sektörünüzdeki hedefleriniz veya bütçeniz hakkında bilgi verebilirsiniz..."
+                  />
+                </div>
+
+                {/* 8. KVKK Onayı */}
+                <div className="form-group full-width form-consent-row">
+                  <input id="form-consent" type="checkbox" required />
+                  <label htmlFor="form-consent">
+                    <a href="/kvkk/" target="_blank" rel="noopener noreferrer">KVKK Aydınlatma Metni</a>'ni okudum, ön analiz amacıyla iletişim kurulmasını onaylıyorum.
+                  </label>
+                </div>
+              </div>
+
+              {/* Gönderim Butonu */}
+              <div className="form-submit-row">
+                <button type="submit" className="button primary form-submit-btn">
+                  <span>Ücretsiz Ön Analiz ve Teklif İsteyin</span>
+                  <Arrow />
+                </button>
+                <div className="form-guarantee-note">
+                  <span>🔒 Bilgileriniz gizlidir</span>
+                  <span>⚡ 60 dakikada geri dönüş</span>
+                  <span>✓ Taahhüt gerektirmez</span>
+                </div>
+              </div>
+            </form>
+          </div>
+        )}
+      </div>
+    </section>
+  )
+}
+
 function Home() {
   const [promptText, setPromptText] = useState('')
 
@@ -1549,26 +1971,12 @@ function Home() {
           </div>
         </section>
 
-        {/* İletişim & Teklif CTA */}
-        <section className="section-pad" style={{ background: 'linear-gradient(135deg, #111111 0%, #171717 100%)', textAlign: 'center' }}>
-          <div style={{ maxWidth: '780px', margin: '0 auto' }}>
-            <span className="section-tag">Hemen Başlayın</span>
-            <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 700, color: '#ffffff', marginBottom: '1rem' }}>
-              ChatGPT Reklamları Markanız İçin Uygun mu?
-            </h2>
-            <p style={{ color: 'var(--chat-text-secondary)', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '2.5rem' }}>
-              Sektörünüzü, hedef pazarınızı ve teklifinizi inceleyelim; kanal uygunluğunu, önerilen ilk kampanyayı ve ölçüm planını birlikte paylaşalım.
-            </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a className="button primary" href="/iletisim/">
-                ChatGPT Reklam Planı İsteyin <Arrow />
-              </a>
-              <a className="button secondary" href="https://wa.me/905363197697">
-                WhatsApp İle Danışın <Arrow />
-              </a>
-            </div>
-          </div>
-        </section>
+        {/* İletişim & Ön Analiz Form Alanı */}
+        <LeadContactForm
+          id="ucretsiz-analiz"
+          title="Markanız İçin ChatGPT ve Yapay Zekâ Reklam Planı İsteyin"
+          subtitle="Sektörünüzü, web sitenizi ve hedefinizi iletin; ChatGPT arama niyetleri, rakip varlığı ve uygun test bütçesiyle 60 dakikada ön analiz hazırlayalım."
+        />
       </main>
     </Layout>
   )
@@ -3078,93 +3486,30 @@ function BlogTurkeyAccountPage() {
 }
 
 function Contact() {
-  const [sent, setSent] = useState(false)
-  const submit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    const data = new FormData(e.currentTarget)
-    const message = [
-      `Merhaba, Yapay Zekâda Reklam ve ChatGPT görünürlük ön analizi istiyorum.`,
-      `Ad Soyad: ${data.get('name')}`,
-      `E-posta: ${data.get('email')}`,
-      `Şirket / Site: ${data.get('company') || '-'}`,
-      `Öncelikli Hedef: ${data.get('goal')}`,
-      `Not / Soru: ${data.get('message') || '-'}`
-    ].join('\n')
-    setSent(true)
-    window.location.href = `https://wa.me/905363197697?text=${encodeURIComponent(message)}`
-  }
-
-  // Pre-fill query from URL if available
   const urlParams = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null
   const defaultQuestion = urlParams ? urlParams.get('soru') || '' : ''
 
   return (
-    <Detail
-      eyebrow="İletişim & Analiz"
-      title="Markanız İçin ChatGPT ve Yapay Zekâ Reklam Planını Çıkaralım"
-      summary="ChatGPT'de reklam verme olanaklarını, markanızın organik GEO skorunu ve ilk test bütçesini uzman ekibimizle birlikte planlayın."
-    >
-      {sent ? (
-        <div className="success">
-          <h2 style={{ color: '#ffffff', marginBottom: '0.6rem' }}>WhatsApp Görüşmeniz Hazırlanıyor...</h2>
-          <p style={{ color: 'var(--chat-text-secondary)' }}>Mesajınız hazırlandı. WhatsApp üzerinden doğrudan uzmanımızla görüşmeye devam edebilirsiniz.</p>
-        </div>
-      ) : (
-        <div className="contact-grid">
-          <div>
-            <div className="contact-actions">
-              <a className="button primary" href="https://wa.me/905363197697">
-                WhatsApp ile Hızlı Mesaj Gönder <Arrow />
-              </a>
-              <a className="button secondary" href="tel:+905363197697">
-                Telefon: 0536 319 76 97
-              </a>
-            </div>
-            <div style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.7 }}>
-              <strong style={{ color: '#ffffff', display: 'block', marginBottom: '0.5rem' }}>Ön Analizde Neler Paylaşıyoruz?</strong>
-              <p>• Sektörünüzde "chat gpt de reklam ver" ve ilgili arama niyetleri hacmi.</p>
-              <p>• Markanızın şu anki ChatGPT ve Gemini cevaplarındaki görünürlük durumu.</p>
-              <p>• Reklam ve GEO için uygulanabilir yol haritası ve tahmini bütçe.</p>
-            </div>
+    <Layout>
+      <main>
+        <section className="detail-hero section-pad" style={{ paddingBottom: '0.5rem', textAlign: 'center' }}>
+          <div className="model-badge" style={{ margin: '0 auto 1.5rem' }}>
+            <i /> İletişim & Danışmanlık · {updated}
           </div>
+          <h1 style={{ maxWidth: '850px', margin: '0 auto 1rem' }}>Bize Ulaşın & AI Reklam Planınızı Çıkarın</h1>
+          <p style={{ maxWidth: '720px', margin: '0 auto 2rem', color: 'var(--chat-text-secondary)', fontSize: '1.1rem' }}>
+            ChatGPT Ads, GEO organik arama görünürlüğü ve yapay zekâ reklam stratejisi için uzman ekibimizle görüşün; markanıza özel ilk test planını oluşturalım.
+          </p>
+        </section>
 
-          <form onSubmit={submit}>
-            <label>
-              Ad Soyad
-              <input name="name" autoComplete="name" required placeholder="Adınız ve Soyadınız" />
-            </label>
-            <label>
-              İş E-postası
-              <input name="email" autoComplete="email" required type="email" placeholder="ornek@sirketiniz.com" />
-            </label>
-            <label>
-              Şirket / Web Sitesi
-              <input name="company" autoComplete="organization" placeholder="sirketiniz.com" />
-            </label>
-            <label>
-              Öncelikli Hedef
-              <select name="goal">
-                <option>ChatGPT'de Reklam Verme & Ads</option>
-                <option>GEO (Organik AI Görünürlüğü)</option>
-                <option>Google & Meta AI Kampanyaları</option>
-                <option>Lead & Satış Artışı</option>
-              </select>
-            </label>
-            <label className="wide">
-              Merak Ettiğiniz veya İletmek İstediğiniz Detay
-              <textarea name="message" rows={4} defaultValue={defaultQuestion} placeholder="ChatGPT'de reklam vermek istiyorum, bütçe ve süreç nasıl işler?" />
-            </label>
-            <label className="consent wide">
-              <input required type="checkbox" />
-              <span><a href="/kvkk/">KVKK Aydınlatma Metni'ni</a> okudum ve kabul ediyorum.</span>
-            </label>
-            <button className="button primary wide" style={{ marginTop: '0.5rem' }}>
-              WhatsApp İle Analiz İsteği Gönder <Arrow />
-            </button>
-          </form>
-        </div>
-      )}
-    </Detail>
+        <LeadContactForm
+          isContactPage
+          title="Markanıza Özel Analiz & Teklif Formu"
+          subtitle="Formu doldurarak veya doğrudan WhatsApp / telefon hatlarımızdan bize ulaşarak aynı gün içinde strateji seansı planlayabilirsiniz."
+          defaultQuestion={defaultQuestion}
+        />
+      </main>
+    </Layout>
   )
 }
 
