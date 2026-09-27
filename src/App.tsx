@@ -213,40 +213,40 @@ function ChatGptSidebar({
           </div>
         )}
 
-        {/* Yeni Sohbet Butonu */}
+        {/* Yeni Sohbet / Analiz Butonu */}
         <div className="sidebar-new-chat-wrap">
-          <a href="/#ucretsiz-analiz" className="chatgpt-new-chat-button" onClick={handleLinkClick}>
+          <a href="/yapay-zeka-gorunurluk-analizi/" className="chatgpt-new-chat-button" onClick={handleLinkClick}>
             <EditSquareIcon />
-            <span>Yeni sohbet</span>
+            <span>AI Görünürlüğünü Test Et</span>
           </a>
         </div>
 
         {/* Kaydırılabilir İçerik Alanı */}
         <div className="chatgpt-sidebar-scroll-area">
-          {/* Hızlı Kısayollar (Zamanlananlar, Kitaplık, Eklentiler, Keşfet) */}
+          {/* Hızlı Kısayollar (Ön Analiz, Bilgi Merkezi, AI Platformları, Hakkımızda) */}
           <div className="sidebar-quick-nav">
             <a href="/#ucretsiz-analiz" className={`sidebar-quick-link ${isItemActive('/#ucretsiz-analiz') ? 'active' : ''}`} onClick={handleLinkClick}>
               <ClockIcon />
-              <span>Zamanlananlar</span>
+              <span>Hızlı Ön Analiz</span>
             </a>
             <a href="/blog/" className={`sidebar-quick-link ${isItemActive('/blog/') ? 'active' : ''}`} onClick={handleLinkClick}>
               <LibraryIcon />
-              <span>Kitaplık</span>
+              <span>Bilgi Merkezi & Rehberler</span>
             </a>
             <a href="/yapay-zeka-platformlarinda-reklam/" className={`sidebar-quick-link ${isItemActive('/yapay-zeka-platformlarinda-reklam/') ? 'active' : ''}`} onClick={handleLinkClick}>
               <AtSignIcon />
-              <span>Eklentiler</span>
+              <span>AI Reklam Platformları</span>
             </a>
             <a href="/hakkimizda/" className={`sidebar-quick-link ${isItemActive('/hakkimizda/') ? 'active' : ''}`} onClick={handleLinkClick}>
               <DotsIcon />
-              <span>Keşfet</span>
+              <span>Hakkımızda & Ekip</span>
             </a>
           </div>
 
-          {/* Bölüm: Projeler */}
+          {/* Bölüm: Hizmetler */}
           {filteredProjects.length > 0 && (
             <div className="sidebar-section-group">
-              <span className="sidebar-section-heading">Projeler</span>
+              <span className="sidebar-section-heading">Hizmetler</span>
               <div className="sidebar-items-list">
                 {filteredProjects.map((p) => {
                   const active = isItemActive(p.href)
@@ -289,13 +289,15 @@ function ChatGptSidebar({
           )}
         </div>
 
-        {/* Profil Satırı (kaan karakaş / Plus) */}
+        {/* Profil Satırı (Yapay Zekâda Reklam / Overseas Marketing) */}
         <div className="chatgpt-sidebar-user-row">
-          <a href="/iletisim/" className="sidebar-user-link" onClick={handleLinkClick}>
-            <div className="sidebar-user-avatar"></div>
+          <a href="/iletisim/" className="sidebar-user-link" onClick={handleLinkClick} title="İletişim & Teklif">
+            <div className="sidebar-user-avatar logo-avatar">
+              <img src="/images/chatgpt-green.webp" alt="ChatGPT" width="18" height="18" />
+            </div>
             <div className="sidebar-user-meta">
-              <span className="sidebar-user-name">kaan karakaş</span>
-              <span className="sidebar-user-plan">Plus</span>
+              <span className="sidebar-user-name">Yapay Zekâda Reklam</span>
+              <span className="sidebar-user-plan">Overseas Marketing</span>
             </div>
           </a>
         </div>

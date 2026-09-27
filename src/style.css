@@ -1067,8 +1067,19 @@ button, input, textarea, select {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: #555555;
+  background: #212121;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(16, 163, 127, 0.35);
+}
+
+.sidebar-user-avatar.logo-avatar img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  display: block;
 }
 
 .sidebar-user-meta {
@@ -1080,7 +1091,7 @@ button, input, textarea, select {
 
 .sidebar-user-name {
   font-size: 13.5px;
-  font-weight: 500;
+  font-weight: 600;
   color: #ececec;
   white-space: nowrap;
   overflow: hidden;
@@ -1089,8 +1100,8 @@ button, input, textarea, select {
 
 .sidebar-user-plan {
   font-size: 11.5px;
-  color: #8e8e8e;
-  font-weight: 400;
+  color: #10a37f;
+  font-weight: 500;
 }
 
 /* ==========================================================================
