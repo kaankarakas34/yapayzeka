@@ -16,75 +16,11 @@ const PhoneCallIcon = () => (
   </svg>
 )
 
-const SparklesNavIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.636 5.636l2.122 2.122m8.484 8.484l2.122 2.122M5.636 18.364l2.122-2.122m8.484-8.484l2.122-2.122" />
-  </svg>
-)
-
-const BotNavIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <rect x="3" y="11" width="18" height="10" rx="2"></rect>
-    <circle cx="12" cy="5" r="2"></circle>
-    <path d="M12 7v4"></path>
-    <line x1="8" y1="16" x2="8.01" y2="16"></line>
-    <line x1="16" y1="16" x2="16.01" y2="16"></line>
-  </svg>
-)
-
 const TargetNavIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <circle cx="12" cy="12" r="10"></circle>
     <circle cx="12" cy="12" r="6"></circle>
     <circle cx="12" cy="12" r="2"></circle>
-  </svg>
-)
-
-const LayersNavIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-    <polyline points="2 17 12 22 22 17"></polyline>
-    <polyline points="2 12 12 17 22 12"></polyline>
-  </svg>
-)
-
-const WandNavIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="m19 11-4-4"></path>
-    <path d="m2 22 10-10"></path>
-    <path d="M14 2v4"></path>
-    <path d="M18 6h4"></path>
-    <path d="M3 3l3 3"></path>
-  </svg>
-)
-
-const GlobeNavIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <circle cx="12" cy="12" r="10"></circle>
-    <line x1="2" y1="12" x2="22" y2="12"></line>
-    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-  </svg>
-)
-
-const TrendingNavIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-    <polyline points="17 6 23 6 23 12"></polyline>
-  </svg>
-)
-
-const ShareNavIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-  </svg>
-)
-
-const BookNavIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
   </svg>
 )
 
@@ -95,55 +31,10 @@ const TagNavIcon = () => (
   </svg>
 )
 
-const ShieldNavIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-    <path d="m9 12 2 2 4-4"></path>
-  </svg>
-)
-
-const CodeNavIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <polyline points="16 18 22 12 16 6"></polyline>
-    <polyline points="8 6 2 12 8 18"></polyline>
-  </svg>
-)
-
-const LightbulbNavIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M9 18h6"></path>
-    <path d="M10 22h4"></path>
-    <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5.76.76 1.23 1.52 1.41 2.5h6.18z"></path>
-  </svg>
-)
-
-
 const ChatGptSidebarIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <rect width="18" height="18" x="3" y="3" rx="3"></rect>
     <line x1="9" y1="3" x2="9" y2="21"></line>
-  </svg>
-)
-
-const PlusMiniIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <line x1="12" y1="5" x2="12" y2="19"></line>
-    <line x1="5" y1="12" x2="19" y2="12"></line>
-  </svg>
-)
-
-
-const SearchIcon = () => (
-  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <circle cx="11" cy="11" r="8"></circle>
-    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-  </svg>
-)
-
-const XIcon = () => (
-  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <line x1="18" y1="6" x2="6" y2="18"></line>
-    <line x1="6" y1="6" x2="18" y2="18"></line>
   </svg>
 )
 
@@ -165,169 +56,61 @@ const BrandLogo = () => (
   </a>
 )
 
-interface SidebarItemData {
-  title: string
-  desc: string
-  href: string
-  badge?: string
-  icon?: ReactNode
-  category: 'ads' | 'guides' | 'direct' | 'prices' | 'geo'
-  pulse?: boolean
-}
+const EditSquareIcon = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+  </svg>
+)
 
-const sidebarServices: SidebarItemData[] = [
-  {
-    title: 'ChatGPT Ads Yönetimi',
-    desc: 'Konuşma anında sponsorlu yerleşim & CAPI',
-    href: '/chatgpt-reklamlari/',
-    badge: 'Öne Çıkan',
-    icon: <BotNavIcon />,
-    category: 'ads',
-  },
-  {
-    title: 'GEO Organik Görünürlük',
-    desc: 'LLM yanıtlarında markanızı tavsiye edilen kaynak yapma',
-    href: '/geo-yapay-zeka-gorunurlugu/',
-    badge: 'Popüler',
-    icon: <GlobeNavIcon />,
-    category: 'geo',
-  },
-  {
-    title: 'Yapay Zekada Reklam Ajansı',
-    desc: '360° AI reklam stratejisi ve bütçe yönetimi',
-    href: '/yapay-zekada-reklam-ajansi/',
-    icon: <TargetNavIcon />,
-    category: 'ads',
-  },
-  {
-    title: 'AI Platformlarında Reklam',
-    desc: 'ChatGPT, Copilot, Perplexity ve LLM kanalları',
-    href: '/yapay-zeka-platformlarinda-reklam/',
-    icon: <LayersNavIcon />,
-    category: 'ads',
-  },
-  {
-    title: 'Yapay Zekâ ile Reklam Üretimi',
-    desc: 'Görsel, video ve metin kreatiflerinin üretimi',
-    href: '/yapay-zeka-ile-reklam-uretimi/',
-    icon: <WandNavIcon />,
-    category: 'ads',
-  },
-  {
-    title: 'Yapay Zekâ ile Google Ads',
-    desc: 'Performance Max ve akıllı teklif optimizasyonu',
-    href: '/hizmetler/yapay-zeka-google-ads/',
-    icon: <TrendingNavIcon />,
-    category: 'ads',
-  },
-  {
-    title: 'Yapay Zekâ ile Meta Ads',
-    desc: 'Advantage+ kitle ve dinamik test stratejileri',
-    href: '/hizmetler/meta-reklam/',
-    icon: <ShareNavIcon />,
-    category: 'ads',
-  },
-  {
-    title: 'Sosyal Medya Reklam Yönetimi',
-    desc: 'Veri odaklı sosyal medya kampanya yönetimi',
-    href: '/hizmetler/sosyal-medya-reklami/',
-    icon: <SparklesNavIcon />,
-    category: 'ads',
-  },
-]
+const ClockIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="10" />
+    <polyline points="12 6 12 12 16 14" />
+  </svg>
+)
 
-const sidebarGuides: SidebarItemData[] = [
-  {
-    title: "ChatGPT'de Reklam Nasıl Verilir?",
-    desc: 'Ads Manager hesap açılışı & kampanya adımları',
-    href: '/chatgpt-reklam-verme/',
-    badge: 'Rehber',
-    icon: <BookNavIcon />,
-    category: 'guides',
-  },
-  {
-    title: 'ChatGPT Reklam Fiyatları 2026',
-    desc: 'Tahmini CPM, CPC maliyetleri ve minimum bütçe',
-    href: '/chatgpt-reklam-fiyatlari/',
-    badge: '2026',
-    icon: <TagNavIcon />,
-    category: 'prices',
-  },
-  {
-    title: 'Türkiye Erişimi & Şirket Kurulumu',
-    desc: "Türkiye'den Ads Manager self servis erişim rehberi",
-    href: '/chatgpt-reklamlari-turkiye/',
-    icon: <ShieldNavIcon />,
-    category: 'guides',
-  },
-  {
-    title: 'Yapay Zekada Reklam Kılavuzu',
-    desc: "A'dan Z'ye yeni nesil yapay zekâ reklamcılığı",
-    href: '/blog/yapay-zekada-reklam-nasil-verilir/',
-    icon: <LightbulbNavIcon />,
-    category: 'guides',
-  },
-  {
-    title: 'Context Hints Hazırlama Kılavuzu',
-    desc: 'Karar anı doğru bağlam ipuçları teknikleri',
-    href: '/blog/chatgpt-ads-context-hints/',
-    icon: <TargetNavIcon />,
-    category: 'guides',
-  },
-  {
-    title: 'Dönüşüm Ölçümü & OpenAI CAPI',
-    desc: 'Pixel ve sunucu taraflı Conversions API kurulumu',
-    href: '/blog/chatgpt-reklam-olcumu/',
-    icon: <CodeNavIcon />,
-    category: 'guides',
-  },
-  {
-    title: 'ChatGPT Ads ile GEO Farkı',
-    desc: 'Sponsorlu reklam ile organik tavsiye ayrımları',
-    href: '/blog/chatgpt-ads-geo-farki/',
-    icon: <LayersNavIcon />,
-    category: 'geo',
-  },
-  {
-    title: 'ChatGPT Reklam Maliyeti Hesabı',
-    desc: 'Bütçe paylaştırma ve ROAS projeksiyonu',
-    href: '/blog/chatgpt-reklam-maliyeti/',
-    icon: <TagNavIcon />,
-    category: 'prices',
-  },
-]
+const LibraryIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+  </svg>
+)
 
-const sidebarDirect: SidebarItemData[] = [
-  {
-    title: 'AI Görünürlük Analizörü',
-    desc: 'Markanız AI yanıtlarında nasıl tavsiye ediliyor?',
-    href: '/yapay-zeka-gorunurluk-analizi/',
-    badge: 'Canlı Araç',
-    category: 'direct',
-    pulse: true,
-  },
-  {
-    title: 'Blog & Makaleler',
-    desc: 'Yapay zekâ reklamcılık ve GEO rehberleri',
-    href: '/blog/',
-    icon: <BookNavIcon />,
-    category: 'direct',
-  },
-  {
-    title: 'Hakkımızda',
-    desc: 'Overseas Marketing ekibi ve metodolojimiz',
-    href: '/hakkimizda/',
-    icon: <ShieldNavIcon />,
-    category: 'direct',
-  },
-  {
-    title: 'İletişim & Teklif İste',
-    desc: 'Özel kampanya stratejisi ve toplantı planlama',
-    href: '/iletisim/',
-    icon: <PhoneCallIcon />,
-    category: 'direct',
-  },
-]
+const AtSignIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="4" />
+    <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94" />
+  </svg>
+)
+
+const DotsIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="5" cy="12" r="1.5" />
+    <circle cx="12" cy="12" r="1.5" />
+    <circle cx="19" cy="12" r="1.5" />
+  </svg>
+)
+
+const FolderOutlineIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+  </svg>
+)
+
+const SearchMiniIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="11" cy="11" r="8" />
+    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+  </svg>
+)
+
+const SidebarToggleMiniIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+    <line x1="9" y1="3" x2="9" y2="21" />
+  </svg>
+)
 
 function ChatGptSidebar({
   isOpen,
@@ -338,8 +121,8 @@ function ChatGptSidebar({
   onToggle: () => void
   onClose: () => void
 }) {
+  const [searchOpen, setSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
-  const [activeFilter, setActiveFilter] = useState<'all' | 'ads' | 'prices' | 'geo' | 'guides'>('all')
   const [currentPath, setCurrentPath] = useState('/')
 
   useEffect(() => {
@@ -347,26 +130,6 @@ function ChatGptSidebar({
       setCurrentPath(window.location.pathname.replace(/\/+$/, '') || '/')
     }
   }, [])
-
-  const filterItem = (item: SidebarItemData) => {
-    if (activeFilter !== 'all') {
-      if (item.category !== activeFilter && !(activeFilter === 'guides' && item.category === 'guides')) {
-        return false
-      }
-    }
-    if (!searchQuery.trim()) return true
-    const q = searchQuery.toLowerCase().trim()
-    return (
-      item.title.toLowerCase().includes(q) ||
-      item.desc.toLowerCase().includes(q) ||
-      (item.badge && item.badge.toLowerCase().includes(q))
-    )
-  }
-
-  const filteredServices = sidebarServices.filter(filterItem)
-  const filteredGuides = sidebarGuides.filter(filterItem)
-  const filteredDirect = sidebarDirect.filter(filterItem)
-  const hasResults = filteredServices.length > 0 || filteredGuides.length > 0 || filteredDirect.length > 0
 
   const handleLinkClick = () => {
     if (typeof window !== 'undefined' && window.innerWidth < 1024) {
@@ -379,235 +142,162 @@ function ChatGptSidebar({
     return cleanHref === currentPath
   }
 
+  const q = searchQuery.toLowerCase().trim()
+
+  const projects = [
+    { title: 'ChatGPT Reklamları', href: '/chatgpt-reklamlari/' },
+    { title: 'Yapay Zekada Reklam Ajansı', href: '/yapay-zekada-reklam-ajansi/' },
+    { title: 'GEO Organik Görünürlük', href: '/geo-yapay-zeka-gorunurlugu/' },
+    { title: 'AI ile Reklam Üretimi', href: '/yapay-zeka-ile-reklam-uretimi/' },
+    { title: 'Meta & Google AI Ads', href: '/hizmetler/meta-reklam/' },
+  ]
+
+  const recents = [
+    { title: 'Ücretsiz Ön Analiz Al', href: '/#ucretsiz-analiz' },
+    { title: 'ChatGPT Reklam Verme Rehberi', href: '/chatgpt-reklam-verme/' },
+    { title: 'ChatGPT Reklam Fiyatları 2026', href: '/chatgpt-reklam-fiyatlari/' },
+    { title: "Türkiye'den ChatGPT Erişimi", href: '/chatgpt-reklamlari-turkiye/' },
+    { title: 'Context Hints (Bağlam İpuçları)', href: '/blog/chatgpt-ads-context-hints/' },
+    { title: 'ChatGPT Reklam Maliyeti', href: '/blog/chatgpt-reklam-maliyeti/' },
+    { title: 'ChatGPT Reklam Ölçümü & ROI', href: '/blog/chatgpt-reklam-olcumu/' },
+    { title: 'Bize Ulaşın & Teklif Alın', href: '/iletisim/' },
+  ]
+
+  const filteredProjects = projects.filter(p => !q || p.title.toLowerCase().includes(q))
+  const filteredRecents = recents.filter(r => !q || r.title.toLowerCase().includes(q))
+
   return (
-    <aside className={`chatgpt-sidebar ${isOpen ? 'open' : 'closed'}`} aria-label="ChatGPT Tarzı Sol Menü">
+    <aside className={`chatgpt-sidebar ${isOpen ? 'open' : 'closed'}`} aria-label="ChatGPT Sol Menü">
       <div className="chatgpt-sidebar-inner">
-        {/* Sidebar Üst Başlık & Marka */}
-        <div className="chatgpt-sidebar-header">
-          <a href="/" className="sidebar-brand-lockup" title="ChatGPT Ads Marketing">
-            <div className="sidebar-brand-icon">
-              <img src="/images/chatgpt-green.webp" alt="ChatGPT" width="22" height="22" />
-            </div>
-            <div className="sidebar-brand-meta">
-              <div className="sidebar-brand-title-row">
-                <strong>ChatGPT Ads</strong>
-                <span className="sidebar-model-badge">v4.0</span>
-              </div>
-              <small>By Overseas Marketing</small>
-            </div>
+        {/* Üst Bar: ChatGPT + 🔍 + ◫ */}
+        <div className="chatgpt-sidebar-top-row">
+          <a href="/" className="sidebar-chatgpt-title" onClick={handleLinkClick}>
+            <span>ChatGPT</span>
           </a>
-          <button
-            type="button"
-            className="sidebar-close-btn"
-            onClick={onToggle}
-            title={isOpen ? 'Kenar Çubuğunu Daralt (Ctrl+B)' : 'Kenar Çubuğunu Aç'}
-            aria-label="Kenar Çubuğunu Kapat"
-          >
-            <ChatGptSidebarIcon />
-          </button>
-        </div>
-
-        {/* ChatGPT "+ Yeni Sohbet" Tarzı Buton */}
-        <div className="sidebar-action-wrap">
-          <a href="/yapay-zeka-gorunurluk-analizi/" className="chatgpt-new-btn" onClick={handleLinkClick}>
-            <div className="new-btn-left">
-              <div className="new-btn-icon-circle">
-                <PlusMiniIcon />
-              </div>
-              <div className="new-btn-text">
-                <strong>Yeni Ön Analiz Başlat</strong>
-                <span>60 saniyede ücretsiz AI denetimi</span>
-              </div>
-            </div>
-            <span className="new-btn-badge">Ücretsiz</span>
-          </a>
-        </div>
-
-        {/* Canlı Filtreleme & Arama */}
-        <div className="sidebar-search-wrap">
-          <div className="sidebar-search-input-box">
-            <SearchIcon />
-            <input
-              type="text"
-              placeholder="Menüde veya rehberlerde ara..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              aria-label="Menüde ara"
-            />
-            {searchQuery && (
-              <button
-                type="button"
-                className="sidebar-search-clear"
-                onClick={() => setSearchQuery('')}
-                aria-label="Aramayı temizle"
-              >
-                <XIcon />
-              </button>
-            )}
+          <div className="sidebar-top-icons">
+            <button
+              type="button"
+              className="sidebar-icon-btn"
+              onClick={() => setSearchOpen(prev => !prev)}
+              title="Ara"
+              aria-label="Menüde Ara"
+            >
+              <SearchMiniIcon />
+            </button>
+            <button
+              type="button"
+              className="sidebar-icon-btn"
+              onClick={onToggle}
+              title={isOpen ? 'Menüyü Daralt' : 'Menüyü Aç'}
+              aria-label="Menüyü Kapat"
+            >
+              <SidebarToggleMiniIcon />
+            </button>
           </div>
         </div>
 
-        {/* Hızlı Kategori Hapları */}
-        <div className="sidebar-quick-pills">
-          <button
-            type="button"
-            className={`quick-pill ${activeFilter === 'all' ? 'active' : ''}`}
-            onClick={() => setActiveFilter('all')}
-          >
-            Tümü
-          </button>
-          <button
-            type="button"
-            className={`quick-pill ${activeFilter === 'ads' ? 'active' : ''}`}
-            onClick={() => setActiveFilter(activeFilter === 'ads' ? 'all' : 'ads')}
-          >
-            ⚡ Ads
-          </button>
-          <button
-            type="button"
-            className={`quick-pill ${activeFilter === 'prices' ? 'active' : ''}`}
-            onClick={() => setActiveFilter(activeFilter === 'prices' ? 'all' : 'prices')}
-          >
-            📊 Fiyatlar
-          </button>
-          <button
-            type="button"
-            className={`quick-pill ${activeFilter === 'geo' ? 'active' : ''}`}
-            onClick={() => setActiveFilter(activeFilter === 'geo' ? 'all' : 'geo')}
-          >
-            🌐 GEO
-          </button>
-          <button
-            type="button"
-            className={`quick-pill ${activeFilter === 'guides' ? 'active' : ''}`}
-            onClick={() => setActiveFilter(activeFilter === 'guides' ? 'all' : 'guides')}
-          >
-            🎯 Rehber
-          </button>
+        {/* Minimal Arama Çubuğu (🔍 tıklandığında) */}
+        {searchOpen && (
+          <div className="sidebar-search-bar">
+            <SearchMiniIcon />
+            <input
+              type="text"
+              placeholder="Ara..."
+              autoFocus
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            {searchQuery && (
+              <button type="button" onClick={() => setSearchQuery('')} aria-label="Temizle">×</button>
+            )}
+          </div>
+        )}
+
+        {/* Yeni Sohbet Butonu */}
+        <div className="sidebar-new-chat-wrap">
+          <a href="/#ucretsiz-analiz" className="chatgpt-new-chat-button" onClick={handleLinkClick}>
+            <EditSquareIcon />
+            <span>Yeni sohbet</span>
+          </a>
         </div>
 
-        {/* Kaydırılabilir ChatGPT Menü Listesi */}
-        <div className="chatgpt-sidebar-scroll">
-          {!hasResults ? (
-            <div className="sidebar-no-results">
-              <p>"{searchQuery}" için sonuç bulunamadı.</p>
-              <button type="button" onClick={() => { setSearchQuery(''); setActiveFilter('all') }}>
-                Filtreleri Temizle
-              </button>
+        {/* Kaydırılabilir İçerik Alanı */}
+        <div className="chatgpt-sidebar-scroll-area">
+          {/* Hızlı Kısayollar (Zamanlananlar, Kitaplık, Eklentiler, Keşfet) */}
+          <div className="sidebar-quick-nav">
+            <a href="/#ucretsiz-analiz" className={`sidebar-quick-link ${isItemActive('/#ucretsiz-analiz') ? 'active' : ''}`} onClick={handleLinkClick}>
+              <ClockIcon />
+              <span>Zamanlananlar</span>
+            </a>
+            <a href="/blog/" className={`sidebar-quick-link ${isItemActive('/blog/') ? 'active' : ''}`} onClick={handleLinkClick}>
+              <LibraryIcon />
+              <span>Kitaplık</span>
+            </a>
+            <a href="/yapay-zeka-platformlarinda-reklam/" className={`sidebar-quick-link ${isItemActive('/yapay-zeka-platformlarinda-reklam/') ? 'active' : ''}`} onClick={handleLinkClick}>
+              <AtSignIcon />
+              <span>Eklentiler</span>
+            </a>
+            <a href="/hakkimizda/" className={`sidebar-quick-link ${isItemActive('/hakkimizda/') ? 'active' : ''}`} onClick={handleLinkClick}>
+              <DotsIcon />
+              <span>Keşfet</span>
+            </a>
+          </div>
+
+          {/* Bölüm: Projeler */}
+          {filteredProjects.length > 0 && (
+            <div className="sidebar-section-group">
+              <span className="sidebar-section-heading">Projeler</span>
+              <div className="sidebar-items-list">
+                {filteredProjects.map((p) => {
+                  const active = isItemActive(p.href)
+                  return (
+                    <a
+                      key={p.href}
+                      href={p.href}
+                      className={`sidebar-project-link ${active ? 'active' : ''}`}
+                      onClick={handleLinkClick}
+                    >
+                      <FolderOutlineIcon />
+                      <span className="project-link-text">{p.title}</span>
+                    </a>
+                  )
+                })}
+              </div>
             </div>
-          ) : (
-            <>
-              {/* Grup 1: AI Reklam Yönetimi & Hizmetler */}
-              {filteredServices.length > 0 && (
-                <div className="sidebar-nav-section">
-                  <span className="sidebar-static-label">AI REKLAM VE AJANS HİZMETLERİ</span>
-                  <div className="sidebar-links-list">
-                    {filteredServices.map((item) => {
-                      const active = isItemActive(item.href)
-                      return (
-                        <a
-                          key={item.href}
-                          href={item.href}
-                          className={`sidebar-nav-item ${active ? 'active' : ''}`}
-                          onClick={handleLinkClick}
-                        >
-                          <span className="sidebar-item-icon">{item.icon}</span>
-                          <div className="sidebar-item-content">
-                            <div className="sidebar-item-row">
-                              <span className="sidebar-item-name">{item.title}</span>
-                              {item.badge && <span className="mega-badge">{item.badge}</span>}
-                            </div>
-                            <span className="sidebar-item-desc">{item.desc}</span>
-                          </div>
-                        </a>
-                      )
-                    })}
-                  </div>
-                </div>
-              )}
+          )}
 
-              {/* Grup 2: Rehberler, Maliyet & Teknik */}
-              {filteredGuides.length > 0 && (
-                <div className="sidebar-nav-section">
-                  <span className="sidebar-static-label">REHBERLER, MALİYET & TEKNİK</span>
-                  <div className="sidebar-links-list">
-                    {filteredGuides.map((item) => {
-                      const active = isItemActive(item.href)
-                      return (
-                        <a
-                          key={item.href}
-                          href={item.href}
-                          className={`sidebar-nav-item ${active ? 'active' : ''}`}
-                          onClick={handleLinkClick}
-                        >
-                          <span className="sidebar-item-icon">{item.icon}</span>
-                          <div className="sidebar-item-content">
-                            <div className="sidebar-item-row">
-                              <span className="sidebar-item-name">{item.title}</span>
-                              {item.badge && <span className="mega-badge">{item.badge}</span>}
-                            </div>
-                            <span className="sidebar-item-desc">{item.desc}</span>
-                          </div>
-                        </a>
-                      )
-                    })}
-                  </div>
-                </div>
-              )}
-
-              {/* Grup 3: Hızlı Araçlar & Kurumsal */}
-              {filteredDirect.length > 0 && (
-                <div className="sidebar-nav-section">
-                  <span className="sidebar-static-label">HIZLI ERİŞİM & KURUMSAL</span>
-                  <div className="sidebar-links-list">
-                    {filteredDirect.map((item) => {
-                      const active = isItemActive(item.href)
-                      return (
-                        <a
-                          key={item.href}
-                          href={item.href}
-                          className={`sidebar-nav-item ${item.pulse ? 'highlight' : ''} ${active ? 'active' : ''}`}
-                          onClick={handleLinkClick}
-                        >
-                          <span className={`sidebar-item-icon ${item.pulse ? 'pulse-dot-wrap' : ''}`}>
-                            {item.pulse ? <span className="pulse-dot"></span> : item.icon}
-                          </span>
-                          <div className="sidebar-item-content">
-                            <div className="sidebar-item-row">
-                              <span className="sidebar-item-name">{item.title}</span>
-                              {item.badge && <span className="pill-badge">{item.badge}</span>}
-                            </div>
-                            <span className="sidebar-item-desc">{item.desc}</span>
-                          </div>
-                        </a>
-                      )
-                    })}
-                  </div>
-                </div>
-              )}
-            </>
+          {/* Bölüm: Yakın zamanlılar */}
+          {filteredRecents.length > 0 && (
+            <div className="sidebar-section-group">
+              <span className="sidebar-section-heading">Yakın zamanlılar</span>
+              <div className="sidebar-items-list">
+                {filteredRecents.map((r) => {
+                  const active = isItemActive(r.href)
+                  return (
+                    <a
+                      key={r.href}
+                      href={r.href}
+                      className={`sidebar-recent-link ${active ? 'active' : ''}`}
+                      onClick={handleLinkClick}
+                    >
+                      <span className="recent-link-text">{r.title}</span>
+                    </a>
+                  )
+                })}
+              </div>
+            </div>
           )}
         </div>
 
-        {/* ChatGPT Profil / Hesap Kartı Stili Alt Bar */}
-        <div className="chatgpt-sidebar-footer">
-          <div className="sidebar-account-box">
-            <div className="account-avatar">OM</div>
-            <div className="account-info">
-              <span className="account-name">Overseas Marketing</span>
-              <span className="account-desc">OpenAI Ads Danışmanlığı</span>
+        {/* Profil Satırı (kaan karakaş / Plus) */}
+        <div className="chatgpt-sidebar-user-row">
+          <a href="/iletisim/" className="sidebar-user-link" onClick={handleLinkClick}>
+            <div className="sidebar-user-avatar"></div>
+            <div className="sidebar-user-meta">
+              <span className="sidebar-user-name">kaan karakaş</span>
+              <span className="sidebar-user-plan">Plus</span>
             </div>
-          </div>
-          <div className="sidebar-footer-cta-row">
-            <a href="tel:+905363197697" className="sidebar-phone-btn" title="Hemen Arayın: 0536 319 76 97">
-              <PhoneCallIcon />
-              <span>0536 319 76 97</span>
-            </a>
-            <a href="/#ucretsiz-analiz" className="sidebar-cta-btn" onClick={handleLinkClick}>
-              <span>Ön Analiz Al</span>
-              <Arrow />
-            </a>
-          </div>
+          </a>
         </div>
       </div>
     </aside>
@@ -758,19 +448,6 @@ function Layout({ children }: { children: ReactNode }) {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [])
 
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.innerWidth < 1024) {
-      if (sidebarOpen) {
-        document.body.style.overflow = 'hidden'
-      } else {
-        document.body.style.overflow = ''
-      }
-    }
-    return () => {
-      document.body.style.overflow = ''
-    }
-  }, [sidebarOpen])
-
   return (
     <div className={`chatgpt-app-container ${sidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
       <ChatGptSidebar
@@ -788,13 +465,6 @@ function Layout({ children }: { children: ReactNode }) {
         </div>
         <Footer />
       </div>
-      {sidebarOpen && (
-        <div
-          className="chatgpt-backdrop"
-          onClick={closeSidebar}
-          aria-hidden="true"
-        />
-      )}
     </div>
   )
 }
