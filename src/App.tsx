@@ -63,12 +63,6 @@ const EditSquareIcon = () => (
   </svg>
 )
 
-const ClockIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <circle cx="12" cy="12" r="10" />
-    <polyline points="12 6 12 12 16 14" />
-  </svg>
-)
 
 const LibraryIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -153,7 +147,6 @@ function ChatGptSidebar({
   ]
 
   const recents = [
-    { title: 'Ücretsiz Ön Analiz Al', href: '/#ucretsiz-analiz' },
     { title: 'ChatGPT Reklam Verme Rehberi', href: '/chatgpt-reklam-verme/' },
     { title: 'ChatGPT Reklam Fiyatları 2026', href: '/chatgpt-reklam-fiyatlari/' },
     { title: "Türkiye'den ChatGPT Erişimi", href: '/chatgpt-reklamlari-turkiye/' },
@@ -223,12 +216,8 @@ function ChatGptSidebar({
 
         {/* Kaydırılabilir İçerik Alanı */}
         <div className="chatgpt-sidebar-scroll-area">
-          {/* Hızlı Kısayollar (Ön Analiz, Bilgi Merkezi, AI Platformları, Hakkımızda) */}
+          {/* Hızlı Kısayollar (Bilgi Merkezi, AI Platformları, Hakkımızda) */}
           <div className="sidebar-quick-nav">
-            <a href="/#ucretsiz-analiz" className={`sidebar-quick-link ${isItemActive('/#ucretsiz-analiz') ? 'active' : ''}`} onClick={handleLinkClick}>
-              <ClockIcon />
-              <span>Hızlı Ön Analiz</span>
-            </a>
             <a href="/blog/" className={`sidebar-quick-link ${isItemActive('/blog/') ? 'active' : ''}`} onClick={handleLinkClick}>
               <LibraryIcon />
               <span>Bilgi Merkezi & Rehberler</span>
@@ -266,10 +255,10 @@ function ChatGptSidebar({
             </div>
           )}
 
-          {/* Bölüm: Yakın zamanlılar */}
+          {/* Bölüm: Bilgi ve Rehber */}
           {filteredRecents.length > 0 && (
             <div className="sidebar-section-group">
-              <span className="sidebar-section-heading">Yakın zamanlılar</span>
+              <span className="sidebar-section-heading">Bilgi ve Rehber</span>
               <div className="sidebar-items-list">
                 {filteredRecents.map((r) => {
                   const active = isItemActive(r.href)
