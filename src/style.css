@@ -1041,12 +1041,53 @@ button, input, textarea, select {
   color: #ffffff;
 }
 
-/* Profil Satırı (kaan karakaş / Plus) */
-.chatgpt-sidebar-user-row {
-  padding: 8px 10px;
+/* Alt Kısım: Bize Ulaşın Butonu + Profil Satırı */
+.chatgpt-sidebar-footer-wrap {
+  display: flex;
+  flex-direction: column;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   flex-shrink: 0;
   background: #171717;
+  padding: 10px 10px 8px;
+  gap: 6px;
+}
+
+.sidebar-contact-btn-box {
+  width: 100%;
+}
+
+.sidebar-contact-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ececec;
+  font-size: 13.5px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+}
+
+.sidebar-contact-action-btn:hover {
+  background: rgba(16, 163, 127, 0.15);
+  border-color: rgba(16, 163, 127, 0.45);
+  color: #10a37f;
+}
+
+.sidebar-contact-action-btn svg {
+  color: #10a37f;
+  flex-shrink: 0;
+}
+
+.chatgpt-sidebar-user-row {
+  padding: 2px 0 0;
+  flex-shrink: 0;
 }
 
 .sidebar-user-link {

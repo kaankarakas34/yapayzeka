@@ -153,7 +153,6 @@ function ChatGptSidebar({
     { title: 'Context Hints (Bağlam İpuçları)', href: '/blog/chatgpt-ads-context-hints/' },
     { title: 'ChatGPT Reklam Maliyeti', href: '/blog/chatgpt-reklam-maliyeti/' },
     { title: 'ChatGPT Reklam Ölçümü & ROI', href: '/blog/chatgpt-reklam-olcumu/' },
-    { title: 'Bize Ulaşın & Teklif Alın', href: '/iletisim/' },
   ]
 
   const filteredProjects = projects.filter(p => !q || p.title.toLowerCase().includes(q))
@@ -278,17 +277,26 @@ function ChatGptSidebar({
           )}
         </div>
 
-        {/* Profil Satırı (Yapay Zekâda Reklam / Overseas Marketing) */}
-        <div className="chatgpt-sidebar-user-row">
-          <a href="/iletisim/" className="sidebar-user-link" onClick={handleLinkClick} title="İletişim & Teklif">
-            <div className="sidebar-user-avatar logo-avatar">
-              <img src="/images/chatgpt-green.webp" alt="ChatGPT" width="18" height="18" />
-            </div>
-            <div className="sidebar-user-meta">
-              <span className="sidebar-user-name">Yapay Zekâda Reklam</span>
-              <span className="sidebar-user-plan">Overseas Marketing</span>
-            </div>
-          </a>
+        {/* Alt Kısım: Bize Ulaşın Butonu + Marka Profili */}
+        <div className="chatgpt-sidebar-footer-wrap">
+          <div className="sidebar-contact-btn-box">
+            <a href="/iletisim/" className="sidebar-contact-action-btn" onClick={handleLinkClick}>
+              <PhoneCallIcon />
+              <span>Bize Ulaşın</span>
+            </a>
+          </div>
+
+          <div className="chatgpt-sidebar-user-row">
+            <a href="/hakkimizda/" className="sidebar-user-link" onClick={handleLinkClick} title="Hakkımızda & Ekip">
+              <div className="sidebar-user-avatar logo-avatar">
+                <img src="/images/chatgpt-green.webp" alt="ChatGPT" width="18" height="18" />
+              </div>
+              <div className="sidebar-user-meta">
+                <span className="sidebar-user-name">Yapay Zekâda Reklam</span>
+                <span className="sidebar-user-plan">Overseas Marketing</span>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </aside>
@@ -333,11 +341,6 @@ function ChatGptTopBar({
 
         <a href="/iletisim/" className="topbar-contact-link">
           İletişim
-        </a>
-
-        <a href="/yapay-zeka-gorunurluk-analizi/" className="topbar-cta-btn">
-          <span>Ön Analiz Al</span>
-          <Arrow />
         </a>
       </div>
     </header>
