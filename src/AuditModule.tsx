@@ -14,7 +14,11 @@ import {
   HelpCircle, 
   TrendingUp, 
   Layers, 
-  RefreshCw
+  RefreshCw,
+  Cpu,
+  Check,
+  Zap,
+  Terminal
 } from 'lucide-react';
 
 export interface AuditFormData {
@@ -212,6 +216,50 @@ export function AuditModule() {
     'Kapsamlı Yapay Zekâ Görünürlük Raporu oluşturuluyor...',
   ];
 
+  const [selectedEngines, setSelectedEngines] = useState<string[]>([
+    'chatgpt',
+    'perplexity',
+    'gemini',
+    'claude',
+  ]);
+
+  const [selectedScopes, setSelectedScopes] = useState<string[]>([
+    'citations',
+    'recommendation',
+    'competitors',
+    'schema',
+  ]);
+
+  const toggleEngine = (id: string) => {
+    setSelectedEngines((prev) =>
+      prev.includes(id)
+        ? prev.length > 1 ? prev.filter((e) => e !== id) : prev
+        : [...prev, id]
+    );
+  };
+
+  const toggleScope = (id: string) => {
+    setSelectedScopes((prev) =>
+      prev.includes(id)
+        ? prev.length > 1 ? prev.filter((s) => s !== id) : prev
+        : [...prev, id]
+    );
+  };
+
+  const engines = [
+    { id: 'chatgpt', name: 'ChatGPT-4o', sub: 'OpenAI Search', badge: 'Canlı İndeks' },
+    { id: 'perplexity', name: 'Perplexity Pro', sub: 'Sonar Engine', badge: 'Citation Taraması' },
+    { id: 'gemini', name: 'Google Gemini', sub: 'AI Overviews', badge: 'Arama Grafiği' },
+    { id: 'claude', name: 'Claude 3.7', sub: 'Anthropic Core', badge: 'Hibrit Akıl' },
+  ];
+
+  const scopes = [
+    { id: 'citations', label: 'Organik Kaynak Alıntıları' },
+    { id: 'recommendation', label: 'Marka Tavsiye Olasılığı' },
+    { id: 'competitors', label: 'Sektörel Rakip Kıyaslaması' },
+    { id: 'schema', label: 'Schema & LLM Bilgi Grafiği' },
+  ];
+
   return (
     <div ref={containerRef} className="audit-module-wrapper">
       {errorMsg && (
@@ -221,115 +269,250 @@ export function AuditModule() {
         </div>
       )}
 
-      {/* FORM EKRANI */}
+      {/* CANLI TEST & TEŞHİS KONSOLU */}
       {status === 'form' && (
         <div className="audit-form-container">
+          {/* Konsol Üst Başlık & Canlı Durum */}
           <div className="audit-form-hero">
-            <span className="audit-badge">
-              <Sparkles className="w-4 h-4 text-emerald-400" /> ÜCRETSİZ GEO & LLM TESTİ
-            </span>
+            <div className="live-engine-pill">
+              <span className="live-dot-pulse"></span>
+              <span>CANLI AI DENETİM MOTORU v4.2 // ÇEVRİMİÇİ</span>
+            </div>
             <h2 className="audit-hero-title">
-              Markanız Yapay Zekâ Aramalarında <br />
-              <span className="text-emerald-400">Ne Kadar Tavsiye Ediliyor?</span>
+              Web Sitenizin <span className="text-emerald-400">Yapay Zekâ Görünürlüğünü</span> Test Edin
             </h2>
             <p className="audit-hero-desc">
-              Web sitenizi ChatGPT, Perplexity, Gemini ve Claude gibi küresel büyük dil modelleri ve yapay zekâ arama motorları üzerinden test edin. Rakiplerinizin nasıl alıntılandığını ve eksiklerinizi anında görün.
+              ChatGPT, Perplexity, Gemini ve Claude motorlarında sektörünüz arandığında markanız tavsiye ediliyor mu?
+              Aşağıdaki canlı tarayıcı konsoluna web sitenizi girin; 60 saniyede gerçek zamanlı teşhis edin.
             </p>
           </div>
 
-          <form className="audit-form-card" onSubmit={handleSubmit}>
-            <div className="audit-form-grid">
-              <div className="audit-field">
-                <label>
-                  <User className="field-icon" /> Ad Soyad *
-                </label>
-                <input
-                  type="text"
-                  placeholder="Örn: Ahmet Yılmaz"
-                  value={formData.fullName}
-                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                  className={errors.fullName ? 'has-error' : ''}
-                />
-                {errors.fullName && <span className="error-text">{errors.fullName}</span>}
+          <form className="audit-scanner-console" onSubmit={handleSubmit}>
+            {/* Terminal Üst Barı */}
+            <div className="scanner-console-topbar">
+              <div className="console-window-dots">
+                <span className="dot dot-red"></span>
+                <span className="dot dot-yellow"></span>
+                <span className="dot dot-green"></span>
+                <span className="console-title">ai-audit-terminal // live-diagnostic</span>
               </div>
-
-              <div className="audit-field">
-                <label>
-                  <Building2 className="field-icon" /> Firma / Marka Adı *
-                </label>
-                <input
-                  type="text"
-                  placeholder="Örn: Acme Teknoloji"
-                  value={formData.companyName}
-                  onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
-                  className={errors.companyName ? 'has-error' : ''}
-                />
-                {errors.companyName && <span className="error-text">{errors.companyName}</span>}
-              </div>
-
-              <div className="audit-field">
-                <label>
-                  <Globe className="field-icon" /> Web Sitesi *
-                </label>
-                <input
-                  type="text"
-                  placeholder="Örn: www.acme.com"
-                  value={formData.website}
-                  onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-                  className={errors.website ? 'has-error' : ''}
-                />
-                {errors.website && <span className="error-text">{errors.website}</span>}
-              </div>
-
-              <div className="audit-field">
-                <label>
-                  <Phone className="field-icon" /> Telefon Numarası *
-                </label>
-                <input
-                  type="tel"
-                  placeholder="Örn: 0532 123 45 67"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className={errors.phone ? 'has-error' : ''}
-                />
-                {errors.phone && <span className="error-text">{errors.phone}</span>}
-              </div>
-
-              <div className="audit-field">
-                <label>
-                  <Mail className="field-icon" /> E-posta Adresi *
-                </label>
-                <input
-                  type="email"
-                  placeholder="Örn: ahmet@acme.com"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className={errors.email ? 'has-error' : ''}
-                />
-                {errors.email && <span className="error-text">{errors.email}</span>}
-              </div>
-
-              <div className="audit-field">
-                <label>
-                  <Layers className="field-icon" /> Sektör / Faaliyet Alanı (Opsiyonel)
-                </label>
-                <input
-                  type="text"
-                  placeholder="Örn: E-ticaret, B2B Yazılım, Sağlık, Hukuk..."
-                  value={formData.sector}
-                  onChange={(e) => setFormData({ ...formData, sector: e.target.value })}
-                />
+              <div className="console-engine-status">
+                <Cpu className="w-3.5 h-3.5 text-emerald-400" />
+                <span>{selectedEngines.length} LLM MOTORU SEÇİLİ</span>
               </div>
             </div>
 
-            <div className="audit-form-footer">
-              <button type="submit" className="audit-submit-btn">
-                <span>Yapay Zekâ Görünürlük Analizini Başlat</span>
-                <ArrowRight className="w-5 h-5" />
+            <div className="scanner-console-body">
+              {/* ADIM 1: Taranacak Web Sitesi (Büyük Scanner Arama Çubuğu) */}
+              <div className="scanner-section-block">
+                <div className="scanner-step-badge">
+                  <span className="step-badge-num">1</span>
+                  <span className="step-badge-title">TEST EDİLECEK WEB SİTESİ VE MARKA</span>
+                </div>
+
+                <div className="scanner-main-url-wrap">
+                  <div className="url-prefix-box">
+                    <Globe className="w-5 h-5 text-emerald-400" />
+                    <span>https://</span>
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="firmaniz.com veya www.alanadiniz.com"
+                    value={formData.website.replace(/^https?:\/\//i, '')}
+                    onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                    className={`scanner-url-input ${errors.website ? 'has-error' : ''}`}
+                  />
+                  <div className="url-scanner-tag">
+                    <Zap className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>CANLI URL</span>
+                  </div>
+                </div>
+                {errors.website && <span className="error-text scanner-error">{errors.website}</span>}
+
+                {/* Marka & Sektör İkili Satır */}
+                <div className="scanner-sub-grid">
+                  <div className="scanner-sub-field">
+                    <label>
+                      <Building2 className="w-4 h-4 text-emerald-400" /> Marka / Firma İsmi *
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Örn: Acme Teknoloji"
+                      value={formData.companyName}
+                      onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
+                      className={errors.companyName ? 'has-error' : ''}
+                    />
+                    {errors.companyName && <span className="error-text">{errors.companyName}</span>}
+                  </div>
+
+                  <div className="scanner-sub-field">
+                    <label>
+                      <Layers className="w-4 h-4 text-emerald-400" /> Sektör / Hedef Arama Alanı (Opsiyonel)
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Örn: B2B Yazılım, Klinik, E-ticaret, Lojistik..."
+                      value={formData.sector}
+                      onChange={(e) => setFormData({ ...formData, sector: e.target.value })}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* ADIM 2: Taranacak Yapay Zekâ Motorları (İnteraktif Seçim Kartları) */}
+              <div className="scanner-section-block">
+                <div className="scanner-step-badge">
+                  <span className="step-badge-num">2</span>
+                  <span className="step-badge-title">SORGULANACAK YAPAY ZEKÂ VE ARAMA MOTORLARI</span>
+                </div>
+
+                <div className="scanner-engines-grid">
+                  {engines.map((eng) => {
+                    const isSelected = selectedEngines.includes(eng.id);
+                    return (
+                      <button
+                        key={eng.id}
+                        type="button"
+                        onClick={() => toggleEngine(eng.id)}
+                        className={`scanner-engine-card ${isSelected ? 'active' : ''}`}
+                      >
+                        <div className="engine-card-top">
+                          <span className="engine-card-name">{eng.name}</span>
+                          <span className={`engine-check ${isSelected ? 'checked' : ''}`}>
+                            {isSelected ? <Check className="w-3.5 h-3.5" /> : null}
+                          </span>
+                        </div>
+                        <span className="engine-card-provider">{eng.sub}</span>
+                        <span className="engine-card-badge">{eng.badge}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {/* İnteraktif Teşhis Kapsamı Çipleri */}
+                <div className="scanner-scopes-row">
+                  <span className="scopes-label">Denetim Kapsamı:</span>
+                  <div className="scopes-chips">
+                    {scopes.map((sc) => {
+                      const isSelected = selectedScopes.includes(sc.id);
+                      return (
+                        <button
+                          key={sc.id}
+                          type="button"
+                          onClick={() => toggleScope(sc.id)}
+                          className={`scope-chip ${isSelected ? 'active' : ''}`}
+                        >
+                          <Check className="w-3 h-3" />
+                          <span>{sc.label}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+
+              {/* Canlı Simülasyon Teşhis Kutusu (Terminal Preview) */}
+              <div className="scanner-live-preview-box">
+                <div className="preview-terminal-header">
+                  <Terminal className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>LLM CANLI TEST SİMÜLATÖRÜ: BU TEST NASIL ÇALIŞIR?</span>
+                </div>
+                <div className="preview-terminal-body">
+                  <div className="preview-step">
+                    <span className="step-tag tag-query">1. SORGU</span>
+                    <span className="step-text">
+                      "2026'da en güvenilir {formData.sector ? `[${formData.sector}]` : '[Sektörünüzün]'} hizmet sağlayıcıları hangileridir?"
+                    </span>
+                  </div>
+                  <div className="preview-step">
+                    <span className="step-tag tag-scan">2. ANALİZ</span>
+                    <span className="step-text">
+                      Seçili {selectedEngines.length} modelde <strong>{formData.companyName || formData.website || 'markanızın'}</strong> kaynak ve alıntı otoritesi taranır.
+                    </span>
+                  </div>
+                  <div className="preview-step">
+                    <span className="step-tag tag-out">3. ÇIKTI</span>
+                    <span className="step-text">
+                      0-100 Görünürlük Skoru, Rakiplerin Öne Çıkma Sebepleri ve 3 Acil Aksiyon Adımı üretilir.
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* ADIM 3: Raporun İletileceği Yetkili Bilgileri */}
+              <div className="scanner-section-block">
+                <div className="scanner-step-badge">
+                  <span className="step-badge-num">3</span>
+                  <span className="step-badge-title">TEST KARNESİ VE ANALİZ RAPORUNUN İLETİLECEĞİ YETKİLİ</span>
+                </div>
+
+                <div className="scanner-contact-grid">
+                  <div className="scanner-sub-field">
+                    <label>
+                      <User className="w-4 h-4 text-emerald-400" /> Ad Soyad *
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Örn: Ahmet Yılmaz"
+                      value={formData.fullName}
+                      onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                      className={errors.fullName ? 'has-error' : ''}
+                    />
+                    {errors.fullName && <span className="error-text">{errors.fullName}</span>}
+                  </div>
+
+                  <div className="scanner-sub-field">
+                    <label>
+                      <Phone className="w-4 h-4 text-emerald-400" /> Telefon Numarası (WhatsApp İletimi) *
+                    </label>
+                    <input
+                      type="tel"
+                      placeholder="Örn: 0532 123 45 67"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      className={errors.phone ? 'has-error' : ''}
+                    />
+                    {errors.phone && <span className="error-text">{errors.phone}</span>}
+                  </div>
+
+                  <div className="scanner-sub-field">
+                    <label>
+                      <Mail className="w-4 h-4 text-emerald-400" /> Kurumsal E-posta (PDF Rapor İçin) *
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="Örn: ahmet@sirketiniz.com"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className={errors.email ? 'has-error' : ''}
+                    />
+                    {errors.email && <span className="error-text">{errors.email}</span>}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Konsol Altı: Büyük Başlat Butonu & Güven İbareleri */}
+            <div className="scanner-console-footer">
+              <button type="submit" className="scanner-submit-button">
+                <Zap className="w-5 h-5" />
+                <span>CANLI YAPAY ZEKÂ TARAMASINI BAŞLAT (ÜCRETSİZ TEST)</span>
+                <ArrowRight className="w-5 h-5 ml-auto" />
               </button>
-              <div className="audit-privacy-note">
-                <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                <span>Bilgileriniz KVKK uyumlu olup, analiz raporunuz danışmanlarımıza anında iletilmektedir.</span>
+
+              <div className="scanner-security-meta">
+                <div className="meta-pill">
+                  <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                  <span>%100 Ücretsiz & Gizlilik Korumalı</span>
+                </div>
+                <div className="meta-pill">
+                  <RefreshCw className="w-4 h-4 text-emerald-400" />
+                  <span>Ortalama Süre: 60 Saniye</span>
+                </div>
+                <div className="meta-pill">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <span>Kapsamlı GEO Skor Karnesi</span>
+                </div>
               </div>
             </div>
           </form>
