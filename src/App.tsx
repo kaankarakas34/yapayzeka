@@ -10,6 +10,10 @@ import {
   ChatGptReklamiMiGoogleAdsMiPage,
   ChatGptSeoPage,
   ChatGptdeWebSitemNedenCikmiyorPage,
+  SozlukPage,
+  ChatGptReklamlariNeredeGorunurPage,
+  ChatGptReklamVermeSartlariPage,
+  ChatGptReklamAjansiNasilSecilirPage,
 } from './NewArticles'
 import {
   ChatGPTGuideUpdatedPage,
@@ -3530,6 +3534,10 @@ function App() {
   if (path === '/blog/chatgpt-reklami-mi-google-ads-mi') return <ChatGptReklamiMiGoogleAdsMiPage Detail={Detail} Arrow={Arrow} />
   if (path === '/chatgpt-seo') return <ChatGptSeoPage Detail={Detail} Arrow={Arrow} />
   if (path === '/chatgptde-web-sitem-neden-cikmiyor') return <ChatGptdeWebSitemNedenCikmiyorPage Detail={Detail} Arrow={Arrow} />
+  if (path === '/sozluk') return <SozlukPage Detail={Detail} Arrow={Arrow} />
+  if (path === '/chatgpt-reklamlari-nerede-gorunur') return <ChatGptReklamlariNeredeGorunurPage Detail={Detail} Arrow={Arrow} />
+  if (path === '/chatgpt-reklam-verme-sartlari') return <ChatGptReklamVermeSartlariPage Detail={Detail} Arrow={Arrow} />
+  if (path === '/chatgpt-reklam-ajansi-nasil-secilir') return <ChatGptReklamAjansiNasilSecilirPage Detail={Detail} Arrow={Arrow} />
   if (path === '/iletisim') return <Contact />
   if (path === '/blog') return <Blog />
   if (path === '/yapay-zeka-gorunurluk-analizi' || path === '/analiz') return <AuditPage />

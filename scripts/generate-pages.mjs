@@ -1268,6 +1268,131 @@ const pages = {
       </main>
     `
   ],
+  'sozluk': [
+    'Yapay Zekâ ve Reklamcılık Sözlüğü | Yapay Zekâda Reklam',
+    'ChatGPT Ads, GEO, bağlam ipuçları (context hints), Share of Model Voice ve yapay zekâ arama terimlerinin tanımları, örnekleri ve kılavuzu.',
+    `
+      <header class="site-header">
+        <nav><a href="/">Ana Sayfa</a> | <a href="/blog/chatgpt-ads-context-hints/">Context Hints</a> | <a href="/geo-yapay-zeka-gorunurlugu/">GEO Hizmeti</a> | <a href="/chatgpt-reklamlari/">ChatGPT Reklamları</a></nav>
+      </header>
+      <main>
+        <h1>Yapay Zekâ ve Reklamcılık Sözlüğü</h1>
+        <p>Yapay zekâ platformlarında reklam verme ve organik görünürlük (GEO) dili, geleneksel Google Ads veya klasik SEO'dan farklı kavramlar kullanır. Bu sözlük, doğru terminolojiyle stratejinizi kurmanız ve bütçenizi doğru yönetmeniz için hazırlanmıştır.</p>
+
+        <section>
+          <h2>Temel Kavramlar ve Tanımlar</h2>
+          <h3>Context Hints (Bağlam İpuçları)</h3>
+          <p>OpenAI Ads Manager reklam grubunda tanımlanan, konuşmanın hangi tematik niyet veya konu bağlamıyla örtüştüğünü modele anlatan doğal dil yönlendirmeleridir. Klasik anahtar kelime eşleşmesi değildir. Detaylar için <a href="/blog/chatgpt-ads-context-hints/">Context Hints Rehberimize</a> bakın.</p>
+
+          <h3>GEO (Generative Engine Optimization)</h3>
+          <p>Web sitelerinin ChatGPT, Perplexity, Gemini ve Copilot gibi üretken yapay zekâ motorlarında doğru alıntılanması, kaynak gösterilmesi ve önerilmesi için yapılan yapısal optimizasyon sürecidir. İncelemek için <a href="/geo-yapay-zeka-gorunurlugu/">GEO Danışmanlığı</a> sayfamızı ziyaret edin.</p>
+
+          <h3>ChatGPT Ads (OpenAI Sponsorlu Reklamlar)</h3>
+          <p>OpenAI Ads Manager üzerinden yönetilen, ChatGPT konuşma ekranında model yanıtının yanında veya altında 'Sponsorlu / Ad' etiketiyle açıkça gösterilen ücretli yerleşimlerdir.</p>
+
+          <h3>Sponsored Agents (Sponsorlu Ajanlar)</h3>
+          <p>OpenAI tarafından duyurulan, kullanıcının konuşma anında davet edebileceği, sipariş tamamlama veya rezervasyon yapma gibi etkileşimli görevleri yerine getiren sponsorlu yapay zekâ asistanlarıdır. İncelemek için <a href="/haberler/sponsored-agents-duyuruldu/">Sponsored Agents analizimize</a> bakın.</p>
+
+          <h3>Share of Model Voice (SoMV)</h3>
+          <p>Bir sektörde kullanıcıların yapay zekâya sorduğu soru setlerinde bir markanın rakiplere kıyasla tavsiye edilme, listelenme veya kaynak gösterilme yüzdesidir.</p>
+
+          <h3>OAI-SearchBot</h3>
+          <p>OpenAI'ın ChatGPT arama özelliğinde web sitelerinden anlık özet ve kaynak alıntıları oluşturmak için sayfaları tarayan resmî arama botudur.</p>
+
+          <h3>OAI-AdsBot</h3>
+          <p>OpenAI Ads Manager'a girilen reklamların açılış sayfalarını politika ve içerik uygunluğu açısından denetleyen ayrı reklam denetim tarayıcısıdır.</p>
+
+          <h3>Information Gain (Bilgi Kazancı)</h3>
+          <p>Bir web sayfasının internetteki mevcut diğer kaynaklara kıyasla sunduğu özgün, birinci el, ölçümlenmiş veya daha önce yayınlanmamış ek katma değerdir.</p>
+        </section>
+
+        <div class="actions">
+          <a href="/iletisim/">Yapay Zekâ Strateji Seansı Planlayın</a>
+          <a href="/chatgpt-reklam-verme/">ChatGPT Reklam Kurulum Rehberi</a>
+        </div>
+      </main>
+    `
+  ],
+  'chatgpt-reklamlari-nerede-gorunur': [
+    'ChatGPT Reklamları Nerede Görünür? Yerleşimler ve Görünüm Formatı | Yapay Zekâda Reklam',
+    'Sponsorlu ChatGPT reklamları arayüzde tam olarak hangi alanda belirir? Organik tavsiyelerden nasıl ayırt edilir? Reklam yerleşimleri ve kullanıcı deneyimi rehberi.',
+    `
+      <header class="site-header">
+        <nav><a href="/">Ana Sayfa</a> | <a href="/chatgpt-reklamlari/">ChatGPT Reklam Yönetimi</a> | <a href="/chatgpt-reklam-verme/">Reklam Verme</a> | <a href="/chatgptde-markam-nasil-cikar/">Organik Görünürlük</a></nav>
+      </header>
+      <main>
+        <h1>ChatGPT Reklamları Nerede Görünür? Yerleşimler ve Görünüm Formatı</h1>
+        <p>ChatGPT reklamları, kullanıcının sohbet penceresinde modelin organik yanıtının hemen altında veya yanında, açıkça 'Sponsorlu / Sponsored / Ad' etiketiyle yer alan özel bir kart formatında görünür. Reklamlar asla modelin kendi cümlelerinin içine gizlenmez veya tarafsız bir öneri gibi maskelenmez.</p>
+
+        <h2>1. ChatGPT Arayüzünde Reklam Yerleşim Noktaları</h2>
+        <h3>Yanıt Altı Sponsorlu Kart</h3>
+        <p>Kullanıcı bir ürün veya çözüm araştırdığında, model cevabını tamamladıktan sonra ilgili işletmenin başlığı, kısa açıklama metni ve yönlendirme butonunu içeren kart gösterilir.</p>
+
+        <h3>Yanıt İçi Ayrılmış Sponsorlu Bölüm</h3>
+        <p>Karşılaştırmalı ve çoklu seçenekli sorularda cevaptan görsel olarak kalın sınırlarla ayrılmış, arka planı farklılaştırılmış sponsorlu alternatif kutusu olarak sunulur.</p>
+
+        <h3>Sponsored Agents (Sponsorlu Ajanlar)</h3>
+        <p>Kullanıcının diyalog içinde doğrudan çağırabileceği ve işlem (sipariş, rezervasyon, randevu) tamamlayabileceği interaktif kurumsal asistan kartı formatıdır.</p>
+
+        <h2>2. Sponsorlu Reklam ile Organik ChatGPT Tavsiyesi Farkı</h2>
+        <p>Sponsorlu reklam açık 'Sponsorlu' ibaresi taşırken, organik tavsiyeler modelin web indeksinden sentezlediği tarafsız alıntılardır. Ücretli reklam vermek modelin tarafsız tavsiyesini etkilemez.</p>
+
+        <div class="actions">
+          <a href="/chatgpt-reklamlari/">ChatGPT Reklam Yönetimi</a>
+          <a href="/chatgpt-reklam-verme/">ChatGPT Reklam Verme Rehberi</a>
+        </div>
+      </main>
+    `
+  ],
+  'chatgpt-reklam-verme-sartlari': [
+    'ChatGPT Reklam Verme Şartları: OpenAI Ads Uygunluk ve Politika Rehberi | Yapay Zekâda Reklam',
+    'OpenAI Ads Manager üzerinden reklam yayınlamak için gereken tüzel kişilik, vergi doğrulaması, yasaklı sektörler ve açılış sayfası uygunluk kriterleri.',
+    `
+      <header class="site-header">
+        <nav><a href="/">Ana Sayfa</a> | <a href="/openai-ads-manager/">OpenAI Ads Manager</a> | <a href="/chatgpt-reklam-verme/">Reklam Kurulumu</a> | <a href="/chatgpt-reklamlari/">Ajans Desteği</a></nav>
+      </header>
+      <main>
+        <h1>ChatGPT Reklam Verme Şartları: OpenAI Ads Uygunluk ve Politika Rehberi</h1>
+        <p>OpenAI Ads Manager self-servis erişimi Türkiye'de aktif durumdadır. Ancak bir hesap açabilmeniz, her reklamınızın veya her sektörün onaylanacağı anlamına gelmez. Reklam verebilmek için tüzel şirket kaydı, şeffaf açılış sayfası ve OpenAI Reklam Politikalarına tam uyum şarttır.</p>
+
+        <h2>1. Zorunlu Hesap ve Tüzel Kişilik Kriterleri</h2>
+        <p>Bireysel şahıslar için reklam hesabı açılamaz; geçerli bir vergi kimlik numarası (VKN) ve yasal unvan beyan edilmelidir. Şirket alan adına bağlı kurumsal e-posta ve iki aşamalı doğrulama (2FA) zorunludur.</p>
+
+        <h2>2. Yasaklı ve Kısıtlı Sektörler</h2>
+        <p>Yetişkin içerik, silah/tütün, yasa dışı maddeler, bahis/kumar, regülasyonsuz kripto para projeleri ve yanıltıcı içerikler kesinlikle yasaktır. Sağlık, finans, hukuk ve eğitim alanları özel belge ve incelemeye tabidir.</p>
+
+        <h2>3. Açılış Sayfası (Landing Page) Şartları</h2>
+        <p>OpenAI OAI-AdsBot tarayıcısı sayfanızı ziyaret ettiğinde sayfa hızlı açılmalı, tüzel unvan ve KVKK bilgileri yer almalı, manipülatif sayaçlar bulunmamalı ve reklam metniyle tam mesaj uyumu (message match) sağlanmalıdır.</p>
+
+        <div class="actions">
+          <a href="/iletisim/">Uygunluk Denetimi İsteyin</a>
+          <a href="/chatgpt-reklam-verme/">İlk Kampanyanızı Kurun</a>
+        </div>
+      </main>
+    `
+  ],
+  'chatgpt-reklam-ajansi-nasil-secilir': [
+    'ChatGPT Reklam Ajansı Nasıl Seçilir? 15 Maddelik Karar Rehberi | Yapay Zekâda Reklam',
+    'Şirketiniz için yapay zekâ ve ChatGPT reklam ajansı seçerken sormanız gereken 15 kritik soru, şeffaflık kriterleri ve bütçe tuzakları.',
+    `
+      <header class="site-header">
+        <nav><a href="/">Ana Sayfa</a> | <a href="/yapay-zekada-reklam-ajansi/">Yapay Zekada Reklam Ajansı</a> | <a href="/chatgpt-reklamlari/">ChatGPT Reklam Yönetimi</a> | <a href="/chatgpt-reklam-fiyatlari/">Fiyatlar</a></nav>
+      </header>
+      <main>
+        <h1>ChatGPT Reklam Ajansı Nasıl Seçilir? 15 Maddelik Karar Rehberi</h1>
+        <p>ChatGPT reklamları yeni bir mecra olduğu için piyasada klasik Google Ads kalıplarını kopyalamaya çalışan veya gerçek dışı vaatlerde bulunan yaklaşımlar görülebilir. Doğru ajansı seçmek için 15 maddelik denetim listesini inceleyin.</p>
+
+        <h2>Kritik Ajans Seçim Kriterleri</h2>
+        <p>Ajansın OpenAI Ads Manager ve self-servis panel mimarisine hakim olması, klasik anahtar kelimeler yerine doğal dil 'Context Hints' yazabilmesi, reklam hesabını işletmenizin tüzel mülkiyetinde açması ve medya bütçesi ile yönetim bedelini şeffaf biçimde ayırması şarttır.</p>
+        <p>Ayrıca OAI-AdsBot ile OAI-SearchBot farkını bilmeli, özel açılış sayfası optimizasyonu ve Conversions API (CAPI) kurabilmelidir.</p>
+
+        <div class="actions">
+          <a href="/yapay-zekada-reklam-ajansi/">Ajans Hizmetimizi İnceleyin</a>
+          <a href="/iletisim/">Ücretsiz Strateji Seansı Başlatın</a>
+        </div>
+      </main>
+    `
+  ],
 }
 
 const source = await readFile('index.html', 'utf8')
@@ -1275,7 +1400,7 @@ for (const [slug, [title, description, staticHtml]] of Object.entries(pages)) {
   const url = `https://www.yapayzekadareklam.com/${slug}/`
   const isService = slug.startsWith('hizmetler/') || ['chatgpt-reklamlari','geo-yapay-zeka-gorunurlugu','yapay-zeka-ile-reklam-uretimi','yapay-zeka-platformlarinda-reklam','yapay-zekada-reklam-ajansi'].includes(slug)
   const isNews = slug.startsWith('haberler/') && slug !== 'haberler'
-  const isArticle = isNews || slug.startsWith('blog/') || ['chatgptde-markam-nasil-cikar','chatgpt-reklam-verme','chatgpt-reklam-fiyatlari','chatgpt-reklamlari-turkiye','openai-ads-manager','chatgpt-seo','chatgptde-web-sitem-neden-cikmiyor'].includes(slug)
+  const isArticle = isNews || slug.startsWith('blog/') || ['chatgptde-markam-nasil-cikar','chatgpt-reklam-verme','chatgpt-reklam-fiyatlari','chatgpt-reklamlari-turkiye','openai-ads-manager','chatgpt-seo','chatgptde-web-sitem-neden-cikmiyor','sozluk','chatgpt-reklamlari-nerede-gorunur','chatgpt-reklam-verme-sartlari','chatgpt-reklam-ajansi-nasil-secilir'].includes(slug)
   const primarySchema = {
     '@type': isNews ? 'NewsArticle' : isArticle ? 'Article' : isService ? 'Service' : 'WebPage',
     name: title,
