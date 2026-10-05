@@ -2,14 +2,14 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises'
 
 const pages = {
   'chatgpt-reklamlari': [
-    'ChatGPT Reklam Ajansı ve Ads Yönetimi | Yapay Zekâda Reklam',
-    'ChatGPT Ads hesap kurulumu, reklam grupları, context hints, açılış sayfası ve dönüşüm ölçümü için kampanya yönetimi. Hizmet kapsamını ve süreci görün.',
+    'ChatGPT Reklam Yönetimi ve OpenAI Ads Ajansı | Yapay Zekâda Reklam',
+    'OpenAI Ads Manager şirket hesabı kurulumu, 25+ context hints kütüphanesi, CAPI dönüşüm takibi ve açılış sayfası mimarisiyle uçtan uca kampanya yönetimi.',
     `
       <header class="site-header">
         <nav><a href="/">Ana Sayfa</a> | <a href="/yapay-zekada-reklam-ajansi/">Yapay Zekada Reklam Ajansı</a> | <a href="/chatgpt-reklam-verme/">ChatGPT'de Reklam Nasıl Verilir?</a> | <a href="/yapay-zeka-gorunurluk-analizi/">AI Görünürlük Testi</a></nav>
       </header>
       <main>
-        <h1>ChatGPT reklam yönetimi ve Ads Ajansı</h1>
+        <h1>ChatGPT Reklam Yönetimi ve OpenAI Ads Ajansı</h1>
         <p>ChatGPT reklamları, kullanıcıların satın alma ve araştırma kararı verdiği konuşma anlarında organik cevaptan ayrı ve sponsorlu etiketli olarak gösterilir. Hesap kurulumundan context hints optimizasyonuna, dönüşüm takibinden GEO sinerjisine kadar tüm süreci uçtan uca yönetiyoruz.</p>
         <h2>ChatGPT reklamları nedir, nerede görünür?</h2>
         <p>Sponsorlu reklamlar, konuşma ekranında model cevabının yanında veya altında açıkça 'Sponsorlu / Ad' ibaresiyle yer alır. Reklam satın almak modelin organik yanıtını veya tarafsız tavsiyesini kesinlikle değiştirmez.</p>
@@ -20,7 +20,7 @@ const pages = {
         <h3>Kampanya ve reklam grubu kurgusu</h3>
         <p>Satın alma niyeti, coğrafi hedefleme ve bütçe optimizasyonuyla kurgulanan reklam grupları.</p>
         <h3>Context hints ve reklam mesajı</h3>
-        <p>Klasik anahtar kelimeler yerine doğal dil ile kullanıcının karar anını yakalayan bağlamsal ipuçları.</p>
+        <p>Klasik anahtar kelimeler yerine doğal dil ile kullanıcının karar anını yakalayan bağlamsal ipuçları kütüphanesi.</p>
         <h3>Açılış sayfası ve dönüşüm ölçümü</h3>
         <p>ChatGPT in-app tarayıcısına uygun, sürtünmesiz form ve hızlı açılan özel landing page mimarisi.</p>
         <h2>Hesap kimin adına açılır, ödemeyi kim yapar?</h2>
@@ -28,39 +28,304 @@ const pages = {
         <h2>Yönetim ücreti ve medya bütçesi</h2>
         <p><a href="/chatgpt-reklam-fiyatlari/">ChatGPT reklam fiyatları ve bütçe seviyeleri</a> ile <a href="/blog/chatgpt-reklam-maliyeti/">ChatGPT reklam maliyeti nasıl hesaplanır</a> rehberlerimizi inceleyin.</p>
         <h2>ChatGPT Ads hakkında sık sorulan sorular</h2>
-        <p>ChatGPT reklamları Türkiye'de self-servis erişime açıktır. Kampanya başlatmak için <a href="/blog/chatgpt-reklam-kampanyasi-nasil-planlanir/">30 günlük test örneğimizi</a> inceleyebilirsiniz.</p>
-        <div class="actions"><a href="/iletisim/">ChatGPT reklam test planı iste</a></div>
+        <p>ChatGPT reklamları Türkiye'de self-servis erişime açıktır. Kampanya açmak ve panel adımlarını görmek için <a href="/chatgpt-reklam-verme/">İlk kampanya kurulum adımları</a> rehberimizi veya <a href="/blog/chatgpt-reklam-kampanyasi-nasil-planlanir/">30 günlük test örneğimizi</a> inceleyebilirsiniz.</p>
+        <div class="actions">
+          <a href="/iletisim/">ChatGPT Ads Kampanya Planı İsteyin</a>
+          <a href="/chatgpt-reklam-fiyatlari/">Fiyat ve Bütçe Planını Görün</a>
+        </div>
       </main>
     `
   ],
   'chatgpt-reklam-verme': [
-    'ChatGPT\'de Reklam Nasıl Verilir? 2026 Güncel Rehber',
-    'Türkiye\'den ChatGPT Ads Manager hesabı açma, doğrulama, kampanya, context hints, reklam ve dönüşüm ölçümünü adım adım öğrenin. Güncel kaynaklarla.',
+    'ChatGPT\'de Reklam Nasıl Verilir? Türkiye İçin 2026 Rehberi',
+    'Türkiye\'den ChatGPT reklamı vermek için Ads Manager hesabı, uygunluk, kampanya hedefi, bağlam ipuçları, açılış sayfası ve ölçüm adımlarını inceleyin.',
     `
       <header class="site-header">
-        <nav><a href="/">Ana Sayfa</a> | <a href="/chatgpt-reklamlari/">ChatGPT Reklam Yönetimi</a> | <a href="/blog/turkiyeden-chatgpt-reklam-hesabi/">Türkiye Reklam Hesabı Açma</a> | <a href="/blog/yapay-zekada-reklam-nasil-verilir/">AI Reklam Verme Stratejisi</a></nav>
+        <nav><a href="/">Ana Sayfa</a> | <a href="/openai-ads-manager/">OpenAI Ads Manager</a> | <a href="/chatgpt-reklamlari/">ChatGPT Reklam Yönetimi</a> | <a href="/chatgpt-reklam-fiyatlari/">Reklam Fiyatları</a> | <a href="/chatgptde-markam-nasil-cikar/">Organik AI Görünürlüğü</a></nav>
       </header>
       <main>
-        <h1>ChatGPT'de reklam vermek: adım adım teknik rehber</h1>
-        <p>ChatGPT'de reklam vermek isteyen işletmeler için resmî OpenAI Ads Manager (ads.openai.com) panelinden kampanya kurulumuna, context hints yazımından bütçe yönetimi ve dönüşüm izlemeye kadar tüm aşamaları adım adım açıklıyoruz. Stratejik kanal seçimi için <a href="/blog/yapay-zekada-reklam-nasil-verilir/">Yapay Zekada Reklam Nasıl Verilir?</a> genel rehberimize de bakabilirsiniz.</p>
-        <h2>ChatGPT'de reklam vermek bugün mümkün mü?</h2>
-        <p>Evet. Uygun reklamverenler ChatGPT reklamlarını OpenAI Ads Manager Beta üzerinden oluşturup yönetebilir.</p>
-        <h2>Türkiye'de Ads Manager erişimi var mı?</h2>
-        <p>OpenAI'ın 2026 güncel belgelerine göre Türkiye, uygun işletmeler için Ads Manager self servis erişim listesindedir.</p>
-        <h2>1. İşletme reklam hesabını oluşturun</h2>
-        <p>ads.openai.com üzerinden kurumsal e-posta ile kayıt olun ve işletme tüzel kimliğini tanımlayın.</p>
-        <h2>2. Kimlik, ödeme ve politika kontrollerini tamamlayın</h2>
-        <p>Vergi dairesi, vergi numarası ve 2 No'lu KDV süreçlerine uygun kurumsal ödeme kartı tanımlanır.</p>
-        <h2>3. Kampanya hedefi ve konumları seçin</h2>
-        <p>Tıklama, potansiyel müşteri veya doğrudan satış hedeflerine göre coğrafi ülke kısıtlamaları belirlenir.</p>
-        <h2>4. Reklam grubunu ve context hints'i hazırlayın</h2>
-        <p>Kullanıcının hangi problem durumunda reklamınızı görmesi gerektiğini belirten doğal dilli bağlam kuralları oluşturun. Ayrıntılar için <a href="/blog/chatgpt-ads-context-hints/">Context Hints rehberimizi</a> inceleyin.</p>
-        <h2>5. Reklamı ve açılış sayfasını ekleyin</h2>
-        <p>Reklam metni karar anına hitap etmeli; açılış sayfası kullanıcının sorusuna anında yanıt vermelidir. <a href="/blog/chatgpt-reklamlari-icin-acilis-sayfasi-kontrol-listesi/">Açılış sayfası kontrol listesini</a> mutlaka uygulayın.</p>
-        <h2>6. Dönüşüm ölçümünü kurun</h2>
-        <p>Conversions API ve Pixel ile satın alma ve form doldurma olaylarını eşleştirin.</p>
-        <h2>ChatGPT Ads ile organik GEO arasındaki fark</h2>
-        <p>Sponsorlu reklam satın almak modelin organik yanıtını değiştirmez. Organik görünürlük için <a href="/geo-yapay-zeka-gorunurlugu/">GEO danışmanlığımızı</a> inceleyin.</p>
+        <h1>ChatGPT reklam verme: Türkiye'den ilk kampanya nasıl açılır?</h1>
+        <p>ChatGPT reklamı, bir işletmenin OpenAI Ads Manager üzerinden oluşturduğu, ChatGPT yanıtından ayrı ve sponsorlu olarak işaretlenen ücretli yerleşimdir. Türkiye merkezli uygun bir tüzel kişi için Ads Manager self servis erişimi, OpenAI'ın güncel ülke listesinde "Available" görünüyor. Ancak ülke erişimi, her sektörün veya reklamın otomatik onaylandığı anlamına gelmez. Önce işletme ve reklam kategorisi uygunluğunu kontrol edin; ardından hesap, kampanya, reklam grubu, reklam ve ölçüm kurulumuna geçin.</p>
+
+        <section class="quick-answer" style="background:#171717;border-left:4px solid #10a37f;padding:1.2rem;margin:1.5rem 0;border-radius:10px;">
+          <h2>30 Saniyede Cevap: ChatGPT'de reklam vermek mümkün mü?</h2>
+          <p>Evet. OpenAI, ChatGPT içinde sponsorlu reklam gösterimi için OpenAI Ads Manager (ads.openai.com) altyapısını kullanıyor. Reklamlar organik ChatGPT yanıtlarından ayrı tutuluyor ve 'Sponsorlu / Ad' olarak etiketleniyor. Kampanyalarda klasik arama motoru anahtar kelime mantığı yerine konuşma bağlamı, kullanıcı niyeti, reklam mesajı, landing page ve reklamverenin sağladığı context hints gibi sinyaller önem taşıyor.</p>
+        </section>
+
+        <section>
+          <h2>ChatGPT'de reklam vermek ile cevaplarda önerilmek aynı mı?</h2>
+          <p>Hayır. Reklamlar organik yanıttan ayrı gösterilir. OpenAI, reklamverenin modelin verdiği cevabı şekillendiremediğini ve reklamların cevapları etkilemediğini açıklıyor. “ChatGPT'de markam nasıl çıkar?” sorusuyla kastınız organik marka görünürlüğüyse <a href="/chatgptde-markam-nasil-cikar/">ayrı rehberimize</a> bakın. Bu sayfa yalnız ücretli kampanya kurulumunu anlatır.</p>
+        </section>
+
+        <section>
+          <h2>1. Reklamveren ülkesini ve sektörünü doğrulayın</h2>
+          <p>Self servis Ads Manager kullanacak ve faturalandırılacak tüzel kişinin OpenAI'ın erişim listesinde yer alan bir ülkede bulunması gerekir. Türkiye listede yer alıyor. Bundan sonra reklamı göstermek istediğiniz ülkeyi, ürün veya hizmetin reklam politikasındaki kategorisini ve açılış sayfanızın uygunluğunu ayrıca denetleyin. Özellikle sağlık, finans ve düzenlemeye tabi alanlarda hesap açılabilmesi kampanya onayı garantisi değildir.</p>
+          <p>Reklam hesabı hangi şirketin adına? Hangi ülkelerde gösterim hedefleniyor? Tıklayan kullanıcı hangi şirketin hangi sayfasına gidecek? Ajansla çalışıyorsanız hesabın ve verinin sahibini baştan belirleyin.</p>
+        </section>
+
+        <section>
+          <h2>2. Ads Manager hesabını kurun</h2>
+          <p>Resmî başlangıç adresi <a href="https://ads.openai.com" target="_blank" rel="noopener noreferrer">ads.openai.com</a> adresidir. İş e-postanızla kayıt olun; şirket yasal unvanını, Türkiye vergi kimlik numarasını (VKN), vergi dairesini ve 2 No'lu KDV süreçleriyle uyumlu kurumsal ödeme kartını tanımlayın. İki aşamalı doğrulamayı (2FA) etkinleştirin.</p>
+        </section>
+
+        <section>
+          <h2>3. Kampanya hedefini ve başarı ölçüsünü seçin</h2>
+          <p>İlk kampanyadan beklenen işi tek cümleyle tanımlayın: markanın görünmesi (Traffic/Awareness), nitelikli site ziyareti veya ölçülebilir başvuru/satış (Conversions/Leads). Katı bir resmi minimum bütçe alt sınırı yoktur; ancak modelin semantik bağlamları sağlıklı öğrenmesi için kontrollü pilot test bütçeleri kurgulanmalıdır.</p>
+        </section>
+
+        <section>
+          <h2>4. Kampanya, reklam grubu ve reklamı ayırın</h2>
+          <p>OpenAI Ads Manager mimarisinde kampanya seviyesinde hedef ve bütçe; reklam grubu seviyesinde context hints (bağlam ipuçları) ve hedef ülke; reklam seviyesinde ise başlık, metin, görsel ve açılış sayfası URL'si tanımlanır. Farklı kullanıcı karar anları için ayrı reklam grupları oluşturun.</p>
+        </section>
+
+        <section>
+          <h2>5. Context hints nasıl yazılır?</h2>
+          <p>Context hints, reklamın hangi konuşma bağlamlarıyla ilişkili olabileceğini anlatan ek ipuçlarıdır. Klasik anahtar kelimeler yerine doğal dil cümleleri kullanılır. Örneğin: <em>'Küçük bir B2B satış ekibi, WhatsApp'tan gelen talepleri ekip içinde dağıtabilen ve CRM'de takip edebilen bir çözüm arıyor.'</em> Bağlam ipuçları olasılıksal çalışır; kesin gösterim garantisi taşımaz. Detaylar için <a href="/blog/chatgpt-ads-context-hints/">Context Hints rehberimize</a> bakın.</p>
+        </section>
+
+        <section>
+          <h2>6. Reklamı doğru açılış sayfasına bağlayın</h2>
+          <p>Kullanıcı diyalogdaki problemine anında cevap veren şeffaf bir açılış sayfasına yönlendirilmelidir. OpenAI reklam açılış sayfalarını denetlemek için <code>OAI-AdsBot</code> tarayıcısını kullanır. Bu bot, organik arama botu olan <code>OAI-SearchBot</code>tan farklıdır. Bot engellenirse reklam onaylanmaz.</p>
+        </section>
+
+        <section>
+          <h2>7. Ölçümü kurup yayına alın</h2>
+          <p>OpenAI Pixel ve Conversions API (CAPI) kurularak Lead ve Satış olayları anlık olarak eşleştirilmelidir. Kampanya 24-48 saatlik incelemenin ardından yayına girer. İlk 14 günde CTR, CPC ve veri kalitesi izlenerek optimize edilir.</p>
+        </section>
+
+        <section>
+          <h2>Sık sorulan sorular</h2>
+          <p>Türkiye'deki şirketler Ads Manager üzerinden self servis hesap açabilir. Zorunlu bir resmi minimum harcama alt sınırı yoktur. Sponsorlu reklam vermek ChatGPT'nin organik cevaplarını kesinlikle etkilemez ve reklamlar yalnızca reklam destekli uygun katmanlardaki kullanıcılara gösterilir.</p>
+        </section>
+
+        <section class="sources">
+          <p><strong>Resmî Kaynaklar:</strong></p>
+          <ul>
+            <li><a href="https://help.openai.com/en/articles/20001245-ads-manager-availability" target="_blank" rel="noopener noreferrer">OpenAI Ads Manager Ülke Kullanılabilirlik Listesi</a></li>
+            <li><a href="https://help.openai.com/en/articles/20001224-quickstart-launch-your-first-campaign" target="_blank" rel="noopener noreferrer">İlk Kampanya Rehberi</a></li>
+            <li><a href="https://help.openai.com/en/articles/20001047-ads-in-chatgpt" target="_blank" rel="noopener noreferrer">ChatGPT Reklamları ve Tarafsızlık İlkeleri</a></li>
+            <li><a href="https://help.openai.com/en/articles/20001243-advertiser-guidance-for-allowing-openai-web-crawlers" target="_blank" rel="noopener noreferrer">Reklam Açılış Sayfası Tarayıcısı (OAI-AdsBot)</a></li>
+          </ul>
+        </section>
+
+        <div class="actions">
+          <a href="/chatgptde-markam-nasil-cikar/">Organik cevaplarda marka görünürlüğü</a>
+          <a href="/chatgpt-reklamlari/">ChatGPT Reklam Yönetimi Servisimiz</a>
+          <a href="/chatgpt-reklam-fiyatlari/">ChatGPT Reklam Fiyatları</a>
+          <a href="/openai-ads-manager/">OpenAI Ads Manager Rehberi</a>
+          <a href="/iletisim/">İşletmeniz için ChatGPT Ads uygunluk ve ilk kampanya planı isteyin</a>
+        </div>
+      </main>
+    `
+  ],
+  'chatgptde-markam-nasil-cikar': [
+    'ChatGPT\'de Markam Nasıl Çıkar? 2026 Görünürlük Rehberi',
+    'Markanızın ChatGPT\'de organik olarak anlaşılması ve kaynak gösterilmesi için teknik erişim, marka bilgisi, içerik ve ölçüm adımlarını öğrenin.',
+    `
+      <header class="site-header">
+        <nav><a href="/">Ana Sayfa</a> | <a href="/geo-yapay-zeka-gorunurlugu/">GEO Hizmeti</a> | <a href="/chatgpt-reklam-verme/">ChatGPT Reklam Verme</a> | <a href="/yapay-zeka-gorunurluk-analizi/">Görünürlük Testi</a> | <a href="/blog/">Bilgi Merkezi</a></nav>
+      </header>
+      <main>
+        <h1>ChatGPT'de markam nasıl çıkar? Organik görünürlük için 7 adım</h1>
+        <p>Markanızın ChatGPT'de görünmesi iki farklı anlama gelebilir: ChatGPT'nin bir soruya verdiği <strong>organik yanıtta</strong> markanızdan söz etmesi veya yanıtın altında <strong>sponsorlu reklam</strong> gösterilmesi. Organik cevap satın alınamaz. Reklam içinse ayrı bir OpenAI Ads Manager hesabı, uygun bir kategori ve kampanya gerekir. Bu rehber organik görünürlüğü ele alıyor. Ücretli kampanya kurmak istiyorsanız <a href="/chatgpt-reklam-verme/">ChatGPT reklam verme rehberine</a> geçin.</p>
+
+        <section>
+          <h2>Kısa Yanıt</h2>
+          <p>Önce sitenizin erişilebilirliğini kontrol edin; marka, ürün ve kurum bilgilerinizi tutarlı biçimde yayımlayın; müşterinin karar sorularına özgün ve doğrulanabilir cevaplar verin; hedef sorularda kaynak gösterimi ve gerçek yönlendirme trafiğini ölçün. Bu çalışmalar belirli bir yanıtta görünme garantisi vermez, ancak doğru bilginin keşfedilmesi için sağlam bir temel oluşturur.</p>
+        </section>
+
+        <section>
+          <h2>1. “Markam çıktı” derken neyi ölçüyorsunuz?</h2>
+          <p>“Markamı ChatGPT'ye sordum ve adını yazdı” tek başına yeterli test değildir. Kullanıcının markayı zaten adıyla sorması ile “İstanbul'da küçük işletmeler için hangi CRM daha uygun?” gibi kategori sorusunda markanın anılması farklı sonuçlardır. Üç ölçüm ayırın:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Ölçüm</th>
+                <th>Örnek</th>
+                <th>Ne anlatır?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Marka anılması</strong></td>
+                <td>Yanıtta marka adı geçer</td>
+                <td>Model markayı bu bağlamla ilişkilendirmiş olabilir</td>
+              </tr>
+              <tr>
+                <td><strong>Kaynak bağlantısı</strong></td>
+                <td>Web sayfanıza tıklanabilir atıf verir</td>
+                <td>Kullanıcı ilgili içeriğe gidebilir; tıklama garanti değildir</td>
+              </tr>
+              <tr>
+                <td><strong>Doğruluk</strong></td>
+                <td>Ürün, fiyat, lokasyon ve yetkinlik doğru aktarılır</td>
+                <td>Görünürlük yararlı mı, yanıltıcı mı anlaşılır</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Aynı soruyu bir kez sormak yerine soruları, ülkeyi, dili, tarihi ve yanıtın kaynaklarını kaydedin.</p>
+        </section>
+
+        <section>
+          <h2>2. Sitenizin ChatGPT aramasına açık olduğunu kontrol edin</h2>
+          <p>OpenAI, kamuya açık bir sitenin ChatGPT aramasında görünebileceğini; özet ve alıntılarda kullanılabilmesi için <code>OAI-SearchBot</code> erişiminin engellenmemesini öneriyor. <code>robots.txt</code>, sayfanın <code>noindex</code> etiketi, Cloudflare/WAF kuralları ve önemli bilgilerin yalnız JavaScript çalışınca görünmesi denetlenecek ilk alanlardır.</p>
+          <p><em>İki botu karıştırmayın:</em> <code>OAI-SearchBot</code> arama görünürlüğüyle, <code>OAI-AdsBot</code> ise ChatGPT Ads açılış sayfasının reklam incelemesiyle ilişkilidir. Birine izin vermek ötekinin hazır olduğu anlamına gelmez.</p>
+        </section>
+
+        <section>
+          <h2>3. Markanızın ne yaptığını açık bir sayfada anlatın</h2>
+          <p>Tam ticari adınız nedir? Hangi ürünü veya hizmeti sunuyorsunuz? Kimler için uygunsunuz? Hangi şehir veya ülkelerde çalışıyorsunuz? Fiyat, kapsam ve teslimat hakkında hangi bilgiler kamuya açık? Yapılandırılmış veriyi (Schema.org) yalnız sayfada gerçekten görünen bilgiyi düzenli anlatmak için kullanın; schema eklemek tek başına ChatGPT'de üst sıralara çıkma yöntemi değildir.</p>
+        </section>
+
+        <section>
+          <h2>4. Müşterinin gerçek karar sorularını ayrı ayrı yanıtlayın</h2>
+          <p>Genel bir “biz en iyiyiz” sayfası yerine müşterinin karar verirken sorduğu sorulara cevap veren içerikler hazırlayın. Örneğin bir CRM markası için “WhatsApp görüşmeleri CRM'de nasıl takip edilir?”, “10 kişilik satış ekibi için kurulum ne sürer?” gibi sorular genel anahtar kelimelerden daha açıklayıcıdır. Kendi ürün ekranınızı, yönteminizin örneğini veya anonimleştirilmiş bir uygulama sonucunu gösterin.</p>
+        </section>
+
+        <section>
+          <h2>5. Bağımsız ve doğrulanabilir kaynakları geliştirin</h2>
+          <p>Gerçek yayınlarda marka adınızın, ürününüzün ve yaptığınız işin doğru anlatılması kullanıcı güvenini artırır. Mesleki dizin, iş ortaklığı duyurusu, bağımsız inceleme veya özgün araştırma değer taşır. Sosyal profillerde, şirket kayıtlarında ve referans verilen yayınlarda aynı marka, alan adı ve hizmet tanımı kullanılmalıdır.</p>
+        </section>
+
+        <section>
+          <h2>6. Görünürlüğü soru seti ve gerçek trafikle ölçün</h2>
+          <p>Üç grup soru hazırlayın: <strong>markalı</strong>, <strong>kategori</strong> ve <strong>karşılaştırma</strong>. OpenAI, ChatGPT arama bağlantılarında <code>utm_source=chatgpt.com</code> parametresinin yer aldığını belirtiyor. Analitikte gelen referral trafiğini ve dönüşümleri izleyin.</p>
+        </section>
+
+        <section>
+          <h2>7. Eksik kalan yeri doğru hizmete bağlayın</h2>
+          <p>Tarama engeli varsa teknik düzeltme; marka tanımı zayıfsa kurumsal içerik; karar sorularında içerik boşluğu varsa rehber üretimi; yanlış bilgi varsa kaynak düzeltmesi gerekir. Bunların hepsine aynı standart paket cevabını vermek yerine <a href="/blog/markam-chatgptde-neden-gorunmuyor/">12 neden kontrol listesini</a> kullanın ve <a href="/yapay-zeka-gorunurluk-analizi/">görünürlük analizinde</a> hangi soruda ne çıktığını kaydedin.</p>
+        </section>
+
+        <section>
+          <h2>Sık sorulan sorular</h2>
+          <p>ChatGPT'ye para ödeyip organik yanıtta ilk sıraya çıkamazsınız; OpenAI reklamların organik yanıtlardan ayrı olduğunu belirtir. Sponsorlu görünüm için <a href="/chatgpt-reklam-verme/">Sponsorlu ChatGPT reklamı nasıl verilir?</a> rehberimize bakın. Sabit bir görünürlük süresi yoktur; erişim, içerik ve kaynak optimizasyonu aşamalı olarak doğrulanmalıdır.</p>
+        </section>
+
+        <section class="sources">
+          <p><strong>Resmî Kaynaklar:</strong></p>
+          <ul>
+            <li><a href="https://help.openai.com/en/articles/12627856-publishers-and-developers-faq" target="_blank" rel="noopener noreferrer">OpenAI Yayıncı ve Geliştirici SSS</a></li>
+            <li><a href="https://help.openai.com/en/articles/20001047-ads-in-chatgpt" target="_blank" rel="noopener noreferrer">OpenAI ChatGPT Reklam SSS</a></li>
+            <li><a href="https://help.openai.com/en/articles/20001243-advertiser-guidance-for-allowing-openai-web-crawlers" target="_blank" rel="noopener noreferrer">OpenAI Reklamveren Tarayıcı Rehberi</a></li>
+          </ul>
+        </section>
+
+        <div class="actions">
+          <a href="/chatgpt-reklam-verme/">Sponsorlu ChatGPT reklamı nasıl verilir?</a>
+          <a href="/blog/markam-chatgptde-neden-gorunmuyor/">12 Neden Teşhis Listesi</a>
+          <a href="/geo-yapay-zeka-gorunurlugu/">GEO Danışmanlığı</a>
+          <a href="/yapay-zeka-gorunurluk-analizi/">Canlı AI Görünürlük Testi</a>
+          <a href="/iletisim/">20 Soruluk Görünürlük İncelemesi İsteyin</a>
+        </div>
+      </main>
+    `
+  ],
+  'openai-ads-manager': [
+    'OpenAI Ads Manager Nedir? ChatGPT Reklam Paneli Rehberi',
+    'OpenAI Ads Manager Beta\'nın ne işe yaradığını, Türkiye\'den erişimi, kampanya yapısını, hedeflemeyi ve ölçüm seçeneklerini tek rehberde inceleyin.',
+    `
+      <header class="site-header">
+        <nav><a href="/">Ana Sayfa</a> | <a href="/chatgpt-reklam-verme/">ChatGPT Reklam Kurulumu</a> | <a href="/chatgpt-reklam-fiyatlari/">Fiyatlar</a> | <a href="/chatgpt-reklamlari/">Hizmet Kapsamı</a></nav>
+      </header>
+      <main>
+        <h1>OpenAI Ads Manager: hesap, kampanya, ölçüm ve raporlama</h1>
+        <p><strong>Arama Niyeti Ayrımı:</strong> Bu sayfa OpenAI reklamveren konsolunun (Ads Manager Beta) ne sunduğunu ve nasıl düzenlendiğini anlatır. İlk reklamınızı sıfırdan kurma adımları için <a href="/chatgpt-reklam-verme/">ChatGPT'de Reklam Nasıl Verilir?</a> rehberimize bakabilirsiniz.</p>
+
+        <h2>OpenAI Ads Manager Beta nedir?</h2>
+        <p>OpenAI Ads Manager (ads.openai.com), ChatGPT içi sponsorlu reklam yerleşimlerini, bağlam eşleşmelerini ve bütçeleri yönetmek üzere tasarlanmış resmî self-servis reklam yönetim platformudur. Resmî belgeler için <a href="https://help.openai.com/en/articles/20001206-ads-manager-beta-overview" target="_blank" rel="noopener noreferrer">Ads Manager Beta Overview</a> sayfasını inceleyin.</p>
+
+        <h2>Türkiye'den kimler self servis erişebilir?</h2>
+        <p>OpenAI'ın resmî ülke listesine göre Türkiye, self-servis erişime açıktır. Türkiye merkezli vergi kimlik numarası (VKN), vergi levhası ve 2 No'lu KDV süreçlerine uygun kurumsal ödeme kartı olan faal tüzel kişiler hesap açabilir.</p>
+
+        <h2>Panelde kampanya, reklam grubu ve reklamın görevi</h2>
+        <p>Panel 3 aşamalı yapıdan oluşur: 1) Kampanya seviyesinde ana hedef (trafik, lead, satış) ve bütçe belirlenir; 2) Reklam grubu seviyesinde context hints (bağlam ipuçları), ülke ve negatif filtreler tanımlanır; 3) Reklam seviyesinde kreatif metin, başlık ve açılış sayfası URL'si girilir.</p>
+
+        <h2>Kampanya hedefleri ve ücretlendirme seçenekleri</h2>
+        <p>Panelde geçerli tıklama (CPC) ve bin gösterim (CPM) teklif modelleri yer alır. Açık artırma dinamikleri bağlam alakası ve teklif kombinasyonuna göre çalışır. Ortalama maliyetler için <a href="/chatgpt-reklam-fiyatlari/">ChatGPT Reklam Fiyatları</a> sayfamıza göz atın.</p>
+
+        <h2>Bağlam ipuçları, konum ve diğer hedefleme alanları</h2>
+        <p>Statik kelimeler yerine doğal dil ile tanımlanan bağlam ipuçları kullanılır. Ülke düzeyinde hedefleme ve hariç tutmalar yapılabilir. Beta sürüm gereği hedefleme parametreleri OpenAI tarafından düzenli geliştirilmektedir.</p>
+
+        <h2>OpenAI Pixel, Conversions API ve raporlama</h2>
+        <p>Veri Kaynakları menüsünden OpenAI Pixel ve sunucu taraflı Conversions API kurulur. PageView, Lead, Purchase ve CompleteRegistration olayları eşleştirilerek gerçek zamanlı raporlanır. Ayrıntılar için <a href="/blog/chatgpt-reklam-olcumu/">Ölçüm Rehberi</a> ve <a href="https://help.openai.com/en/articles/20001409-conversion-measurement" target="_blank" rel="noopener noreferrer">Resmî Dönüşüm Dokümanı</a> referans alınabilir.</p>
+
+        <h2>Toplu yükleme ve ürün feed'i hangi işletmeler için anlamlı?</h2>
+        <p>Geniş ürün kataloğuna sahip e-ticaret siteleri ürün feed'i ile yüzlerce ürünü otomatik bağlayabilir. B2B ve profesyonel hizmet şirketleri içinse derin niyet odaklı context hints kurgusu daha verimlidir.</p>
+
+        <h2>Hangi işletme nereden başlamalı? Karar Tablosu</h2>
+        <p>B2B SaaS şirketleri Lead hedefi ve CAPI entegrasyonu ile; E-ticaret markaları Ürün Feed'i ve dinamik katalog ile; İhracatçılar çok dilli context hints ile başlamalıdır. Organik aramalarda kaynak gösterilmek isteyenler içinse reklam değil, <a href="/geo-yapay-zeka-gorunurlugu/">GEO Danışmanlığı</a> gereklidir.</p>
+
+        <h2>Beta sürümün sınırları ve sık sorulan sorular</h2>
+        <p>Panel arayüzü İngilizce olmakla birlikte Türkçe reklam ve bağlamlar sorunsuz yönetilir. Business Settings sekmesinden ajans uzmanlarına yetki atanabilir.</p>
+
+        <div class="actions">
+          <a href="/iletisim/">Ads Manager kurulum ve ilk test kampanyası taslağı alın</a>
+        </div>
+      </main>
+    `
+  ],
+  'chatgpt-seo': [
+    'ChatGPT SEO Nedir? ChatGPT\'de Görünür Olmak İçin SEO Rehberi',
+    'ChatGPT SEO ve GEO optimizasyonu: Klasik SEO ile farklar, OAI-SearchBot tarama mantığı, entity netliği, alıntılanabilir formatlar ve görünürlük ölçümü.',
+    `
+      <header class="site-header">
+        <nav><a href="/">Ana Sayfa</a> | <a href="/chatgptde-markam-nasil-cikar/">Markam Nasıl Çıkar?</a> | <a href="/geo-yapay-zeka-gorunurlugu/">GEO Hizmeti</a> | <a href="/yapay-zeka-gorunurluk-analizi/">AI Testi</a></nav>
+      </header>
+      <main>
+        <h1>ChatGPT SEO Nedir? ChatGPT'de Görünür Olmak İçin SEO Nasıl Değişiyor?</h1>
+        <p><strong>30 Saniyelik Cevap:</strong> ChatGPT SEO, büyük dil modellerinin (LLM) kullanıcıların derin ve çok adımlı sorularına doğrudan cevap üretirken web sitenizi anlamasını, referans almasını ve kaynak (citation) olarak göstermesini sağlayan Generative Engine Optimization (GEO) çalışmasıdır.</p>
+        
+        <h2>Klasik SEO ile ChatGPT SEO Arasındaki Fark</h2>
+        <p>Klasik SEO Google SERP üzerindeki 10 mavi bağlantıda sıra almayı hedeflerken; ChatGPT SEO, modelin sentezlediği doğrudan yanıtta tavsiye edilmeyi ve kaynak gösterilmeyi hedefler.</p>
+
+        <h2>ChatGPT Web'i Nasıl Kullanır?</h2>
+        <p>Kullanıcı güncel pazar veya ürün bilgisi istediğinde arama motoru dizini taranır; birinci el veri, karşılaştırma tablosu ve net sınırlar sunan sayfalar alıntı bağlantısı olarak seçilir.</p>
+
+        <h2>Yapay Zekâların Kolay Alıntıladığı İçerik Formatları</h2>
+        <p>1) İlk paragrafta 2 cümlelik net cevap, 2) Karşılaştırma tabloları, 3) Adım adım işlem listeleri, 4) Şeffaf fiyat ve süreç sınırları, 5) Tarih ve uzman doğrulaması.</p>
+
+        <h2>Schema Tek Başına Yeterli mi?</h2>
+        <p>Hayır. Schema.org yapılandırılmış verisi makinelerin bilgiyi hatasız okumasına yardım eder; ancak zayıf içeriği ChatGPT'de öne çıkaracak bir sıralama hilesi değildir.</p>
+
+        <div class="actions">
+          <a href="/chatgptde-markam-nasil-cikar/">ChatGPT'de Markam Nasıl Çıkar?</a>
+          <a href="/geo-yapay-zeka-gorunurlugu/">GEO Danışmanlığı</a>
+          <a href="/yapay-zeka-gorunurluk-analizi/">Canlı AI Görünürlük Testi</a>
+        </div>
+      </main>
+    `
+  ],
+  'chatgptde-web-sitem-neden-cikmiyor': [
+    'ChatGPT\'de Web Sitem Neden Çıkmıyor? 10 Maddelik Teşhis Rehberi',
+    'ChatGPT web sitemi görmüyor, şirketimi bulmuyor veya markamı önermiyor diyorsanız robots.txt, JS-only rendering, entity ve bilgi kazancı kontrollerini inceleyin.',
+    `
+      <header class="site-header">
+        <nav><a href="/">Ana Sayfa</a> | <a href="/chatgptde-markam-nasil-cikar/">Markam Nasıl Çıkar?</a> | <a href="/geo-yapay-zeka-gorunurlugu/">GEO Hizmeti</a> | <a href="/chatgpt-seo/">ChatGPT SEO</a></nav>
+      </header>
+      <main>
+        <h1>ChatGPT'de Web Sitem Neden Çıkmıyor? 10 Maddelik Teşhis Rehberi</h1>
+        <p><strong>Kısa Teşhis:</strong> ChatGPT bir siteyi 'cezalandırdığı' için değil; genellikle OAI-SearchBot engeli, JS-only rendering, belirsiz entity sinyalleri veya karar sorularına cevap veren özgün içerik eksikliği nedeniyle önermez.</p>
+
+        <h2>10 Maddelik Teşhis Kontrol Listesi</h2>
+        <ol>
+          <li><strong>OAI-SearchBot robots.txt veya WAF Engeli:</strong> OpenAI arama botunun erişiminin engellenmesi.</li>
+          <li><strong>noindex Etiketi:</strong> Önemli sayfalarda yanlışlıkla noindex bulunması.</li>
+          <li><strong>Yalnızca JavaScript ile Yüklenen İçerik:</strong> Ham HTML çıktısında kritik metinlerin bulunmaması.</li>
+          <li><strong>Zayıf Entity Sinyalleri:</strong> Markanın ne yaptığının net tanımlanmaması.</li>
+          <li><strong>Bilgi Kazancı Eksikliği:</strong> İnternetteki diğer siteleri tekrarlayan jenerik metinler.</li>
+          <li><strong>Çelişkili Kurumsal Bilgiler:</strong> Farklı platformlarda tutarsız marka tanımları.</li>
+          <li><strong>3. Taraf Doğrulama Eksikliği:</strong> Bağımsız dizin ve sektörel haberlerde marka bahsinin olmaması.</li>
+          <li><strong>Karar Sorularına Sayfa Açılmaması:</strong> Müşterinin satın alma öncesi sorularına yanıt veren sayfaların bulunmaması.</li>
+          <li><strong>Canonical ve Yönlendirme Hataları:</strong> Botların doğru sayfayı seçmesini zorlaştıran URL çakışmaları.</li>
+          <li><strong>Tek Denemeyle Karar Vermek:</strong> Çoklu dilli ve bağlamlı soru setleriyle test yapılmaması.</li>
+        </ol>
+
+        <div class="actions">
+          <a href="/chatgptde-markam-nasil-cikar/">Adım Adım Görünürlük Rehberi</a>
+          <a href="/yapay-zeka-gorunurluk-analizi/">Canlı AI Teşhis Aracı</a>
+          <a href="/iletisim/">Görünürlük Analizi İsteyin</a>
+        </div>
       </main>
     `
   ],
@@ -138,13 +403,13 @@ const pages = {
     'AI yanıtlarında kaynak olma ihtimali için teknik erişim, özgün içerik, marka bilgisi ve alıntı takibi. GEO hizmetinin kapsamını ve sınırlarını görün.',
     `
       <header class="site-header">
-        <nav><a href="/">Ana Sayfa</a> | <a href="/yapay-zekada-reklam-ajansi/">Yapay Zekada Reklam Ajansı</a> | <a href="/yapay-zeka-gorunurluk-analizi/">Canlı Görünürlük Testi</a> | <a href="/blog/chatgpt-ads-geo-farki/">ChatGPT Ads ve GEO Farkı</a></nav>
+        <nav><a href="/">Ana Sayfa</a> | <a href="/yapay-zekada-reklam-ajansi/">Yapay Zekada Reklam Ajansı</a> | <a href="/chatgptde-markam-nasil-cikar/">Markam Nasıl Çıkar?</a> | <a href="/yapay-zeka-gorunurluk-analizi/">Canlı Görünürlük Testi</a> | <a href="/blog/chatgpt-ads-geo-farki/">ChatGPT Ads ve GEO Farkı</a></nav>
       </header>
       <main>
         <h1>GEO ve yapay zekâ aramalarında organik görünürlük</h1>
-        <p>Generative Engine Optimization (GEO); markanızın ChatGPT, Perplexity, Gemini ve Claude gibi üretken yapay zekâ motorları tarafından anlaşılması ve organik yanıtlarda kaynak olarak gösterilmesi çalışmasıdır.</p>
+        <p>Generative Engine Optimization (GEO); yapay zekâ yanıtlarında marka bilgilerinin anlaşılabilirliğini ve kaynak olarak bulunabilirliğini geliştirme ve ölçme çalışmasıdır. Markanızın ChatGPT, Perplexity, Gemini ve Claude gibi üretken yapay zekâ motorları tarafından anlaşılması ve organik yanıtlarda kaynak olarak gösterilmesi hedeflenir.</p>
         <h2>GEO nedir?</h2>
-        <p>Kullanıcıların karmaşık sektör ve ürün sorularında büyük dil modellerinin (LLM) sentezlediği doğrudan yanıtlar içerisinde markanızın güvenilir kaynak ve tavsiye olarak yer almasını sağlayan stratejidir.</p>
+        <p>Kullanıcıların karmaşık sektör ve ürün sorularında büyük dil modellerinin (LLM) sentezlediği doğrudan yanıtlar içerisinde markanızın güvenilir kaynak ve tavsiye olarak yer almasını sağlayan stratejidir. Adım adım optimizasyon süreci için <a href="/chatgptde-markam-nasil-cikar/">ChatGPT'de markam nasıl çıkar?</a> rehberimize göz atabilirsiniz.</p>
         <h2>Markam ChatGPT'de neden önerilmiyor?</h2>
         <p>En sık karşılaşılan üç neden: 1) OAI-SearchBot gibi botların robots.txt veya WAF tarafından engellenmesi, 2) Marka varlığının (entity) bağımsız 3. taraf kaynaklarda yetersiz kalması, 3) Karar vericiye doğrudan yanıt veren bilgi kazancı (information gain) eksikliğidir. Ayrıntılar için <a href="/blog/markam-chatgptde-neden-gorunmuyor/">12 Neden ve Kontrol Listesi</a> yazımızı inceleyin.</p>
         <h2>Hangi sorularda kaynak gösteriliyorum?</h2>
@@ -154,6 +419,7 @@ const pages = {
         <h2>Ücretli reklamdan farkı nedir?</h2>
         <p>Reklam satın almak yapay zekânın organik cevabını veya tavsiyesini kesinlikle değiştirmez. Belirli modelde veya soruda ilk sırada çıkma garantisi verilmez.</p>
         <div class="actions">
+          <a href="/chatgptde-markam-nasil-cikar/">ChatGPT'de Markam Nasıl Çıkar?</a>
           <a href="/yapay-zeka-gorunurluk-analizi/">⚡ Canlı AI Teşhis Konsolunu Başlat</a>
           <a href="/iletisim/">Ücretsiz GEO Analizi İsteyin</a>
         </div>
@@ -162,25 +428,41 @@ const pages = {
   ],
   'chatgpt-reklam-fiyatlari': [
     'ChatGPT Reklam Fiyatları 2026: TBM, Bütçe ve Yönetim Ücreti',
-    'ChatGPT reklam maliyetleri nasıl hesaplanır? TBM, CPM, minimum bütçe önerileri, ajans yönetim modelleri ve yatırım getirisi (ROAS) analizi.',
+    'ChatGPT reklam maliyetleri nasıl hesaplanır? Resmî OpenAI Ads Manager açık artırma modelleri (CPC/CPM), ajans önerili pilot test bütçeleri ve dönüşüm simülasyonu.',
     `
       <header class="site-header">
-        <nav><a href="/">Ana Sayfa</a> | <a href="/chatgpt-reklamlari/">ChatGPT Reklam Yönetimi</a> | <a href="/blog/chatgpt-reklam-maliyeti/">Maliyet Hesaplama Rehberi</a> | <a href="/iletisim/">Teklif Alın</a></nav>
+        <nav><a href="/">Ana Sayfa</a> | <a href="/chatgpt-reklamlari/">ChatGPT Reklam Yönetimi</a> | <a href="/chatgpt-reklam-verme/">Reklam Verme Adımları</a> | <a href="/openai-ads-manager/">OpenAI Ads Manager</a> | <a href="/iletisim/">Teklif Alın</a></nav>
       </header>
       <main>
         <h1>ChatGPT Reklam Fiyatları 2026: TBM, Bütçe ve Yönetim Maliyeti</h1>
-        <p>ChatGPT reklam maliyetleri, sabit bir fiyat listesine dayanmaz; Google ve Meta reklamlarında olduğu gibi <strong>açık artırma (auction-based)</strong> ve bağlam rekabeti esasına göre çalışır. Medya bütçesi doğrudan OpenAI'ya ödenir; ajans yönetim ücreti strateji ve optimizasyonu kapsar. Detaylı kampanya simülasyonu için <a href="/blog/chatgpt-reklam-maliyeti/">ChatGPT Reklam Maliyeti Nasıl Hesaplanır?</a> rehberimize bakın.</p>
-        <h2>ChatGPT Reklam Maliyeti Nasıl Hesaplanır?</h2>
-        <p>OpenAI Yardım Merkezi güncel belgelerine göre reklamverenlere hem <strong>bin gösterim (CPM)</strong> hem de <strong>geçerli tıklama (CPC)</strong> üzerinden açık artırma modelleri sunulmaktadır. Maliyetler sadece TBM'ye indirgenmemeli, bağlam derinliğine göre planlanmalıdır.</p>
-        <h2>Örnek Bütçe ve Kampanya Büyüklükleri Karşılaştırma Matrisi</h2>
-        <p>Kontrollü Pilot Test ($1,500 - $3,000 / ay): Temel bağlam testi ve ilk lead maliyeti tespiti.<br />
-        Büyüme & Ölçeklenme ($5,000+ / ay): Çoklu bağlam segmentasyonu ve CAPI satış eşleştirmesi.<br />
-        Kurumsal & B2B SaaS ($15,000+ / ay): Uluslararası pazar ve çok dilli context hints stratejisi.</p>
-        <h2>İlk 30-60 Günlük Pilot Test Bütçesi Neden Hayatidir?</h2>
-        <p>Yapay zekâ modellerinin bağlam öğrenme süreci boyunca hangi context hint ifadelerinin en kaliteli potansiyel müşteriyi çektiğini matematiksel olarak kanıtlamak için kontrollü bir test bütçesi şarttır.</p>
-        <h2>Sıkça Sorulan Sorular</h2>
-        <p>Medya bütçesi doğrudan kendi kurumsal kartınızdan OpenAI'ya ödenir. Ajansımıza ise kurulum, context hints kütüphanesi ve optimizasyon bedeli ödenir.</p>
-        <div class="actions"><a href="/iletisim/">Sektörünüze Özel Bütçe Senaryosu İsteyin</a></div>
+        <p><strong>Kritik Şeffaflık Notu:</strong> Sitemizde veya sektörel analizlerde yer alan $1.500–$3.000/ay gibi tutarlar, <em>OpenAI'ın zorunlu kıldığı bir alt harcama barajı değildir</em>. Bunlar, yapay zekânın karar anlarını ve semantik bağlamlarını sağlıklı öğrenebilmesi adına <em>ajansımız tarafından önerilen kontrollü pilot test senaryolarıdır</em>. Platform gerçek zamanlı açık artırma esasıyla çalışır ve katı bir resmî minimum bütçe zorunluluğu yoktur.</p>
+
+        <h2>Reklam ücreti nasıl oluşur?</h2>
+        <p>ChatGPT reklam maliyetleri basılı veya sabit bir fiyat listesine dayanmaz. OpenAI Ads Manager açık artırma sistemi; maksimum teklifiniz (Bid), context hints (bağlam ipucu) alaka düzeyiniz ve reklam metninin beklenen tıklama performansı (eCTR) bileşenlerine göre anlık açık artırmayla şekillenir.</p>
+
+        <h2>CPC ve CPM farkı</h2>
+        <p>OpenAI Ads Manager faturalandırma altyapısında (<a href="https://help.openai.com/en/articles/20001216-billing-payment" target="_blank" rel="noopener noreferrer">Billing & Payment Documentation</a>) iki temel ücretlendirme modeli sunulur: Tıklama Başı Maliyet (CPC / TBM) reklam tıklandığında ve kullanıcı sitenize yönlendirildiğinde ücretlendirilir; satın alma niyetli kitleleri toplamak için esastır. Bin Gösterim Başı Maliyet (CPM / BGBM) ise reklam kartının konuşma penceresinde 1.000 kez görüntülenmesi karşılığında tahsil edilir ve marka bilinirliği için tercih edilir.</p>
+
+        <h2>Resmî minimum bütçe var mı?</h2>
+        <p>OpenAI Yardım Merkezi kampanya oluşturma kurallarına (<a href="https://help.openai.com/en/articles/20001210-create-campaigns-for-chatgpt-ads" target="_blank" rel="noopener noreferrer">Campaign Creation Guide</a>) göre zorunlu, katı bir alt harcama eşiği bulunmamaktadır. Günlük küçük bütçelerle de kampanya başlatılabilir; ancak modelin yeterli bağlam verisi toplayıp optimize olabilmesi için istatistiksel geçerliliğe sahip pilot bütçeler önerilir.</p>
+
+        <h2>Test bütçesi nasıl hesaplanır?</h2>
+        <p>Test bütçesi formülü: <code>(Hedeflenen Asgari Dönüşüm Sayısı / Sayfa Dönüşüm Oranı) × Tahmini TBM</code> şeklinde hesaplanır. Örneğin ilk 30 günde modelin öğrenmesi için 40 nitelikli lead hedefleniyorsa, %8 açılış sayfası dönüşüm oranı ve $1.80 ortalama TBM ile en az 500 tıklama ve ~$900 test medya bütçesi hedeflenir.</p>
+
+        <h2>Ajans ücreti ile medya bütçesi</h2>
+        <p>Medya bütçesi doğrudan işletmenizin kurumsal kartından OpenAI'a ödenir; ajansımız medya harcamanızdan komisyon almaz veya bütçeyi gizlemez. Ajans yönetim ücreti ise hesap kurulumu, semantik context hints kütüphanesi, CAPI entegrasyonu ve haftalık optimizasyon danışmanlığını kapsayan şeffaf hizmet bedelidir.</p>
+
+        <h2>Örnek hesap: gösterim → tıklama → lead → satış</h2>
+        <p>Tipik bir B2B pilot kampanyası simülasyonu: 25.000 Gösterim (~$12 CPM) → 500 Tıklama (%2 CTR, ~$1.80 TBM) → 40 Nitelikli Form Lead (%8 CR, $22.50 CPL) → 6 Yeni Müşteri/Satış (%15 Kapanış, $150 CAC). Veriler sektör rekabetine göre değişiklik gösterir.</p>
+
+        <h2>Güncel kampanya ve kredi koşulları</h2>
+        <p>OpenAI zaman zaman yeni reklamverenlere teşvik kredileri sunabilir. Ancak doğrulanmamış spekülatif rakamlara itibar edilmemelidir; uygunluk, şirket tüzel kişiliği, harcama son tarihi ve kredi kullanım süreleri <a href="https://ads.openai.com" target="_blank" rel="noopener noreferrer">ads.openai.com</a> başlangıç ekranından yazılı olarak teyit edilmelidir.</p>
+
+        <div class="actions">
+          <a href="/iletisim/">Sektörünüze Özel Bütçe Senaryosu İsteyin</a>
+          <a href="/chatgpt-reklam-verme/">ChatGPT Reklam Kurulum Rehberi</a>
+          <a href="/openai-ads-manager/">OpenAI Ads Manager Rehberi</a>
+        </div>
       </main>
     `
   ],
@@ -241,19 +523,79 @@ const pages = {
     `
   ],
   'blog/chatgpt-ads-context-hints': [
-    'ChatGPT Ads Context Hints Nasıl Yazılır? | Bağlam İpuçları Rehberi',
-    'ChatGPT Ads kampanyalarında context hints yazımı, kullanıcı karar anları, negatif bağlam filtreleri ve sektör örnekleri.',
+    'ChatGPT Context Hints Nedir? OpenAI Ads İçin 25 Örnekle Bağlam İpuçları Rehberi',
+    'OpenAI Ads Manager context hints (bağlam ipuçları) nasıl yazılır? Klasik anahtar kelimelerden farkı, 25 sektörel karar anı örneği, negatif filtreler ve açılış sayfası eşleşmesi.',
     `
       <header class="site-header">
-        <nav><a href="/">Ana Sayfa</a> | <a href="/chatgpt-reklam-verme/">Reklam Verme Adımları</a> | <a href="/chatgpt-reklamlari/">ChatGPT Ads Ajansı</a></nav>
+        <nav><a href="/">Ana Sayfa</a> | <a href="/chatgpt-reklam-verme/">ChatGPT Reklam Verme</a> | <a href="/chatgpt-reklamlari/">ChatGPT Ads Ajansı</a> | <a href="/chatgpt-reklam-fiyatlari/">Fiyatlar</a></nav>
       </header>
       <main>
-        <h1>ChatGPT Ads context hints nasıl yazılır?</h1>
-        <p>Context hints, klasik anahtar kelimeler yerine yapay zekâya ürününüzün kimler için, hangi durumda ve hangi problem için uygun olduğunu anlatan doğal dilli bağlam ipuçlarıdır.</p>
-        <h2>Context hints nedir ve nasıl çalışır?</h2>
-        <p>Kullanıcının diyalog geçmişi ve karar anı semantik benzerlik algoritmalarıyla analiz edilerek reklamla eşleştirilir.</p>
-        <h2>Açılış sayfasıyla tutarlılık</h2>
-        <p>Bağlam ipucunda vadedilen çözümün açılış sayfasının ilk ekranında yer alması şarttır. <a href="/blog/chatgpt-reklamlari-icin-acilis-sayfasi-kontrol-listesi/">Açılış Sayfası Kontrol Listesi</a> yazımızı inceleyin.</p>
+        <h1>ChatGPT Ads Context Hints Nedir ve Nasıl Yazılır? 25 Örnekle Rehber</h1>
+        <p><strong>30 Saniyede Özeti:</strong> ChatGPT context hints (bağlam ipuçları); OpenAI Ads Manager reklam grubunda kullanılan, modelin reklamınızı hangi konuşma bağlamında, hangi kullanıcı profilinde ve hangi karar anında sponsorlu olarak gösterebileceğini doğal dille anlatan sinyallerdir. Klasik Google Ads tam eşleşmeli kelime mantığı değildir; semantik anlamsal yakınlık ve konuşma niyeti üzerinden çalışır.</p>
+        
+        <h2>Context hints klasik Google Ads anahtar kelimesi değildir</h2>
+        <p>Google Arama motorunda kullanıcı 'crm programı' ararken, ChatGPT'de '12 kişilik ekibimiz var, WhatsApp görüşmelerini takip edecek HubSpot alternatifi arıyoruz' şeklinde problem anlatır. Context hints bu düşünme sürecini yakalar.</p>
+
+        <h2>İyi bir context hint hangi bileşenlerden oluşur?</h2>
+        <p>1) Hedef kitle tanımı, 2) Yaşanan problem, 3) Karar anında sorulan spesifik sorular, 4) Coğrafya ve kapsam.</p>
+
+        <h2>25 Örnek ChatGPT Ads Context Hint Şablonu</h2>
+        <h3>B2B SaaS & Kurumsal Yazılım</h3>
+        <ul>
+          <li>1. Türkiye'de 10-50 çalışanlı satış ekibi için WhatsApp entegrasyonlu ve e-fatura uyumlu CRM çözümü arayan şirket yöneticileri.</li>
+          <li>2. HubSpot veya Salesforce alternatiflerini maliyet ve yerel destek açısından karşılaştıran Türk teknoloji kurucuları.</li>
+          <li>3. Bulut tabanlı muhasebe ve ön muhasebe yazılımı geçiş maliyetini hesaplayan, Paraşüt/BizimHesap kıyaslaması yapan finans müdürleri.</li>
+          <li>4. Personel vardiya, izin ve bordro takibini otomatikleştirmek isteyen insan kaynakları direktörleri.</li>
+          <li>5. B2B e-ihracat yapan firmalar için çok dilli müşteri destek masası (Helpdesk) ve bilet yönetim sistemi araştıran operasyon liderleri.</li>
+        </ul>
+
+        <h3>E-Ticaret & D2C Tüketici Markaları</h3>
+        <ul>
+          <li>6. Günlük şehir koşusu ile yarı maraton antrenmanı arasındaki ayakkabı farkını soran ve darbe emici taban araştıran koşucular.</li>
+          <li>7. Yeni doğan bebek için ergonomik, toksik madde içermeyen ve katlanabilir bebek arabası tavsiyesi isteyen ebeveynler.</li>
+          <li>8. Evden çalışanlar için bel destekli ergonomik çalışma koltuğu ve ayarlanabilir masa modellerini kıyaslayan profesyoneller.</li>
+          <li>9. Kuru ve hassas ciltler için seramid ve hyaluronik asit içerikli vegan nemlendirici krem önerisi arayan kullanıcılar.</li>
+          <li>10. Kahve demleme ekipmanları arasında V60, Aeropress ve filtre kahve makinesi lezzet farkını araştıran gurmeler.</li>
+        </ul>
+
+        <h3>Sağlık Turizmi & Klinikler</h3>
+        <ul>
+          <li>11. İngiltere veya Almanya'dan İstanbul'da all-on-4 diş implantı yaptırmayı planlayan, klinik akreditasyonu ve paket fiyat soran hastalar.</li>
+          <li>12. Avrupa'dan Türkiye'de FUE/DHI saç ekimi operasyonu için hekim deneyimi, operasyon süresi ve konaklama dahil maliyet araştıranlar.</li>
+          <li>13. Göz lazer cerrahisi (No-Touch / SMILE) risklerini ve Türkiye'deki özel hastane standartlarını kıyaslayan yurt dışı hastalar.</li>
+          <li>14. Rinoplasti cerrahisi sonrası iyileşme sürecini ve Türkiye'deki uzman cerrahların vaka sonuçlarını inceleyen ziyaretçiler.</li>
+          <li>15. Termal sağlık oteli ve fizik tedavi rehabilitasyon merkezleri arayan ileri yaş hasta yakınları.</li>
+        </ul>
+
+        <h3>Kurumsal Danışmanlık & Finans</h3>
+        <ul>
+          <li>16. İngiltere'de (LLC/LTD) veya ABD Delaware'de şirket kurarak Stripe açmak isteyen Türk yazılımcı ve e-ihracatçılar.</li>
+          <li>17. Ar-Ge merkezi ve Teknopark vergi muafiyetleri ile kurumlar vergisi teşviklerini karşılaştıran ölçeklenen girişimler.</li>
+          <li>18. Şirket birleşme ve devralma (M&A) süreçlerinde bağımsız finansal değerleme ve due diligence raporu talep eden fonlar.</li>
+          <li>19. KVKK ve GDPR uyumluluk denetimi yaptırmak isteyen veri işleyen orta ölçekli finans ve sağlık şirketleri.</li>
+          <li>20. Yurt dışı pazar araştırması için Ticaret Bakanlığı Turquality hibe ve destek oranlarını araştıran üreticiler.</li>
+        </ul>
+
+        <h3>Gayrimenkul, Mimarlık & Yatırım</h3>
+        <ul>
+          <li>21. İstanbul Anadolu Yakası'nda metroya yakın, deprem yönetmeliğine uygun 2+1 ve 3+1 sıfır daire arayan aileler.</li>
+          <li>22. Bodrum veya Urla'da müstakil havuzlu villa yatırımı yaparak yüksek sezonluk kira getirisi hedefleyen yatırımcılar.</li>
+          <li>23. Ofis ve ticari plaza alanlarında kurumsal iç mimari tasarım, anahtar teslim uygulama ve akustik düzenleme arayan şirketler.</li>
+          <li>24. Vatandaşlık veya ikamet izni amacıyla Türkiye'de minimum yatırım tutarını sağlayan gayrimenkul portföyü araştıran yabancılar.</li>
+          <li>25. Prefabrik çelik konstrüksiyon ev maliyetleri ve ruhsat izin süreçlerini betonarme ile kıyaslayan arsa sahipleri.</li>
+        </ul>
+
+        <h2>Negatif Context Hints: Bütçenizi koruyun</h2>
+        <p>Akademik tez/ödev arayanları, ücretsiz veya açık kaynak yazılım isteyenleri, iş arayan stajyerleri negatif bağlam kurallarıyla hariç tutun.</p>
+
+        <h2>Açılış sayfası ile uyum (Message Match)</h2>
+        <p>Context hint ile vadedilen spesifik değer önerisi, açılış sayfasının H1 başlığında ilk 3 saniyede karşılanmalıdır. <a href="/blog/chatgpt-reklamlari-icin-acilis-sayfasi-kontrol-listesi/">Açılış sayfası kontrol listesi</a> rehberimize bakın.</p>
+
+        <div class="actions">
+          <a href="/chatgpt-reklam-verme/">ChatGPT Reklam Verme Rehberi</a>
+          <a href="/chatgpt-reklamlari/">ChatGPT Ads Kampanya Yönetimi</a>
+          <a href="/iletisim/">Context Hints Stratejisi İsteyin</a>
+        </div>
       </main>
     `
   ],
@@ -296,18 +638,37 @@ const pages = {
     'Sektörünüzle veya ürünlerinizle ilgili sorularda ChatGPT neden şirketinizi önermiyor? Tarama engelleri, bilgi tutarsızlıkları ve rekabet analizi kontrol listesi.',
     `
       <header class="site-header">
-        <nav><a href="/">Ana Sayfa</a> | <a href="/geo-yapay-zeka-gorunurlugu/">GEO Hizmeti</a> | <a href="/yapay-zeka-gorunurluk-analizi/">Canlı AI Testi</a> | <a href="/blog/">Bilgi Merkezi</a></nav>
+        <nav><a href="/">Ana Sayfa</a> | <a href="/geo-yapay-zeka-gorunurlugu/">GEO Hizmeti</a> | <a href="/chatgptde-markam-nasil-cikar/">Markam Nasıl Çıkar?</a> | <a href="/yapay-zeka-gorunurluk-analizi/">Canlı AI Testi</a> | <a href="/blog/">Bilgi Merkezi</a></nav>
       </header>
       <main>
         <h1>Markam ChatGPT’de Neden Görünmüyor? 12 Olası Neden ve Kontrol Listesi</h1>
-        <p><strong>Kısa yanıt:</strong> ChatGPT bir arama motoru gibi yalnızca anahtar kelime eşleştirmez. Bir markayı önermesi için OAI-SearchBot taranabilirliği, doğrulanmış 3. taraf varlık (entity) otoritesi ve doğrudan kullanıcının karar anına cevap veren bilgi kazancı (information gain) sunmanız gerekir. Yapay zekâda kesin ilk sıra garantisi verilemez.</p>
-        <h2>1. Tarama, erişim ve indeksleme sorunları</h2>
-        <p>robots.txt dosyasında <code>OAI-SearchBot</code> engelinin bulunması, istemci taraflı JavaScript (SPA) içeriğinin ham HTML'de çıkmaması veya Cloudflare WAF kurallarının OpenAI botlarını engellemesi ilk nedendir.</p>
-        <h2>2. Marka bilgilerindeki tutarsızlıklar ve içerik boşlukları</h2>
-        <p>Farklı platformlarda tutarsız faaliyet tanımları, tarafsız haber kaynaklarının eksikliği ve yapısal veri (Schema.org) bulunmaması modelin güven skorunu düşürür.</p>
-        <h2>3. Rakiplerle karşılaştırmalı görünürlük testi</h2>
-        <p>Aynı prompt varyasyonlarında rakiplerin hangi kaynaklardan alıntılandığını analiz ederek eksik içerik boşlukları kapatılır.</p>
+        <p><strong>Kısa ve Doğrudan Teşhis:</strong> Bir markanın ChatGPT yanıtında görünmemesi tek bir "algoritma cezası" ile açıklanamaz. Önce hangi soruda görünmediğinizi belirleyin: marka adınız sorulunca mı, kategoriniz sorulunca mı, yoksa bir karşılaştırmada mı? Ardından aşağıdaki 12 kontrolü sırayla yapın. Kurulum ve geliştirme adımları için <a href="/chatgptde-markam-nasil-cikar/">Adım adım görünürlük rehberi</a> sayfamızı uygulayabilirsiniz.</p>
+
+        <section>
+          <h2>12 Somut Neden ve Teşhis Kontrol Listesi</h2>
+          <ol>
+            <li><strong>Soru markayı zaten içermiyor olabilir:</strong> Markalı soru ile kategori sorusunda görünmek farklıdır; iki sorgu türünü ayrı ölçün.</li>
+            <li><strong>OAI-SearchBot erişimi engelleniyor olabilir:</strong> robots.txt, WAF kuralları veya Cloudflare bot koruması OpenAI arama botunu engelliyor olabilir.</li>
+            <li><strong>Sayfa herkese açık ve okunabilir olmayabilir:</strong> Önemli marka ve ürün bilgileri ham HTML çıktısında bulunmalıdır; JavaScript bağımlılığını azaltın.</li>
+            <li><strong>Yanlış veya eski canonical sayfa işaretlenmiş olabilir:</strong> Yinelenen sayfalar veya yanlış yönlendirmeler bilgi tespitini zorlaştırır.</li>
+            <li><strong>Marka kimliği sayfalar arasında tutarsız olabilir:</strong> Farklı platformlardaki çelişkili tanımlar insan için de makine için de belirsizlik yaratır.</li>
+            <li><strong>Ürün veya hizmet farkı açıklanmıyor olabilir:</strong> Jenerik sloganlar yerine kim için, hangi işi yaptığınızı somut örneklerle belirtin.</li>
+            <li><strong>Kullanıcının karar sorularına cevap veren sayfa olmayabilir:</strong> Sık sorulan satın alma ve karşılaştırma sorularına özel içerik üretin.</li>
+            <li><strong>İddialar doğrulanabilir kanıt taşımıyor olabilir:</strong> Müşteri örneği, ürün ekranı ve metodoloji sunun; dayanaksız süperlatiflerden kaçının.</li>
+            <li><strong>Üçüncü taraf bilgiler yanlış veya eksik olabilir:</strong> Bağımsız yayın, dizin ve sektör profillerindeki verileri güncelleyin.</li>
+            <li><strong>Yanlış ülke veya dilde test yapıyor olabilirsiniz:</strong> Farklı dil ve ülke bağlamlarını ayrı test edin.</li>
+            <li><strong>Tek denemeye bakıyor olabilirsiniz:</strong> Yanıtlar zaman ve arama bağlamına göre değişir; soru setleriyle test edin.</li>
+            <li><strong>Anılmayı trafik ve doğrulukla karıştırıyor olabilirsiniz:</strong> Mention, citation ve yönlendirme trafiğini ayrı analiz edin.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Rakiplerle Karşılaştırmalı Görünürlük Testi</h2>
+          <p>Aynı prompt varyasyonlarında rakiplerin hangi kaynaklardan alıntılandığını analiz ederek eksik içerik boşlukları kapatılır.</p>
+        </section>
+
         <div class="actions">
+          <a href="/chatgptde-markam-nasil-cikar/">Adım adım görünürlük rehberi</a>
           <a href="/yapay-zeka-gorunurluk-analizi/">⚡ Sitenizi Canlı AI Konsolunda Test Edin</a>
           <a href="/geo-yapay-zeka-gorunurlugu/">GEO Hizmet Detayları</a>
         </div>
@@ -347,7 +708,7 @@ const pages = {
         <h2>1. Ölçülecek soru seti nasıl oluşturulur?</h2>
         <p>Keşif, değerlendirme ve satın alma niyeti içeren en az 30 soruluk sektörel soru havuzu kurgulanır.</p>
         <h2>2. Anılma, kaynak bağlantısı ve tavsiye farkı</h2>
-        <p>Mention temel bilinirliktir; Citation doğrudan referral trafiği getirir; Recommendation ise en yüksek dönüşümlü müşteriyi sağlar.</p>
+        <p>Mention temel bilinirliktir; Citation tıklanabilir bir kaynak yolu sunar; gerçek tıklamayı analitikte ölçmek gerekir. Recommendation ise kullanıcının karar anında markanızın alternatif veya doğrudan çözüm olarak tavsiye edilmesidir.</p>
         <h2>3. Aylık rapor ve Yapay Zekâ Ses Payı (SoMV)</h2>
         <p>ChatGPT, Perplexity ve Gemini üzerinde periyodik testlerle duyarlılık (sentiment) ve pazar payı izlenir.</p>
         <div class="actions"><a href="/yapay-zeka-gorunurluk-analizi/">Markanızın GEO Skorunu Bugün Ölçün</a></div>
@@ -600,6 +961,18 @@ const pages = {
         <h2>1. GEO ve Yapay Zekâ Görünürlüğü (Organik Kaynak)</h2>
         <div class="articles-list">
           <article>
+            <h3><a href="/chatgptde-markam-nasil-cikar/">ChatGPT'de Markam Nasıl Çıkar? 2026 Görünürlük ve GEO Rehberi</a></h3>
+            <p>Markanızın ChatGPT'de anlaşılması, kaynak gösterilmesi ve bulunabilir olması için 7 adımlı kılavuz.</p>
+          </article>
+          <article>
+            <h3><a href="/chatgpt-seo/">ChatGPT SEO Nedir? ChatGPT'de Görünür Olmak İçin SEO Nasıl Değişiyor?</a></h3>
+            <p>Klasik SEO vs GEO farkı, OAI-SearchBot taraması, entity otoritesi ve alıntılanabilir formatlar.</p>
+          </article>
+          <article>
+            <h3><a href="/chatgptde-web-sitem-neden-cikmiyor/">ChatGPT'de Web Sitem Neden Çıkmıyor? 10 Maddelik Teşhis Rehberi</a></h3>
+            <p>robots.txt, noindex, JS-only rendering, zayıf entity ve bilgi kazancı eksiklikleri teşhisi.</p>
+          </article>
+          <article>
             <h3><a href="/blog/markam-chatgptde-neden-gorunmuyor/">Markam ChatGPT’de Neden Görünmüyor? 12 Neden ve Kontrol Listesi</a></h3>
             <p>Tarama engelleri, marka bilgisi tutarsızlıkları ve rakiplerle karşılaştırmalı görünürlük testi.</p>
           </article>
@@ -684,33 +1057,216 @@ const pages = {
     'Web sitenizin ChatGPT, Perplexity, Gemini ve Claude gibi yapay zekâ motorlarında ne kadar önerildiğini ve kaynak gösterildiğini ücretsiz analiz edin.',
     `
       <header class="site-header">
-        <nav><a href="/">Ana Sayfa</a> | <a href="/geo-yapay-zeka-gorunurlugu/">GEO Ajansı</a> | <a href="/chatgpt-reklamlari/">ChatGPT Ads</a></nav>
+        <nav><a href="/">Ana Sayfa</a> | <a href="/geo-yapay-zeka-gorunurlugu/">GEO Ajansı</a> | <a href="/chatgptde-markam-nasil-cikar/">Markam Nasıl Çıkar?</a> | <a href="/chatgpt-reklamlari/">ChatGPT Ads</a></nav>
       </header>
       <main>
         <h1>Ücretsiz Yapay Zekâ Görünürlük Analizi ve Denetim Konsolu</h1>
         <p>Web sitenizin ChatGPT, Perplexity Pro, Google Gemini ve Claude gibi büyük dil modellerinde taranabilirlik, marka varlığı, alıntı ve tavsiye edilme durumunu anında test edin.</p>
         <h2>Canlı AI Denetim Konsolu Nasıl Çalışır?</h2>
         <p>1. Web sitenizin URL'si girilir.<br />
-        2. Taranacak modeller (ChatGPT-4o, Perplexity Pro, Gemini 2.0, Claude 3.7) ve denetim kapsamı seçilir.<br />
+        2. Taranacak modeller (ChatGPT, Perplexity Pro, Gemini, Claude) ve denetim kapsamı seçilir.<br />
         3. Model arka planda sektörel karar sorgularını simüle ederek sitenizin tavsiye indeksini ve kaynak bağlantılarını puanlar.</p>
-        <div class="actions"><a href="/geo-yapay-zeka-gorunurlugu/">GEO Hizmet Kapsamını İnceleyin</a></div>
+        <p><small>Tarama skorları anlık test simülasyonu olup model güncellemelerine ve prompt varyasyonlarına göre değişebilir. Desteklenen modeller: ChatGPT, Perplexity, Gemini, Claude (Son kontrol: 29 Eylül 2026).</small></p>
+        <div class="actions">
+          <a href="/chatgptde-markam-nasil-cikar/">ChatGPT'de Markam Nasıl Çıkar?</a>
+          <a href="/geo-yapay-zeka-gorunurlugu/">GEO Hizmet Kapsamını İnceleyin</a>
+        </div>
       </main>
     `
   ],
   'gizlilik': [
     'Gizlilik Politikası | Yapay Zekâda Reklam',
-    'Yapay Zekâda Reklam gizlilik politikası.',
+    'Yapay Zekâda Reklam veri güvenliği ve gizlilik politikası. Kullanıcı verilerinin işlenmesi, korunması ve haklarınız hakkında bilgilendirme.',
     `<main><h1>Gizlilik Politikası</h1><p>Veri güvenliği ve gizlilik politikamız. Müşteri analiz talepleri yalnızca teklif ve denetim amacıyla işlenir.</p></main>`
   ],
   'kvkk': [
     'KVKK Aydınlatma Metni | Yapay Zekâda Reklam',
-    'Yapay Zekâda Reklam KVKK aydınlatma metni.',
+    '6698 sayılı KVKK kapsamında kişisel verilerin işlenmesi, saklanması ve haklarınıza ilişkin Yapay Zekâda Reklam aydınlatma metni.',
     `<main><h1>KVKK Aydınlatma Metni</h1><p>6698 sayılı Kişisel Verilerin Korunması Kanunu uyarınca aydınlatma metnimiz.</p></main>`
   ],
   'cerez-politikasi': [
     'Çerez Politikası | Yapay Zekâda Reklam',
-    'Yapay Zekâda Reklam çerez politikası.',
+    'Yapay Zekâda Reklam web sitesinde kullanıcı deneyimini artırmak ve analiz yapmak için kullanılan çerez türleri ve yönetim rehberi.',
     `<main><h1>Çerez Politikası</h1><p>Web sitemizde kullanıcı deneyimini iyileştirmek için kullanılan zorunlu ve analitik çerezler.</p></main>`
+  ],
+  'haberler': [
+    'Yapay Zekâ ve ChatGPT Reklam Haberleri | Güncel Gelişmeler',
+    'OpenAI Ads Manager, ChatGPT reklam ekosistemi, küresel pazar erişimleri ve üretken yapay zekâ pazarlamasına dair en güncel haberler, analizler ve resmî duyurular.',
+    `
+      <header class="site-header">
+        <nav><a href="/">Ana Sayfa</a> | <a href="/chatgpt-reklam-verme/">ChatGPT Reklam Kurulumu</a> | <a href="/openai-ads-manager/">OpenAI Ads Manager</a> | <a href="/blog/">Bilgi Merkezi</a></nav>
+      </header>
+      <main>
+        <h1>Yapay Zekâ Reklamcılığı Haberleri & Resmî Duyurular</h1>
+        <p>OpenAI Ads Manager, ChatGPT reklam ekosistemi, küresel pazar erişimleri ve üretken yapay zekâ pazarlamasına dair en güncel haberler, analizler ve resmî duyurular.</p>
+        
+        <h2>Editoryal Haber Standartlarımız ve Doğrulama İlkelerimiz</h2>
+        <p>Yapay Zekâda Reklam Haber Masası, üretken yapay zekâ ve arama ekosistemindeki gelişmeleri bağımsız bir gözle izler. Haberlerimizde spekülasyonlara ve doğrulanmamış söylentilere yer vermeyiz. Yayın tarihi ile resmî duyuru tarihlerini şeffaf olarak belirtir; 'Ne oldu, kimi etkiler, Türkiye'ye etkisi nedir ve resmî kaynak neresidir?' metodolojisiyle sektörel analiz sunarız.</p>
+        <p>Her haber analizimiz doğrudan OpenAI yardım merkezi (help.openai.com) ve resmi duyuru bültenleriyle teyit edilir; Türkiye merkezli tüzel kişilerin vergi, hesap açılışı ve hedefleme hakları netleştirilir.</p>
+
+        <section class="articles-list">
+          <article>
+            <h3><a href="/haberler/chatgpt-ads-60-ulkeye-ulasti/">ChatGPT Ads 60'tan Fazla Ülkeye Ulaştı: Türkiye İçin Ne Değişiyor?</a></h3>
+            <p><strong>Yayın:</strong> 29 Eylül 2026 | <strong>Duyuru:</strong> 23 Eylül 2026</p>
+            <p>OpenAI, Güneydoğu Asya'daki 7 yeni pazara açıldığını ve ChatGPT Ads'in 60'tan fazla ülkede kullanılabilir olduğunu duyurdu. Türkiye merkezli şirketlerin erişim durumu ve ihracatçılar için yeni imkanlar.</p>
+          </article>
+          <article>
+            <h3><a href="/haberler/sponsored-agents-duyuruldu/">OpenAI Sponsored Agents'ı Duyurdu: Reklamdan Markayla Sohbete</a></h3>
+            <p><strong>Yayın:</strong> 29 Eylül 2026 | <strong>Duyuru:</strong> 16 Eylül 2026</p>
+            <p>OpenAI, kullanıcıların reklama tıkladığında harici web sitesi yerine doğrudan markanın özel yapay zekâ asistanıyla sohbet başlattığı yeni Sponsored Agents formatını duyurdu. Kapsam ve alpha test detayları.</p>
+          </article>
+        </section>
+
+        <h2>Yapay Zekâ Reklam Masası Neleri Takip Ediyor?</h2>
+        <p>Dijital reklamcılık, arama motoru sonuç sayfalarından (SERP) doğrudan yapay zekâ modellerinin konuşma pencerelerine doğru evrilmektedir. Ekibimiz bu geçiş sürecinde reklamverenleri ilgilendiren dört kritik alanı kesintisiz takip eder:</p>
+        <ul>
+          <li><strong>1. OpenAI Ads Manager Güncellemeleri:</strong> Açılan yeni ülkeler, self-servis erişim listeleri, faturalandırma kuralları ve kampanya yönetim araçları.</li>
+          <li><strong>2. Yeni Reklam Formatları & Alpha Programları:</strong> Sponsorlu konuşma ajanları (Sponsored Agents), ürün feed entegrasyonları ve doğrudan satın alma butonları.</li>
+          <li><strong>3. GEO & LLM Kaynak Gösterme Algoritmaları:</strong> ChatGPT Search, Perplexity ve Google Gemini gibi modellerin markaları tavsiye etme ve kaynak gösterme kriterleri.</li>
+          <li><strong>4. Türkiye Mevzuat ve Vergi Uyumu:</strong> Yurt dışı reklam faturaları, 2 No'lu KDV beyannamesi, kurumsal kart harcamaları ve stopaj düzenlemeleri.</li>
+        </ul>
+
+        <div class="actions">
+          <a href="/chatgpt-reklam-verme/">ChatGPT Reklam Verme Rehberi</a>
+          <a href="/openai-ads-manager/">OpenAI Ads Manager Rehberi</a>
+          <a href="/chatgpt-reklam-fiyatlari/">ChatGPT Reklam Fiyatları</a>
+        </div>
+      </main>
+    `
+  ],
+  'haberler/chatgpt-ads-60-ulkeye-ulasti': [
+    'ChatGPT Ads 60\'tan Fazla Ülkeye Ulaştı: Türkiye İçin Ne Değişiyor?',
+    'ChatGPT Ads 60\'tan fazla ülkede açıldı. Güneydoğu Asya pazarları, Türkiye merkezli şirketlerin erişim durumu ve ihracatçılar için kritik etkiler.',
+    `
+      <header class="site-header">
+        <nav><a href="/">Ana Sayfa</a> | <a href="/haberler/">Haberler</a> | <a href="/chatgpt-reklam-verme/">Reklam Kurulumu</a> | <a href="/openai-ads-manager/">Ads Manager</a></nav>
+      </header>
+      <main>
+        <h1>ChatGPT Ads 60'tan fazla ülkede: reklamverenler için yeni tablo</h1>
+        <div class="news-meta">
+          <p><strong>Yayın Tarihi:</strong> 29 Eylül 2026 | <strong>OpenAI Duyuru Tarihi:</strong> 23 Eylül 2026 | <strong>Son Doğrulama:</strong> 29 Eylül 2026 | <strong>Yazar:</strong> Overseas Marketing AI Masası</p>
+        </div>
+        <p><strong>Haber Özeti & Doğrudan Giriş:</strong> OpenAI, 23 Eylül 2026 tarihinde yayımladığı genişleme duyurusuyla ChatGPT Ads altyapısının Güneydoğu Asya ve Tayvan'daki yedi kritik pazara açıldığını ve platformun dünya genelinde 60'tan fazla ülkede kullanılabilir hale geldiğini resmen açıkladı. OpenAI'ın güncel yardım merkezi kullanılabilirlik listesinde (<a href="https://help.openai.com/en/articles/20001245-ads-manager-availability" target="_blank" rel="noopener noreferrer">Ads Manager Availability Listesi</a>) Türkiye, self-servis erişim listesinde 'Available' (Kullanılabilir) statüsünde yer almaktadır. Bu gelişme, hem iç pazardaki yapay zekâ kullanıcılarına ulaşmak isteyen markalar hem de ihracat odaklı Türk şirketleri için yepyeni bir reklam envanteri sunmaktadır.</p>
+
+        <h2>Hangi yedi pazar eklendi?</h2>
+        <p>OpenAI'ın 23 Eylül duyurusuyla eklenen pazarlar: Endonezya, Malezya, Filipinler, Singapur, Tayland, Vietnam ve Tayvan'dır. Bu pazarlar özellikle genç nüfus yoğunluğu, mobil öncelikli dijital tüketim alışkanlıkları ve hızla büyüyen sınır ötesi e-ticaret hacimleriyle öne çıkmaktadır. Singapur bölgesel finans ve teknoloji merkezi rolüyle; Endonezya ve Filipinler ise devasa tüketici kitleleriyle yapay zekâ tabanlı karar anı reklamcılığı için yüksek potansiyel taşımaktadır.</p>
+
+        <h2>60+ ülke reklamveren için ne anlama geliyor?</h2>
+        <p>ChatGPT Ads ilk lansman döneminde yalnızca sınırlı sayıda global kurumsal reklamverenle kapalı devre test edilmişti. Platformun 60'tan fazla ülkeye yayılması, OpenAI'ın reklam teknolojisi ve sunucu altyapısının ölçeklenebilir, kararlı ve ticari kullanıma hazır bir ekosisteme dönüştüğünü kanıtlamaktadır. Reklamverenler artık tek bir <a href="/openai-ads-manager/">OpenAI Ads Manager</a> paneli üzerinden Kuzey Amerika, Avrupa ve Asya-Pasifik genelindeki kullanıcılara aynı kurumsal hesaptan erişebilmektedir.</p>
+
+        <h2>Türkiye'deki şirketler reklam hesabı açabilir mi?</h2>
+        <p>Evet. Türkiye merkezli şirketler <a href="https://ads.openai.com" target="_blank" rel="noopener noreferrer">ads.openai.com</a> portalı üzerinden şirket yasal unvanı, vergi kimlik numarası (VKN), vergi dairesi ve geçerli bir kurumsal ödeme kartı tanımlayarak doğrudan self-servis reklam hesabı açabilmektedir. Fatura süreçleri yurt dışı hizmet alımı kapsamında Türkiye mevzuatına uygun 2 No'lu KDV beyannamesi ile muhasebeleştirilir. Ayrıntılı adımlar için <a href="/chatgpt-reklam-verme/">ChatGPT'de Reklam Nasıl Verilir?</a> rehberimizi inceleyebilirsiniz.</p>
+
+        <h2>Türkiye'deki kullanıcıların reklam görmesi aynı şey mi?</h2>
+        <p>Bu noktada editoryal bir titizlik şarttır: Bir ülkeden reklamveren hesabı açabilmek ile o ülkedeki kullanıcılara reklam gösterilmesi iki ayrı teknik kontrol noktasıdır. Yanıltıcı genellemeleri önlemek için şu üç sütunlu kontrol matrisini dikkate almalısınız:</p>
+        <table border="1" cellpadding="8" style="border-collapse: collapse; width: 100%; margin-bottom: 1.5rem;">
+          <thead>
+            <tr>
+              <th>Kontrol Noktası</th>
+              <th>Tanım & Resmî Durum</th>
+              <th>Etkilenen Kitle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. Reklamveren Hesabı (Advertiser Country)</strong></td>
+              <td>Türkiye merkezli tüzel kişiler Ads Manager hesabı açabilir ve fatura tanımlayabilir (Available).</td>
+              <td>Şirketler, reklam ajansları, pazarlama direktörleri.</td>
+            </tr>
+            <tr>
+              <td><strong>2. Hedef Ülkede Gösterim (Ad Delivery Country)</strong></td>
+              <td>Reklamın hedef kitlesinin bulunduğu ülkenin envantere açık olması gerekir. Türkiye'den bir şirket ABD veya Asya'daki kullanıcıları hedefleyebilir.</td>
+              <td>Kampanya coğrafi hedefleme ayarları.</td>
+            </tr>
+            <tr>
+              <td><strong>3. Kullanıcı Abonelik Türü</strong></td>
+              <td>Yalnızca reklam destekli ücretsiz veya uygun katmanlardaki kullanıcılara reklam gösterilir; Plus, Team ve Kurumsal abonelere reklam gösterilmez.</td>
+              <td>Son kullanıcı gizlilik ve deneyim koruması.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>'60+ ülkede herkes reklam görüyor' veya 'her hesap türünde reklam çıkıyor' çıkarımı gerçeği yansıtmaz. Reklamlar yalnızca uygun bağlamlarda, organik cevaptan ayrı ve sponsorlu etiketli olarak sunulur.</p>
+
+        <h2>İhracat yapan markalar için ilk test nasıl planlanır?</h2>
+        <p>Türkiye merkezli e-ihracat, B2B SaaS, tekstil, mobilya veya sağlık turizmi markaları için bu genişleme büyük bir stratejik avantajdır. İstanbul'daki şirketinizden açacağınız tek bir OpenAI Ads Manager paneliyle:</p>
+        <ul>
+          <li><strong>Yerelleştirilmiş Bağlam İpuçları (Context Hints):</strong> Hedef ülkenin yerel dilinde (İngilizce, Vietnamca, Tayca vb.) kullanıcı karar anlarına odaklanan spesifik bağlamlar kurgulayabilirsiniz.</li>
+          <li><strong>Sürtünmesiz Açılış Sayfaları:</strong> Yerel para birimini, uluslararası kargo veya teslimat sürelerini şeffaf belirten hızlı landing page mimarileri kurmalısınız.</li>
+          <li><strong>Kontrollü Pilot Bütçe:</strong> Belirsizliği yönetmek adına ilk 30 günde hedef pazar başına kontrollü bir test bütçesi ayırarak TBM ve lead kalitesini ölçebilirsiniz. Bütçe simülasyonu için <a href="/chatgpt-reklam-fiyatlari/">ChatGPT Reklam Fiyatları</a> analizimize bakın.</li>
+        </ul>
+
+        <section class="sources">
+          <p><strong>Resmî Dayanak Dokümanları:</strong></p>
+          <ul>
+            <li><a href="https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/" target="_blank" rel="noopener noreferrer">OpenAI 23 Eylül Genişleme Duyurusu (Resmî Blog)</a></li>
+            <li><a href="https://help.openai.com/en/articles/20001245-ads-manager-availability" target="_blank" rel="noopener noreferrer">OpenAI Ads Manager Ülke Kullanılabilirlik Listesi</a></li>
+            <li><a href="https://help.openai.com/en/articles/20001047-ads-in-chatgpt" target="_blank" rel="noopener noreferrer">ChatGPT'de Reklamlar ve Şeffaflık İlkeleri</a></li>
+          </ul>
+        </section>
+
+        <div class="actions">
+          <a href="/chatgpt-reklam-verme/">ChatGPT Reklam Kurulum Rehberi</a>
+          <a href="/openai-ads-manager/">OpenAI Ads Manager Rehberi</a>
+          <a href="/iletisim/">Global Reklam Planı İsteyin</a>
+        </div>
+      </main>
+    `
+  ],
+  'haberler/sponsored-agents-duyuruldu': [
+    'OpenAI Sponsored Agents Duyuruldu: Reklamdan Markayla Sohbete',
+    'OpenAI Sponsored Agents reklam formatını duyurdu. Tıklamayla web sitesi yerine marka asistanıyla sohbet başlatan yeni modelin kapsamı ve sınırları.',
+    `
+      <header class="site-header">
+        <nav><a href="/">Ana Sayfa</a> | <a href="/haberler/">Haberler</a> | <a href="/openai-ads-manager/">Ads Manager</a> | <a href="/chatgpt-reklam-verme/">Reklam Verme</a></nav>
+      </header>
+      <main>
+        <h1>OpenAI Sponsored Agents'ı duyurdu: reklamdan markayla sohbete</h1>
+        <div class="news-meta">
+          <p><strong>Yayın Tarihi:</strong> 29 Eylül 2026 | <strong>OpenAI Duyuru Tarihi:</strong> 16 Eylül 2026 | <strong>Son Doğrulama:</strong> 29 Eylül 2026 | <strong>Yazar:</strong> Overseas Marketing AI Masası</p>
+        </div>
+        <p><strong>Haber Özeti & Doğrudan Giriş:</strong> OpenAI, 16 Eylül 2026 tarihinde yayımladığı vizyon makalesiyle (<a href="https://openai.com/index/reimagining-advertising-with-ai/" target="_blank" rel="noopener noreferrer">Reimagining Advertising with AI</a>) dijital pazarlamada devrim niteliğinde bir yenilik olan <strong>Sponsored Agents (Sponsorlu Marka Asistanları)</strong> formatını duyurdu. Bu modelde kullanıcı sponsorlu bir karta tıkladığında harici bir web sitesine gitmek yerine, doğrudan ChatGPT konuşma penceresi içerisinde markanın kendi özel yapay zekâ asistanıyla sohbete başlayabiliyor. Bu analizde 16 Eylül duyurusunun getirdiklerini, kullanıcı deneyimini, organik yanıtlardan farkını ve reklamverenler için kritik sınırları inceliyoruz.</p>
+
+        <h2>16 Eylül'de ne açıklandı?</h2>
+        <p>OpenAI, klasik banner veya arama motoru metin reklamlarının üretken yapay zekânın sunduğu derin akıl yürütme ortamında yetersiz kaldığını vurguladı. Açıklanan Sponsored Agents vizyonu; markaların kendi ürün katalogları, teknik servis kılavuzları ve canlı CRM sistemleriyle entegre çalışan akıllı sohbet ajanlarını bir reklam ürünü olarak konuşmalara dahil etmesini amaçlıyor. Böylece reklam, pasif bir tıklama bağlantısından interaktif bir danışmanlık deneyimine dönüşüyor.</p>
+
+        <h2>Kullanıcı deneyimi nasıl işliyor?</h2>
+        <p>Kullanıcı belirli bir satın alma veya problem çözümü konusunda ChatGPT ile konuşurken, yapay zekâ kullanıcının karar bağlamına uygun bir sponsorlu asistan kartı gösterir. Örneğin:</p>
+        <ul>
+          <li><strong>Diyalog Başlangıcı:</strong> Kullanıcı ChatGPT'ye 'Şirketimiz için bulut tabanlı siber güvenlik yazılımı seçerken nelere dikkat etmeliyiz?' diye sorar.</li>
+          <li><strong>Sponsorlu Kart:</strong> Organik model yanıtının hemen altında net bir rozetle '[Marka] Güvenlik Danışmanı ile Sohbet Edin' seçeneği belirir.</li>
+          <li><strong>Anında Görüşme:</strong> Kullanıcı karta tıkladığında sayfadan ayrılmadan markanın asistanıyla anlık konuşmaya geçer; şirket ölçeğine göre paket karşılaştırması ve demo rezervasyonu sohbet içinde tamamlanır.</li>
+        </ul>
+
+        <h2>Organik ChatGPT yanıtından farkı</h2>
+        <p>Sponsored Agents modeli hiçbir şekilde tarafsız ChatGPT modelinin bağımsız cevabı yerine geçmez. Kullanıcının konuştuğu pencerede açıkça 'Sponsorlu / Sponsored Agent' ibaresi yer alır. Kullanıcı dilediği an görüşmeyi sonlandırıp bağımsız ChatGPT genel konuşmasına dönebilir. OpenAI, modelin editoryal ve organik tarafsızlığını korumayı en temel ilke olarak konumlandırmıştır.</p>
+
+        <h2>Kimler bugün kullanabiliyor? (Önemli Sınır)</h2>
+        <p><strong>Kritik Editoryal Sınır:</strong> Sponsored Agents şu anda <em>yalnızca ABD'deki seçilmiş kurumsal reklamverenlerle sınırlı kapalı bir alpha testi</em> aşamasındadır. Türkiye'ye, global pazarlara veya standart self-servis Ads Manager panellerine henüz açılmamıştır. OpenAI açık bir başvuru formu sunmamakta, katılımcıları doğrudan davet etmektedir. Dolayısıyla bugün genel kullanıma açık bir ürün gibi sunulması yanıltıcıdır.</p>
+
+        <h2>E-ticaret ve hizmet şirketleri için olası kullanım alanları</h2>
+        <p><em>(Editoryal Değerlendirme & Gelecek Senaryosu)</em>: Format küresel ölçekte açıldığında özellikle yüksek karar derinliği gerektiren sektörlerde köklü değişim yaratacaktır:</p>
+        <ul>
+          <li><strong>B2B SaaS ve Profesyonel Hizmetler:</strong> Ziyaretçinin sorularına anında yanıt veren, özel teklif simülasyonu yapan ve takvim rezervasyonu oluşturan dijital satış temsilcileri.</li>
+          <li><strong>E-Ticaret ve Moda/Mobilya:</strong> Kullanıcının bütçesine, bedenine veya ev dekorasyonuna göre canlı stok verisiyle doğrudan ürün öneren stilist ajanlar.</li>
+          <li><strong>Finans ve Sigorta:</strong> Müşteri kriterlerine göre kasko, sağlık veya yatırım poliçesi simülasyonu yapan lisanslı finansal rehberler.</li>
+        </ul>
+        <p>Bugün mevcut self-servis imkanlarıyla kampanya başlatmak isteyen işletmeler için <a href="/chatgpt-reklam-verme/">ChatGPT Reklam Verme Rehberimizi</a> ve <a href="/openai-ads-manager/">OpenAI Ads Manager Paneli</a> incelememizi tavsiye ederiz.</p>
+
+        <section class="sources">
+          <p><strong>Resmî Kaynaklar:</strong></p>
+          <ul>
+            <li><a href="https://openai.com/index/reimagining-advertising-with-ai/" target="_blank" rel="noopener noreferrer">OpenAI 16 Eylül Duyurusu: Reimagining Advertising with AI</a></li>
+            <li><a href="https://help.openai.com/en/articles/20001524-sponsored-agents-in-chatgpt-ads" target="_blank" rel="noopener noreferrer">OpenAI Yardım Merkezi: Sponsored Agents in ChatGPT Ads Dokümantasyonu</a></li>
+          </ul>
+        </section>
+
+        <div class="actions">
+          <a href="/chatgpt-reklam-verme/">ChatGPT Reklam Kurulum Rehberi</a>
+          <a href="/openai-ads-manager/">OpenAI Ads Manager Rehberi</a>
+          <a href="/iletisim/">Yapay Zekâ Strateji Seansı Planlayın</a>
+        </div>
+      </main>
+    `
   ],
 }
 
@@ -718,11 +1274,14 @@ const source = await readFile('index.html', 'utf8')
 for (const [slug, [title, description, staticHtml]] of Object.entries(pages)) {
   const url = `https://www.yapayzekadareklam.com/${slug}/`
   const isService = slug.startsWith('hizmetler/') || ['chatgpt-reklamlari','geo-yapay-zeka-gorunurlugu','yapay-zeka-ile-reklam-uretimi','yapay-zeka-platformlarinda-reklam','yapay-zekada-reklam-ajansi'].includes(slug)
-  const isArticle = slug.startsWith('blog/') || ['chatgpt-reklam-verme','chatgpt-reklam-fiyatlari','chatgpt-reklamlari-turkiye'].includes(slug)
+  const isNews = slug.startsWith('haberler/') && slug !== 'haberler'
+  const isArticle = isNews || slug.startsWith('blog/') || ['chatgptde-markam-nasil-cikar','chatgpt-reklam-verme','chatgpt-reklam-fiyatlari','chatgpt-reklamlari-turkiye','openai-ads-manager','chatgpt-seo','chatgptde-web-sitem-neden-cikmiyor'].includes(slug)
   const primarySchema = {
-    '@type': isArticle ? 'Article' : isService ? 'Service' : 'WebPage',
+    '@type': isNews ? 'NewsArticle' : isArticle ? 'Article' : isService ? 'Service' : 'WebPage',
     name: title,
     headline: isArticle ? title : undefined,
+    datePublished: isNews ? '2026-09-29' : undefined,
+    dateModified: '2026-09-29',
     description,
     url,
     provider: isService ? {'@id':'https://www.yapayzekadareklam.com/#organization'} : undefined,

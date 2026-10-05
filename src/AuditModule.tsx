@@ -209,8 +209,8 @@ export function AuditModule() {
   };
 
   const scanningSteps = [
-    'ChatGPT & OpenAI Search dizinleri taranıyor...',
-    'Perplexity Pro & Claude 3.7 varlık veritabanı sorgulanıyor...',
+    'ChatGPT (OpenAI Search) dizinleri taranıyor...',
+    'Perplexity Pro & Claude varlık veritabanı sorgulanıyor...',
     'Google AI Overviews & Gemini kaynak referansları kontrol ediliyor...',
     'Sektörel arama niyetleri ve Schema.org mimarisi doğrulanıyor...',
     'Kapsamlı Yapay Zekâ Görünürlük Raporu oluşturuluyor...',
@@ -247,10 +247,10 @@ export function AuditModule() {
   };
 
   const engines = [
-    { id: 'chatgpt', name: 'ChatGPT-4o', sub: 'OpenAI Search', badge: 'Canlı İndeks' },
+    { id: 'chatgpt', name: 'ChatGPT', sub: 'OpenAI Search', badge: 'Canlı İndeks' },
     { id: 'perplexity', name: 'Perplexity Pro', sub: 'Sonar Engine', badge: 'Citation Taraması' },
     { id: 'gemini', name: 'Google Gemini', sub: 'AI Overviews', badge: 'Arama Grafiği' },
-    { id: 'claude', name: 'Claude 3.7', sub: 'Anthropic Core', badge: 'Hibrit Akıl' },
+    { id: 'claude', name: 'Claude', sub: 'Anthropic Core', badge: 'Hibrit Akıl' },
   ];
 
   const scopes = [
@@ -365,6 +365,9 @@ export function AuditModule() {
                   <span className="step-badge-num">2</span>
                   <span className="step-badge-title">SORGULANACAK YAPAY ZEKÂ VE ARAMA MOTORLARI</span>
                 </div>
+                <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.86rem', margin: '0 0 1rem 0', lineHeight: 1.5 }}>
+                  Desteklenen modeller (Son kontrol tarihi: 29 Eylül 2026: ChatGPT, Perplexity Pro, Google Gemini, Claude). Bu test tekil bir deneme simülasyonudur; kalıcı bir sıralama skoru veya kesin tavsiye garantisi değildir.
+                </p>
 
                 <div className="scanner-engines-grid">
                   {engines.map((eng) => {
@@ -549,7 +552,7 @@ export function AuditModule() {
             <span className={scanningStep >= 0 ? 'active' : ''}>ChatGPT</span>
             <span className={scanningStep >= 1 ? 'active' : ''}>Perplexity Pro</span>
             <span className={scanningStep >= 2 ? 'active' : ''}>Google AI</span>
-            <span className={scanningStep >= 2 ? 'active' : ''}>Claude 3.7</span>
+            <span className={scanningStep >= 2 ? 'active' : ''}>Claude</span>
             <span className={scanningStep >= 3 ? 'active' : ''}>Copilot</span>
           </div>
         </div>

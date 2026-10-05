@@ -2,12 +2,23 @@ import { useState, useEffect, type FormEvent, type ReactNode } from 'react'
 import { AuditModule } from './AuditModule'
 import {
   MarkamNedenGorunmuyorPage,
+  ChatGptdeMarkamNasilCikarPage,
   KaynakGosterilmekIcinSitePage,
   GeoPerformansiNasilOlculurPage,
   ChatGptReklamKampanyasiPlanlamaPage,
   ChatGptAcilisSayfasiKontrolPage,
   ChatGptReklamiMiGoogleAdsMiPage,
+  ChatGptSeoPage,
+  ChatGptdeWebSitemNedenCikmiyorPage,
 } from './NewArticles'
+import {
+  ChatGPTGuideUpdatedPage,
+  OpenAIAdsManagerPage,
+  ChatGptAds60UlkePage,
+  ChatGPTPriceUpdatedPage,
+  SponsoredAgentsPage,
+  HaberlerIndexPage,
+} from './NewsAndGuides'
 
 const updated = '2026 Güncellemesi'
 const Arrow = () => <span aria-hidden="true">↗</span>
@@ -155,7 +166,9 @@ function ChatGptSidebar({
   ]
 
   const recents = [
+    { title: "ChatGPT'de Markam Nasıl Çıkar?", href: '/chatgptde-markam-nasil-cikar/' },
     { title: 'ChatGPT Reklam Verme Rehberi', href: '/chatgpt-reklam-verme/' },
+    { title: 'OpenAI Ads Manager Paneli', href: '/openai-ads-manager/' },
     { title: 'ChatGPT Reklam Fiyatları 2026', href: '/chatgpt-reklam-fiyatlari/' },
     { title: "Türkiye'den ChatGPT Erişimi", href: '/chatgpt-reklamlari-turkiye/' },
     { title: 'Context Hints (Bağlam İpuçları)', href: '/blog/chatgpt-ads-context-hints/' },
@@ -223,11 +236,18 @@ function ChatGptSidebar({
 
         {/* Kaydırılabilir İçerik Alanı */}
         <div className="chatgpt-sidebar-scroll-area">
-          {/* Hızlı Kısayollar (Bilgi Merkezi, AI Platformları, Hakkımızda) */}
+          {/* Hızlı Kısayollar (Bilgi Merkezi, Haberler, AI Platformları, Hakkımızda) */}
           <div className="sidebar-quick-nav">
             <a href="/blog/" className={`sidebar-quick-link ${isItemActive('/blog/') ? 'active' : ''}`} onClick={handleLinkClick}>
               <LibraryIcon />
               <span>Bilgi Merkezi & Rehberler</span>
+            </a>
+            <a href="/haberler/" className={`sidebar-quick-link ${isItemActive('/haberler/') ? 'active' : ''}`} onClick={handleLinkClick}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2" />
+                <path d="M18 14h-8" /><path d="M15 18h-5" /><path d="M10 6h8v4h-8V6Z" />
+              </svg>
+              <span>Haberler & Duyurular</span>
             </a>
             <a href="/yapay-zeka-platformlarinda-reklam/" className={`sidebar-quick-link ${isItemActive('/yapay-zeka-platformlarinda-reklam/') ? 'active' : ''}`} onClick={handleLinkClick}>
               <AtSignIcon />
@@ -378,10 +398,12 @@ function Footer() {
           <a href="tel:+905363197697">0536 319 76 97</a>
         </div>
         <div>
-          <strong>Hizmetler</strong>
+          <strong>Hizmetler & Rehberler</strong>
           <a href="/yapay-zekada-reklam-ajansi/">Yapay Zekada Reklam Ajansı</a>
           <a href="/chatgpt-reklamlari/">ChatGPT Ads Yönetimi</a>
-          <a href="/chatgpt-reklam-verme/">ChatGPT’de Reklam Nasıl Verilir?</a>
+          <a href="/chatgpt-reklam-verme/">ChatGPT reklam verme</a>
+          <a href="/chatgptde-markam-nasil-cikar/">ChatGPT'de markam nasıl çıkar?</a>
+          <a href="/openai-ads-manager/">OpenAI Ads Manager Rehberi</a>
           <a href="/blog/yapay-zekada-reklam-nasil-verilir/">Yapay Zekada Reklam Nasıl Verilir?</a>
           <a href="/chatgpt-reklam-fiyatlari/">ChatGPT Reklam Fiyatları</a>
           <a href="/chatgpt-reklamlari-turkiye/">ChatGPT Reklamları Türkiye</a>
@@ -389,7 +411,8 @@ function Footer() {
           <a href="/yapay-zeka-platformlarinda-reklam/">AI Reklam Platformları</a>
         </div>
         <div>
-          <strong>Şirket</strong>
+          <strong>Şirket & Yayınlar</strong>
+          <a href="/haberler/">Haberler & Resmî Duyurular</a>
           <a href="/hakkimizda/">Hakkımızda</a>
           <a href="/blog/">Bilgi Merkezi</a>
           <a href="/iletisim/">İletişim & Teklif</a>
@@ -403,7 +426,7 @@ function Footer() {
       </div>
       <div className="footer-bottom">
         <span>© 2026 Yapay Zekâda Reklam · Bir <a href="https://overseas.marketing" target="_blank" rel="noreferrer">overseas.marketing</a> markasıdır.</span>
-        <span>Son Kontrol & Güncelleme: 23 Eylül 2026</span>
+        <span>Son Kontrol & Güncelleme: 29 Eylül 2026</span>
       </div>
     </footer>
   )
@@ -1331,13 +1354,22 @@ function Home() {
             ChatGPT Ads ve <em>AI görünürlüğü</em>
           </h1>
 
+          <div style={{ background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '14px', padding: '1.2rem 1.6rem', margin: '1.5rem auto 1.8rem', maxWidth: '820px', textAlign: 'left', lineHeight: 1.7 }}>
+            <strong style={{ color: '#ffffff', display: 'block', marginBottom: '0.4rem', fontSize: '1.02rem' }}>
+              ChatGPT'de markanızın organik cevaplarda görünmesini mi, sponsorlu reklam alanında yer almasını mı istiyorsunuz?
+            </strong>
+            <p style={{ color: 'var(--chat-text-secondary)', margin: 0, fontSize: '0.98rem' }}>
+              Bu iki hedefin yöntemi ve ölçümü farklıdır. <a href="/chatgptde-markam-nasil-cikar/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>Organik görünürlük rehberi</a> ile sitenizin bilgi ve kaynak yapısını geliştirin; <a href="/chatgpt-reklam-verme/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>ChatGPT reklam verme rehberi</a> ile Ads Manager uygunluğunu ve kampanya adımlarını öğrenin.
+            </p>
+          </div>
+
           <p className="hero-subtitle">
             Müşterileriniz ürün ve hizmetleri yapay zekâ araçlarında da araştırıyor. Markanız için ChatGPT'de sponsorlu reklam kampanyalarını, yapay zekâ yanıtlarında organik görünürlüğü ve AI destekli Google/Meta reklam yönetimini ayrı hedeflerle planlıyoruz. Önce uygun kanalı belirliyor, sonra sonuçları ölçüyoruz.
           </p>
 
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
-            <a className="button primary" href="/iletisim/">Markam için reklam planı iste <Arrow /></a>
-            <a className="button secondary" href="/blog/yapay-zekada-reklam-nasil-verilir/">Yapay zekada reklam nasıl verilir? <Arrow /></a>
+            <a className="button primary" href="/chatgptde-markam-nasil-cikar/">Markam ChatGPT'de nasıl çıkar? <Arrow /></a>
+            <a className="button secondary" href="/chatgpt-reklam-verme/">ChatGPT'de reklam nasıl verilir? <Arrow /></a>
           </div>
 
           {/* ChatGPT App Screen Card */}
@@ -1349,8 +1381,10 @@ function Home() {
                   <MenuIcon />
                 </button>
                 <div className="card-header-title">
-                  <span>ChatGPT Ads Manager</span>
-                  <span style={{ fontSize: '0.8rem', color: '#6b7280' }}>&gt;</span>
+                  <a href="/openai-ads-manager/" style={{ color: '#ffffff', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                    <span>OpenAI Ads Manager</span>
+                    <span style={{ fontSize: '0.8rem', color: '#6b7280' }}>&gt;</span>
+                  </a>
                 </div>
                 <button type="button" className="card-header-btn" title="Yeni Kampanya">
                   <NewChatIcon />
@@ -1368,7 +1402,7 @@ function Home() {
                     <img src="/images/chatgpt-green.webp" alt="ChatGPT" width="24" height="24" style={{ borderRadius: '50%', display: 'block' }} />
                   </div>
                   <div className="chatgpt-bot-text">
-                    ChatGPT'de markanızı konumlandırmak için <strong>OpenAI Ads Manager Beta</strong> üzerinden sponsorlu reklam kampanyaları kuruyor ve niyet odaklı <strong>context hints (bağlam ipuçları)</strong> tanımlıyoruz. Ayrı bir çalışma olarak organik yanıt otoritesi için <a href="/geo-yapay-zeka-gorunurlugu/" className="chatgpt-bot-highlight">GEO (Generative Engine Optimization)</a> süreçlerini yönetiyoruz.
+                    ChatGPT'de markanızı konumlandırmak için <a href="/openai-ads-manager/" className="chatgpt-bot-highlight"><strong>OpenAI Ads Manager Beta</strong></a> üzerinden sponsorlu reklam kampanyaları kuruyor ve niyet odaklı <strong>context hints (bağlam ipuçları)</strong> tanımlıyoruz. Ayrı bir çalışma olarak organik yanıt otoritesi için <a href="/geo-yapay-zeka-gorunurlugu/" className="chatgpt-bot-highlight">GEO (Generative Engine Optimization)</a> süreçlerini yönetiyoruz.
                   </div>
                 </div>
               </div>
@@ -1419,6 +1453,75 @@ function Home() {
 
         {/* 12 AI Modeli Kayan Logo Slider */}
         <AILogoMarquee />
+
+        {/* Karar Merkezi: "Ne Arıyorsunuz?" Arama Niyeti Yönlendirmesi */}
+        <section className="section-pad" style={{ background: 'var(--chat-surface)', borderTop: '1px solid var(--chat-border)', borderBottom: '1px solid var(--chat-border)' }}>
+          <div style={{ maxWidth: '1080px', margin: '0 auto', textAlign: 'center' }}>
+            <span className="section-tag" style={{ color: 'var(--chat-green)', fontWeight: 600, fontSize: '0.85rem' }}>Hızlı Karar Rehberi</span>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, margin: '0.6rem 0 1rem', color: '#ffffff' }}>
+              Ne Arıyorsunuz? İhtiyacınıza Uygun Doğru Adımı Seçin
+            </h2>
+            <p style={{ color: 'var(--chat-text-secondary)', maxWidth: '720px', margin: '0 auto 2.5rem', lineHeight: 1.7, fontSize: '1.02rem' }}>
+              Yapay zekâda görünürlük ve reklamcılık farklı hedefler içerir. Arama niyetinize göre tasarlanmış doğrudan çözüme geçin:
+            </p>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.2rem', textAlign: 'left' }}>
+              <a href="/chatgpt-reklam-verme/" style={{ background: '#171717', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '14px', padding: '1.5rem', textDecoration: 'none', transition: 'border-color 0.2s', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>🎯</div>
+                  <strong style={{ color: '#ffffff', fontSize: '1.1rem', display: 'block', marginBottom: '0.4rem' }}>ChatGPT'de Reklam Vermek İstiyorum</strong>
+                  <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, margin: 0 }}>OpenAI Ads Manager self-servis panelinden hesap açma, Türkiye şartları ve ilk kampanya kurulum adımları.</p>
+                </div>
+                <span style={{ color: 'var(--chat-green)', fontWeight: 600, fontSize: '0.85rem', marginTop: '1rem', display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>Kurulum Rehberini Aç ➔</span>
+              </a>
+
+              <a href="/chatgptde-markam-nasil-cikar/" style={{ background: '#171717', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '14px', padding: '1.5rem', textDecoration: 'none', transition: 'border-color 0.2s', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>🔍</div>
+                  <strong style={{ color: '#ffffff', fontSize: '1.1rem', display: 'block', marginBottom: '0.4rem' }}>Markam ChatGPT'de Görünmüyor</strong>
+                  <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, margin: 0 }}>Reklam satın almadan organik yanıtlarda kaynak gösterilmek, OAI-SearchBot erişimi ve entity optimizasyonu.</p>
+                </div>
+                <span style={{ color: 'var(--chat-green)', fontWeight: 600, fontSize: '0.85rem', marginTop: '1rem', display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>GEO Görünürlük Rehberi ➔</span>
+              </a>
+
+              <a href="/chatgpt-reklamlari/" style={{ background: '#171717', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '14px', padding: '1.5rem', textDecoration: 'none', transition: 'border-color 0.2s', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>💼</div>
+                  <strong style={{ color: '#ffffff', fontSize: '1.1rem', display: 'block', marginBottom: '0.4rem' }}>Reklamları Yönetecek Ajans Arıyorum</strong>
+                  <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, margin: 0 }}>Context hints kütüphanesi, CAPI ölçümü, landing page mimarisi ve uçtan uca OpenAI Ads ajans yönetimi.</p>
+                </div>
+                <span style={{ color: 'var(--chat-green)', fontWeight: 600, fontSize: '0.85rem', marginTop: '1rem', display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>Hizmet Kapsamını Gör ➔</span>
+              </a>
+
+              <a href="/yapay-zeka-gorunurluk-analizi/" style={{ background: '#171717', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '14px', padding: '1.5rem', textDecoration: 'none', transition: 'border-color 0.2s', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>⚡</div>
+                  <strong style={{ color: '#ffffff', fontSize: '1.1rem', display: 'block', marginBottom: '0.4rem' }}>AI Görünürlüğümü Ölçmek İstiyorum</strong>
+                  <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, margin: 0 }}>ChatGPT, Perplexity, Gemini ve Claude üzerinde web sitenizin anılma ve tavsiye indeksini anında test edin.</p>
+                </div>
+                <span style={{ color: 'var(--chat-green)', fontWeight: 600, fontSize: '0.85rem', marginTop: '1rem', display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>Canlı Test Konsolunu Aç ➔</span>
+              </a>
+
+              <a href="/chatgpt-reklam-fiyatlari/" style={{ background: '#171717', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '14px', padding: '1.5rem', textDecoration: 'none', transition: 'border-color 0.2s', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>💰</div>
+                  <strong style={{ color: '#ffffff', fontSize: '1.1rem', display: 'block', marginBottom: '0.4rem' }}>Reklam Fiyatları ve Bütçeyi Öğrenmek İstiyorum</strong>
+                  <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, margin: 0 }}>Açık artırma modelleri (CPC/CPM), pilot test bütçe hesabı ve şeffaf ajans yönetim bedeli ayrımı.</p>
+                </div>
+                <span style={{ color: 'var(--chat-green)', fontWeight: 600, fontSize: '0.85rem', marginTop: '1rem', display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>Fiyat & Bütçe Matrisini İncele ➔</span>
+              </a>
+
+              <a href="/blog/chatgpt-ads-context-hints/" style={{ background: '#171717', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '14px', padding: '1.5rem', textDecoration: 'none', transition: 'border-color 0.2s', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>🧠</div>
+                  <strong style={{ color: '#ffffff', fontSize: '1.1rem', display: 'block', marginBottom: '0.4rem' }}>Context Hints Nasıl Yazılır?</strong>
+                  <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, margin: 0 }}>Klasik anahtar kelimeler yerine konuşma anını yakalayan 25 hazır bağlam şablonu ve negatif filtreler.</p>
+                </div>
+                <span style={{ color: 'var(--chat-green)', fontWeight: 600, fontSize: '0.85rem', marginTop: '1rem', display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>25 Örnekli Rehberi Oku ➔</span>
+              </a>
+            </div>
+          </div>
+        </section>
 
         {/* Yapay Zekâ Görünürlük Analizi Modülü */}
         <section id="ucretsiz-analiz" className="audit-home-section">
@@ -1713,7 +1816,7 @@ const pages: { [key: string]: { e: string; t: string; s: string; items: [string,
   '/geo-yapay-zeka-gorunurlugu': {
     e: 'Organik Görünürlük',
     t: 'Yapay Zekâ Aramalarında Görünürlük: GEO Ajansı',
-    s: 'GEO (Generative Engine Optimization); markanızın üretken yapay zekâ sistemleri tarafından anlaşılması ve aramalarda güvenilir tavsiye kaynağı olarak listelenmesi çalışmasıdır.',
+    s: 'GEO (Generative Engine Optimization); marka bilgilerinin anlaşılabilirliğini ve kaynak olarak bulunabilirliğini geliştirme ve ölçme çalışmasıdır.',
     items: [
       ['Varlık Netliği', 'Marka, ürün ve hizmet bilgilerinin AI modellerine uygun tanımlanması.'],
       ['Cevap Mimarisi', 'Yapay zekânın kaynak gösterilebileceği derinlikte otoriter içerikler.'],
@@ -1972,270 +2075,19 @@ function ChatGPTAdsPage() {
 
         <div style={{ textAlign: 'center', marginTop: '3.5rem', padding: '2.5rem', background: 'var(--chat-surface)', borderRadius: '16px', border: '1px solid var(--chat-border)' }}>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem', color: '#ffffff' }}>Markanız İçin ChatGPT Ads Kampanyası Başlatalım</h2>
-          <p style={{ color: 'var(--chat-text-secondary)', marginBottom: '1.8rem', maxWidth: '600px', margin: '0 auto 1.8rem', lineHeight: 1.7 }}>
-            Ürün veya hizmetinizin ChatGPT ekosistemindeki arama niyetlerini çıkaralım, context hints yapısını kuralım ve kontrollü pilot testinizi başlatalım.
+          <p style={{ color: 'var(--chat-text-secondary)', marginBottom: '1.8rem', maxWidth: '640px', margin: '0 auto 1.8rem', lineHeight: 1.7 }}>
+            Ürün veya hizmetinizin ChatGPT ekosistemindeki arama niyetlerini çıkaralım, 25+ context hints bağlam haritasını kuralım, CAPI dönüşüm takibini bağlayalım ve kontrollü pilot testinizi başlatalım. Adım adım kurulum için <a href="/chatgpt-reklam-verme/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>İlk kampanya kurulum adımları</a> rehberimizi inceleyin.
           </p>
-          <a className="button primary" href="/iletisim/">Hemen Strateji Görüşmesi Planlayın <Arrow /></a>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a className="button primary" href="/iletisim/">ChatGPT Ads Kampanya Planı İsteyin <Arrow /></a>
+            <a className="button secondary" href="/chatgpt-reklam-fiyatlari/">Fiyat ve Bütçe Seviyeleri <Arrow /></a>
+          </div>
         </div>
       </div>
     </Detail>
   )
 }
 
-function ChatGPTGuidePage() {
-  const steps = [
-    { title: 'Uygunluk ve Ülke Doğrulaması', desc: 'İşletmenizin OpenAI Ads Manager Beta politikalarına ve Türkiye self-servis erişim listesine uygunluğunu ads.openai.com üzerinden kontrol edin.' },
-    { title: 'Ads Manager İşletme Hesabı Kurulumu', desc: 'Resmî kurumsal e-posta, şirket tüzel kişilik bilgileri, vergi dairesi / vergi kimlik numarası ve faturalandırma profilinizi eksiksiz tanımlayın.' },
-    { title: 'Kampanya Hedefi ve Dönüşüm Hunisi', desc: 'Tıklama (Trafik), Nitelikli Lead (Form) veya Doğrudan Satış hedeflerinden işletmenizin ticari yapısına uygun olanı seçin.' },
-    { title: 'Context Hints (Doğal Bağlam İpuçları) Tasarımı', desc: 'Klasik arama motoru kelime yığması yerine; müşterinizin hangi problem anında, ne amaçla ve hangi koşulda ürününüze ihtiyaç duyduğunu doğal dille tanımlayın.' },
-    { title: 'Negatif Bağlam ve Uygunsuz Filtreleri', desc: 'Bütçe israfını önlemek için reklamınızın kesinlikle görünmemesi gereken alakasız, tüketici dışı veya akademik sorguları negatif bağlam olarak ekleyin.' },
-    { title: 'Konuşma Odaklı Reklam Metinleri', desc: 'Kullanıcının diyalog akışını kesmeyen, abartılı vaatler içermeyen, açık ve net değer önerisi sunan sponsorlu mesaj varyasyonları oluşturun.' },
-    { title: 'Açılış Sayfası (Landing Page) Uyumu', desc: 'ChatGPT kullanıcısının reklam metninde gördüğü net vaatle doğrudan uyuşan, hızlı açılan ve mobil uyumlu bir karşılama sayfası hazırlayın.' },
-    { title: 'Pixel, Conversions API ve UTM Takibi', desc: 'Satın alma veya lead dönüşümlerini geriye doğru beslemek üzere OpenAI Pikseli ve CAPI altyapısını kurun; analiz araçları için UTM şablonlarını ekleyin.' },
-    { title: 'Öğrenme Verisi Analizi ve GEO ile Büyüme', desc: 'İlk 30-45 günlük test verilerini inceleyerek kazanan bağlamları ölçekleyin; eş zamanlı olarak markanızı organik GEO ile güçlendirin.' }
-  ]
-
-  return (
-    <Detail
-      eyebrow="2026 Kapsamlı Uygulama Rehberi"
-      title="ChatGPT’de Reklam Nasıl Verilir? Adım Adım 2026 Rehberi"
-      summary="ChatGPT'de reklam vermek isteyen işletmeler için resmî OpenAI Ads Manager Beta panelinden kampanya kurulumuna, context hints yazımından bütçe yönetimi ve dönüşüm izlemeye kadar tüm aşamaları adım adım açıklıyoruz."
-      cta="Rehbere Göre Kampanyamızı Kuralım"
-    >
-      <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-        <section style={{ marginBottom: '3.5rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.2rem', color: '#ffffff' }}>
-            1. ChatGPT Reklam Ekosistemine Giriş: Doğru Panel Neresidir?
-          </h2>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1rem' }}>
-            En sık yapılan aramalardan biri <em>"chat gpt de reklam ver"</em> veya <em>"ChatGPT reklam butonu nerede?"</em> sorusudur. 
-            Önemli bir düzeltmeyle başlayalım: ChatGPT'nin son kullanıcı sohbet arayüzünde (chatgpt.com) bir "reklam ver" butonu bulunmaz. 
-            Reklamlar, OpenAI'nin resmî reklamveren yönetim paneli olan <strong>OpenAI Ads Manager (ads.openai.com)</strong> üzerinden oluşturulur ve yönetilir.
-          </p>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem' }}>
-            23 Eylül 2026 resmi kontrolleri itibarıyla Türkiye, OpenAI Ads Manager Beta programında self-servis erişime uygun ülkeler arasında yer almaktadır. 
-            Bu durum, Türkiye merkezli işletmelerin bir aracıya veya global bir temsilciye bağımlı olmadan kendi şirket hesaplarıyla doğrudan reklam açabileceği anlamına gelir.
-          </p>
-        </section>
-
-        <section style={{ marginBottom: '3.5rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem', color: '#ffffff' }}>
-            2. Adım Adım 9 Aşamalı Kampanya Kurulum Süreci
-          </h2>
-          <div className="timeline">
-            {steps.map((s, idx) => (
-              <div key={s.title} style={{ marginBottom: '1.5rem', background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '0.6rem' }}>
-                  <span style={{ background: 'var(--chat-green)', color: '#ffffff', width: '28px', height: '28px', borderRadius: '50%', display: 'grid', placeItems: 'center', fontWeight: 700, fontSize: '0.85rem' }}>
-                    {idx + 1}
-                  </span>
-                  <h3 style={{ fontSize: '1.2rem', fontWeight: 600, color: '#ffffff', margin: 0 }}>{s.title}</h3>
-                </div>
-                <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, margin: 0, paddingLeft: '2.5rem' }}>{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section style={{ marginBottom: '3.5rem', background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '16px', padding: '2rem' }}>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem', color: '#ffffff' }}>
-            3. Context Hints (Bağlam İpuçları) Nasıl Yazılır?
-          </h2>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, marginBottom: '1.2rem' }}>
-            Google Ads'te anahtar kelime eşleme kullanırken ("muhasebe programı" vb.), ChatGPT Ads'te yapay zekâya hedef kitlenizin karar bağlamını anlatırsınız.
-          </p>
-          <div style={{ background: 'var(--chat-bg-secondary)', padding: '1.2rem', borderRadius: '10px', borderLeft: '4px solid var(--chat-green)', marginBottom: '1.2rem' }}>
-            <strong style={{ color: '#ffffff', display: 'block', marginBottom: '0.4rem' }}>Doğru Context Hint Örneği:</strong>
-            <p style={{ color: 'var(--chat-text-secondary)', fontStyle: 'italic', margin: 0 }}>
-              "Türkiye'de e-fatura ve stok takibi yapmak isteyen, 5-50 çalışana sahip küçük ve orta ölçekli işletmelerin bulut tabanlı yazılım arayışları veya karşılaştırma talepleri."
-            </p>
-          </div>
-          <div style={{ background: 'var(--chat-bg-secondary)', padding: '1.2rem', borderRadius: '10px', borderLeft: '4px solid #ef4444' }}>
-            <strong style={{ color: '#ffffff', display: 'block', marginBottom: '0.4rem' }}>Hatalı Context Hint Örneği:</strong>
-            <p style={{ color: 'var(--chat-text-secondary)', fontStyle: 'italic', margin: 0 }}>
-              "en ucuz muhasebe programı, en iyi yazılım satın al, hemen tıkla" (Kuru anahtar kelimeler yapay zekânın doğru bağlamı kurmasını engeller).
-            </p>
-          </div>
-        </section>
-
-        <section style={{ marginBottom: '3.5rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.2rem', color: '#ffffff' }}>
-            4. ChatGPT'de Reklam Verirken En Sık Yapılan 4 Hata
-          </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.2rem' }}>
-            <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <strong style={{ color: '#f87171', display: 'block', marginBottom: '0.5rem' }}>1. Organik Tavsiyeyi Değiştireceğini Sanmak</strong>
-              <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, margin: 0 }}>
-                Reklam yalnızca sponsorlu alanda görünür; yapay zekânın organik cevabını etkilemez. Organik öneri için GEO gerekir.
-              </p>
-            </div>
-            <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <strong style={{ color: '#f87171', display: 'block', marginBottom: '0.5rem' }}>2. Dönüşüm API'sini (CAPI) Kurmamak</strong>
-              <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, margin: 0 }}>
-                Sadece tıklama takibi yapmak yapay zekâ modelinin hangi kullanıcının gerçek müşteri olduğunu öğrenmesini engeller.
-              </p>
-            </div>
-            <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <strong style={{ color: '#f87171', display: 'block', marginBottom: '0.5rem' }}>3. Yanıltıcı / Genel Açılış Sayfası</strong>
-              <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, margin: 0 }}>
-                Kullanıcıyı doğrudan anasayfaya yönlendirmek terk oranını artırır; özel bağlamı karşılayan bir sayfa olmalıdır.
-              </p>
-            </div>
-            <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <strong style={{ color: '#f87171', display: 'block', marginBottom: '0.5rem' }}>4. Erken Karar Verip Kampanyayı Kapatmak</strong>
-              <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, margin: 0 }}>
-                İlk birkaç günde yeterli veri birikmeden yapılan müdahaleler modelin öğrenme algoritmasını sıfırlar.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section style={{ marginBottom: '2rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem', color: '#ffffff' }}>
-            Sıkça Sorulan Sorular
-          </h2>
-          <div className="faq-list">
-            <div className="faq-item" style={{ borderBottom: '1px solid var(--chat-border)', paddingBottom: '1.2rem', marginBottom: '1.2rem' }}>
-              <h3 style={{ color: '#ffffff', fontSize: '1.1rem', marginBottom: '0.5rem' }}>OpenAI Ads Manager'a nasıl kaydolabilirim?</h3>
-              <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, fontSize: '0.95rem' }}>
-                ads.openai.com adresinden kurumsal e-posta adresinizle giriş yaparak şirket profilinizi ve fatura bilgilerinizi girip beta erişim sürecini başlatabilirsiniz.
-              </p>
-            </div>
-            <div className="faq-item" style={{ borderBottom: '1px solid var(--chat-border)', paddingBottom: '1.2rem', marginBottom: '1.2rem' }}>
-              <h3 style={{ color: '#ffffff', fontSize: '1.1rem', marginBottom: '0.5rem' }}>ChatGPT reklamlarında minimum bütçe zorunluluğu var mı?</h3>
-              <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, fontSize: '0.95rem' }}>
-                OpenAI platformunda katı bir minimum harcama eşiği olmamakla birlikte, modelin karar anlarını tespit edip verimli teklif verebilmesi için aylık belirli bir kontrollü pilot bütçe önerilir.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <div style={{ textAlign: 'center', marginTop: '3.5rem', padding: '2.5rem', background: 'var(--chat-surface)', borderRadius: '16px', border: '1px solid var(--chat-border)' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem', color: '#ffffff' }}>Rehberdeki Adımları Birlikte Hayata Geçirelim</h2>
-          <p style={{ color: 'var(--chat-text-secondary)', marginBottom: '1.8rem', maxWidth: '600px', margin: '0 auto 1.8rem', lineHeight: 1.7 }}>
-            Hesap açılışından bağlam tasarımı ve piksel entegrasyonuna kadar tüm aşamaları uzman ekibimizle eksiksiz tamamlayın.
-          </p>
-          <a className="button primary" href="/iletisim/">Kurulum Desteği Alın <Arrow /></a>
-        </div>
-      </div>
-    </Detail>
-  )
-}
-
-function ChatGPTPricePage() {
-  return (
-    <Detail
-      eyebrow="2026 Fiyatlandırma ve Bütçe Rehberi"
-      title="ChatGPT Reklam Fiyatları 2026: TBM, Bütçe ve Yönetim Maliyeti"
-      summary="ChatGPT'de reklam vermenin gerçek maliyetleri nasıl hesaplanır? OpenAI Ads Manager medya bütçesi dinamikleri, TBM (CPC) açık artırması, ajans yönetim modelleri ve yatırım getirisi (ROAS) analizi."
-      cta="Fiyatlandırma & Teklif Alın"
-    >
-      <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-        <section style={{ marginBottom: '3.5rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.2rem', color: '#ffffff' }}>
-            ChatGPT Reklam Maliyeti Nasıl Hesaplanır?
-          </h2>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1rem' }}>
-            ChatGPT reklam maliyetleri, sabit bir fiyat listesine dayanmaz; Google ve Meta reklamlarında olduğu gibi <strong>açık artırma (auction-based)</strong> ve bağlam rekabeti esasına göre çalışır. 
-            Toplam maliyet iki temel kalemden oluşur:
-          </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginTop: '1.5rem' }}>
-            <div style={{ background: 'var(--chat-surface)', padding: '1.8rem', borderRadius: '14px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.3rem', marginBottom: '0.8rem' }}>1. Medya Bütçesi (OpenAI)</h3>
-              <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, fontSize: '0.95rem' }}>
-                Tıklama başı maliyet (TBM / CPC) veya bin gösterim başı maliyet (BGBM / CPM) üzerinden doğrudan OpenAI platformuna ödenen tutardır. Tamamen kendi kurumsal kartınızdan çekilir.
-              </p>
-            </div>
-            <div style={{ background: 'var(--chat-surface)', padding: '1.8rem', borderRadius: '14px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.3rem', marginBottom: '0.8rem' }}>2. Ajans Yönetim Bedeli</h3>
-              <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, fontSize: '0.95rem' }}>
-                Hesap kurulumu, context hints kütüphanesi mimarisi, kreatif mesaj testleri, Conversions API entegrasyonu ve haftalık kârlılık optimizasyonunu kapsayan profesyonel danışmanlık ücretidir.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section style={{ marginBottom: '3.5rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem', color: '#ffffff' }}>
-            Örnek Bütçe ve Kampanya Büyüklükleri Karşılaştırma Matrisi
-          </h2>
-          <div className="table-wrap" style={{ overflowX: 'auto' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.95rem' }}>
-              <thead>
-                <tr style={{ borderBottom: '2px solid var(--chat-border)', color: '#ffffff' }}>
-                  <th style={{ padding: '0.9rem' }}>Kampanya Seviyesi</th>
-                  <th style={{ padding: '0.9rem' }}>Önerilen Medya Bütçesi</th>
-                  <th style={{ padding: '0.9rem' }}>Kapsam ve Amaç</th>
-                  <th style={{ padding: '0.9rem' }}>Yönetim Modeli</th>
-                </tr>
-              </thead>
-              <tbody style={{ color: 'var(--chat-text-secondary)' }}>
-                <tr style={{ borderBottom: '1px solid var(--chat-border)' }}>
-                  <td style={{ padding: '0.9rem', fontWeight: 600, color: '#ffffff' }}>Kontrollü Pilot Test</td>
-                  <td style={{ padding: '0.9rem' }}>Başlangıç / Pilot</td>
-                  <td style={{ padding: '0.9rem' }}>Sektörel niyet doğrulaması, temel context hints testi, piksel veri akışı ve ilk lead maliyeti tespiti.</td>
-                  <td style={{ padding: '0.9rem' }}>Sabit Aylık Danışmanlık</td>
-                </tr>
-                <tr style={{ borderBottom: '1px solid var(--chat-border)' }}>
-                  <td style={{ padding: '0.9rem', fontWeight: 600, color: '#ffffff' }}>Büyüme & Ölçeklenme</td>
-                  <td style={{ padding: '0.9rem' }}>Orta Ölçek</td>
-                  <td style={{ padding: '0.9rem' }}>Çoklu karar anı segmentasyonu, dinamik kreatif testleri, CAPI satış eşleştirmesi ve kârlı ROAS hedefi.</td>
-                  <td style={{ padding: '0.9rem' }}>Sabit + Performans Payı</td>
-                </tr>
-                <tr style={{ borderBottom: '1px solid var(--chat-border)' }}>
-                  <td style={{ padding: '0.9rem', fontWeight: 600, color: '#ffffff' }}>Kurumsal & B2B SaaS</td>
-                  <td style={{ padding: '0.9rem' }}>Yüksek Hacimli</td>
-                  <td style={{ padding: '0.9rem' }}>Uluslararası pazarlar, çoklu dil context hints, CRM entegrasyonu, GEO + Ads hibrit dominasyon stratejisi.</td>
-                  <td style={{ padding: '0.9rem' }}>Özel Kurumsal Kapsam</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section style={{ marginBottom: '3.5rem', background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '16px', padding: '2rem' }}>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem', color: '#ffffff' }}>
-            İlk 30-60 Günlük Pilot Test Bütçesi Neden Hayatidir?
-          </h2>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, marginBottom: '1rem' }}>
-            Yapay zekâ modelleri deterministik kurallarla değil, olasılık ve semantik benzerlik algoritmalarıyla karar verir. Bir kullanıcının sorduğu soru ile sizin bağlam ipuçlarınızın eşleşmesi, modelin "öğrenme süreci" boyunca netleşir.
-          </p>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7 }}>
-            Bu nedenle ilk 30-60 günlük süreçte amaç sadece anlık satış yapmak değil; hangi context hint ifadelerinin en yüksek satın alma niyetli trafiği çektiğini ve en düşük müşteri edinme maliyetini (CPA) sağladığını matematiksel olarak kanıtlamaktır.
-          </p>
-        </section>
-
-        <section style={{ marginBottom: '2rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem', color: '#ffffff' }}>
-            Sıkça Sorulan Sorular
-          </h2>
-          <div className="faq-list">
-            <div className="faq-item" style={{ borderBottom: '1px solid var(--chat-border)', paddingBottom: '1.2rem', marginBottom: '1.2rem' }}>
-              <h3 style={{ color: '#ffffff', fontSize: '1.1rem', marginBottom: '0.5rem' }}>ChatGPT reklamları Google Ads'e göre daha mı pahalı?</h3>
-              <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, fontSize: '0.95rem' }}>
-                Tıklama başı maliyet (TBM) sektöre ve rekabete göre değişir; ancak ChatGPT kullanıcıları pasif gezinti yerine doğrudan bir problemi çözmek için soru sorduğundan, dönüşüm oranı (CR) geleneksel arama motorlarına göre daha yüksek olabilmekte ve nitelikli müşteri edinme maliyetini dengelemektedir.
-              </p>
-            </div>
-            <div className="faq-item" style={{ borderBottom: '1px solid var(--chat-border)', paddingBottom: '1.2rem', marginBottom: '1.2rem' }}>
-              <h3 style={{ color: '#ffffff', fontSize: '1.1rem', marginBottom: '0.5rem' }}>Ajans yönetim ücreti neye göre belirlenir?</h3>
-              <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, fontSize: '0.95rem' }}>
-                Yönetim ücreti; hedeflenen pazar sayısı (Türkiye / Global), kampanya adedi, entegrasyon karmaşıklığı (CAPI, CRM) ve eş zamanlı GEO çalışması talebine göre şeffaf bir teklif olarak sunulur.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <div style={{ textAlign: 'center', marginTop: '3.5rem', padding: '2.5rem', background: 'var(--chat-surface)', borderRadius: '16px', border: '1px solid var(--chat-border)' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem', color: '#ffffff' }}>Sektörünüze Özel Bütçe Senaryosu İsteyin</h2>
-          <p style={{ color: 'var(--chat-text-secondary)', marginBottom: '1.8rem', maxWidth: '600px', margin: '0 auto 1.8rem', lineHeight: 1.7 }}>
-            Web sitenizi ve ürününüzü inceleyelim; tahmini TBM, önerilen test bütçesi ve ajans yönetim teklifimizi aynı gün iletelim.
-          </p>
-          <a className="button primary" href="/iletisim/">Teklif ve Bütçe Planı İsteyin <Arrow /></a>
-        </div>
-      </div>
-    </Detail>
-  )
-}
 
 function ChatGPTTurkeyPage() {
   return (
@@ -2370,9 +2222,9 @@ function ChatGPTTurkeyPage() {
 function GEOPage() {
   return (
     <Detail
-      eyebrow="Organik AI Görünürlüğü & Tavsiye"
+      eyebrow="Organik AI Görünürlüğü & Kaynak Olma"
       title="GEO Ajansı: Yapay Zekâ Aramalarında Organik Görünürlük"
-      summary="Generative Engine Optimization (GEO); markanızın ChatGPT, Perplexity, Google Gemini ve Claude gibi üretken yapay zekâ motorları tarafından anlaşılması ve organik yanıtlar üretilirken güvenilir kaynak olarak tavsiye edilmesini sağlayan yeni nesil arama stratejisidir."
+      summary="Generative Engine Optimization (GEO); marka bilgilerinin anlaşılabilirliğini ve kaynak olarak bulunabilirliğini geliştirme ve ölçme çalışmasıdır."
       cta="Ücretsiz GEO Analizi İsteyin"
     >
       <div style={{ maxWidth: '900px', margin: '0 auto' }}>
@@ -2385,7 +2237,7 @@ function GEOPage() {
             Doğrudan ChatGPT, Perplexity veya Gemini'ye giderek: <em>"İstanbul'da B2B lojistik için en güvenilir 3 yazılım hangisi ve aralarındaki farklar neler?"</em> gibi karmaşık sorular soruyorlar.
           </p>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem' }}>
-            <strong>GEO (Üretken Motor Optimizasyonu)</strong>; web sitenizin, içeriklerinizin ve marka varlığınızın büyük dil modelleri (LLM) tarafından taranmasını, anlaşılmasını ve sentezlenen cevapta markanızın referans verilmesini sağlayan disiplindir.
+            <strong>GEO (Üretken Motor Optimizasyonu)</strong>; web sitenizin, içeriklerinizin ve marka varlığınızın büyük dil modelleri (LLM) tarafından anlaşılabilirliğini ve kaynak olarak bulunabilirliğini geliştirme ve ölçme çalışmasıdır.
           </p>
         </section>
 
@@ -2489,6 +2341,11 @@ function GEOPage() {
               </p>
             </div>
           </div>
+          <div style={{ background: 'var(--chat-surface)', borderRadius: '12px', padding: '1.2rem', border: '1px solid var(--chat-border)' }}>
+            <p style={{ color: 'var(--chat-text-secondary)', margin: 0, fontSize: '0.95rem' }}>
+              Adım adım organik görünürlük adımları ve kaynak gösterilme rehberi için <a href="/chatgptde-markam-nasil-cikar/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>ChatGPT'de markam nasıl çıkar?</a> sayfamızı inceleyin.
+            </p>
+          </div>
         </section>
 
         {/* Yeni Bölüm: Hangi Sorularda Kaynak Gösteriliyorum? */}
@@ -2540,8 +2397,8 @@ function GEOPage() {
           <h3 style={{ fontSize: '1.8rem', color: '#ffffff', margin: '0.8rem 0' }}>
             Sitenizin Yapay Zekâ Görünürlüğünü Şimdi Canlı Test Edin
           </h3>
-          <p style={{ color: 'var(--chat-text-secondary)', maxWidth: '650px', margin: '0 auto 1.5rem', lineHeight: 1.7 }}>
-            ChatGPT-4o, Perplexity Pro ve Gemini 2.0 üzerinde sitenizin taranabilirlik durumunu, marka referanslarını ve alıntı potansiyelini anında tarayın.
+          <p style={{ color: 'var(--chat-text-secondary)', maxWidth: '680px', margin: '0 auto 1.5rem', lineHeight: 1.7 }}>
+            Desteklenen modeller (Son kontrol: Eylül 2026: ChatGPT, Perplexity, Gemini, Claude) üzerinde sitenizin taranabilirlik durumunu, marka referanslarını ve alıntı potansiyelini test simülasyonuyla anında inceleyin.
           </p>
           <a className="button primary" href="/yapay-zeka-gorunurluk-analizi/">
             ⚡ Canlı AI Denetim Konsolunu Başlat <Arrow />
@@ -3108,53 +2965,237 @@ function BlogGeoDiffPage() {
 }
 
 function BlogContextHintsPage() {
+  const exampleCategories = [
+    {
+      category: 'B2B SaaS & Kurumsal Yazılım',
+      color: '#10a37f',
+      items: [
+        'Türkiye\'de 10-50 çalışanlı satış ekibi için WhatsApp entegrasyonlu ve e-fatura uyumlu CRM çözümü arayan şirket yöneticileri.',
+        'HubSpot veya Salesforce alternatiflerini maliyet ve yerel destek açısından karşılaştıran Türk teknoloji kurucuları.',
+        'Bulut tabanlı muhasebe ve ön muhasebe yazılımı geçiş maliyetini hesaplayan, Paraşüt/BizimHesap kıyaslaması yapan finans müdürleri.',
+        'Personel vardiya, izin ve bordro takibini otomatikleştirmek isteyen insan kaynakları direktörleri.',
+        'B2B e-ihracat yapan firmalar için çok dilli müşteri destek masası (Helpdesk) ve bilet yönetim sistemi araştıran operasyon liderleri.'
+      ]
+    },
+    {
+      category: 'E-Ticaret & D2C Tüketici Markaları',
+      color: '#60a5fa',
+      items: [
+        'Günlük şehir koşusu ile yarı maraton antrenmanı arasındaki ayakkabı farkını soran ve darbe emici taban araştıran koşucular.',
+        'Yeni doğan bebek için ergonomik, toksik madde içermeyen ve katlanabilir bebek arabası tavsiyesi isteyen ebeveynler.',
+        'Evden çalışanlar için bel destekli ergonomik çalışma koltuğu ve ayarlanabilir masa modellerini kıyaslayan profesyoneller.',
+        'Kuru ve hassas ciltler için seramid ve hyaluronik asit içerikli vegan nemlendirici krem önerisi arayan kullanıcılar.',
+        'Kahve demleme ekipmanları arasında V60, Aeropress ve filtre kahve makinesi lezzet farkını araştıran gurmeler.'
+      ]
+    },
+    {
+      category: 'Sağlık Turizmi & Klinikler',
+      color: '#34d399',
+      items: [
+        'İngiltere veya Almanya\'dan İstanbul\'da all-on-4 diş implantı yaptırmayı planlayan, klinik akreditasyonu ve paket fiyat soran hastalar.',
+        'Avrupa\'dan Türkiye\'de FUE/DHI saç ekimi operasyonu için hekim deneyimi, operasyon süresi ve konaklama dahil maliyet araştıranlar.',
+        'Göz lazer cerrahisi (No-Touch / SMILE) risklerini ve Türkiye\'deki özel hastane standartlarını kıyaslayan yurt dışı hastalar.',
+        'Rinoplasti cerrahisi sonrası iyileşme sürecini ve Türkiye\'deki uzman cerrahların vaka sonuçlarını inceleyen ziyaretçiler.',
+        'Termal sağlık oteli ve fizik tedavi rehabilitasyon merkezleri arayan ileri yaş hasta yakınları.'
+      ]
+    },
+    {
+      category: 'Kurumsal Danışmanlık & Finans',
+      color: '#f59e0b',
+      items: [
+        'İngiltere\'de (LLC/LTD) veya ABD Delaware\'de şirket kurarak Stripe açmak isteyen Türk yazılımcı ve e-ihracatçılar.',
+        'Ar-Ge merkezi ve Teknopark vergi muafiyetleri ile kurumlar vergisi teşviklerini karşılaştıran ölçeklenen girişimler.',
+        'Şirket birleşme ve devralma (M&A) süreçlerinde bağımsız finansal değerleme ve due diligence raporu talep eden fonlar.',
+        'KVKK ve GDPR uyumluluk denetimi yaptırmak isteyen veri işleyen orta ölçekli finans ve sağlık şirketleri.',
+        'Yurt dışı pazar araştırması için Ticaret Bakanlığı Turquality hibe ve destek oranlarını araştıran üreticiler.'
+      ]
+    },
+    {
+      category: 'Gayrimenkul, Mimarlık & Yatırım',
+      color: '#a78bfa',
+      items: [
+        'İstanbul Anadolu Yakası\'nda metroya yakın, deprem yönetmeliğine uygun 2+1 ve 3+1 sıfır daire arayan aileler.',
+        'Bodrum veya Urla\'da müstakil havuzlu villa yatırımı yaparak yüksek sezonluk kira getirisi hedefleyen yatırımcılar.',
+        'Ofis ve ticari plaza alanlarında kurumsal iç mimari tasarım, anahtar teslim uygulama ve akustik düzenleme arayan şirketler.',
+        'Vatandaşlık veya ikamet izni amacıyla Türkiye\'de minimum yatırım tutarını sağlayan gayrimenkul portföyü araştıran yabancılar.',
+        'Prefabrik çelik konstrüksiyon ev maliyetleri ve ruhsat izin süreçlerini betonarme ile kıyaslayan arsa sahipleri.'
+      ]
+    }
+  ]
+
   return (
     <Detail
-      eyebrow="Kampanya Kurulumu & Bağlam"
-      title="ChatGPT Ads Context Hints Nasıl Yazılır?"
-      summary="ChatGPT Ads kampanyalarında context hints yazımı, kullanıcı karar anları, negatif bağlam filtreleri ve sektör örnekleri."
-      cta="Bağlam Kütüphanenizi Hazırlayalım"
+      eyebrow="Teknik Uzmanlık Rehberi"
+      title="ChatGPT Context Hints Nedir? OpenAI Ads İçin 25 Örnekle Bağlam İpuçları Rehberi"
+      summary="OpenAI Ads Manager'da context hints (bağlam ipuçları) nasıl yazılır? Klasik anahtar kelimelerden farkı, 25 sektörel karar anı örneği, negatif filtreler ve açılış sayfası eşleşmesi."
+      cta="Sektörünüze Özel Context Hints Kütüphanesi İsteyin"
     >
-      <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-        <section style={{ marginBottom: '3rem' }}>
-          <h2 style={{ fontSize: '1.7rem', fontWeight: 700, marginBottom: '1rem', color: '#ffffff' }}>
-            Context Hints Nedir ve Nasıl Çalışır?
+      <div style={{ maxWidth: '920px', margin: '0 auto' }}>
+        {/* 30 Saniyelik Özeti */}
+        <div style={{ background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '16px', padding: '1.8rem', marginBottom: '3rem', borderLeft: '4px solid var(--chat-green)' }}>
+          <h3 style={{ color: '#ffffff', fontSize: '1.2rem', marginBottom: '0.6rem' }}>📌 30 Saniyede Özeti</h3>
+          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, margin: 0 }}>
+            ChatGPT context hints (bağlam ipuçları); OpenAI Ads Manager reklam grubunda kullanılan, modelin reklamınızı <strong>hangi konuşma bağlamında, hangi kullanıcı profilinde ve hangi karar anında</strong> sponsorlu olarak gösterebileceğini doğal dille anlatan sinyallerdir. 
+            Klasik Google Ads tam eşleşmeli kelime mantığı değildir; semantik anlamsal yakınlık ve konuşma niyeti üzerinden çalışır.
+          </p>
+        </div>
+
+        {/* Klasik Anahtar Kelime vs Context Hint */}
+        <section style={{ marginBottom: '3.5rem' }}>
+          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginBottom: '1.2rem', color: '#ffffff' }}>
+            Context Hints Klasik Google Ads Anahtar Kelimesi Değildir
           </h2>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem' }}>
-            Context hints; geleneksel arama motorlarındaki kelime eşleme yerine, yapay zekâya reklamınızın hangi problem, hangi kullanıcı profili ve hangi satın alma kararı esnasında uygun olduğunu doğal dille açıklayan yönlendirici bağlam ipuçlarıdır.
+          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1.5rem' }}>
+            Arama motorlarında kullanıcı <em>"crm fiyatları"</em> gibi 2 kelime arar. ChatGPT'de ise kullanıcı bir durum anlatır: <em>"12 kişilik satış ekibimiz var, WhatsApp görüşmelerini kaçırıyoruz, HubSpot pahalı geldi, alternatif ne var?"</em> Context hints bu akıl yürütme sürecini yakalar.
+          </p>
+          <div className="table-wrap" style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.95rem' }}>
+              <thead>
+                <tr style={{ borderBottom: '2px solid var(--chat-border)', color: '#ffffff' }}>
+                  <th style={{ padding: '0.85rem' }}>Özellik</th>
+                  <th style={{ padding: '0.85rem' }}>Klasik Google Ads Kelimesi</th>
+                  <th style={{ padding: '0.85rem', color: 'var(--chat-green)' }}>ChatGPT Ads Context Hint</th>
+                </tr>
+              </thead>
+              <tbody style={{ color: 'var(--chat-text-secondary)' }}>
+                <tr style={{ borderBottom: '1px solid var(--chat-border)' }}>
+                  <td style={{ padding: '0.85rem', fontWeight: 600, color: '#ffffff' }}>Biçim</td>
+                  <td style={{ padding: '0.85rem' }}>Kısa kelime öbeği: [crm programı]</td>
+                  <td style={{ padding: '0.85rem' }}>Doğal dil cümlesi veya bağlamsal paragraf</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid var(--chat-border)' }}>
+                  <td style={{ padding: '0.85rem', fontWeight: 600, color: '#ffffff' }}>Eşleşme Mantığı</td>
+                  <td style={{ padding: '0.85rem' }}>Harf/kelime sözdizimsel eşleşmesi (Exact/Phrase)</td>
+                  <td style={{ padding: '0.85rem' }}>Semantik vektör benzerliği ve konuşma niyeti</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid var(--chat-border)' }}>
+                  <td style={{ padding: '0.85rem', fontWeight: 600, color: '#ffffff' }}>Kullanıcı Anı</td>
+                  <td style={{ padding: '0.85rem' }}>Hızlı arama ve link tarama anı</td>
+                  <td style={{ padding: '0.85rem' }}>Derin değerlendirme, analiz ve karar anı</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: '0.85rem', fontWeight: 600, color: '#ffffff' }}>Gereksinim</td>
+                  <td style={{ padding: '0.85rem' }}>Geniş negatif anahtar kelime listeleri</td>
+                  <td style={{ padding: '0.85rem' }}>Net hedef kitle sınırları ve konu dışı negatif bağlamlar</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* İyi Bir Context Hint'in 4 Bileşeni */}
+        <section style={{ marginBottom: '3.5rem', background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '16px', padding: '2rem' }}>
+          <h2 style={{ fontSize: '1.6rem', fontWeight: 700, marginBottom: '1.2rem', color: '#ffffff' }}>
+            İyi Bir Context Hint Hangi Bileşenlerden Oluşur?
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.2rem' }}>
+            <div style={{ background: '#171717', padding: '1.2rem', borderRadius: '12px' }}>
+              <span style={{ color: 'var(--chat-green)', fontWeight: 700, fontSize: '0.85rem' }}>1. HEDEF KİTLE KİMDİR?</span>
+              <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.92rem', margin: '0.4rem 0 0', lineHeight: 1.6 }}>Küçük işletme sahibi mi, kurumsal İK direktörü mü, amatör sporcu mu?</p>
+            </div>
+            <div style={{ background: '#171717', padding: '1.2rem', borderRadius: '12px' }}>
+              <span style={{ color: 'var(--chat-green)', fontWeight: 700, fontSize: '0.85rem' }}>2. YAŞANAN PROBLEM NEDİR?</span>
+              <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.92rem', margin: '0.4rem 0 0', lineHeight: 1.6 }}>Mevcut yazılımın pahalı olması, teslimat gecikmesi, bel ağrısı, vergi belirsizliği vb.</p>
+            </div>
+            <div style={{ background: '#171717', padding: '1.2rem', borderRadius: '12px' }}>
+              <span style={{ color: 'var(--chat-green)', fontWeight: 700, fontSize: '0.85rem' }}>3. HANGİ SORULAR SORULUYOR?</span>
+              <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.92rem', margin: '0.4rem 0 0', lineHeight: 1.6 }}>Alternatif arayışı, fiyat/maliyet hesabı, kurulum süresi, hekim tecrübesi.</p>
+            </div>
+            <div style={{ background: '#171717', padding: '1.2rem', borderRadius: '12px' }}>
+              <span style={{ color: 'var(--chat-green)', fontWeight: 700, fontSize: '0.85rem' }}>4. COĞRAFYA VE KAPSAM</span>
+              <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.92rem', margin: '0.4rem 0 0', lineHeight: 1.6 }}>Türkiye geneli, belirli bir metropol veya yurt dışı ihracat hedef pazarı.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* 25 Örnek Kütüphanesi */}
+        <section style={{ marginBottom: '3.5rem' }}>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '0.8rem', color: '#ffffff' }}>
+            25 Gerçek ChatGPT Ads Context Hint Şablonu
+          </h2>
+          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, marginBottom: '2rem' }}>
+            Aşağıdaki bağlam kalıplarını reklam gruplarınızda başlangıç noktası olarak kullanabilir, ürününüze göre özelleştirebilirsiniz:
+          </p>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+            {exampleCategories.map((cat, idx) => (
+              <div key={cat.category} style={{ background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '16px', padding: '1.8rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '1.2rem' }}>
+                  <span style={{ background: cat.color, color: '#000000', fontWeight: 700, padding: '0.2rem 0.6rem', borderRadius: '6px', fontSize: '0.8rem' }}>
+                    GRUP {idx + 1}
+                  </span>
+                  <h3 style={{ color: '#ffffff', margin: 0, fontSize: '1.25rem' }}>{cat.category}</h3>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                  {cat.items.map((item, itemIdx) => (
+                    <div key={itemIdx} style={{ background: '#121212', padding: '1rem 1.2rem', borderRadius: '10px', borderLeft: `3px solid ${cat.color}` }}>
+                      <span style={{ color: '#6b7280', fontSize: '0.8rem', display: 'block', marginBottom: '0.2rem' }}>Örnek #{idx * 5 + itemIdx + 1}</span>
+                      <p style={{ color: '#e5e7eb', margin: 0, fontSize: '0.94rem', lineHeight: 1.6 }}>“{item}”</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Negatif Context Hint Var mı? */}
+        <section style={{ marginBottom: '3.5rem' }}>
+          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginBottom: '1.2rem', color: '#ffffff' }}>
+            Negatif Context Hints: Bütçenizi Koruma Kılavuzu
+          </h2>
+          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1rem' }}>
+            Tıpkı negatif anahtar kelimeler gibi, reklamınızın hangi bağlamlarda <strong>kesinlikle çıkmaması gerektiğini</strong> de tanımlamalısınız:
+          </p>
+          <div style={{ background: 'rgba(239, 68, 68, 0.08)', border: '1px solid rgba(239, 68, 68, 0.25)', borderRadius: '14px', padding: '1.5rem' }}>
+            <h4 style={{ color: '#f87171', margin: '0 0 0.8rem', fontSize: '1.1rem' }}>Örnek Negatif Bağlam Kuralları:</h4>
+            <ul style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, margin: 0, paddingLeft: '1.2rem' }}>
+              <li><strong>Akademik / Ödev Araştırmaları:</strong> "CRM yazılımının tarihçesi, üniversite tez veya ders slaytı arayan öğrenciler."</li>
+              <li><strong>İş Başvurusu & Staj:</strong> "Yazılım şirketlerinde açık pozisyonlar, staj imkanları ve maaş araştırması yapan adaylar."</li>
+              <li><strong>Ücretsiz / Açık Kaynak:</strong> "Açık kaynak kodlu (open-source), tamamen ücretsiz ve sıfır bütçeli çözüm arayan bireysel kullanıcılar."</li>
+              <li><strong>Teknik Destek / Hata Çözümü:</strong> "Mevcut rakip yazılımın kurulum hatası kodlarını ve şifre sıfırlama adımlarını soranlar."</li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Context Hints ile Açılış Sayfası Uyumu (Message Match) */}
+        <section style={{ marginBottom: '3.5rem' }}>
+          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginBottom: '1.2rem', color: '#ffffff' }}>
+            Context Hints ile Açılış Sayfası (Landing Page) İlişkisi
+          </h2>
+          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1.2rem' }}>
+            Context hint'te tanımladığınız senaryo ile kullanıcının yönlendirildiği sayfanın ilk 3 saniyesindeki mesaj birebir örtüşmelidir (Message Match). OpenAI'ın reklam tarayıcısı <code>OAI-AdsBot</code> bu ilişkiyi ve vaat tutarlılığını denetler. Detaylı mimari için <a href="/blog/chatgpt-reklamlari-icin-acilis-sayfasi-kontrol-listesi/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>açılış sayfası kontrol listesini</a> inceleyin.
           </p>
         </section>
 
-        <section style={{ marginBottom: '3rem', background: 'var(--chat-surface)', padding: '2rem', borderRadius: '16px', border: '1px solid var(--chat-border)' }}>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem', color: '#ffffff' }}>
-            Üç Sektör İçin Context Hints Örnekleri
-          </h2>
-          <div style={{ marginBottom: '1.5rem' }}>
-            <strong style={{ color: 'var(--chat-green)' }}>1. B2B SaaS (Muhasebe & ERP):</strong>
-            <p style={{ color: 'var(--chat-text-secondary)', margin: '0.4rem 0 0' }}>
-              "Türkiye'de e-fatura entegrasyonu ve stok takibi arayan 5-50 çalışanlı işletmelerin bulut tabanlı yazılım karşılaştırmaları."
-            </p>
-          </div>
-          <div style={{ marginBottom: '1.5rem' }}>
-            <strong style={{ color: 'var(--chat-green)' }}>2. Sağlık Turizmi:</strong>
-            <p style={{ color: 'var(--chat-text-secondary)', margin: '0.4rem 0 0' }}>
-              "Avrupa'dan Türkiye'de diş implantı veya göz cerrahisi yaptırmak isteyen hastaların klinik güvenilirliği ve paket fiyat araştırmaları."
-            </p>
-          </div>
-          <div>
-            <strong style={{ color: 'var(--chat-green)' }}>3. Kurumsal Danışmanlık:</strong>
-            <p style={{ color: 'var(--chat-text-secondary)', margin: '0.4rem 0 0' }}>
-              "Yurtdışında şirket kurmak ve vergi optimizasyonu sağlamak isteyen teknoloji girişimcilerinin hukuki danışmanlık talepleri."
-            </p>
+        {/* İlgili Bağlantılar */}
+        <section style={{ marginBottom: '3.5rem', background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '16px', padding: '1.8rem' }}>
+          <h3 style={{ color: '#ffffff', fontSize: '1.2rem', marginBottom: '1rem' }}>İlgili ChatGPT Ads Rehberleri</h3>
+          <div style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap' }}>
+            <a href="/chatgpt-reklam-verme/" style={{ background: '#1f2937', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+              ChatGPT Reklam Verme Rehberi ➔
+            </a>
+            <a href="/chatgpt-reklamlari/" style={{ background: '#1f2937', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+              ChatGPT Reklam Yönetimi Servisimiz ➔
+            </a>
+            <a href="/chatgpt-reklam-fiyatlari/" style={{ background: '#1f2937', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+              Fiyatlar ve Bütçe Planı ➔
+            </a>
+            <a href="/blog/chatgpt-reklam-olcumu/" style={{ background: '#1f2937', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+              Conversions API & Ölçümleme ➔
+            </a>
           </div>
         </section>
 
+        {/* CTA */}
         <div style={{ textAlign: 'center', marginTop: '3.5rem', padding: '2.5rem', background: 'var(--chat-surface)', borderRadius: '16px', border: '1px solid var(--chat-border)' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem', color: '#ffffff' }}>Sektörünüze Özel Bağlam Haritası Hazırlayalım</h2>
-          <p style={{ color: 'var(--chat-text-secondary)', marginBottom: '1.8rem', maxWidth: '600px', margin: '0 auto 1.8rem', lineHeight: 1.7 }}>
-            <a href="/chatgpt-reklamlari/">ChatGPT reklam yönetimi</a> ekibimizle markanızın context hints matrisini oluşturun.
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem', color: '#ffffff' }}>
+            Sektörünüze Özel Context Hints Kütüphanesi Hazırlayalım
+          </h2>
+          <p style={{ color: 'var(--chat-text-secondary)', marginBottom: '1.8rem', maxWidth: '640px', margin: '0 auto 1.8rem', lineHeight: 1.7 }}>
+            Ürününüze, hedef kitlenize ve rakiplerinize özel onlarca bağlam senaryosunu kuralım; gereksiz tıklamaları negatif bağlamlarla engelleyerek reklam bütçenizi doğrudan kârlı müşterilere yönlendirelim.
           </p>
-          <a className="button primary" href="/iletisim/">Context Hints Desteği Alın <Arrow /></a>
+          <a className="button primary" href="/iletisim/">Context Hints Stratejisi İsteyin <Arrow /></a>
         </div>
       </div>
     </Detail>
@@ -3276,7 +3317,10 @@ function Contact() {
 
 function Blog() {
   const geoPosts = [
-    { title: 'Markam ChatGPT’de Neden Görünmüyor? 12 Olası Neden ve Kontrol Listesi', href: '/blog/markam-chatgptde-neden-gorunmuyor/', tag: 'YENİ REHBER', desc: 'Tarama engelleri, marka bilgisi tutarsızlıkları ve rakiplerle karşılaştırmalı görünürlük testi.' },
+    { title: "ChatGPT'de Markam Nasıl Çıkar? 2026 Görünürlük Rehberi", href: '/chatgptde-markam-nasil-cikar/', tag: 'UYGULAMA REHBERİ', desc: 'Organik görünürlük için 7 adım: teknik erişim, marka tanımı, karar soruları ve gerçek yönlendirme trafiği ölçümü.' },
+    { title: "ChatGPT SEO Nedir? AI Arama ve GEO Rehberi", href: '/chatgpt-seo/', tag: 'YENİ REHBER', desc: 'Klasik SEO vs GEO farkı, OAI-SearchBot tarama mantığı, entity netliği ve alıntılanabilir formatlar.' },
+    { title: "ChatGPT'de Web Sitem Neden Çıkmıyor? 10 Maddelik Teşhis", href: '/chatgptde-web-sitem-neden-cikmiyor/', tag: 'TEŞHİS LİSTESİ', desc: 'robots.txt, noindex, JS-only rendering, zayıf entity ve bilgi kazancı kontrolleri.' },
+    { title: 'Markam ChatGPT’de Neden Görünmüyor? 12 Olası Neden ve Kontrol Listesi', href: '/blog/markam-chatgptde-neden-gorunmuyor/', tag: 'TEŞHİS LİSTESİ', desc: 'Tarama engelleri, marka bilgisi tutarsızlıkları ve rakiplerle karşılaştırmalı görünürlük testi.' },
     { title: 'ChatGPT’de Kaynak Olarak Gösterilmek İçin Site Nasıl Hazırlanır?', href: '/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/', tag: 'TEKNİK GEO', desc: 'OAI-SearchBot izinleri, birinci el bilgi kazancı ve dipnot alıntı mimarisi.' },
     { title: 'GEO Performansı Nasıl Ölçülür? Marka, Rakip ve Kaynak Gösterimi', href: '/blog/geo-performansi-nasil-olculur/', tag: 'ÖLÇÜMLEME', desc: 'Mention, Citation ve Recommendation metrikleri ile aylık Share of Model Voice takibi.' },
     { title: 'ChatGPT Ads ile GEO (AI Görünürlüğü) Farkı', href: '/blog/chatgpt-ads-geo-farki/', tag: 'TEMEL FARK', desc: 'Sponsorlu konuşma reklamları ile organik model önerileri arasındaki kritik farklar.' },
@@ -3284,9 +3328,10 @@ function Blog() {
   ]
 
   const adsPosts = [
+    { title: "ChatGPT Reklam Verme: Türkiye'den İlk Kampanya Rehberi (2026)", href: '/chatgpt-reklam-verme/', tag: 'KURULUM REHBERİ', desc: 'OpenAI Ads Manager üzerinden hesap açma, context hints kurgusu ve kampanya yayını.' },
     { title: 'ChatGPT Reklam Kampanyası Nasıl Planlanır? İlk 30 Günlük Test Örneği', href: '/blog/chatgpt-reklam-kampanyasi-nasil-planlanir/', tag: 'YENİ REHBER', desc: 'Hedef kitle, context hints, 30 günlük bütçe planı ve durdurma (stop-loss) kararları.' },
+    { title: 'OpenAI Ads Manager Nedir? ChatGPT Reklam Paneli Rehberi', href: '/openai-ads-manager/', tag: 'PANEL REHBERİ', desc: 'OpenAI Ads Manager Beta özellikleri, hesap açma, kampanya yapısı ve ölçüm araçları.' },
     { title: 'ChatGPT Reklamları İçin Açılış Sayfası Kontrol Listesi', href: '/blog/chatgpt-reklamlari-icin-acilis-sayfasi-kontrol-listesi/', tag: 'CRO REHBERİ', desc: 'Reklam vaadi ve ilk ekran uyumu, form sadeliği, mobil in-app browser hızı ve güven kanıtları.' },
-    { title: 'ChatGPT’de Reklam Verme: Adım Adım Resmî Kurulum Rehberi', href: '/chatgpt-reklam-verme/', tag: 'KURULUM', desc: 'OpenAI Ads Manager üzerinden hesap açma, context hints kurgusu ve kampanya yayını.' },
     { title: 'ChatGPT Reklam Fiyatları 2026: TBM, Bütçe ve Yönetim Modeli', href: '/chatgpt-reklam-fiyatlari/', tag: 'FİYAT MATRİSİ', desc: 'Açık artırma dinamikleri, CPM ve CPC modelleri, pilot bütçe seviyeleri ve ajans ücretleri.' },
     { title: 'ChatGPT Reklam Maliyeti Nasıl Hesaplanır? | Bütçe Planlama', href: '/blog/chatgpt-reklam-maliyeti/', tag: 'BÜTÇE HESABI', desc: 'Medya bütçesi ve ajans bedeli ayrımı, sektör rekabeti ve ROI/ROAS simülasyonu.' },
     { title: 'ChatGPT Ads Context Hints (Bağlam İpuçları) Nasıl Yazılır?', href: '/blog/chatgpt-ads-context-hints/', tag: 'CONTEXT HINTS', desc: 'Anahtar kelime yerine doğal dilli kullanıcı karar anı bağlamları kurgulama rehberi.' },
@@ -3368,8 +3413,8 @@ function Blog() {
         {/* Canlı Test CTA */}
         <div style={{ textAlign: 'center', marginTop: '4rem', padding: '2.5rem', background: 'var(--chat-surface)', borderRadius: '16px', border: '1px solid var(--chat-border)' }}>
           <h3 style={{ fontSize: '1.6rem', color: '#ffffff', marginBottom: '0.8rem' }}>Sitenizin Yapay Zekâ Görünürlüğünü Test Ettiniz mi?</h3>
-          <p style={{ color: 'var(--chat-text-secondary)', maxWidth: '650px', margin: '0 auto 1.5rem', lineHeight: 1.7 }}>
-            ChatGPT-4o, Perplexity Pro ve Google Gemini üzerindeki marka ve kaynak görünürlüğünüzü ücretsiz canlı konsolumuzla inceleyin.
+          <p style={{ color: 'var(--chat-text-secondary)', maxWidth: '680px', margin: '0 auto 1.5rem', lineHeight: 1.7 }}>
+            Desteklenen modeller (Son kontrol: Eylül 2026: ChatGPT, Perplexity, Gemini, Claude) üzerindeki marka ve kaynak görünürlüğünüzü ücretsiz canlı konsol simülasyonumuzla inceleyin.
           </p>
           <a className="button primary" href="/yapay-zeka-gorunurluk-analizi/">
             ⚡ Canlı Teşhis Aracını Başlat <Arrow />
@@ -3461,8 +3506,13 @@ function App() {
   if (path === '/yapay-zekada-reklam-ajansi') return <YapayZekadaReklamAjansiPage />
   if (path === '/blog/yapay-zekada-reklam-nasil-verilir') return <YapayZekadaReklamNasilVerilirPage />
   if (path === '/chatgpt-reklamlari') return <ChatGPTAdsPage />
-  if (path === '/chatgpt-reklam-verme') return <ChatGPTGuidePage />
-  if (path === '/chatgpt-reklam-fiyatlari') return <ChatGPTPricePage />
+  if (path === '/chatgpt-reklam-verme') return <ChatGPTGuideUpdatedPage Detail={Detail} Arrow={Arrow} />
+  if (path === '/chatgptde-markam-nasil-cikar') return <ChatGptdeMarkamNasilCikarPage Detail={Detail} Arrow={Arrow} />
+  if (path === '/openai-ads-manager') return <OpenAIAdsManagerPage Detail={Detail} Arrow={Arrow} />
+  if (path === '/chatgpt-reklam-fiyatlari') return <ChatGPTPriceUpdatedPage Detail={Detail} Arrow={Arrow} />
+  if (path === '/haberler/chatgpt-ads-60-ulkeye-ulasti') return <ChatGptAds60UlkePage Detail={Detail} Arrow={Arrow} />
+  if (path === '/haberler/sponsored-agents-duyuruldu') return <SponsoredAgentsPage Detail={Detail} Arrow={Arrow} />
+  if (path === '/haberler') return <HaberlerIndexPage Detail={Detail} Arrow={Arrow} />
   if (path === '/chatgpt-reklamlari-turkiye') return <ChatGPTTurkeyPage />
   if (path === '/geo-yapay-zeka-gorunurlugu') return <GEOPage />
   if (path === '/yapay-zeka-platformlarinda-reklam') return <AIPlatformsPage />
@@ -3478,6 +3528,8 @@ function App() {
   if (path === '/blog/chatgpt-reklam-kampanyasi-nasil-planlanir') return <ChatGptReklamKampanyasiPlanlamaPage Detail={Detail} Arrow={Arrow} />
   if (path === '/blog/chatgpt-reklamlari-icin-acilis-sayfasi-kontrol-listesi') return <ChatGptAcilisSayfasiKontrolPage Detail={Detail} Arrow={Arrow} />
   if (path === '/blog/chatgpt-reklami-mi-google-ads-mi') return <ChatGptReklamiMiGoogleAdsMiPage Detail={Detail} Arrow={Arrow} />
+  if (path === '/chatgpt-seo') return <ChatGptSeoPage Detail={Detail} Arrow={Arrow} />
+  if (path === '/chatgptde-web-sitem-neden-cikmiyor') return <ChatGptdeWebSitemNedenCikmiyorPage Detail={Detail} Arrow={Arrow} />
   if (path === '/iletisim') return <Contact />
   if (path === '/blog') return <Blog />
   if (path === '/yapay-zeka-gorunurluk-analizi' || path === '/analiz') return <AuditPage />
