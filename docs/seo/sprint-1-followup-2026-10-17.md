@@ -1,6 +1,6 @@
 # Sprint 1 — 17 Ekim 2026 devam çalışması
 
-Kapsam: yalnız yapayzekareklam, E4N-264/265/266. Önceki commit edilmemiş değişiklikler korundu. Bu turdaki değişiklikler yerelde hazır; production dağıtımı yapılmadı. Üç görev de kalan veri ve yayın doğrulaması nedeniyle In Progress.
+Kapsam: yalnız yapayzekareklam, E4N-264/265/266. 19 Ekim 2026'da değişiklikler Vercel production ortamına dağıtıldı (`d1e50c5`). Canlı HTTP ve bot kontrolleri (49 kontrol, 48 bot isteği) 0 hata ile doğrulandı. E4N-266 (YZR-03) canlıda tamamlandı. E4N-264 ve E4N-265 GSC mülk verisi erişimi beklenmesi nedeniyle In Progress.
 
 ## Teslim edilen işler
 
