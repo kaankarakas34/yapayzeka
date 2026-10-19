@@ -52,7 +52,7 @@ Vercel'de doğru proje ve production dağıtımı okunabildi: `yapayzekadareklam
 
 Ancak etkin firewall config ve attack-status uçları aynı team/project kimlikleriyle 404 `Seawall Config not found` verdi. Bu yanıt, tüm güvenlik katmanlarının kapalı olduğunu kanıtlamaz. Güvenlik ayarları değiştirilmedi. Gerçek doğrulanmış bot IP'lerinin trafik kayıtları bu tur elde edilemedi. Dağıtım yöneticisi dashboard/loglardan Googlebot ve OpenAI botlarının gerçek IP istekleri için challenge/deny durumunu doğrulamalı. User-Agent taklidi testleri bu kontrolün yerine geçmez.
 
-YZR-01/02: GSC mülk sahibi veri erişimini veya karşılaştırılabilir export'u sağlamalı. YZR-03: yeni paketin yayınından sonra HTTP, robots, bot adı ve performans kontrolü tekrar yapılmalı; gerçek bot trafiği ve manuel erişilebilirlik incelemesi açık. Üç kısa yasal sayfanın gerçek işletim süreçleriyle uyumu da yetkili içerik sahibi tarafından tamamlanmalı.
+YZR-01/02: GSC mülk sahibi veri erişimini veya karşılaştırılabilir export'u sağlamalı. YZR-03: yeni paket Vercel production ortamına dağıtıldı, HTTP (49/49) ve bot (48/48) kontrolleri 0 hata ile doğrulandı. Üç yasal sayfa (`/gizlilik/`, `/kvkk/`, `/cerez-politikasi/`) kapsamlı metinlerle zenginleştirildi ve build kalite kapısındaki uyarılar 0'a indirildi. YZR-06 (Fiyat sayfasında CPM vs. CPC modelleme tutarlılığı) tamamlandı ve canlıda yayınlandı.
 
 ## Değişen kaynaklar ve geri dönüş
 
