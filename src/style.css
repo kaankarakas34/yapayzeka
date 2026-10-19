@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 :root {
   /* ChatGPT Official Dark Mode System Tokens */
   --chat-bg-main: #212121;
@@ -13,7 +11,8 @@
   --chat-green-subtle: rgba(16, 163, 127, 0.12);
   --chat-text-primary: #ececec;
   --chat-text-secondary: #b4b4b4;
-  --chat-text-muted: #8e8e8e;
+  --chat-text-muted: #a0a0a0;
+  --chat-green-text: #40c9a2;
   --chat-border: rgba(255, 255, 255, 0.1);
   --chat-border-strong: rgba(255, 255, 255, 0.18);
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -26,6 +25,7 @@
 }
 
 html {
+  color-scheme: dark;
   scroll-behavior: smooth;
   background-color: var(--chat-bg-main);
 }
@@ -48,7 +48,108 @@ button, input, textarea, select {
   font: inherit;
 }
 
+/* Keyboard navigation remains visible on dark and green surfaces. */
+:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+  outline: 3px solid #facc15;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 2000;
+  padding: 12px 18px;
+  background: #171717;
+  color: #fff;
+  border-radius: 8px;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+main, [id] {
+  scroll-margin-top: 80px;
+}
+
+/* Keep offscreen sections in the DOM and defer their layout/paint. */
+@supports (content-visibility: auto) {
+  main > section:not(.hero) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 900px;
+  }
+}
+
+.sim-ad-badge {
+  color: var(--chat-green-text) !important;
+}
+
+.marquee-toggle {
+  display: block;
+  margin: 0 auto 12px;
+  padding: 8px 12px;
+  border: 1px solid var(--chat-border-strong);
+  border-radius: 8px;
+  background: var(--chat-bg-secondary);
+  color: var(--chat-text-primary);
+  cursor: pointer;
+}
+
+.marquee-toggle:hover {
+  background: var(--chat-surface-hover);
+}
+
+main p a:not(.button) {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee-toggle { display: none; }
+  .ai-marquee-viewport { overflow-x: auto; }
+}
+
 /* Container Spacing */
+.audit-widget.is-pending {
+  min-height: 1100px;
+}
+
+.audit-widget-placeholder {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.audit-widget-placeholder p {
+  margin: 20px 0;
+  color: var(--chat-text-secondary);
+}
+
+.page-load-error {
+  padding: 16px 24px;
+  background: var(--chat-bg-secondary);
+  border-bottom: 1px solid var(--chat-border-strong);
+}
+
+.page-load-error button {
+  margin-top: 12px;
+  padding: 8px 16px;
+  color: var(--chat-text-primary);
+  background: var(--chat-surface);
+  border: 1px solid var(--chat-border-strong);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 .section-pad {
   padding: clamp(3.5rem, 6vw, 5.5rem) max(5vw, calc((100vw - 1240px) / 2));
 }
@@ -105,7 +206,7 @@ button, input, textarea, select {
 .chatgpt-sidebar-trigger:hover {
   background: rgba(16, 163, 127, 0.14);
   border-color: rgba(16, 163, 127, 0.45);
-  color: #10a37f;
+  color: var(--chat-green-text);
   transform: translateY(-1px);
   box-shadow: 0 4px 14px rgba(16, 163, 127, 0.2);
 }
@@ -308,7 +409,7 @@ button, input, textarea, select {
 .pill-badge {
   font-size: 0.62rem;
   font-weight: 700;
-  color: #10a37f;
+  color: var(--chat-green-text);
   background: rgba(16, 163, 127, 0.2);
   padding: 1px 7px;
   border-radius: 9999px;
@@ -465,7 +566,7 @@ button, input, textarea, select {
   padding: 1px 7px;
   border-radius: 9999px;
   background: rgba(16, 163, 127, 0.18);
-  color: #10a37f;
+  color: var(--chat-green-text);
   border: 1px solid rgba(16, 163, 127, 0.35);
   text-transform: uppercase;
   white-space: nowrap;
@@ -497,7 +598,7 @@ button, input, textarea, select {
   display: inline-block;
   font-size: 0.68rem;
   font-weight: 700;
-  color: #10a37f;
+  color: var(--chat-green-text);
   background: rgba(16, 163, 127, 0.2);
   border: 1px solid rgba(16, 163, 127, 0.4);
   padding: 2px 9px;
@@ -567,7 +668,7 @@ button, input, textarea, select {
 }
 
 .mega-bottom-link {
-  color: #10a37f;
+  color: var(--chat-green-text);
   font-weight: 600;
   text-decoration: none;
   display: inline-flex;
@@ -604,7 +705,7 @@ button, input, textarea, select {
 }
 
 .header-phone-link:hover {
-  color: #10a37f;
+  color: var(--chat-green-text);
   background: rgba(16, 163, 127, 0.08);
 }
 
@@ -670,7 +771,7 @@ button, input, textarea, select {
 
 .mobile-toggle-btn:hover {
   background: rgba(255, 255, 255, 0.12);
-  color: #10a37f;
+  color: var(--chat-green-text);
 }
 
 /* Backdrop (Mega Menü) */
@@ -1077,11 +1178,11 @@ button, input, textarea, select {
 .sidebar-contact-action-btn:hover {
   background: rgba(16, 163, 127, 0.15);
   border-color: rgba(16, 163, 127, 0.45);
-  color: #10a37f;
+  color: var(--chat-green-text);
 }
 
 .sidebar-contact-action-btn svg {
-  color: #10a37f;
+  color: var(--chat-green-text);
   flex-shrink: 0;
 }
 
@@ -1141,7 +1242,7 @@ button, input, textarea, select {
 
 .sidebar-user-plan {
   font-size: 11.5px;
-  color: #10a37f;
+  color: var(--chat-green-text);
   font-weight: 500;
 }
 
@@ -1187,7 +1288,7 @@ button, input, textarea, select {
 .topbar-sidebar-toggle:hover {
   background: rgba(16, 163, 127, 0.14);
   border-color: rgba(16, 163, 127, 0.4);
-  color: #10a37f;
+  color: var(--chat-green-text);
   transform: translateY(-1px);
 }
 
@@ -1231,7 +1332,7 @@ button, input, textarea, select {
 .model-selector-version {
   font-size: 0.65rem;
   font-weight: 700;
-  color: #10a37f;
+  color: var(--chat-green-text);
   background: rgba(16, 163, 127, 0.15);
   padding: 1px 6px;
   border-radius: 4px;
@@ -1239,7 +1340,7 @@ button, input, textarea, select {
 
 .model-selector-dot {
   font-size: 0.55rem;
-  color: #10a37f;
+  color: var(--chat-green-text);
   animation: pulseDot 2s infinite ease-in-out;
 }
 
@@ -1268,7 +1369,7 @@ button, input, textarea, select {
 }
 
 .topbar-phone-link:hover {
-  color: #10a37f;
+  color: var(--chat-green-text);
   background: rgba(16, 163, 127, 0.08);
 }
 
@@ -1408,6 +1509,7 @@ button, input, textarea, select {
    ========================================================= */
 .openai-partner-lockup {
   display: inline-flex;
+  max-width: 100%;
   align-items: center;
   justify-content: center;
   gap: 1.4rem;
@@ -1442,6 +1544,7 @@ button, input, textarea, select {
 
 .lockup-chatgpt-text {
   font-size: 1.05rem;
+  white-space: nowrap;
   font-weight: 700;
   color: #ffffff;
   letter-spacing: -0.02em;
@@ -1465,6 +1568,30 @@ button, input, textarea, select {
   display: block;
   object-fit: contain;
   filter: brightness(0) invert(1);
+}
+
+@media (max-width: 600px) {
+  .openai-partner-lockup {
+    flex-direction: column;
+    gap: 0.65rem;
+    padding: 0.8rem 1rem;
+    border-radius: 16px;
+  }
+
+  .lockup-divider {
+    width: 64px;
+    height: 1px;
+  }
+
+  .lockup-partner-side {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .lockup-overseas-img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /* =========================================================
@@ -1863,7 +1990,7 @@ button, input, textarea, select {
 }
 
 .section-tag {
-  color: var(--chat-green);
+  color: var(--chat-green-text);
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -1971,7 +2098,7 @@ button, input, textarea, select {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--chat-green);
+  color: var(--chat-green-text);
   font-weight: 600;
   margin-bottom: 1rem;
   display: inline-block;
@@ -2167,7 +2294,7 @@ button, input, textarea, select {
   gap: 8px;
   background: rgba(16, 163, 127, 0.14);
   border: 1px solid rgba(16, 163, 127, 0.35);
-  color: #10a37f;
+  color: var(--chat-green-text);
   font-size: 0.8rem;
   font-weight: 700;
   padding: 4px 14px;
@@ -2216,7 +2343,7 @@ button, input, textarea, select {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-.sidebar-perk-card h4 {
+.sidebar-perk-card h3 {
   font-size: 1.1rem;
   font-weight: 700;
   color: #ffffff;
@@ -2350,7 +2477,7 @@ button, input, textarea, select {
 }
 
 .direct-phone-btn svg {
-  color: #10a37f;
+  color: var(--chat-green-text);
   flex-shrink: 0;
 }
 
@@ -2408,7 +2535,7 @@ button, input, textarea, select {
 }
 
 .form-group label svg {
-  color: #10a37f;
+  color: var(--chat-green-text);
   flex-shrink: 0;
 }
 
@@ -2468,7 +2595,7 @@ button, input, textarea, select {
 }
 
 .pill-select-btn.active {
-  color: #10a37f;
+  color: var(--chat-green-text);
   background: rgba(16, 163, 127, 0.16);
   border-color: rgba(16, 163, 127, 0.55);
   font-weight: 700;
@@ -2502,7 +2629,7 @@ button, input, textarea, select {
 }
 
 .form-consent-row a {
-  color: #10a37f;
+  color: var(--chat-green-text);
   text-decoration: underline;
 }
 
@@ -2877,7 +3004,7 @@ button, input, textarea, select {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.14em;
-  color: #10a37f;
+  color: var(--chat-green-text);
   background: rgba(16, 163, 127, 0.12);
   border: 1px solid rgba(16, 163, 127, 0.28);
   padding: 0.35rem 0.9rem;
@@ -3079,7 +3206,7 @@ button, input, textarea, select {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: #10a37f;
+  color: var(--chat-green-text);
   background: rgba(16, 163, 127, 0.1);
   border: 1px solid rgba(16, 163, 127, 0.3);
   padding: 0.4rem 1rem;
@@ -3161,7 +3288,7 @@ button, input, textarea, select {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: #10a37f;
+  color: var(--chat-green-text);
   background: rgba(16, 163, 127, 0.12);
   padding: 3px 9px;
   border-radius: 6px;
@@ -3257,7 +3384,7 @@ button, input, textarea, select {
   gap: 5px;
   font-size: 0.7rem;
   font-weight: 700;
-  color: #10a37f;
+  color: var(--chat-green-text);
   background: rgba(16, 163, 127, 0.12);
   border: 1px solid rgba(16, 163, 127, 0.25);
   padding: 4px 8px;
@@ -3385,7 +3512,7 @@ button, input, textarea, select {
 .engine-card-badge {
   font-size: 0.65rem;
   font-weight: 700;
-  color: #10a37f;
+  color: var(--chat-green-text);
   background: rgba(16, 163, 127, 0.18);
   padding: 2px 6px;
   border-radius: 4px;
@@ -3434,7 +3561,7 @@ button, input, textarea, select {
 }
 
 .scope-chip.active {
-  color: #10a37f;
+  color: var(--chat-green-text);
   background: rgba(16, 163, 127, 0.12);
   border-color: rgba(16, 163, 127, 0.35);
   font-weight: 600;
@@ -3456,7 +3583,7 @@ button, input, textarea, select {
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: #10a37f;
+  color: var(--chat-green-text);
   margin-bottom: 0.75rem;
   text-transform: uppercase;
 }
@@ -3487,7 +3614,7 @@ button, input, textarea, select {
 
 .tag-query { background: rgba(59, 130, 246, 0.18); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
 .tag-scan { background: rgba(168, 85, 247, 0.18); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
-.tag-out { background: rgba(16, 163, 127, 0.18); color: #10a37f; border: 1px solid rgba(16, 163, 127, 0.3); }
+.tag-out { background: rgba(16, 163, 127, 0.18); color: var(--chat-green-text); border: 1px solid rgba(16, 163, 127, 0.3); }
 
 .step-text {
   color: #cccccc;
@@ -3621,7 +3748,7 @@ button, input, textarea, select {
 .radar-icon {
   width: 36px;
   height: 36px;
-  color: #10a37f;
+  color: var(--chat-green-text);
   z-index: 2;
 }
 
@@ -3725,7 +3852,7 @@ button, input, textarea, select {
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: #10a37f;
+  color: var(--chat-green-text);
   background: rgba(16, 163, 127, 0.12);
   border: 1px solid rgba(16, 163, 127, 0.3);
   padding: 0.25rem 0.65rem;
@@ -3972,7 +4099,7 @@ button, input, textarea, select {
 .q-badge {
   font-size: 0.7rem;
   font-weight: 700;
-  color: #10a37f;
+  color: var(--chat-green-text);
   letter-spacing: 0.1em;
 }
 
@@ -4090,7 +4217,7 @@ button, input, textarea, select {
   display: inline-block;
   font-size: 0.68rem;
   font-weight: 700;
-  color: #10a37f;
+  color: var(--chat-green-text);
   background: rgba(16, 163, 127, 0.12);
   padding: 0.2rem 0.55rem;
   border-radius: 4px;
@@ -4143,7 +4270,7 @@ button, input, textarea, select {
 .step-num {
   font-size: 1.3rem;
   font-weight: 800;
-  color: #10a37f;
+  color: var(--chat-green-text);
   margin-bottom: 0.75rem;
 }
 
@@ -4174,7 +4301,7 @@ button, input, textarea, select {
 .step-time {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #10a37f;
+  color: var(--chat-green-text);
 }
 
 .step-impact {
@@ -4641,7 +4768,7 @@ button, input, textarea, select {
 
 .sim-model-organic-note {
   font-size: 0.75rem;
-  color: #6b7280;
+  color: #a0a0a0;
   line-height: 1.45;
   font-style: italic;
   padding: 0 0.25rem;
@@ -4712,7 +4839,7 @@ button, input, textarea, select {
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: #71717a;
+  color: #a1a1aa;
   text-transform: uppercase;
 }
 
@@ -4951,7 +5078,7 @@ button, input, textarea, select {
   border: 1px solid rgba(16, 163, 127, 0.35);
   display: grid;
   place-items: center;
-  color: #10a37f;
+  color: var(--chat-green-text);
   flex-shrink: 0;
   transition: all 0.25s ease;
 }
@@ -4973,7 +5100,7 @@ button, input, textarea, select {
   font-size: 0.65rem;
   font-weight: 800;
   letter-spacing: 0.1em;
-  color: #10a37f;
+  color: var(--chat-green-text);
   text-transform: uppercase;
 }
 

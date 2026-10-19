@@ -1,22 +1,67 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /analiz/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /api/
+Disallow: /analiz/
 
 User-agent: OAI-AdsBot
 Allow: /
+Disallow: /api/
+Disallow: /analiz/
+
+# Google's advertising crawlers ignore the wildcard group.
+User-agent: AdsBot-Google
+Allow: /
+Disallow: /api/
+Disallow: /analiz/
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+Disallow: /api/
+Disallow: /analiz/
 
 User-agent: GPTBot
 Allow: /
+Disallow: /api/
+Disallow: /analiz/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /api/
+Disallow: /analiz/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /api/
+Disallow: /analiz/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /api/
+Disallow: /analiz/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /api/
+Disallow: /analiz/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /api/
+Disallow: /analiz/
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /api/
+Disallow: /analiz/
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /api/
+Disallow: /analiz/
 
 Sitemap: https://www.yapayzekadareklam.com/sitemap.xml

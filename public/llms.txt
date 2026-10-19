@@ -1,21 +1,60 @@
 # Yapay Zekâda Reklam
 
-Yapay Zekâda Reklam, Türkiye ve uluslararası pazarlar için ChatGPT Ads yönetimi, AI reklam danışmanlığı ve GEO hizmetleri sunan bağımsız bir uzmanlık markasıdır.
+Yapay Zekâda Reklam, Türkiye ve küresel pazarlar için ChatGPT Ads yönetimi, OpenAI Ads Manager entegrasyonu, Conversions API (CAPI) mimarisi ve Generative Engine Optimization (GEO) uzmanlığı sunan bağımsız bir reklam yönetimi ve büyüme ajansıdır.
 
-## Ana sayfalar
-- https://www.yapayzekadareklam.com/chatgpt-reklamlari/
-- https://www.yapayzekadareklam.com/chatgpt-reklam-verme/
-- https://www.yapayzekadareklam.com/chatgptde-markam-nasil-cikar/
-- https://www.yapayzekadareklam.com/yapay-zeka-platformlarinda-reklam/
-- https://www.yapayzekadareklam.com/geo-yapay-zeka-gorunurlugu/
-- https://www.yapayzekadareklam.com/hizmetler/yapay-zeka-google-ads/
-- https://www.yapayzekadareklam.com/hizmetler/meta-reklam/
-- https://www.yapayzekadareklam.com/hizmetler/sosyal-medya-reklami/
-- https://www.yapayzekadareklam.com/hizmetler/reklam-filmi-video/
-- https://www.yapayzekadareklam.com/hizmetler/urun-gorseli/
-- https://www.yapayzekadareklam.com/hizmetler/chatbot/
-- https://www.yapayzekadareklam.com/blog/yapay-zeka-ile-reklam-verme-nasil-yapilir/
-- https://www.yapayzekadareklam.com/hakkimizda/
-- https://www.yapayzekadareklam.com/iletisim/
+## Hizmetler ve Çözümler
+- [ChatGPT Reklam Yönetimi ve OpenAI Ads Ajansı | Yapay Zekâda Reklam](https://www.yapayzekadareklam.com/chatgpt-reklamlari/): OpenAI Ads Manager şirket hesabı kurulumu, 25+ context hints kütüphanesi, CAPI dönüşüm takibi ve açılış sayfası mimarisiyle uçtan uca kampanya yönetimi.
+- [Yapay Zekada Reklam Ajansı | ChatGPT Ads ve AI Stratejisi](https://www.yapayzekadareklam.com/yapay-zekada-reklam-ajansi/): ChatGPT Ads, yapay zekâ reklam stratejisi ve GEO görünürlüğü için hesap kurulumu, ölçüm, kampanya yönetimi ve raporlama. Hizmet kapsamını inceleyin.
+- [Yapay Zekâ Platformlarında Reklam | Kanal ve Erişim Rehberi](https://www.yapayzekadareklam.com/yapay-zeka-platformlarinda-reklam/): ChatGPT ve diğer AI deneyimlerindeki sponsorlu reklam seçeneklerini, erişim durumunu ve organik görünürlükten farkını karşılaştırın.
+- [GEO Ajansı | Yapay Zekâ Aramalarında Organik Görünürlük](https://www.yapayzekadareklam.com/geo-yapay-zeka-gorunurlugu/): AI yanıtlarında kaynak olma ihtimali için teknik erişim, özgün içerik, marka bilgisi ve alıntı takibi. GEO hizmetinin kapsamını ve sınırlarını görün.
+- [Yapay Zekâ ile Reklam Üretimi | AI Kreatif Ajansı](https://www.yapayzekadareklam.com/yapay-zeka-ile-reklam-uretimi/): AI destekli reklam metni, görsel, kısa video ve kreatif varyasyon üretimi. Marka dili, insan kontrolü ve performans testi.
+- [Yapay Zekâ ile Google Ads Yönetimi | AI Reklam Ajansı](https://www.yapayzekadareklam.com/hizmetler/yapay-zeka-google-ads/): Performance Max, Akıllı Teklif, dönüşüm ölçümü ve AI destekli kreatif testleriyle Google Ads kampanyalarınızı yönetin.
+- [Yapay Zekâ Destekli Meta Reklam Yönetimi](https://www.yapayzekadareklam.com/hizmetler/meta-reklam/): Facebook ve Instagram için Advantage+, kreatif varyasyon, Pixel ve Conversions API odaklı Meta reklam yönetimi.
+- [Yapay Zekâ ile Sosyal Medya Reklamı | Instagram, LinkedIn, TikTok](https://www.yapayzekadareklam.com/hizmetler/sosyal-medya-reklami/): AI destekli hedef kitle araştırması, reklam kreatifi, kanal planı ve performans analiziyle sosyal medya reklam yönetimi.
+- [Yapay Zekâ Reklam Filmi ve Video Üretimi | AI Video Prodüksiyon](https://www.yapayzekadareklam.com/hizmetler/reklam-filmi-video/): AI destekli senaryo, storyboard, görsel, ses ve kurgu süreçleriyle marka kontrollü reklam filmi ve kısa video üretimi.
+- [Yapay Zekâ ile Ürün Görseli Üretimi | E-Ticaret AI Render](https://www.yapayzekadareklam.com/hizmetler/urun-gorseli/): E-ticaret, katalog ve reklam kampanyaları için ürün doğruluğunu koruyan AI destekli ürün görselleri üretin.
+- [Yapay Zekâ Chatbot Kurulumu | Kurumsal AI Asistan](https://www.yapayzekadareklam.com/hizmetler/chatbot/): Müşteri sorularını yanıtlayan, doğru hizmete yönlendiren ve gerektiğinde insana aktaran yapay zekâ chatbot kurulumu.
 
-Sponsorlu reklam ile organik yapay zekâ cevapları ayrı sistemlerdir. Site garanti sıralama veya doğrulanmamış platform ortaklığı iddiasında bulunmaz.
+## ChatGPT Ads & Görünürlük Rehberleri
+- [ChatGPT'de Reklam Nasıl Verilir? Türkiye İçin 2026 Rehberi](https://www.yapayzekadareklam.com/chatgpt-reklam-verme/): Türkiye'den ChatGPT reklamı vermek için Ads Manager hesabı, uygunluk, kampanya hedefi, bağlam ipuçları, açılış sayfası ve ölçüm adımlarını inceleyin.
+- [ChatGPT'de Markam Nasıl Çıkar? 2026 Görünürlük Rehberi](https://www.yapayzekadareklam.com/chatgptde-markam-nasil-cikar/): Markanızın ChatGPT'de organik olarak anlaşılması ve kaynak gösterilmesi için teknik erişim, marka bilgisi, içerik ve ölçüm adımlarını öğrenin.
+- [OpenAI Ads Manager Nedir? ChatGPT Reklam Paneli Rehberi](https://www.yapayzekadareklam.com/openai-ads-manager/): OpenAI Ads Manager Beta'nın ne işe yaradığını, Türkiye'den erişimi, kampanya yapısını, hedeflemeyi ve ölçüm seçeneklerini tek rehberde inceleyin.
+- [ChatGPT SEO Nedir? ChatGPT'de Görünür Olmak İçin SEO Rehberi](https://www.yapayzekadareklam.com/chatgpt-seo/): ChatGPT SEO ve GEO optimizasyonu: Klasik SEO ile farklar, OAI-SearchBot tarama mantığı, entity netliği, alıntılanabilir formatlar ve görünürlük ölçümü.
+- [ChatGPT'de Web Sitem Neden Çıkmıyor? 10 Maddelik Teşhis Rehberi](https://www.yapayzekadareklam.com/chatgptde-web-sitem-neden-cikmiyor/): ChatGPT web sitemi görmüyor, şirketimi bulmuyor veya markamı önermiyor diyorsanız robots.txt, JS-only rendering, entity ve bilgi kazancı kontrollerini inceleyin.
+- [ChatGPT Reklam Fiyatları 2026: TBM, Bütçe ve Yönetim Ücreti](https://www.yapayzekadareklam.com/chatgpt-reklam-fiyatlari/): ChatGPT reklam maliyetleri nasıl hesaplanır? Resmî OpenAI Ads Manager açık artırma modelleri (CPC/CPM), ajans önerili pilot test bütçeleri ve dönüşüm simülasyonu.
+- [ChatGPT Reklamları Türkiye: Erişim, Kurulum ve Uygunluk Rehberi](https://www.yapayzekadareklam.com/chatgpt-reklamlari-turkiye/): OpenAI Ads Manager Beta Türkiye durumu: Self-servis panel erişimi, tüzel kişilik, vergi ve faturalandırma gereksinimleri ve Türkçe kampanya yönetimi.
+- [Hakkımızda | Yapay Zekâda Reklam](https://www.yapayzekadareklam.com/hakkimizda/): Yapay Zekâda Reklam markasının yaklaşımı, uzmanlık alanları ve şeffaf çalışma ilkeleri.
+- [Yapay Zekâ Reklam Danışmanlığı | İletişim & Teklif](https://www.yapayzekadareklam.com/iletisim/): Markanız için uygun AI reklam kanalını, gerekli hazırlıkları ve ilk kontrollü test planını birlikte çıkaralım.
+- [Yapay Zekâ Reklamcılığı ve GEO Bilgi Bankası | Blog](https://www.yapayzekadareklam.com/blog/): ChatGPT Ads kampanya yönetimi, OpenAI Ads Manager rehberleri, Generative Engine Optimization (GEO) ve AI arama görünürlüğü üzerine derinlemesine teknik analizler.
+- [Ücretsiz Yapay Zekâ Görünürlük Analizi | GEO & LLM Testi](https://www.yapayzekadareklam.com/yapay-zeka-gorunurluk-analizi/): Web sitenizin ChatGPT, Perplexity, Gemini ve Claude gibi yapay zekâ motorlarında ne kadar önerildiğini ve kaynak gösterildiğini ücretsiz analiz edin.
+- [Yapay Zekâ ve ChatGPT Reklam Haberleri | Güncel Gelişmeler](https://www.yapayzekadareklam.com/haberler/): OpenAI Ads Manager, ChatGPT reklam ekosistemi, küresel pazar erişimleri ve üretken yapay zekâ pazarlamasına dair en güncel haberler, analizler ve resmî duyurular.
+- [Yapay Zekâ ve Reklamcılık Sözlüğü | Yapay Zekâda Reklam](https://www.yapayzekadareklam.com/sozluk/): ChatGPT Ads, GEO, bağlam ipuçları (context hints), Share of Model Voice ve yapay zekâ arama terimlerinin tanımları, örnekleri ve kılavuzu.
+- [ChatGPT Reklamları Nerede Görünür? Yerleşim Rehberi](https://www.yapayzekadareklam.com/chatgpt-reklamlari-nerede-gorunur/): Sponsorlu ChatGPT reklamları arayüzde tam olarak hangi alanda belirir? Organik tavsiyelerden nasıl ayırt edilir? Reklam yerleşimleri ve kullanıcı deneyimi rehberi.
+- [ChatGPT Reklam Verme Şartları ve OpenAI Politikaları](https://www.yapayzekadareklam.com/chatgpt-reklam-verme-sartlari/): OpenAI Ads Manager üzerinden reklam yayınlamak için gereken tüzel kişilik, vergi doğrulaması, yasaklı sektörler ve açılış sayfası uygunluk kriterleri.
+- [ChatGPT Reklam Ajansı Nasıl Seçilir? 15 Karar Kriteri](https://www.yapayzekadareklam.com/chatgpt-reklam-ajansi-nasil-secilir/): Şirketiniz için yapay zekâ ve ChatGPT reklam ajansı seçerken sormanız gereken 15 kritik soru, şeffaflık kriterleri ve bütçe tuzakları.
+
+## Bilgi Merkezi & Blog Makaleleri
+- [Yapay Zekada Reklam Nasıl Verilir? 2026 Uygulama Rehberi](https://www.yapayzekadareklam.com/blog/yapay-zekada-reklam-nasil-verilir/): Yapay zekada reklam vermek için platform, hesap, hedef, bütçe, kreatif ve ölçüm adımlarını öğrenin. ChatGPT Ads ile GEO arasındaki farkı görün.
+- [ChatGPT Reklam Maliyeti Nasıl Hesaplanır? | Bütçe ve Ücretler](https://www.yapayzekadareklam.com/blog/chatgpt-reklam-maliyeti/): ChatGPT reklam maliyetleri, medya bütçesi ve ajans yönetim ücretleri nasıl planlanır? TBM açık artırması ve test bütçesi rehberi.
+- [ChatGPT Ads ve GEO Arasındaki Fark Nedir? | Sponsorlu vs Organik](https://www.yapayzekadareklam.com/blog/chatgpt-ads-geo-farki/): ChatGPT Ads ile organik GEO arasındaki temel farklar: Görünürlük, ödeme modeli, ölçüm kriterleri ve iki sistemin birlikte kullanımı.
+- [ChatGPT Context Hints Nedir? 25 Örnekle Bağlam Rehberi](https://www.yapayzekadareklam.com/blog/chatgpt-ads-context-hints/): OpenAI Ads Manager context hints nasıl yazılır? 25 sektörel karar anı örneği, kesin eşleme ve negatif hedefleme arasındaki farklar.
+- [ChatGPT Reklam Performansı Nasıl Ölçülür? | CAPI, Pixel & CRM](https://www.yapayzekadareklam.com/blog/chatgpt-reklam-olcumu/): ChatGPT Ads dönüşüm takibi, Pixel ve Conversions API entegrasyonu, UTM şablonları ve nitelikli talep kalitesinin ölçümü.
+- [Türkiye'den ChatGPT Reklam Hesabı Nasıl Açılır? | Kurulum Rehberi](https://www.yapayzekadareklam.com/blog/turkiyeden-chatgpt-reklam-hesabi/): Türkiye merkezli işletmeler için OpenAI Ads Manager hesabı açma, tüzel kişilik doğrulaması, vergilendirme ve fatura süreci.
+- [Markam ChatGPT’de Neden Görünmüyor? 12 Neden ve Kontrol Listesi](https://www.yapayzekadareklam.com/blog/markam-chatgptde-neden-gorunmuyor/): Sektörünüzle veya ürünlerinizle ilgili sorularda ChatGPT neden şirketinizi önermiyor? Tarama engelleri, bilgi tutarsızlıkları ve rekabet analizi kontrol listesi.
+- [ChatGPT’de Kaynak Olarak Gösterilmek İçin Site Nasıl Hazırlanır?](https://www.yapayzekadareklam.com/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/): OpenAI Search motorunun web sitenizi alıntılaması ve dipnot kaynak bağlantısı göstermesi için OAI-SearchBot izinleri, bilgi kazancı ve referans takibi rehberi.
+- [GEO Performansı Nasıl Ölçülür? Marka, Rakip ve Kaynak Gösterimi](https://www.yapayzekadareklam.com/blog/geo-performansi-nasil-olculur/): Yapay zekâ yanıtlarındaki görünürlüğünüzü nasıl ölçeceksiniz? Marka anılması (mention), kaynak bağlantısı (citation) ve tavsiye (recommendation) takibi.
+- [ChatGPT Reklam Kampanyası Nasıl Planlanır? İlk 30 Günlük Test Örneği](https://www.yapayzekadareklam.com/blog/chatgpt-reklam-kampanyasi-nasil-planlanir/): OpenAI Ads Manager üzerinde ilk ChatGPT sponsorlu reklam kampanyasını kurgularken hedef kitle, context hints, bütçe yönetimi ve durdurma kriterleri.
+- [ChatGPT Reklamları İçin Açılış Sayfası Kontrol Listesi | CRO](https://www.yapayzekadareklam.com/blog/chatgpt-reklamlari-icin-acilis-sayfasi-kontrol-listesi/): ChatGPT diyalogundan tıklayan bilinçli ziyaretçiyi müşteriye dönüştüren landing page mimarisi: İlk ekran uyumu, güven kanıtları, mobil hız ve form sadeliği.
+- [ChatGPT Reklamı mı Google Ads mi? Hangi Hedef İçin Hangisi?](https://www.yapayzekadareklam.com/blog/chatgpt-reklami-mi-google-ads-mi/): Kullanıcı niyeti, bütçe dinamikleri, açık artırma modelleri ve satın alma hunisindeki rolleri açısından ChatGPT Ads ve Google Ads karşılaştırması.
+- [Yapay Zekâ ile Reklam Verme Nasıl Yapılır? | Temel Rehber](https://www.yapayzekadareklam.com/blog/yapay-zeka-ile-reklam-verme-nasil-yapilir/): Yapay zekâ ile reklam verme adımları: hedef, ölçüm, kanal seçimi, kreatif test, bütçe ve performans optimizasyonu rehberi.
+
+## Güncel Haberler & Platform Güncellemeleri
+- [ChatGPT Ads 60'tan Fazla Ülkeye Ulaştı: Türkiye İçin Ne Değişiyor?](https://www.yapayzekadareklam.com/haberler/chatgpt-ads-60-ulkeye-ulasti/): ChatGPT Ads 60'tan fazla ülkede açıldı. Güneydoğu Asya pazarları, Türkiye merkezli şirketlerin erişim durumu ve ihracatçılar için kritik etkiler.
+- [OpenAI Sponsored Agents Duyuruldu: Reklamdan Markayla Sohbete](https://www.yapayzekadareklam.com/haberler/sponsored-agents-duyuruldu/): OpenAI Sponsored Agents reklam formatını duyurdu. Tıklamayla web sitesi yerine marka asistanıyla sohbet başlatan yeni modelin kapsamı ve sınırları.
+
+## Yasal Bilgilendirme
+- [Gizlilik Politikası | Yapay Zekâda Reklam](https://www.yapayzekadareklam.com/gizlilik/): Yapay Zekâda Reklam veri güvenliği ve gizlilik politikası. Kullanıcı verilerinin işlenmesi, korunması ve haklarınız hakkında bilgilendirme.
+- [KVKK Aydınlatma Metni | Yapay Zekâda Reklam](https://www.yapayzekadareklam.com/kvkk/): 6698 sayılı KVKK kapsamında kişisel verilerin işlenmesi, saklanması ve haklarınıza ilişkin Yapay Zekâda Reklam aydınlatma metni.
+- [Çerez Politikası | Yapay Zekâda Reklam](https://www.yapayzekadareklam.com/cerez-politikasi/): Yapay Zekâda Reklam web sitesinde kullanıcı deneyimini artırmak ve analiz yapmak için kullanılan çerez türleri ve yönetim rehberi.
+
+Sponsorlu reklam ile organik yapay zekâ cevapları bağımsız mekanizmalardır. Site hiçbir platformla doğrulanmamış ortaklık veya organik sıralama garantisi iddiasında bulunmaz.

@@ -24,3 +24,7 @@ dist-ssr
 *.sw?
 
 .vercel
+
+# Local audit evidence, backups and browser sessions
+output/
+.playwright-cli/

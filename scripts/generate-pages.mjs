@@ -70,7 +70,7 @@ const pages = {
 
         <section>
           <h2>3. Kampanya hedefini ve başarı ölçüsünü seçin</h2>
-          <p>İlk kampanyadan beklenen işi tek cümleyle tanımlayın: markanın görünmesi (Traffic/Awareness), nitelikli site ziyareti veya ölçülebilir başvuru/satış (Conversions/Leads). Katı bir resmi minimum bütçe alt sınırı yoktur; ancak modelin semantik bağlamları sağlıklı öğrenmesi için kontrollü pilot test bütçeleri kurgulanmalıdır.</p>
+          <p>İlk kampanyanın hedefini ve başarı ölçüsünü belirleyin. Resmî günlük minimum bütçe hesap para birimine göre değişir; güncel tutarı <a href="https://help.openai.com/en/articles/20001210-create-campaigns-for-chatgpt-ads" target="_blank" rel="noopener noreferrer">Minimum Campaign Spend tablosundan</a> ve panelinizden doğrulayın. Pilot test bütçesi bu alt sınırdan ayrı bir planlama kararıdır.</p>
         </section>
 
         <section>
@@ -95,7 +95,7 @@ const pages = {
 
         <section>
           <h2>Sık sorulan sorular</h2>
-          <p>Türkiye'deki şirketler Ads Manager üzerinden self servis hesap açabilir. Zorunlu bir resmi minimum harcama alt sınırı yoktur. Sponsorlu reklam vermek ChatGPT'nin organik cevaplarını kesinlikle etkilemez ve reklamlar yalnızca reklam destekli uygun katmanlardaki kullanıcılara gösterilir.</p>
+          <p>Türkiye'deki uygun işletmeler self servis Ads Manager erişimini kullanabilir. Günlük minimum bütçe hesabın faturalandırma para birimine göre belirlenir. Sponsorlu reklamlar organik cevapları değiştirmez.</p>
         </section>
 
         <section class="sources">
@@ -239,7 +239,7 @@ const pages = {
         <p>OpenAI'ın resmî ülke listesine göre Türkiye, self-servis erişime açıktır. Türkiye merkezli vergi kimlik numarası (VKN), vergi levhası ve 2 No'lu KDV süreçlerine uygun kurumsal ödeme kartı olan faal tüzel kişiler hesap açabilir.</p>
 
         <h2>Panelde kampanya, reklam grubu ve reklamın görevi</h2>
-        <p>Panel 3 aşamalı yapıdan oluşur: 1) Kampanya seviyesinde ana hedef (trafik, lead, satış) ve bütçe belirlenir; 2) Reklam grubu seviyesinde context hints (bağlam ipuçları), ülke ve negatif filtreler tanımlanır; 3) Reklam seviyesinde kreatif metin, başlık ve açılış sayfası URL'si girilir.</p>
+        <p>Panel üç seviyeden oluşur: kampanya hedef, bütçe, tarih ve hedef ülkeyi; reklam grubu benzer ürün/hizmet niyetlerini ve context hints'i; reklam başlık, metin, görsel ve açılış sayfasını taşır. Context hints negatif anahtar kelime veya kesin hedefleme kuralı değildir.</p>
 
         <h2>Kampanya hedefleri ve ücretlendirme seçenekleri</h2>
         <p>Panelde geçerli tıklama (CPC) ve bin gösterim (CPM) teklif modelleri yer alır. Açık artırma dinamikleri bağlam alakası ve teklif kombinasyonuna göre çalışır. Ortalama maliyetler için <a href="/chatgpt-reklam-fiyatlari/">ChatGPT Reklam Fiyatları</a> sayfamıza göz atın.</p>
@@ -435,7 +435,7 @@ const pages = {
       </header>
       <main>
         <h1>ChatGPT Reklam Fiyatları 2026: TBM, Bütçe ve Yönetim Maliyeti</h1>
-        <p><strong>Kritik Şeffaflık Notu:</strong> Sitemizde veya sektörel analizlerde yer alan $1.500–$3.000/ay gibi tutarlar, <em>OpenAI'ın zorunlu kıldığı bir alt harcama barajı değildir</em>. Bunlar, yapay zekânın karar anlarını ve semantik bağlamlarını sağlıklı öğrenebilmesi adına <em>ajansımız tarafından önerilen kontrollü pilot test senaryolarıdır</em>. Platform gerçek zamanlı açık artırma esasıyla çalışır ve katı bir resmî minimum bütçe zorunluluğu yoktur.</p>
+        <p><strong>Şeffaflık notu:</strong> $1.500–$3.000/ay gibi tutarlar ajansın örnek pilot bütçe senaryolarıdır. OpenAI'ın resmî günlük minimumu hesap para birimine göre değişir. Medya bütçesi, ajans ücreti ve örnek senaryo ayrı kalemlerdir.</p>
 
         <h2>Reklam ücreti nasıl oluşur?</h2>
         <p>ChatGPT reklam maliyetleri basılı veya sabit bir fiyat listesine dayanmaz. OpenAI Ads Manager açık artırma sistemi; maksimum teklifiniz (Bid), context hints (bağlam ipucu) alaka düzeyiniz ve reklam metninin beklenen tıklama performansı (eCTR) bileşenlerine göre anlık açık artırmayla şekillenir.</p>
@@ -444,7 +444,7 @@ const pages = {
         <p>OpenAI Ads Manager faturalandırma altyapısında (<a href="https://help.openai.com/en/articles/20001216-billing-payment" target="_blank" rel="noopener noreferrer">Billing & Payment Documentation</a>) iki temel ücretlendirme modeli sunulur: Tıklama Başı Maliyet (CPC / TBM) reklam tıklandığında ve kullanıcı sitenize yönlendirildiğinde ücretlendirilir; satın alma niyetli kitleleri toplamak için esastır. Bin Gösterim Başı Maliyet (CPM / BGBM) ise reklam kartının konuşma penceresinde 1.000 kez görüntülenmesi karşılığında tahsil edilir ve marka bilinirliği için tercih edilir.</p>
 
         <h2>Resmî minimum bütçe var mı?</h2>
-        <p>OpenAI Yardım Merkezi kampanya oluşturma kurallarına (<a href="https://help.openai.com/en/articles/20001210-create-campaigns-for-chatgpt-ads" target="_blank" rel="noopener noreferrer">Campaign Creation Guide</a>) göre zorunlu, katı bir alt harcama eşiği bulunmamaktadır. Günlük küçük bütçelerle de kampanya başlatılabilir; ancak modelin yeterli bağlam verisi toplayıp optimize olabilmesi için istatistiksel geçerliliğe sahip pilot bütçeler önerilir.</p>
+        <p><strong>Son kontrol: 11 Ekim 2026.</strong> OpenAI'ın <a href="https://help.openai.com/en/articles/20001210-create-campaigns-for-chatgpt-ads" target="_blank" rel="noopener noreferrer">Minimum Campaign Spend tablosu</a> günlük minimumu faturalandırma para birimine göre belirtir: USD hesaplarda 25 USD, EUR hesaplarda 15 EUR, GBP hesaplarda 15 GBP. Bunlar CPC veya aylık test bütçesi değildir. Türkiye'deki hesabınızın para birimini ve panelde geçerli alt sınırı doğrulayın; TRY karşılığını sabit resmî tutar gibi sunmayın.</p>
 
         <h2>Test bütçesi nasıl hesaplanır?</h2>
         <p>Test bütçesi formülü: <code>(Hedeflenen Asgari Dönüşüm Sayısı / Sayfa Dönüşüm Oranı) × Tahmini TBM</code> şeklinde hesaplanır. Örneğin ilk 30 günde modelin öğrenmesi için 40 nitelikli lead hedefleniyorsa, %8 açılış sayfası dönüşüm oranı ve $1.80 ortalama TBM ile en az 500 tıklama ve ~$900 test medya bütçesi hedeflenir.</p>
@@ -523,8 +523,8 @@ const pages = {
     `
   ],
   'blog/chatgpt-ads-context-hints': [
-    'ChatGPT Context Hints Nedir? OpenAI Ads İçin 25 Örnekle Bağlam İpuçları Rehberi',
-    'OpenAI Ads Manager context hints (bağlam ipuçları) nasıl yazılır? Klasik anahtar kelimelerden farkı, 25 sektörel karar anı örneği, negatif filtreler ve açılış sayfası eşleşmesi.',
+    'ChatGPT Context Hints Nedir? 25 Örnekle Bağlam Rehberi',
+    'OpenAI Ads Manager context hints nasıl yazılır? 25 sektörel karar anı örneği, kesin eşleme ve negatif hedefleme arasındaki farklar.',
     `
       <header class="site-header">
         <nav><a href="/">Ana Sayfa</a> | <a href="/chatgpt-reklam-verme/">ChatGPT Reklam Verme</a> | <a href="/chatgpt-reklamlari/">ChatGPT Ads Ajansı</a> | <a href="/chatgpt-reklam-fiyatlari/">Fiyatlar</a></nav>
@@ -585,8 +585,9 @@ const pages = {
           <li>25. Prefabrik çelik konstrüksiyon ev maliyetleri ve ruhsat izin süreçlerini betonarme ile kıyaslayan arsa sahipleri.</li>
         </ul>
 
-        <h2>Negatif Context Hints: Bütçenizi koruyun</h2>
-        <p>Akademik tez/ödev arayanları, ücretsiz veya açık kaynak yazılım isteyenleri, iş arayan stajyerleri negatif bağlam kurallarıyla hariç tutun.</p>
+        <h2>Negatif Context Hints bir hariç tutma sistemi mi?</h2>
+        <p>Hayır. Context hints, resmî ad group rehberinde alaka düzeyini açıklayan ipuçlarıdır; kesin eşleme veya hedefleme kuralları değildir. “Öğrencilere gösterme” gibi bir cümle yazmak o kitleyi hariç tutmaz. Ülke ve desteklenen kitle kontrollerini kendi panel ayarlarından yönetin; ürününüzün kim için yararlı olduğunu olumlu, açık ifadelerle anlatın.</p>
+        <p><strong>Son kontrol: 11 Ekim 2026.</strong> <a href="https://help.openai.com/en/articles/20001211-create-ad-groups-for-chatgpt-ads" target="_blank" rel="noopener noreferrer">Resmî Context Hints ve ad group rehberi</a>.</p>
 
         <h2>Açılış sayfası ile uyum (Message Match)</h2>
         <p>Context hint ile vadedilen spesifik değer önerisi, açılış sayfasının H1 başlığında ilk 3 saniyede karşılanmalıdır. <a href="/blog/chatgpt-reklamlari-icin-acilis-sayfasi-kontrol-listesi/">Açılış sayfası kontrol listesi</a> rehberimize bakın.</p>
@@ -1314,7 +1315,7 @@ const pages = {
     `
   ],
   'chatgpt-reklamlari-nerede-gorunur': [
-    'ChatGPT Reklamları Nerede Görünür? Yerleşimler ve Görünüm Formatı | Yapay Zekâda Reklam',
+    'ChatGPT Reklamları Nerede Görünür? Yerleşim Rehberi',
     'Sponsorlu ChatGPT reklamları arayüzde tam olarak hangi alanda belirir? Organik tavsiyelerden nasıl ayırt edilir? Reklam yerleşimleri ve kullanıcı deneyimi rehberi.',
     `
       <header class="site-header">
@@ -1345,7 +1346,7 @@ const pages = {
     `
   ],
   'chatgpt-reklam-verme-sartlari': [
-    'ChatGPT Reklam Verme Şartları: OpenAI Ads Uygunluk ve Politika Rehberi | Yapay Zekâda Reklam',
+    'ChatGPT Reklam Verme Şartları ve OpenAI Politikaları',
     'OpenAI Ads Manager üzerinden reklam yayınlamak için gereken tüzel kişilik, vergi doğrulaması, yasaklı sektörler ve açılış sayfası uygunluk kriterleri.',
     `
       <header class="site-header">
@@ -1372,7 +1373,7 @@ const pages = {
     `
   ],
   'chatgpt-reklam-ajansi-nasil-secilir': [
-    'ChatGPT Reklam Ajansı Nasıl Seçilir? 15 Maddelik Karar Rehberi | Yapay Zekâda Reklam',
+    'ChatGPT Reklam Ajansı Nasıl Seçilir? 15 Karar Kriteri',
     'Şirketiniz için yapay zekâ ve ChatGPT reklam ajansı seçerken sormanız gereken 15 kritik soru, şeffaflık kriterleri ve bütçe tuzakları.',
     `
       <header class="site-header">
@@ -1395,34 +1396,103 @@ const pages = {
   ],
 }
 
-const source = await readFile('index.html', 'utf8')
+let source = await readFile('index.html', 'utf8')
+const homeFaqs = JSON.parse(await readFile('src/content/home-faq.json', 'utf8'))
+const escapeHtml = (value) => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: homeFaqs.map(([question, answer]) => ({
+    '@type': 'Question', name: question,
+    acceptedAnswer: { '@type': 'Answer', text: answer },
+  })),
+}
+// One data source keeps the rendered FAQ, static fallback and schema in sync.
+source = source
+  .replace(/<script id="faq-schema" type="application\/ld\+json">[\s\S]*?<\/script>/, `<script id="faq-schema" type="application/ld+json">${JSON.stringify(faqSchema).replace(/</g, '\\u003c')}</script>`)
+  .replace(/<section id="home-faq">[\s\S]*?<\/section>/, `<section id="home-faq">\n          <h2>Yapay zekada reklam hakkında sık sorulan sorular</h2>\n${homeFaqs.map(([question, answer]) => `          <details><summary>${escapeHtml(question)}</summary><p>${escapeHtml(answer)}</p></details>`).join('\n')}\n        </section>`)
+await writeFile('index.html', source)
+const allSlugs = Object.keys(pages)
+
+// Track pages for sitemap & llms.txt
+const sitemapEntries = [
+  { url: 'https://www.yapayzekadareklam.com/', priority: '1.0', changefreq: 'daily', lastmod: '2026-10-09' }
+]
+
+const categorizedForLlms = {
+  hizmetler: [],
+  rehberler: [],
+  blog: [],
+  haberler: [],
+  diger: []
+}
+
 for (const [slug, [title, description, staticHtml]] of Object.entries(pages)) {
   const url = `https://www.yapayzekadareklam.com/${slug}/`
   const isService = slug.startsWith('hizmetler/') || ['chatgpt-reklamlari','geo-yapay-zeka-gorunurlugu','yapay-zeka-ile-reklam-uretimi','yapay-zeka-platformlarinda-reklam','yapay-zekada-reklam-ajansi'].includes(slug)
   const isNews = slug.startsWith('haberler/') && slug !== 'haberler'
   const isArticle = isNews || slug.startsWith('blog/') || ['chatgptde-markam-nasil-cikar','chatgpt-reklam-verme','chatgpt-reklam-fiyatlari','chatgpt-reklamlari-turkiye','openai-ads-manager','chatgpt-seo','chatgptde-web-sitem-neden-cikmiyor','sozluk','chatgpt-reklamlari-nerede-gorunur','chatgpt-reklam-verme-sartlari','chatgpt-reklam-ajansi-nasil-secilir'].includes(slug)
+  const isLegal = ['gizlilik', 'kvkk', 'cerez-politikasi'].includes(slug)
+
+  // Prioritize sitemap
+  const priority = isLegal ? '0.3' : isService ? '0.9' : slug.startsWith('blog/') || isNews ? '0.8' : '0.85'
+  const changefreq = isNews ? 'daily' : slug.startsWith('blog/') ? 'weekly' : 'monthly'
+  sitemapEntries.push({ url, priority, changefreq, lastmod: '2026-10-09' })
+
+  // Categorize for llms.txt
+  if (isService) categorizedForLlms.hizmetler.push({ url, title, description })
+  else if (slug.startsWith('blog/')) categorizedForLlms.blog.push({ url, title, description })
+  else if (slug.startsWith('haberler/')) categorizedForLlms.haberler.push({ url, title, description })
+  else if (isLegal) categorizedForLlms.diger.push({ url, title, description })
+  else categorizedForLlms.rehberler.push({ url, title, description })
+
   const primarySchema = {
     '@type': isNews ? 'NewsArticle' : isArticle ? 'Article' : isService ? 'Service' : 'WebPage',
     name: title,
     headline: isArticle ? title : undefined,
-    datePublished: isNews ? '2026-09-29' : undefined,
-    dateModified: '2026-09-29',
+    datePublished: isArticle ? (isNews ? '2026-09-29' : '2026-09-29') : undefined,
+    dateModified: '2026-10-09',
     description,
     url,
+    image: 'https://www.yapayzekadareklam.com/images/ai-karar-aninda-reklam.png',
+    author: isArticle ? {
+      '@type': 'Organization',
+      name: 'Yapay Zekâda Reklam',
+      url: 'https://www.yapayzekadareklam.com/'
+    } : undefined,
     provider: isService ? {'@id':'https://www.yapayzekadareklam.com/#organization'} : undefined,
-    publisher: isArticle ? {'@id':'https://www.yapayzekadareklam.com/#organization'} : undefined,
+    publisher: {'@id':'https://www.yapayzekadareklam.com/#organization'},
     areaServed: isService ? 'Türkiye' : undefined,
   }
+
+  // Hierarchical BreadcrumbList
+  const breadcrumbElements = [
+    { '@type': 'ListItem', position: 1, name: 'Ana sayfa', item: 'https://www.yapayzekadareklam.com/' }
+  ]
+
+  if (slug.startsWith('blog/') && slug !== 'blog') {
+    breadcrumbElements.push({ '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.yapayzekadareklam.com/blog/' })
+    breadcrumbElements.push({ '@type': 'ListItem', position: 3, name: title, item: url })
+  } else if (slug.startsWith('haberler/') && slug !== 'haberler') {
+    breadcrumbElements.push({ '@type': 'ListItem', position: 2, name: 'Haberler', item: 'https://www.yapayzekadareklam.com/haberler/' })
+    breadcrumbElements.push({ '@type': 'ListItem', position: 3, name: title, item: url })
+  } else if (slug.startsWith('hizmetler/')) {
+    // There is no /hizmetler/ index page: use the actual two-level hierarchy.
+    breadcrumbElements.push({ '@type': 'ListItem', position: 2, name: title, item: url })
+  } else {
+    breadcrumbElements.push({ '@type': 'ListItem', position: 2, name: title, item: url })
+  }
+
+  const schemaGraph = [primarySchema, {
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbElements,
+  }]
+
   const schema = {
     '@context': 'https://schema.org',
-    '@graph': [primarySchema, {
-      '@type':'BreadcrumbList',
-      itemListElement:[
-        {'@type':'ListItem',position:1,name:'Ana sayfa',item:'https://www.yapayzekadareklam.com/'},
-        {'@type':'ListItem',position:2,name:title,item:url},
-      ],
-    }],
+    '@graph': schemaGraph,
   }
+
   let html = source
     .replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
     .replace(/<meta\s+name="description"\s+content="[\s\S]*?"\s*\/>/, `<meta name="description" content="${description}" />`)
@@ -1430,6 +1500,8 @@ for (const [slug, [title, description, staticHtml]] of Object.entries(pages)) {
     .replace(/<meta property="og:url" content=".*?" \/>/, `<meta property="og:url" content="${url}" />`)
     .replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${title}" />`)
     .replace(/<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${description}" />`)
+    .replace(/<meta name="twitter:title" content=".*?" \/>/, `<meta name="twitter:title" content="${title}" />`)
+    .replace(/<meta name="twitter:description" content=".*?" \/>/, `<meta name="twitter:description" content="${description}" />`)
     .replace(/<script id="page-schema" type="application\/ld\+json">[\s\S]*?<\/script>/, `<script id="page-schema" type="application/ld+json">${JSON.stringify(schema)}</script>`)
     .replace(/\s*<script id="faq-schema" type="application\/ld\+json">[\s\S]*?<\/script>/, '')
 
@@ -1441,4 +1513,42 @@ for (const [slug, [title, description, staticHtml]] of Object.entries(pages)) {
   await mkdir(slug, { recursive: true })
   await writeFile(`${slug}/index.html`, html)
 }
-console.log(`Generated ${Object.keys(pages).length} pages successfully.`)
+
+// 1. Auto-generate public/sitemap.xml with lastmod dates
+const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapEntries.map(e => `  <url>
+    <loc>${e.url}</loc>
+    <lastmod>${e.lastmod}</lastmod>
+    <changefreq>${e.changefreq}</changefreq>
+    <priority>${e.priority}</priority>
+  </url>`).join('\n')}
+</urlset>
+`
+await writeFile('public/sitemap.xml', sitemapXml)
+
+// 2. Auto-generate public/llms.txt with complete, categorized index
+let llmsTxt = `# Yapay Zekâda Reklam
+
+Yapay Zekâda Reklam, Türkiye ve küresel pazarlar için ChatGPT Ads yönetimi, OpenAI Ads Manager entegrasyonu, Conversions API (CAPI) mimarisi ve Generative Engine Optimization (GEO) uzmanlığı sunan bağımsız bir reklam yönetimi ve büyüme ajansıdır.
+
+## Hizmetler ve Çözümler
+${categorizedForLlms.hizmetler.map(p => `- [${p.title}](${p.url}): ${p.description}`).join('\n')}
+
+## ChatGPT Ads & Görünürlük Rehberleri
+${categorizedForLlms.rehberler.map(p => `- [${p.title}](${p.url}): ${p.description}`).join('\n')}
+
+## Bilgi Merkezi & Blog Makaleleri
+${categorizedForLlms.blog.map(p => `- [${p.title}](${p.url}): ${p.description}`).join('\n')}
+
+## Güncel Haberler & Platform Güncellemeleri
+${categorizedForLlms.haberler.map(p => `- [${p.title}](${p.url}): ${p.description}`).join('\n')}
+
+## Yasal Bilgilendirme
+${categorizedForLlms.diger.map(p => `- [${p.title}](${p.url}): ${p.description}`).join('\n')}
+
+Sponsorlu reklam ile organik yapay zekâ cevapları bağımsız mekanizmalardır. Site hiçbir platformla doğrulanmamış ortaklık veya organik sıralama garantisi iddiasında bulunmaz.
+`
+await writeFile('public/llms.txt', llmsTxt)
+
+console.log(`Generated ${allSlugs.length} pages, updated sitemap.xml and llms.txt successfully.`)

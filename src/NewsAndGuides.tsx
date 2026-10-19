@@ -31,9 +31,9 @@ export function ChatGPTGuideUpdatedPage({ Detail, Arrow }: NewsAndGuidesProps) {
             <strong>Evet.</strong> OpenAI, ChatGPT içinde sponsorlu reklam gösterimi için <strong>OpenAI Ads Manager (ads.openai.com)</strong> altyapısını kullanmaktadır. Reklamlar organik ChatGPT cevaplarından tamamen ayrı tutulur ve açıkça "Sponsorlu / Ad" olarak etiketlenir. Kampanyalarda klasik arama motoru anahtar kelime mantığı yerine; konuşma bağlamı, kullanıcı amacı, açılış sayfası uyumu ve reklamverenin tanımladığı <strong>context hints (bağlam ipuçları)</strong> kullanılır.
           </p>
           <div style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap' }}>
-            <a href="/blog/chatgpt-ads-context-hints/" style={{ background: '#121212', color: 'var(--chat-green)', padding: '0.4rem 0.8rem', borderRadius: '6px', fontSize: '0.85rem', textDecoration: 'none', fontWeight: 600 }}>25 Context Hints Örneği ➔</a>
-            <a href="/chatgpt-reklam-fiyatlari/" style={{ background: '#121212', color: 'var(--chat-green)', padding: '0.4rem 0.8rem', borderRadius: '6px', fontSize: '0.85rem', textDecoration: 'none', fontWeight: 600 }}>TBM & Bütçe Hesaplama ➔</a>
-            <a href="/chatgpt-reklamlari-turkiye/" style={{ background: '#121212', color: 'var(--chat-green)', padding: '0.4rem 0.8rem', borderRadius: '6px', fontSize: '0.85rem', textDecoration: 'none', fontWeight: 600 }}>Türkiye Vergi & Fatura ➔</a>
+            <a href="/blog/chatgpt-ads-context-hints/" style={{ background: '#121212', color: 'var(--chat-green-text)', padding: '0.4rem 0.8rem', borderRadius: '6px', fontSize: '0.85rem', textDecoration: 'none', fontWeight: 600 }}>25 Context Hints Örneği ➔</a>
+            <a href="/chatgpt-reklam-fiyatlari/" style={{ background: '#121212', color: 'var(--chat-green-text)', padding: '0.4rem 0.8rem', borderRadius: '6px', fontSize: '0.85rem', textDecoration: 'none', fontWeight: 600 }}>TBM & Bütçe Hesaplama ➔</a>
+            <a href="/chatgpt-reklamlari-turkiye/" style={{ background: '#121212', color: 'var(--chat-green-text)', padding: '0.4rem 0.8rem', borderRadius: '6px', fontSize: '0.85rem', textDecoration: 'none', fontWeight: 600 }}>Türkiye Vergi & Fatura ➔</a>
           </div>
         </div>
 
@@ -43,7 +43,7 @@ export function ChatGPTGuideUpdatedPage({ Detail, Arrow }: NewsAndGuidesProps) {
             ChatGPT'de reklam vermek ile organik cevaplarda önerilmek aynı şey mi?
           </h3>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.02rem', margin: 0 }}>
-            Hayır. Reklamlar organik yanıttan ayrı gösterilir. OpenAI, reklamverenin modelin verdiği cevabı şekillendiremediğini ve reklamların cevapları etkilemediğini açıkça belirtir. “ChatGPT'de markam nasıl çıkar?” sorusuyla kastınız organik marka görünürlüğüyse <a href="/chatgptde-markam-nasil-cikar/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>organik GEO rehberimize</a> bakın. Bu sayfa yalnız ücretli kampanya kurulumunu anlatır.
+            Hayır. Reklamlar organik yanıttan ayrı gösterilir. OpenAI, reklamverenin modelin verdiği cevabı şekillendiremediğini ve reklamların cevapları etkilemediğini açıkça belirtir. “ChatGPT'de markam nasıl çıkar?” sorusuyla kastınız organik marka görünürlüğüyse <a href="/chatgptde-markam-nasil-cikar/" style={{ color: 'var(--chat-green-text)', fontWeight: 600 }}>organik GEO rehberimize</a> bakın. Bu sayfa yalnız ücretli kampanya kurulumunu anlatır.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ export function ChatGPTGuideUpdatedPage({ Detail, Arrow }: NewsAndGuidesProps) {
             2. Ads Manager hesabını kurun
           </h2>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1rem' }}>
-            Resmî başlangıç adresi <a href="https://ads.openai.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}><code>ads.openai.com</code></a>dur. İş e-postanızla giriş yapın veya hesap oluşturun. Reklamveren adını, marka bilgilerini, ödeme profilini ve ödeme yöntemini tamamlayın; istenen doğrulama adımlarını geçin. Ekip üyelerine görevlerine uygun erişim verin. OpenAI'ın hızlı başlangıç rehberi, kampanyaların Ads Manager Beta'da oluşturulduğunu ve yönetildiğini belirtiyor.
+            Resmî başlangıç adresi <a href="https://ads.openai.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}><code>ads.openai.com</code></a>dur. İş e-postanızla giriş yapın veya hesap oluşturun. Reklamveren adını, marka bilgilerini, ödeme profilini ve ödeme yöntemini tamamlayın; istenen doğrulama adımlarını geçin. Ekip üyelerine görevlerine uygun erişim verin. OpenAI'ın hızlı başlangıç rehberi, kampanyaların Ads Manager Beta'da oluşturulduğunu ve yönetildiğini belirtiyor.
           </p>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem' }}>
             Arayüz beta aşamasında değişebilir. Bu nedenle ekran görüntüsü yayımlarsanız görüntüleme tarihini yazın. Türkiye'deki vergi/muhasebe durumunu her şirkete aynı cümleyle kesinleştirmek yerine kendi mali müşavirinizle değerlendirin.
@@ -118,13 +118,13 @@ export function ChatGPTGuideUpdatedPage({ Detail, Arrow }: NewsAndGuidesProps) {
             Context hints, reklamın hangi konuşma bağlamlarıyla ilişkili olabileceğini anlatan ek ipuçlarıdır. Klasik arama motorundaki tam eşleşen anahtar kelime listesi değildir ve belirli bir soruda gösterim garantisi vermez. İşletmenin sunduğu şey, kullanıcı ihtiyacı ve karar aşaması net olmalı. “Her sohbetten lead istiyorum” gibi geniş bir tanım yerine ürünle ilgili gerçek soruları seçin.
           </p>
           <div style={{ background: 'var(--chat-surface)', borderLeft: '4px solid var(--chat-green)', borderRadius: '12px', padding: '1.3rem', marginBottom: '1rem' }}>
-            <span style={{ fontSize: '0.82rem', color: 'var(--chat-green)', fontWeight: 700, display: 'block', marginBottom: '0.3rem' }}>BAĞLAM İPUCU ÖRNEĞİ:</span>
+            <span style={{ fontSize: '0.82rem', color: 'var(--chat-green-text)', fontWeight: 700, display: 'block', marginBottom: '0.3rem' }}>BAĞLAM İPUCU ÖRNEĞİ:</span>
             <p style={{ color: '#e5e7eb', fontStyle: 'italic', margin: 0, lineHeight: 1.7 }}>
               “Küçük bir B2B satış ekibi, WhatsApp'tan gelen talepleri ekip içinde dağıtabilen ve görüşmeleri CRM'de takip edebilen bir çözüm karşılaştırıyor.”
             </p>
           </div>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem' }}>
-            Reklam metni ve açılış sayfası da bu ihtiyacı gerçekten karşılamalı. Daha fazla örnek için <a href="/blog/chatgpt-ads-context-hints/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>context hints rehberine</a> bağlantı verin.
+            Reklam metni ve açılış sayfası da bu ihtiyacı gerçekten karşılamalı. Daha fazla örnek için <a href="/blog/chatgpt-ads-context-hints/" style={{ color: 'var(--chat-green-text)', fontWeight: 600 }}>context hints rehberine</a> bağlantı verin.
           </p>
         </section>
 
@@ -193,16 +193,16 @@ export function ChatGPTGuideUpdatedPage({ Detail, Arrow }: NewsAndGuidesProps) {
         <section style={{ marginBottom: '3.5rem', background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '16px', padding: '1.8rem' }}>
           <h3 style={{ color: '#ffffff', fontSize: '1.2rem', marginBottom: '1rem' }}>İç Bağlantılar ve Rehberler</h3>
           <div style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap' }}>
-            <a href="/chatgpt-reklamlari/" style={{ background: 'var(--chat-bg-secondary)', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+            <a href="/chatgpt-reklamlari/" style={{ background: 'var(--chat-bg-secondary)', color: 'var(--chat-green-text)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
               ChatGPT reklam yönetimi ➔
             </a>
-            <a href="/chatgpt-reklam-fiyatlari/" style={{ background: 'var(--chat-bg-secondary)', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+            <a href="/chatgpt-reklam-fiyatlari/" style={{ background: 'var(--chat-bg-secondary)', color: 'var(--chat-green-text)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
               ChatGPT reklam fiyatları ➔
             </a>
-            <a href="/chatgptde-markam-nasil-cikar/" style={{ background: 'var(--chat-bg-secondary)', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+            <a href="/chatgptde-markam-nasil-cikar/" style={{ background: 'var(--chat-bg-secondary)', color: 'var(--chat-green-text)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
               Organik cevaplarda marka görünürlüğü ➔
             </a>
-            <a href="/blog/chatgpt-ads-context-hints/" style={{ background: 'var(--chat-bg-secondary)', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+            <a href="/blog/chatgpt-ads-context-hints/" style={{ background: 'var(--chat-bg-secondary)', color: 'var(--chat-green-text)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
               Context hints ➔
             </a>
           </div>
@@ -212,10 +212,10 @@ export function ChatGPTGuideUpdatedPage({ Detail, Arrow }: NewsAndGuidesProps) {
         <section style={{ marginBottom: '3.5rem', fontSize: '0.9rem', color: 'var(--chat-text-secondary)', borderTop: '1px solid var(--chat-border)', paddingTop: '1.5rem' }}>
           <strong style={{ color: '#ffffff', display: 'block', marginBottom: '0.5rem' }}>Resmî Kaynaklar:</strong>
           <ul style={{ margin: 0, paddingLeft: '1.2rem', lineHeight: 1.8 }}>
-            <li><a href="https://help.openai.com/en/articles/20001245-ads-manager-availability" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>OpenAI ülke erişim listesi</a></li>
-            <li><a href="https://help.openai.com/en/articles/20001224-quickstart-launch-your-first-campaign" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>İlk kampanya rehberi</a></li>
-            <li><a href="https://help.openai.com/en/articles/20001047-ads-in-chatgpt" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>ChatGPT reklamları SSS</a></li>
-            <li><a href="https://help.openai.com/en/articles/20001243-advertiser-guidance-for-allowing-openai-web-crawlers" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>Reklam açılış sayfası tarayıcısı</a></li>
+            <li><a href="https://help.openai.com/en/articles/20001245-ads-manager-availability" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>OpenAI ülke erişim listesi</a></li>
+            <li><a href="https://help.openai.com/en/articles/20001224-quickstart-launch-your-first-campaign" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>İlk kampanya rehberi</a></li>
+            <li><a href="https://help.openai.com/en/articles/20001047-ads-in-chatgpt" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>ChatGPT reklamları SSS</a></li>
+            <li><a href="https://help.openai.com/en/articles/20001243-advertiser-guidance-for-allowing-openai-web-crawlers" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>Reklam açılış sayfası tarayıcısı</a></li>
           </ul>
         </section>
 
@@ -265,7 +265,7 @@ export function OpenAIAdsManagerPage({ Detail, Arrow }: NewsAndGuidesProps) {
             OpenAI Ads Manager (Beta), OpenAI'ın ChatGPT ekosisteminde yer alan sponsorlu reklam alanlarını yönetmek için geliştirdiği resmî self-servis reklam yönetim platformudur. Tıpkı Meta Ads Manager veya Google Ads paneli gibi, reklamverenlerin kampanyalarını, hedef kitle bağlamlarını, günlük bütçelerini ve dönüşüm piksellerini tek bir kurumsal merkezden yönetmelerini sağlar.
           </p>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem' }}>
-            En kritik yapısal özelliği, kullanıcı sohbet arayüzünden (chatgpt.com) tamamen izole edilmiş bağımsız bir iş portalı (<a href="https://ads.openai.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>ads.openai.com</a>) olarak çalışmasıdır. Resmî çerçeve için <a href="https://help.openai.com/en/articles/20001206-ads-manager-beta-overview" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>OpenAI Ads Manager Beta Overview</a> belgesini inceleyebilirsiniz.
+            En kritik yapısal özelliği, kullanıcı sohbet arayüzünden (chatgpt.com) tamamen izole edilmiş bağımsız bir iş portalı (<a href="https://ads.openai.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>ads.openai.com</a>) olarak çalışmasıdır. Resmî çerçeve için <a href="https://help.openai.com/en/articles/20001206-ads-manager-beta-overview" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>OpenAI Ads Manager Beta Overview</a> belgesini inceleyebilirsiniz.
           </p>
         </section>
 
@@ -275,7 +275,7 @@ export function OpenAIAdsManagerPage({ Detail, Arrow }: NewsAndGuidesProps) {
             Türkiye'den kimler self servis erişebilir?
           </h2>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1.2rem' }}>
-            OpenAI'ın resmî kullanılabilirlik listesine (<a href="https://help.openai.com/en/articles/20001245-ads-manager-availability" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>Availability Documentation</a>) göre Türkiye, self-servis erişime açık ülkeler arasında yer almaktadır. Ancak bu erişim bireysel anonim kullanıcılara değil, resmî tüzel kişilere yöneliktir:
+            OpenAI'ın resmî kullanılabilirlik listesine (<a href="https://help.openai.com/en/articles/20001245-ads-manager-availability" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>Availability Documentation</a>) göre Türkiye, self-servis erişime açık ülkeler arasında yer almaktadır. Ancak bu erişim bireysel anonim kullanıcılara değil, resmî tüzel kişilere yöneliktir:
           </p>
           <ul style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, paddingLeft: '1.4rem', marginBottom: '1.5rem' }}>
             <li style={{ marginBottom: '0.6rem' }}><strong style={{ color: '#ffffff' }}>Vergi Mükellefiyeti:</strong> Şirketinizin Türkiye'de kayıtlı geçerli bir Vergi Kimlik Numarası (VKN) ve vergi dairesi bulunmalıdır.</li>
@@ -292,7 +292,7 @@ export function OpenAIAdsManagerPage({ Detail, Arrow }: NewsAndGuidesProps) {
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1.2rem' }}>
             OpenAI Ads Manager, endüstri standardı olan 3 seviyeli bir hiyerarşi üzerine inşa edilmiştir:
           </p>
-          <div className="table-wrap" style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
+          <div className="table-wrap" tabIndex={0} style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.95rem' }}>
               <thead>
                 <tr style={{ borderBottom: '2px solid var(--chat-border)', color: '#ffffff' }}>
@@ -304,13 +304,13 @@ export function OpenAIAdsManagerPage({ Detail, Arrow }: NewsAndGuidesProps) {
               <tbody style={{ color: 'var(--chat-text-secondary)' }}>
                 <tr style={{ borderBottom: '1px solid var(--chat-border)' }}>
                   <td style={{ padding: '0.9rem', fontWeight: 600, color: '#ffffff' }}>Kampanya (Campaign)</td>
-                  <td style={{ padding: '0.9rem' }}>Hedef seçimi, toplam veya günlük bütçe, faturalandırma</td>
+                  <td style={{ padding: '0.9rem' }}>Hedef, toplam veya günlük bütçe, tarih ve hedef ülke</td>
                   <td style={{ padding: '0.9rem' }}>İşletmenin ana ticari amacını (trafik, lead veya satış) belirler.</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid var(--chat-border)' }}>
-                  <td style={{ padding: '0.9rem', fontWeight: 600, color: '#ffffff' }}>Reklam Grubu (Ad Set)</td>
-                  <td style={{ padding: '0.9rem' }}>Context hints, coğrafi konum, negatif filtreler, teklif stratejisi</td>
-                  <td style={{ padding: '0.9rem' }}>Reklamın hangi kullanıcı karar bağlamında ve hangi ülkede çıkacağını yönetir.</td>
+                  <td style={{ padding: '0.9rem', fontWeight: 600, color: '#ffffff' }}>Reklam Grubu (Ad Group)</td>
+                  <td style={{ padding: '0.9rem' }}>Ürün/hizmet odağı, context hints ve ilgili reklamlar</td>
+                  <td style={{ padding: '0.9rem' }}>Benzer müşteri ihtiyaçlarını gruplar; context hints kesin gösterim veya hariç tutma kuralı değildir.</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid var(--chat-border)' }}>
                   <td style={{ padding: '0.9rem', fontWeight: 600, color: '#ffffff' }}>Reklam (Ad Creative)</td>
@@ -332,20 +332,20 @@ export function OpenAIAdsManagerPage({ Detail, Arrow }: NewsAndGuidesProps) {
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginBottom: '1.5rem' }}>
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <h4 style={{ color: 'var(--chat-green)', marginBottom: '0.5rem' }}>Bin Gösterim Başı Maliyet (CPM)</h4>
+              <h4 style={{ color: 'var(--chat-green-text)', marginBottom: '0.5rem' }}>Bin Gösterim Başı Maliyet (CPM)</h4>
               <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.92rem', lineHeight: 1.6, margin: 0 }}>
                 Sponsorlu yerleşimin konuşma ekranında 1.000 kez görüntülenmesi karşılığında açık artırma teklifi verilir. Marka bilinirliği ve geniş erişim için kullanılır.
               </p>
             </div>
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <h4 style={{ color: 'var(--chat-green)', marginBottom: '0.5rem' }}>Tıklama Başı Maliyet (CPC)</h4>
+              <h4 style={{ color: 'var(--chat-green-text)', marginBottom: '0.5rem' }}>Tıklama Başı Maliyet (CPC)</h4>
               <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.92rem', lineHeight: 1.6, margin: 0 }}>
                 Kullanıcı reklam bağlantısına tıklayıp açılış sayfasına yönlendirildiğinde ücretlendirilir. Nitelikli müşteri ve web sitesi trafiği için esastır.
               </p>
             </div>
           </div>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem' }}>
-            Maliyetler sabit bir tarifeyle belirlenmez; sektörün bağlam rekabetine göre açık artırma algoritması tarafından hesaplanır. Ayrıntılı bütçe seviyeleri için <a href="/chatgpt-reklam-fiyatlari/" style={{ color: 'var(--chat-green)' }}>ChatGPT Reklam Fiyatları</a> analizimizi inceleyebilirsiniz.
+            Maliyetler sabit bir tarifeyle belirlenmez; sektörün bağlam rekabetine göre açık artırma algoritması tarafından hesaplanır. Ayrıntılı bütçe seviyeleri için <a href="/chatgpt-reklam-fiyatlari/" style={{ color: 'var(--chat-green-text)' }}>ChatGPT Reklam Fiyatları</a> analizimizi inceleyebilirsiniz.
           </p>
         </section>
 
@@ -370,7 +370,7 @@ export function OpenAIAdsManagerPage({ Detail, Arrow }: NewsAndGuidesProps) {
             OpenAI Pixel, Conversions API ve raporlama
           </h2>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1.2rem' }}>
-            Panelin "Data Sources" (Veri Kaynakları) sekmesi üzerinden iki temel dönüşüm motoru yapılandırılır (<a href="https://help.openai.com/en/articles/20001409-conversion-measurement" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>OpenAI Conversion Measurement Guide</a>):
+            Panelin "Data Sources" (Veri Kaynakları) sekmesi üzerinden iki temel dönüşüm motoru yapılandırılır (<a href="https://help.openai.com/en/articles/20001409-conversion-measurement" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>OpenAI Conversion Measurement Guide</a>):
           </p>
           <div style={{ background: 'var(--chat-surface)', borderRadius: '14px', border: '1px solid var(--chat-border)', padding: '1.5rem', marginBottom: '1.5rem' }}>
             <p style={{ color: '#ffffff', fontWeight: 600, marginBottom: '0.8rem' }}>İzlenebilen Standart Olaylar:</p>
@@ -382,7 +382,7 @@ export function OpenAIAdsManagerPage({ Detail, Arrow }: NewsAndGuidesProps) {
             </ul>
           </div>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem' }}>
-            Raporlama ekranında gösterim, tıklama, harcanan bütçe, ortalama CPC, dönüşüm adedi ve CPA (Edinme Başı Maliyet) metrikleri gerçek zamanlı izlenebilir. Ayrıntılar için <a href="/blog/chatgpt-reklam-olcumu/" style={{ color: 'var(--chat-green)' }}>Dönüşüm Ölçümü ve CAPI Rehberi</a> sayfamıza bakın.
+            Raporlama ekranında gösterim, tıklama, harcanan bütçe, ortalama CPC, dönüşüm adedi ve CPA (Edinme Başı Maliyet) metrikleri gerçek zamanlı izlenebilir. Ayrıntılar için <a href="/blog/chatgpt-reklam-olcumu/" style={{ color: 'var(--chat-green-text)' }}>Dönüşüm Ölçümü ve CAPI Rehberi</a> sayfamıza bakın.
           </p>
         </section>
 
@@ -408,7 +408,7 @@ export function OpenAIAdsManagerPage({ Detail, Arrow }: NewsAndGuidesProps) {
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1.2rem' }}>
             Her işletmenin iş modeli farklıdır. Aşağıdaki matrisi kullanarak işletmeniz için en doğru başlangıç stratejisini seçebilirsiniz:
           </p>
-          <div className="table-wrap" style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
+          <div className="table-wrap" tabIndex={0} style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.92rem' }}>
               <thead>
                 <tr style={{ borderBottom: '2px solid var(--chat-border)', color: '#ffffff' }}>
@@ -440,7 +440,7 @@ export function OpenAIAdsManagerPage({ Detail, Arrow }: NewsAndGuidesProps) {
                 <tr style={{ borderBottom: '1px solid var(--chat-border)' }}>
                   <td style={{ padding: '0.8rem', fontWeight: 600, color: '#ffffff' }}>Organik Görünürlük Arayan</td>
                   <td style={{ padding: '0.8rem' }}>Kaynak Gösterilme (Tavsiye)</td>
-                  <td style={{ padding: '0.8rem' }}>Reklam değil; doğrudan <a href="/geo-yapay-zeka-gorunurlugu/" style={{ color: 'var(--chat-green)' }}>GEO Hizmeti</a></td>
+                  <td style={{ padding: '0.8rem' }}>Reklam değil; doğrudan <a href="/geo-yapay-zeka-gorunurlugu/" style={{ color: 'var(--chat-green-text)' }}>GEO Hizmeti</a></td>
                   <td style={{ padding: '0.8rem' }}>OAI-SearchBot erişimi ve bağımsız alıntılar.</td>
                 </tr>
               </tbody>
@@ -506,7 +506,7 @@ export function ChatGptAds60UlkePage({ Detail, Arrow }: NewsAndGuidesProps) {
           </div>
           <div style={{ borderLeft: '1px solid var(--chat-border)', paddingLeft: '1.5rem' }}>
             <span style={{ fontSize: '0.75rem', color: 'var(--chat-text-secondary)', textTransform: 'uppercase', display: 'block' }}>RESMÎ DUYURU TARİHİ</span>
-            <strong style={{ color: 'var(--chat-green)', fontSize: '0.95rem' }}>23 Eylül 2026</strong>
+            <strong style={{ color: 'var(--chat-green-text)', fontSize: '0.95rem' }}>23 Eylül 2026</strong>
           </div>
           <div style={{ borderLeft: '1px solid var(--chat-border)', paddingLeft: '1.5rem' }}>
             <span style={{ fontSize: '0.75rem', color: 'var(--chat-text-secondary)', textTransform: 'uppercase', display: 'block' }}>YAZAR</span>
@@ -514,7 +514,7 @@ export function ChatGptAds60UlkePage({ Detail, Arrow }: NewsAndGuidesProps) {
           </div>
           <div style={{ borderLeft: '1px solid var(--chat-border)', paddingLeft: '1.5rem' }}>
             <span style={{ fontSize: '0.75rem', color: 'var(--chat-text-secondary)', textTransform: 'uppercase', display: 'block' }}>KAYNAK</span>
-            <a href="https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)', fontSize: '0.95rem', fontWeight: 600 }}>OpenAI Duyurusu ↗</a>
+            <a href="https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)', fontSize: '0.95rem', fontWeight: 600 }}>OpenAI Duyurusu ↗</a>
           </div>
         </div>
 
@@ -524,7 +524,7 @@ export function ChatGptAds60UlkePage({ Detail, Arrow }: NewsAndGuidesProps) {
             OpenAI, <strong>23 Eylül 2026</strong> tarihinde yayımladığı genişleme duyurusuyla ChatGPT Ads altyapısının Güneydoğu Asya’daki yedi stratejik pazara açıldığını ve platformun dünya genelinde <strong>60'tan fazla ülkede</strong> kullanılabilir hale geldiğini kamuoyuna açıkladı. 
           </p>
           <p style={{ color: 'var(--chat-text-secondary)' }}>
-            OpenAI'ın güncel yardım belgelerindeki kullanılabilirlik listesinde (<a href="https://help.openai.com/en/articles/20001245-ads-manager-availability" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>Ads Manager Availability</a>) Türkiye, self-servis erişim listesinde "Available" (Kullanılabilir) olarak yer almayı sürdürüyor. Bu gelişme, hem iç pazarda yapay zekâ kullanıcılarına ulaşmak isteyen şirketler hem de yurt dışına e-ihracat veya B2B hizmet sunan Türk markaları için önemli fırsatlar barındırıyor.
+            OpenAI'ın güncel yardım belgelerindeki kullanılabilirlik listesinde (<a href="https://help.openai.com/en/articles/20001245-ads-manager-availability" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>Ads Manager Availability</a>) Türkiye, self-servis erişim listesinde "Available" (Kullanılabilir) olarak yer almayı sürdürüyor. Bu gelişme, hem iç pazarda yapay zekâ kullanıcılarına ulaşmak isteyen şirketler hem de yurt dışına e-ihracat veya B2B hizmet sunan Türk markaları için önemli fırsatlar barındırıyor.
           </p>
         </div>
 
@@ -554,7 +554,7 @@ export function ChatGptAds60UlkePage({ Detail, Arrow }: NewsAndGuidesProps) {
             60+ ülke reklamveren için ne anlama geliyor?
           </h2>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1.2rem' }}>
-            ChatGPT Ads ilk döneminde yalnızca sınırlı sayıda büyük kurumsal reklamverenle test edilirken, 60+ ülkeye ulaşması platformun olgunlaştığını ve ölçeklenebilir bir küresel reklam ağı haline geldiğini gösteriyor. Artık markalar, tek bir <a href="/openai-ads-manager/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>OpenAI Ads Manager</a> paneli üzerinden farklı kıtalardaki kullanıcıların karar anlarına hitap edebiliyor.
+            ChatGPT Ads ilk döneminde yalnızca sınırlı sayıda büyük kurumsal reklamverenle test edilirken, 60+ ülkeye ulaşması platformun olgunlaştığını ve ölçeklenebilir bir küresel reklam ağı haline geldiğini gösteriyor. Artık markalar, tek bir <a href="/openai-ads-manager/" style={{ color: 'var(--chat-green-text)', fontWeight: 600 }}>OpenAI Ads Manager</a> paneli üzerinden farklı kıtalardaki kullanıcıların karar anlarına hitap edebiliyor.
           </p>
         </section>
 
@@ -564,7 +564,7 @@ export function ChatGptAds60UlkePage({ Detail, Arrow }: NewsAndGuidesProps) {
             Türkiye'deki şirketler reklam hesabı açabilir mi?
           </h2>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1.2rem' }}>
-            Evet. Türkiye merkezli şirketler <a href="https://ads.openai.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>ads.openai.com</a> üzerinden tüzel kişi bilgilerini, vergi numaralarını ve kurumsal ödeme yöntemlerini girerek doğrudan reklam hesabı oluşturabilir. Kurulum aşamalarını görmek için <a href="/chatgpt-reklam-verme/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>ChatGPT Reklam Verme Rehberimizi</a> inceleyin.
+            Evet. Türkiye merkezli şirketler <a href="https://ads.openai.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>ads.openai.com</a> üzerinden tüzel kişi bilgilerini, vergi numaralarını ve kurumsal ödeme yöntemlerini girerek doğrudan reklam hesabı oluşturabilir. Kurulum aşamalarını görmek için <a href="/chatgpt-reklam-verme/" style={{ color: 'var(--chat-green-text)', fontWeight: 600 }}>ChatGPT Reklam Verme Rehberimizi</a> inceleyin.
           </p>
         </section>
 
@@ -578,7 +578,7 @@ export function ChatGptAds60UlkePage({ Detail, Arrow }: NewsAndGuidesProps) {
           </p>
           <div style={{ background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '14px', padding: '1.5rem', marginBottom: '1.5rem' }}>
             <p style={{ color: '#ffffff', fontWeight: 600, marginBottom: '0.8rem' }}>Üçlü Kontrol Noktası Ayrımı:</p>
-            <div className="table-wrap" style={{ overflowX: 'auto' }}>
+            <div className="table-wrap" tabIndex={0} style={{ overflowX: 'auto' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.9rem' }}>
                 <thead>
                   <tr style={{ borderBottom: '2px solid var(--chat-border)', color: '#ffffff' }}>
@@ -623,7 +623,7 @@ export function ChatGptAds60UlkePage({ Detail, Arrow }: NewsAndGuidesProps) {
           <ul style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, paddingLeft: '1.4rem', marginBottom: '1.5rem' }}>
             <li style={{ marginBottom: '0.6rem' }}><strong style={{ color: '#ffffff' }}>Yerelleştirilmiş Context Hints:</strong> Hedef ülkenin dilinde ve ticari arama alışkanlıklarına uygun bağlam ipuçları kurgulayın.</li>
             <li style={{ marginBottom: '0.6rem' }}><strong style={{ color: '#ffffff' }}>Çok Para Birimli Fiyatlandırma:</strong> Açılış sayfasında yerel para birimi ve net teslimat/ithalat koşulları sunun.</li>
-            <li style={{ marginBottom: '0.6rem' }}><strong style={{ color: '#ffffff' }}>Bütçe Dağılımı:</strong> Tahmini maliyetleri hesaplamak için <a href="/chatgpt-reklam-fiyatlari/" style={{ color: 'var(--chat-green)' }}>Fiyatlandırma Rehberimizi</a> inceleyin.</li>
+            <li style={{ marginBottom: '0.6rem' }}><strong style={{ color: '#ffffff' }}>Bütçe Dağılımı:</strong> Tahmini maliyetleri hesaplamak için <a href="/chatgpt-reklam-fiyatlari/" style={{ color: 'var(--chat-green-text)' }}>Fiyatlandırma Rehberimizi</a> inceleyin.</li>
           </ul>
         </section>
 
@@ -660,7 +660,7 @@ export function ChatGPTPriceUpdatedPage({ Detail, Arrow }: NewsAndGuidesProps) {
         <div style={{ background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '16px', padding: '1.8rem', marginBottom: '3rem', borderLeft: '4px solid #f59e0b' }}>
           <h3 style={{ color: '#ffffff', fontSize: '1.2rem', marginBottom: '0.6rem' }}>💡 Kritik Şeffaflık Notu: Resmî Ücretlendirme ve Pilot Senaryolar</h3>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.02rem', margin: 0 }}>
-            Bu sayfada veya sektörel analizlerde göreceğiniz $1.500–$3.000/ay gibi rakamlar, <strong>OpenAI'ın zorunlu kıldığı bir taban harcama barajı değildir</strong>. Bunlar, yapay zekânın karar anlarını ve semantik bağlamlarını sağlıklı öğrenebilmesi adına <strong>ajansımız tarafından tavsiye edilen kontrollü pilot test senaryolarıdır</strong>. Platform, açık artırma usulüyle çalışır ve katı bir minimum bütçe zorunluluğu yoktur.
+            Bu sayfadaki $1.500–$3.000/ay gibi rakamlar <strong>ajansın örnek pilot bütçe senaryolarıdır</strong>; OpenAI'ın resmî günlük minimumuyla aynı şey değildir. Resmî minimum, reklam hesabının faturalandırma para birimine göre değişir. Test bütçesi ise hedeflenen dönüşüm, tahmini tıklama maliyeti ve veri kalitesine göre ayrıca planlanır.
           </p>
         </div>
 
@@ -683,17 +683,17 @@ export function ChatGPTPriceUpdatedPage({ Detail, Arrow }: NewsAndGuidesProps) {
             CPC ve CPM farkı
           </h2>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1.2rem' }}>
-            OpenAI Ads Manager faturalandırma altyapısında (<a href="https://help.openai.com/en/articles/20001216-billing-payment" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>Billing & Payment Documentation</a>) iki temel model desteklenmektedir:
+            OpenAI Ads Manager faturalandırma altyapısında (<a href="https://help.openai.com/en/articles/20001216-billing-payment" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>Billing & Payment Documentation</a>) iki temel model desteklenmektedir:
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginBottom: '1.5rem' }}>
             <div style={{ background: 'var(--chat-surface)', padding: '1.6rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.25rem', marginBottom: '0.6rem' }}>CPC (Tıklama Başı Maliyet)</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.25rem', marginBottom: '0.6rem' }}>CPC (Tıklama Başı Maliyet)</h3>
               <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, fontSize: '0.95rem', margin: 0 }}>
                 Reklam bağlantısına fiilen tıklanıp kullanıcı açılış sayfasına aktarıldığında ücret yansır. Satın alma niyeti yüksek karar anlarını yakalamak ve doğrudan müşteri adayı toplamak için önerilir.
               </p>
             </div>
             <div style={{ background: 'var(--chat-surface)', padding: '1.6rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.25rem', marginBottom: '0.6rem' }}>CPM (Bin Gösterim Başı Maliyet)</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.25rem', marginBottom: '0.6rem' }}>CPM (Bin Gösterim Başı Maliyet)</h3>
               <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, fontSize: '0.95rem', margin: 0 }}>
                 Reklam kartı ilgili konuşma penceresinde 1.000 kez görüntülendiğinde ücretlendirilir. Marka bilinirliği inşa etmek ve yeni ürün lansmanlarında geniş kitleye ulaşmak için kullanılır.
               </p>
@@ -707,10 +707,10 @@ export function ChatGPTPriceUpdatedPage({ Detail, Arrow }: NewsAndGuidesProps) {
             Resmî minimum bütçe var mı?
           </h2>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1.2rem' }}>
-            <strong>Resmî Durum:</strong> OpenAI Yardım Merkezi'nin kampanya oluşturma kılavuzuna (<a href="https://help.openai.com/en/articles/20001210-create-campaigns-for-chatgpt-ads" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>Campaign Creation Rules</a>) göre platformda zorunlu, katı bir minimum harcama alt sınırı bulunmamaktadır. Günlük birkaç dolar gibi sembolik bütçelerle de teknik olarak kampanya açılabilir.
+            <strong>Son kontrol: 11 Ekim 2026.</strong> OpenAI'ın <a href="https://help.openai.com/en/articles/20001210-create-campaigns-for-chatgpt-ads" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>Minimum Campaign Spend tablosunda</a> günlük minimum bütçe hesap para birimine göre listelenir: USD hesaplarda 25 USD, EUR hesaplarda 15 EUR ve GBP hesaplarda 15 GBP. Bunlar tıklama fiyatı veya önerilen aylık test bütçesi değildir. Türkiye'deki bir şirketin hesabı için geçerli alt sınırı paneldeki faturalandırma para biriminden doğrulayın; TRY karşılığını sabit resmî tutar gibi kullanmayın.
           </p>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem' }}>
-            Ancak günlük $5 - $10 gibi mikro bütçelerle yola çıkıldığında, modelin açık artırmada yeterli gösterim kazanması ve semantik bağlamları optimize edebilmesi aylar sürebilir. Bu nedenle istatistiksel geçerlilik için kontrollü bütçeler gereklidir.
+            Resmî minimumu karşılamak yeterli test verisi elde edeceğiniz anlamına gelmez. Pilot için hedeflenen sonuç sayısını, tahmini CPC'yi ve dönüşüm oranını açık varsayımlarla hesaplayın; bu örnekleri platformun garanti ettiği performans gibi sunmayın.
           </p>
         </section>
 
@@ -722,7 +722,7 @@ export function ChatGPTPriceUpdatedPage({ Detail, Arrow }: NewsAndGuidesProps) {
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1.2rem' }}>
             Sağlıklı bir test bütçesi tahmini matematiksel bir formüle dayanmalıdır:
           </p>
-          <div style={{ background: 'var(--chat-surface)', borderRadius: '12px', border: '1px solid var(--chat-border)', padding: '1.4rem', marginBottom: '1.5rem', fontFamily: 'monospace', color: '#10a37f' }}>
+          <div style={{ background: 'var(--chat-surface)', borderRadius: '12px', border: '1px solid var(--chat-border)', padding: '1.4rem', marginBottom: '1.5rem', fontFamily: 'monospace', color: 'var(--chat-green-text)' }}>
             Test Bütçesi = (Hedeflenen Asgari Dönüşüm Sinyali / Beklenen Sayfa Dönüşüm Oranı) × Tahmini TBM (CPC)
           </div>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem' }}>
@@ -764,7 +764,7 @@ export function ChatGPTPriceUpdatedPage({ Detail, Arrow }: NewsAndGuidesProps) {
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1.2rem' }}>
             Aşağıdaki tablo, kurumsal bir B2B SaaS veya hizmet şirketinin 30 günlük pilot ChatGPT kampanyasındaki gerçekçi dönüşüm simülasyonunu göstermektedir:
           </p>
-          <div className="table-wrap" style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
+          <div className="table-wrap" tabIndex={0} style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.95rem' }}>
               <thead>
                 <tr style={{ borderBottom: '2px solid var(--chat-border)', color: '#ffffff' }}>
@@ -818,7 +818,7 @@ export function ChatGPTPriceUpdatedPage({ Detail, Arrow }: NewsAndGuidesProps) {
           <div style={{ background: 'rgba(59, 130, 246, 0.08)', border: '1px solid rgba(59, 130, 246, 0.25)', borderRadius: '12px', padding: '1.4rem', marginBottom: '1.5rem' }}>
             <strong style={{ color: '#60a5fa', display: 'block', marginBottom: '0.5rem' }}>⚠️ Doğrulama Şartları:</strong>
             <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.92rem', lineHeight: 1.6, margin: 0 }}>
-              İnternetteki spekülatif rakamlara dayanarak kesin bir promosyon tutarı vaat edilemez. Herhangi bir teşvik teklifinin geçerli olabilmesi için; hesabınızın yeni olması, şirket tüzel kişiliğinin onaylanması, harcama son tarihi ve kredinin kullanım sürelerinin <a href="https://ads.openai.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>ads.openai.com</a> başlangıç ekranında yazılı olarak teyit edilmesi gerekir.
+              İnternetteki spekülatif rakamlara dayanarak kesin bir promosyon tutarı vaat edilemez. Herhangi bir teşvik teklifinin geçerli olabilmesi için; hesabınızın yeni olması, şirket tüzel kişiliğinin onaylanması, harcama son tarihi ve kredinin kullanım sürelerinin <a href="https://ads.openai.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>ads.openai.com</a> başlangıç ekranında yazılı olarak teyit edilmesi gerekir.
             </p>
           </div>
         </section>
@@ -860,7 +860,7 @@ export function SponsoredAgentsPage({ Detail, Arrow }: NewsAndGuidesProps) {
           </div>
           <div style={{ borderLeft: '1px solid var(--chat-border)', paddingLeft: '1.5rem' }}>
             <span style={{ fontSize: '0.75rem', color: 'var(--chat-text-secondary)', textTransform: 'uppercase', display: 'block' }}>DUYURU TARİHİ</span>
-            <strong style={{ color: 'var(--chat-green)', fontSize: '0.95rem' }}>16 Eylül 2026</strong>
+            <strong style={{ color: 'var(--chat-green-text)', fontSize: '0.95rem' }}>16 Eylül 2026</strong>
           </div>
           <div style={{ borderLeft: '1px solid var(--chat-border)', paddingLeft: '1.5rem' }}>
             <span style={{ fontSize: '0.75rem', color: 'var(--chat-text-secondary)', textTransform: 'uppercase', display: 'block' }}>YAZAR</span>
@@ -868,14 +868,14 @@ export function SponsoredAgentsPage({ Detail, Arrow }: NewsAndGuidesProps) {
           </div>
           <div style={{ borderLeft: '1px solid var(--chat-border)', paddingLeft: '1.5rem' }}>
             <span style={{ fontSize: '0.75rem', color: 'var(--chat-text-secondary)', textTransform: 'uppercase', display: 'block' }}>KAYNAK</span>
-            <a href="https://openai.com/index/reimagining-advertising-with-ai/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)', fontSize: '0.95rem', fontWeight: 600 }}>OpenAI Duyurusu ↗</a>
+            <a href="https://openai.com/index/reimagining-advertising-with-ai/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)', fontSize: '0.95rem', fontWeight: 600 }}>OpenAI Duyurusu ↗</a>
           </div>
         </div>
 
         {/* Giriş */}
         <div style={{ fontSize: '1.1rem', lineHeight: 1.85, color: '#e5e7eb', marginBottom: '3rem' }}>
           <p>
-            OpenAI, <strong>16 Eylül 2026</strong> tarihinde yayımladığı analizinde (<a href="https://openai.com/index/reimagining-advertising-with-ai/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>Reimagining Advertising with AI</a>) dijital pazarlamada radikal bir paradigma değişimini simgeleyen <strong>Sponsored Agents (Sponsorlu Marka Asistanları)</strong> formatını duyurdu.
+            OpenAI, <strong>16 Eylül 2026</strong> tarihinde yayımladığı analizinde (<a href="https://openai.com/index/reimagining-advertising-with-ai/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>Reimagining Advertising with AI</a>) dijital pazarlamada radikal bir paradigma değişimini simgeleyen <strong>Sponsored Agents (Sponsorlu Marka Asistanları)</strong> formatını duyurdu.
           </p>
           <p style={{ color: 'var(--chat-text-secondary)' }}>
             Geleneksel web reklamcılığında kullanıcı bir sponsorlu bağlantıya tıkladığında harici bir açılış sayfasına yönlendirilirken; Sponsored Agents modeliyle kullanıcı doğrudan konuşma penceresi içinde markanın özel eğitilmiş AI danışmanıyla sohbete geçiş yapabiliyor.
@@ -940,7 +940,7 @@ export function SponsoredAgentsPage({ Detail, Arrow }: NewsAndGuidesProps) {
           <div style={{ background: 'rgba(239, 68, 68, 0.08)', border: '1px solid rgba(239, 68, 68, 0.25)', borderRadius: '14px', padding: '1.5rem', marginBottom: '1.5rem' }}>
             <h4 style={{ color: '#f87171', margin: '0 0 0.5rem 0', fontSize: '1.15rem' }}>⚠️ Önemli Sınır: Sınırlı Alpha Testi</h4>
             <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.95rem', lineHeight: 1.7, margin: 0 }}>
-              Sponsored Agents şu anda <strong>genel kullanıma, Türkiye'ye veya tüm reklamverenlere açık değildir</strong>. OpenAI Resmî Yardım Merkezi dokümanına (<a href="https://help.openai.com/en/articles/20001524-sponsored-agents-in-chatgpt-ads" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>Sponsored Agents Availability</a>) göre program, ABD merkezli seçilmiş birkaç kurumsal reklamverenle <strong>kapalı alpha</strong> olarak yürütülmektedir. Açık bir başvuru formu bulunmamaktadır.
+              Sponsored Agents şu anda <strong>genel kullanıma, Türkiye'ye veya tüm reklamverenlere açık değildir</strong>. OpenAI Resmî Yardım Merkezi dokümanına (<a href="https://help.openai.com/en/articles/20001524-sponsored-agents-in-chatgpt-ads" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>Sponsored Agents Availability</a>) göre program, ABD merkezli seçilmiş birkaç kurumsal reklamverenle <strong>kapalı alpha</strong> olarak yürütülmektedir. Açık bir başvuru formu bulunmamaktadır.
             </p>
           </div>
         </section>
@@ -961,7 +961,7 @@ export function SponsoredAgentsPage({ Detail, Arrow }: NewsAndGuidesProps) {
             <li style={{ marginBottom: '0.8rem' }}><strong style={{ color: '#ffffff' }}>Finans & Sigorta:</strong> Poliçe kapsamlarını karşılaştırıp kişiselleştirilmiş prim teklifini saniyeler içinde hesaplayan yetkili finans asistanları.</li>
           </ul>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem' }}>
-            Bugün mevcut self-servis panel imkanlarını kullanmak için <a href="/chatgpt-reklam-verme/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>ChatGPT Reklam Verme Rehberimizi</a> ve <a href="/openai-ads-manager/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>OpenAI Ads Manager İncelememizi</a> takip edebilirsiniz.
+            Bugün mevcut self-servis panel imkanlarını kullanmak için <a href="/chatgpt-reklam-verme/" style={{ color: 'var(--chat-green-text)', fontWeight: 600 }}>ChatGPT Reklam Verme Rehberimizi</a> ve <a href="/openai-ads-manager/" style={{ color: 'var(--chat-green-text)', fontWeight: 600 }}>OpenAI Ads Manager İncelememizi</a> takip edebilirsiniz.
           </p>
         </section>
 
@@ -1030,7 +1030,7 @@ export function HaberlerIndexPage({ Detail, Arrow }: NewsAndGuidesProps) {
             <article key={item.href} style={{ background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '16px', padding: '1.8rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem', gap: '0.5rem', flexWrap: 'wrap' }}>
-                  <span style={{ background: 'rgba(16, 163, 127, 0.15)', color: '#10a37f', padding: '0.3rem 0.7rem', borderRadius: '6px', fontSize: '0.75rem', fontWeight: 700 }}>
+                  <span style={{ background: 'rgba(16, 163, 127, 0.15)', color: 'var(--chat-green-text)', padding: '0.3rem 0.7rem', borderRadius: '6px', fontSize: '0.75rem', fontWeight: 700 }}>
                     {item.tag}
                   </span>
                   <span style={{ fontSize: '0.8rem', color: 'var(--chat-text-secondary)' }}>
@@ -1045,7 +1045,7 @@ export function HaberlerIndexPage({ Detail, Arrow }: NewsAndGuidesProps) {
                 </p>
               </div>
               <div>
-                <a href={item.href} style={{ color: 'var(--chat-green)', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+                <a href={item.href} style={{ color: 'var(--chat-green-text)', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
                   Haberi Oku <Arrow />
                 </a>
               </div>

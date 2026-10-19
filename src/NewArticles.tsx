@@ -21,7 +21,7 @@ export function MarkamNedenGorunmuyorPage({ Detail, Arrow }: ArticleProps) {
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, margin: 0 }}>
             Bir markanın ChatGPT yanıtında görünmemesi tek bir “algoritma cezası” ile açıklanamaz. 
             Önce hangi soruda görünmediğinizi belirleyin: marka adınız sorulunca mı, kategoriniz sorulunca mı, yoksa bir karşılaştırmada mı? 
-            Ardından aşağıdaki 12 kontrolü sırayla yapın. Kurulum ve geliştirme adımları için <a href="/chatgptde-markam-nasil-cikar/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>adım adım görünürlük rehberini</a> uygulayabilirsiniz.
+            Ardından aşağıdaki 12 kontrolü sırayla yapın. Kurulum ve geliştirme adımları için <a href="/chatgptde-markam-nasil-cikar/" style={{ color: 'var(--chat-green-text)', fontWeight: 600 }}>adım adım görünürlük rehberini</a> uygulayabilirsiniz.
           </p>
         </div>
 
@@ -33,84 +33,84 @@ export function MarkamNedenGorunmuyorPage({ Detail, Arrow }: ArticleProps) {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '14px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>1. Soru markayı zaten içermiyor olabilir</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>1. Soru markayı zaten içermiyor olabilir</h3>
               <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, margin: 0 }}>
                 “X markası ne yapıyor?” sorusunda görünmek ile “Bu iş için hangi marka uygun?” sorusunda görünmek farklıdır. Önce her iki sorgu türünü ayrı ölçün; sonuçları tek bir görünürlük puanına sıkıştırmayın.
               </p>
             </div>
 
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '14px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>2. <code>OAI-SearchBot</code> erişimi engelleniyor olabilir</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>2. <code>OAI-SearchBot</code> erişimi engelleniyor olabilir</h3>
               <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, margin: 0 }}>
                 OpenAI, ChatGPT aramasında sitenin özet ve alıntılarla görünmesi için bu tarayıcının engellenmemesini önerir. <code>robots.txt</code>, WAF ve sunucu loglarını kontrol edin. Bot izni kaynak gösterimi garantisi değildir.
               </p>
             </div>
 
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '14px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>3. Sayfa herkese açık ve okunabilir olmayabilir</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>3. Sayfa herkese açık ve okunabilir olmayabilir</h3>
               <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, margin: 0 }}>
                 Giriş duvarı, erişim hatası veya içeriğin sadece uygulama çalışınca görünmesi bilgiyi keşfetmeyi zorlaştırabilir. En önemli marka ve ürün cümlelerinin sayfanın erişilebilir HTML'inde bulunmasını sağlayın.
               </p>
             </div>
 
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '14px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>4. Yanlış veya eski canonical sayfa işaretlenmiş olabilir</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>4. Yanlış veya eski canonical sayfa işaretlenmiş olabilir</h3>
               <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, margin: 0 }}>
                 Farklı URL'lerde aynı içerik varsa hangisinin esas sayfa olduğu belirsizleşir. Yönlendirmeleri, canonical etiketini ve gerçek içerik adresini kontrol edin.
               </p>
             </div>
 
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '14px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>5. Marka kimliği sayfalar arasında tutarsız olabilir</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>5. Marka kimliği sayfalar arasında tutarsız olabilir</h3>
               <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, margin: 0 }}>
                 Ana sayfa, iletişim, ürün ve sosyal hesaplarda farklı şirket adı veya hizmet tanımı varsa müşterinin de kafası karışır. Ticari ad, alan adı, konum ve hizmet kapsamını aynı gerçeklere dayandırın.
               </p>
             </div>
 
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '14px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>6. Ürün veya hizmet farkı açıklanmıyor olabilir</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>6. Ürün veya hizmet farkı açıklanmıyor olabilir</h3>
               <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, margin: 0 }}>
                 “Yenilikçi çözümler sunuyoruz” cümlesi hangi soruda markanızın ilgili olduğunu anlatmaz. Kim için, hangi işi, hangi koşullarda yaptığınızı örneklerle gösterin.
               </p>
             </div>
 
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '14px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>7. Kullanıcının karar sorularına cevap veren sayfa olmayabilir</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>7. Kullanıcının karar sorularına cevap veren sayfa olmayabilir</h3>
               <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, margin: 0 }}>
                 Genel bir ana sayfa bütün karşılaştırma ve kullanım sorularına yetmez. En sık gelen satış sorularını kendi veri ve süreçlerinize dayanarak ayrı bölümlerde yanıtlayın.
               </p>
             </div>
 
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '14px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>8. İddialar doğrulanabilir kanıt taşımıyor olabilir</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>8. İddialar doğrulanabilir kanıt taşımıyor olabilir</h3>
               <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, margin: 0 }}>
                 Müşteri örneği, ürün ekranı, yöntem ve kaynak eksikse “en iyi” gibi sıfatlar açıklama yerine geçmez. İzinli ve gerçek kanıt sunun; vaka sonucu uydurmayın.
               </p>
             </div>
 
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '14px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>9. Üçüncü taraf bilgiler yanlış veya eksik olabilir</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>9. Üçüncü taraf bilgiler yanlış veya eksik olabilir</h3>
               <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, margin: 0 }}>
                 Bağımsız yayın, iş ortaklığı ve dizin bilgilerindeki marka adı ile faaliyet tanımı güncel olmalıdır. Ücretli yerleştirmeleri bağımsız kaynak gibi göstermeyin.
               </p>
             </div>
 
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '14px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>10. Yanlış ülke veya dilde test yapıyor olabilirsiniz</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>10. Yanlış ülke veya dilde test yapıyor olabilirsiniz</h3>
               <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, margin: 0 }}>
                 İngiltere'de İngilizce sorulan bir sorunun kaynakları Türkiye'de Türkçe sorulana benzeyebilir veya farklılaşabilir. Hedef pazarı ve dili test kayıtlarına ekleyin.
               </p>
             </div>
 
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '14px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>11. Tek denemeye bakıyor olabilirsiniz</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>11. Tek denemeye bakıyor olabilirsiniz</h3>
               <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, margin: 0 }}>
                 Yanıtlar zaman, soru biçimi, konuşma bağlamı ve arama kullanımına göre değişir. Önceden tanımlanmış soru setini tekrarlayın; bir ekran görüntüsünden kalıcı sıralama sonucu çıkarmayın.
               </p>
             </div>
 
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '14px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>12. Anılmayı trafik ve doğrulukla karıştırıyor olabilirsiniz</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>12. Anılmayı trafik ve doğrulukla karıştırıyor olabilirsiniz</h3>
               <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, margin: 0 }}>
                 Adınızın geçmesi her zaman tıklama getirmez; bir kaynak bağlantısı da her zaman doğru tanıtım anlamına gelmez. Marka anılması, tıklanabilir atıf, bilgi doğruluğu ve gerçek yönlendirme trafiğini ayrı kaydedin.
               </p>
@@ -126,7 +126,7 @@ export function MarkamNedenGorunmuyorPage({ Detail, Arrow }: ArticleProps) {
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, marginBottom: '1.2rem' }}>
             Rakibiniz aynı soruda önerilirken siz neden önerilmiyorsunuz? Bunu tespit etmek için 3 adımlı test matrisi uygulanır:
           </p>
-          <div className="table-wrap" style={{ overflowX: 'auto', marginBottom: '2rem' }}>
+          <div className="table-wrap" tabIndex={0} style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.95rem' }}>
               <thead>
                 <tr style={{ borderBottom: '2px solid var(--chat-border)', color: '#ffffff' }}>
@@ -160,7 +160,7 @@ export function MarkamNedenGorunmuyorPage({ Detail, Arrow }: ArticleProps) {
         <section style={{ marginBottom: '3.5rem', fontSize: '0.9rem', color: 'var(--chat-text-secondary)', borderTop: '1px solid var(--chat-border)', paddingTop: '1.5rem' }}>
           <strong style={{ color: '#ffffff', display: 'block', marginBottom: '0.4rem' }}>Resmî Kılavuz Referansı:</strong>
           <p style={{ margin: 0, lineHeight: 1.7 }}>
-            OpenAI arama dizinlemesi ve kaynak gösterimi için <a href="https://help.openai.com/en/articles/12627856-publishers-and-developers-faq" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>OpenAI Yayıncı ve Geliştirici Kılavuzu</a> esas alınmalıdır. Yapılandırılmış veriler (Schema) bilgiyi düzenli sunmak için faydalıdır; ancak OpenAI herhangi bir kapalı “güven skoru” formülü yayımlamaz.
+            OpenAI arama dizinlemesi ve kaynak gösterimi için <a href="https://help.openai.com/en/articles/12627856-publishers-and-developers-faq" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>OpenAI Yayıncı ve Geliştirici Kılavuzu</a> esas alınmalıdır. Yapılandırılmış veriler (Schema) bilgiyi düzenli sunmak için faydalıdır; ancak OpenAI herhangi bir kapalı “güven skoru” formülü yayımlamaz.
           </p>
         </section>
 
@@ -311,19 +311,19 @@ export function GeoPerformansiNasilOlculurPage({ Detail, Arrow }: ArticleProps) 
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <h4 style={{ color: 'var(--chat-green)', marginBottom: '0.5rem' }}>Aşama 1: Keşif & Bilgi</h4>
+              <h4 style={{ color: 'var(--chat-green-text)', marginBottom: '0.5rem' }}>Aşama 1: Keşif & Bilgi</h4>
               <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>
                 "Sektör X'te en sık karşılaşılan problemler ve çözüm yöntemleri nelerdir?" (Sektörel otorite ve kaynak testi).
               </p>
             </div>
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <h4 style={{ color: 'var(--chat-green)', marginBottom: '0.5rem' }}>Aşama 2: Değerlendirme & Kıyas</h4>
+              <h4 style={{ color: 'var(--chat-green-text)', marginBottom: '0.5rem' }}>Aşama 2: Değerlendirme & Kıyas</h4>
               <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>
                 "Türkiye'de [Hizmet] sunan en güvenilir 5 firma hangisi ve kriterler neler?" (Doğrudan tavsiye testi).
               </p>
             </div>
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <h4 style={{ color: 'var(--chat-green)', marginBottom: '0.5rem' }}>Aşama 3: Satın Alma Kararı</h4>
+              <h4 style={{ color: 'var(--chat-green-text)', marginBottom: '0.5rem' }}>Aşama 3: Satın Alma Kararı</h4>
               <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>
                 "[Marka X] güvenilir mi, fiyat politikası ve müşteri yorumları nasıl?" (Marka itibarı ve duyarlılık analizi).
               </p>
@@ -338,7 +338,7 @@ export function GeoPerformansiNasilOlculurPage({ Detail, Arrow }: ArticleProps) 
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, marginBottom: '1.2rem' }}>
             Yapay zekâ yanıtlarında görünürlük 3 farklı değer kademesine ayrılır:
           </p>
-          <div className="table-wrap" style={{ overflowX: 'auto' }}>
+          <div className="table-wrap" tabIndex={0} style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.95rem' }}>
               <thead>
                 <tr style={{ borderBottom: '2px solid var(--chat-border)', color: '#ffffff' }}>
@@ -453,7 +453,7 @@ export function ChatGptReklamKampanyasiPlanlamaPage({ Detail, Arrow }: ArticlePr
             ChatGPT reklamlarında ücretlendirme hem <strong>bin gösterim (CPM)</strong> hem de <strong>geçerli tıklama (CPC)</strong> seçenekleri üzerinden işler. 
             İlk 30 günde riskleri minimize etmek için şu yol haritası izlenir:
           </p>
-          <div className="table-wrap" style={{ overflowX: 'auto' }}>
+          <div className="table-wrap" tabIndex={0} style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.95rem' }}>
               <thead>
                 <tr style={{ borderBottom: '2px solid var(--chat-border)', color: '#ffffff' }}>
@@ -532,7 +532,7 @@ export function ChatGptAcilisSayfasiKontrolPage({ Detail, Arrow }: ArticleProps)
               </p>
             </div>
             <div style={{ background: 'rgba(16, 185, 129, 0.1)', border: '1px solid rgba(16, 185, 129, 0.3)', padding: '1.5rem', borderRadius: '12px' }}>
-              <h4 style={{ color: 'var(--chat-green)', marginBottom: '0.5rem' }}>✓ Doğru Yaklaşım</h4>
+              <h4 style={{ color: 'var(--chat-green-text)', marginBottom: '0.5rem' }}>✓ Doğru Yaklaşım</h4>
               <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6 }}>
                 "Almanya E-İhracat Lojistiği: 48 Saatte Depo Teslimatı & Gümrük Çözümleri" başlıklı özel hazırlanmış açılış sayfasına yönlendirmek.
               </p>
@@ -614,7 +614,7 @@ export function ChatGptReklamiMiGoogleAdsMiPage({ Detail, Arrow }: ArticleProps)
           <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginBottom: '1.2rem', color: '#ffffff' }}>
             2. Karşılaştırma Matrisi: ChatGPT Ads vs. Google Ads
           </h2>
-          <div className="table-wrap" style={{ overflowX: 'auto', marginBottom: '2rem' }}>
+          <div className="table-wrap" tabIndex={0} style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.95rem' }}>
               <thead>
                 <tr style={{ borderBottom: '2px solid var(--chat-border)', color: '#ffffff' }}>
@@ -695,7 +695,7 @@ export function ChatGptdeMarkamNasilCikarPage({ Detail, Arrow }: ArticleProps) {
       <div style={{ maxWidth: '900px', margin: '0 auto' }}>
         {/* Giriş & Ayrım */}
         <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1.5rem' }}>
-          Markanızın ChatGPT'de görünmesi iki farklı anlama gelebilir: ChatGPT'nin bir soruya verdiği <strong>organik yanıtta</strong> markanızdan söz etmesi veya yanıtın altında <strong>sponsorlu reklam</strong> gösterilmesi. Organik cevap satın alınamaz. Reklam içinse ayrı bir OpenAI Ads Manager hesabı, uygun bir kategori ve kampanya gerekir. Bu rehber organik görünürlüğü ele alıyor. Ücretli kampanya kurmak istiyorsanız <a href="/chatgpt-reklam-verme/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>ChatGPT reklam verme rehberine</a> geçin.
+          Markanızın ChatGPT'de görünmesi iki farklı anlama gelebilir: ChatGPT'nin bir soruya verdiği <strong>organik yanıtta</strong> markanızdan söz etmesi veya yanıtın altında <strong>sponsorlu reklam</strong> gösterilmesi. Organik cevap satın alınamaz. Reklam içinse ayrı bir OpenAI Ads Manager hesabı, uygun bir kategori ve kampanya gerekir. Bu rehber organik görünürlüğü ele alıyor. Ücretli kampanya kurmak istiyorsanız <a href="/chatgpt-reklam-verme/" style={{ color: 'var(--chat-green-text)', fontWeight: 600 }}>ChatGPT reklam verme rehberine</a> geçin.
         </p>
 
         {/* Kısa Yanıt Kutusu */}
@@ -714,7 +714,7 @@ export function ChatGptdeMarkamNasilCikarPage({ Detail, Arrow }: ArticleProps) {
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1.2rem' }}>
             “Markamı ChatGPT'ye sordum ve adını yazdı” tek başına yeterli test değildir. Kullanıcının markayı zaten adıyla sorması ile “İstanbul'da küçük işletmeler için hangi CRM daha uygun?” gibi kategori sorusunda markanın anılması farklı sonuçlardır. Üç ölçüm ayırın:
           </p>
-          <div className="table-wrap" style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
+          <div className="table-wrap" tabIndex={0} style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.95rem' }}>
               <thead>
                 <tr style={{ borderBottom: '2px solid var(--chat-border)', color: '#ffffff' }}>
@@ -820,7 +820,7 @@ export function ChatGptdeMarkamNasilCikarPage({ Detail, Arrow }: ArticleProps) {
             7. Eksik kalan yeri doğru hizmete bağlayın
           </h2>
           <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1.2rem' }}>
-            Tarama engeli varsa teknik düzeltme; marka tanımı zayıfsa kurumsal içerik; karar sorularında içerik boşluğu varsa rehber üretimi; yanlış bilgi varsa kaynak düzeltmesi gerekir. Bunların hepsine aynı “GEO paketi” cevabını vermek yerine <a href="/blog/markam-chatgptde-neden-gorunmuyor/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>12 neden kontrol listesini</a> kullanın ve <a href="/yapay-zeka-gorunurluk-analizi/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>görünürlük analizinde</a> hangi soruda ne çıktığını kaydedin.
+            Tarama engeli varsa teknik düzeltme; marka tanımı zayıfsa kurumsal içerik; karar sorularında içerik boşluğu varsa rehber üretimi; yanlış bilgi varsa kaynak düzeltmesi gerekir. Bunların hepsine aynı “GEO paketi” cevabını vermek yerine <a href="/blog/markam-chatgptde-neden-gorunmuyor/" style={{ color: 'var(--chat-green-text)', fontWeight: 600 }}>12 neden kontrol listesini</a> kullanın ve <a href="/yapay-zeka-gorunurluk-analizi/" style={{ color: 'var(--chat-green-text)', fontWeight: 600 }}>görünürlük analizinde</a> hangi soruda ne çıktığını kaydedin.
           </p>
         </section>
 
@@ -833,7 +833,7 @@ export function ChatGptdeMarkamNasilCikarPage({ Detail, Arrow }: ArticleProps) {
             <div style={{ borderBottom: '1px solid var(--chat-border)', paddingBottom: '1.2rem', marginBottom: '1.2rem' }}>
               <h3 style={{ color: '#ffffff', fontSize: '1.1rem', marginBottom: '0.5rem' }}>ChatGPT'ye para ödeyip organik yanıtta ilk sıraya çıkabilir miyim?</h3>
               <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, fontSize: '0.95rem', margin: 0 }}>
-                Hayır. OpenAI reklamların organik cevaplardan ayrı çalıştığını ve reklamverenin cevabı şekillendiremediğini belirtiyor. Sponsorlu alanda görünmek için <a href="/chatgpt-reklam-verme/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>ChatGPT Ads rehberine</a> bakın.
+                Hayır. OpenAI reklamların organik cevaplardan ayrı çalıştığını ve reklamverenin cevabı şekillendiremediğini belirtiyor. Sponsorlu alanda görünmek için <a href="/chatgpt-reklam-verme/" style={{ color: 'var(--chat-green-text)', fontWeight: 600 }}>ChatGPT Ads rehberine</a> bakın.
               </p>
             </div>
             <div style={{ borderBottom: '1px solid var(--chat-border)', paddingBottom: '1.2rem', marginBottom: '1.2rem' }}>
@@ -849,16 +849,16 @@ export function ChatGptdeMarkamNasilCikarPage({ Detail, Arrow }: ArticleProps) {
         <section style={{ marginBottom: '3.5rem', background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '16px', padding: '1.8rem' }}>
           <h3 style={{ color: '#ffffff', fontSize: '1.2rem', marginBottom: '1rem' }}>İlgili Rehberler ve Hizmetler</h3>
           <div style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap' }}>
-            <a href="/chatgpt-reklam-verme/" style={{ background: 'var(--chat-bg-secondary)', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+            <a href="/chatgpt-reklam-verme/" style={{ background: 'var(--chat-bg-secondary)', color: 'var(--chat-green-text)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
               Sponsorlu ChatGPT reklamı nasıl verilir? ➔
             </a>
-            <a href="/blog/markam-chatgptde-neden-gorunmuyor/" style={{ background: 'var(--chat-bg-secondary)', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+            <a href="/blog/markam-chatgptde-neden-gorunmuyor/" style={{ background: 'var(--chat-bg-secondary)', color: 'var(--chat-green-text)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
               12 Neden Teşhis Listesi ➔
             </a>
-            <a href="/geo-yapay-zeka-gorunurlugu/" style={{ background: 'var(--chat-bg-secondary)', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+            <a href="/geo-yapay-zeka-gorunurlugu/" style={{ background: 'var(--chat-bg-secondary)', color: 'var(--chat-green-text)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
               GEO Danışmanlığı ➔
             </a>
-            <a href="/yapay-zeka-gorunurluk-analizi/" style={{ background: 'var(--chat-bg-secondary)', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+            <a href="/yapay-zeka-gorunurluk-analizi/" style={{ background: 'var(--chat-bg-secondary)', color: 'var(--chat-green-text)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
               Canlı AI Görünürlük Testi ➔
             </a>
           </div>
@@ -868,9 +868,9 @@ export function ChatGptdeMarkamNasilCikarPage({ Detail, Arrow }: ArticleProps) {
         <section style={{ marginBottom: '3.5rem', fontSize: '0.9rem', color: 'var(--chat-text-secondary)', borderTop: '1px solid var(--chat-border)', paddingTop: '1.5rem' }}>
           <strong style={{ color: '#ffffff', display: 'block', marginBottom: '0.5rem' }}>Resmî Kaynaklar:</strong>
           <ul style={{ margin: 0, paddingLeft: '1.2rem', lineHeight: 1.8 }}>
-            <li><a href="https://help.openai.com/en/articles/12627856-publishers-and-developers-faq" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>OpenAI yayıncı ve geliştirici SSS</a></li>
-            <li><a href="https://help.openai.com/en/articles/20001047-ads-in-chatgpt" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>OpenAI ChatGPT reklam SSS</a></li>
-            <li><a href="https://help.openai.com/en/articles/20001243-advertiser-guidance-for-allowing-openai-web-crawlers" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green)' }}>OpenAI reklamveren tarayıcı rehberi</a></li>
+            <li><a href="https://help.openai.com/en/articles/12627856-publishers-and-developers-faq" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>OpenAI yayıncı ve geliştirici SSS</a></li>
+            <li><a href="https://help.openai.com/en/articles/20001047-ads-in-chatgpt" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>OpenAI ChatGPT reklam SSS</a></li>
+            <li><a href="https://help.openai.com/en/articles/20001243-advertiser-guidance-for-allowing-openai-web-crawlers" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--chat-green-text)' }}>OpenAI reklamveren tarayıcı rehberi</a></li>
           </ul>
         </section>
 
@@ -917,13 +917,13 @@ export function ChatGptSeoPage({ Detail, Arrow }: ArticleProps) {
           <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginBottom: '1.2rem', color: '#ffffff' }}>
             Klasik SEO ile ChatGPT SEO (GEO) Arasındaki Fark
           </h2>
-          <div className="table-wrap" style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
+          <div className="table-wrap" tabIndex={0} style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.95rem' }}>
               <thead>
                 <tr style={{ borderBottom: '2px solid var(--chat-border)', color: '#ffffff' }}>
                   <th style={{ padding: '0.85rem' }}>Metrik</th>
                   <th style={{ padding: '0.85rem' }}>Klasik Google SEO</th>
-                  <th style={{ padding: '0.85rem', color: 'var(--chat-green)' }}>ChatGPT SEO / GEO</th>
+                  <th style={{ padding: '0.85rem', color: 'var(--chat-green-text)' }}>ChatGPT SEO / GEO</th>
                 </tr>
               </thead>
               <tbody style={{ color: 'var(--chat-text-secondary)' }}>
@@ -972,19 +972,19 @@ export function ChatGptSeoPage({ Detail, Arrow }: ArticleProps) {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.2rem' }}>
             <div style={{ background: '#171717', padding: '1.2rem', borderRadius: '12px' }}>
-              <span style={{ color: 'var(--chat-green)', fontWeight: 700, fontSize: '0.9rem' }}>1. 30 Saniyelik Net Tanım</span>
+              <span style={{ color: 'var(--chat-green-text)', fontWeight: 700, fontSize: '0.9rem' }}>1. 30 Saniyelik Net Tanım</span>
               <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.92rem', margin: '0.4rem 0 0', lineHeight: 1.6 }}>Her başlığın ilk paragrafında sorunun net, doğrulanabilir 2 cümlelik cevabı.</p>
             </div>
             <div style={{ background: '#171717', padding: '1.2rem', borderRadius: '12px' }}>
-              <span style={{ color: 'var(--chat-green)', fontWeight: 700, fontSize: '0.9rem' }}>2. Karşılaştırma Tabloları</span>
+              <span style={{ color: 'var(--chat-green-text)', fontWeight: 700, fontSize: '0.9rem' }}>2. Karşılaştırma Tabloları</span>
               <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.92rem', margin: '0.4rem 0 0', lineHeight: 1.6 }}>Modeller tabloları hızla ayrıştırıp kullanıcıya özet çıkarabilir.</p>
             </div>
             <div style={{ background: '#171717', padding: '1.2rem', borderRadius: '12px' }}>
-              <span style={{ color: 'var(--chat-green)', fontWeight: 700, fontSize: '0.9rem' }}>3. Adım Adım İşlem Listeleri</span>
+              <span style={{ color: 'var(--chat-green-text)', fontWeight: 700, fontSize: '0.9rem' }}>3. Adım Adım İşlem Listeleri</span>
               <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.92rem', margin: '0.4rem 0 0', lineHeight: 1.6 }}>Sıralı mantık zincirleri LLM akıl yürütme motorları için ideal kaynaktır.</p>
             </div>
             <div style={{ background: '#171717', padding: '1.2rem', borderRadius: '12px' }}>
-              <span style={{ color: 'var(--chat-green)', fontWeight: 700, fontSize: '0.9rem' }}>4. Tarih ve Uzman Damgası</span>
+              <span style={{ color: 'var(--chat-green-text)', fontWeight: 700, fontSize: '0.9rem' }}>4. Tarih ve Uzman Damgası</span>
               <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.92rem', margin: '0.4rem 0 0', lineHeight: 1.6 }}>Son güncelleme tarihi ve yazar uzmanlık profili güncellik sinyalini güçlendirir.</p>
             </div>
           </div>
@@ -1004,16 +1004,16 @@ export function ChatGptSeoPage({ Detail, Arrow }: ArticleProps) {
         <section style={{ marginBottom: '3.5rem', background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '16px', padding: '1.8rem' }}>
           <h3 style={{ color: '#ffffff', fontSize: '1.2rem', marginBottom: '1rem' }}>İlgili GEO ve Görünürlük Rehberleri</h3>
           <div style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap' }}>
-            <a href="/chatgptde-markam-nasil-cikar/" style={{ background: '#1f2937', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+            <a href="/chatgptde-markam-nasil-cikar/" style={{ background: '#1f2937', color: 'var(--chat-green-text)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
               ChatGPT'de Markam Nasıl Çıkar? ➔
             </a>
-            <a href="/geo-yapay-zeka-gorunurlugu/" style={{ background: '#1f2937', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+            <a href="/geo-yapay-zeka-gorunurlugu/" style={{ background: '#1f2937', color: 'var(--chat-green-text)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
               GEO Danışmanlığı ➔
             </a>
-            <a href="/blog/markam-chatgptde-neden-gorunmuyor/" style={{ background: '#1f2937', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+            <a href="/blog/markam-chatgptde-neden-gorunmuyor/" style={{ background: '#1f2937', color: 'var(--chat-green-text)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
               12 Neden Kontrol Listesi ➔
             </a>
-            <a href="/yapay-zeka-gorunurluk-analizi/" style={{ background: '#1f2937', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+            <a href="/yapay-zeka-gorunurluk-analizi/" style={{ background: '#1f2937', color: 'var(--chat-green-text)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
               Canlı AI Görünürlük Testi ➔
             </a>
           </div>
@@ -1076,7 +1076,7 @@ export function ChatGptdeWebSitemNedenCikmiyorPage({ Detail, Arrow }: ArticlePro
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
             {diagnosticChecks.map((check, idx) => (
               <div key={idx} style={{ background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '14px', padding: '1.4rem' }}>
-                <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.4rem' }}>{check.title}</h3>
+                <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.4rem' }}>{check.title}</h3>
                 <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.94rem', lineHeight: 1.6, margin: 0 }}>{check.desc}</p>
               </div>
             ))}
@@ -1087,16 +1087,16 @@ export function ChatGptdeWebSitemNedenCikmiyorPage({ Detail, Arrow }: ArticlePro
         <section style={{ marginBottom: '3.5rem', background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '16px', padding: '1.8rem' }}>
           <h3 style={{ color: '#ffffff', fontSize: '1.2rem', marginBottom: '1rem' }}>Çözüm ve Uygulama Rehberleri</h3>
           <div style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap' }}>
-            <a href="/chatgptde-markam-nasil-cikar/" style={{ background: '#1f2937', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+            <a href="/chatgptde-markam-nasil-cikar/" style={{ background: '#1f2937', color: 'var(--chat-green-text)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
               ChatGPT'de Markam Nasıl Çıkar? ➔
             </a>
-            <a href="/chatgpt-seo/" style={{ background: '#1f2937', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+            <a href="/chatgpt-seo/" style={{ background: '#1f2937', color: 'var(--chat-green-text)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
               ChatGPT SEO Nedir? ➔
             </a>
-            <a href="/geo-yapay-zeka-gorunurlugu/" style={{ background: '#1f2937', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+            <a href="/geo-yapay-zeka-gorunurlugu/" style={{ background: '#1f2937', color: 'var(--chat-green-text)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
               GEO Danışmanlığı ➔
             </a>
-            <a href="/yapay-zeka-gorunurluk-analizi/" style={{ background: '#1f2937', color: 'var(--chat-green)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+            <a href="/yapay-zeka-gorunurluk-analizi/" style={{ background: '#1f2937', color: 'var(--chat-green-text)', padding: '0.5rem 1rem', borderRadius: '8px', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
               Canlı AI Teşhis Aracı ➔
             </a>
           </div>
@@ -1218,7 +1218,7 @@ export function SozlukPage({ Detail, Arrow }: ArticleProps) {
             {glossaryTerms.map((item, idx) => (
               <div key={idx} style={{ background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '14px', padding: '1.5rem' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.6rem' }}>
-                  <h3 style={{ color: 'var(--chat-green)', fontSize: '1.2rem', margin: 0 }}>{item.term}</h3>
+                  <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.2rem', margin: 0 }}>{item.term}</h3>
                   <a href={item.link} style={{ color: '#9ca3af', fontSize: '0.85rem', textDecoration: 'none', borderBottom: '1px dotted #6b7280' }}>
                     {item.linkText} ➔
                   </a>
@@ -1273,19 +1273,19 @@ export function ChatGptReklamlariNeredeGorunurPage({ Detail, Arrow }: ArticlePro
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '14px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>Yanıt Altı Sponsorlu Kart</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>Yanıt Altı Sponsorlu Kart</h3>
               <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, fontSize: '0.94rem' }}>
                 Kullanıcı bir ürün veya çözüm araştırdığında, model cevabını tamamladıktan sonra ilgili işletmenin başlığı, kısa açıklama metni ve yönlendirme butonunu içeren kart gösterilir.
               </p>
             </div>
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '14px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>Yanıt İçi Ayrılmış Sponsorlu Bölüm</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>Yanıt İçi Ayrılmış Sponsorlu Bölüm</h3>
               <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, fontSize: '0.94rem' }}>
                 Karşılaştırmalı ve çoklu seçenekli sorularda cevaptan görsel olarak kalın sınırlarla ayrılmış, arka planı farklılaştırılmış sponsorlu alternatif kutusu olarak sunulur.
               </p>
             </div>
             <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '14px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>Sponsored Agents (Sponsorlu Ajanlar)</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>Sponsored Agents (Sponsorlu Ajanlar)</h3>
               <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, fontSize: '0.94rem' }}>
                 Kullanıcının diyalog içinde doğrudan çağırabileceği ve işlem (sipariş, rezervasyon, randevu) tamamlayabileceği interaktif kurumsal asistan kartı formatıdır.
               </p>
@@ -1310,7 +1310,7 @@ export function ChatGptReklamlariNeredeGorunurPage({ Detail, Arrow }: ArticlePro
                 <tr>
                   <td style={{ padding: '1rem', borderBottom: '1px solid var(--chat-border)', color: '#ffffff', fontWeight: 600 }}>Etiket / İbare</td>
                   <td style={{ padding: '1rem', borderBottom: '1px solid var(--chat-border)', color: '#f59e0b' }}>Açık "Sponsorlu / Ad" etiketi taşır</td>
-                  <td style={{ padding: '1rem', borderBottom: '1px solid var(--chat-border)', color: '#10a37f' }}>Etiketsiz doğal model metni & web alıntısı</td>
+                  <td style={{ padding: '1rem', borderBottom: '1px solid var(--chat-border)', color: 'var(--chat-green-text)' }}>Etiketsiz doğal model metni & web alıntısı</td>
                 </tr>
                 <tr>
                   <td style={{ padding: '1rem', borderBottom: '1px solid var(--chat-border)', color: '#ffffff', fontWeight: 600 }}>Ücretlendirme</td>
@@ -1382,19 +1382,19 @@ export function ChatGptReklamVermeSartlariPage({ Detail, Arrow }: ArticleProps) 
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
             <div style={{ background: 'var(--chat-surface)', padding: '1.4rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.4rem' }}>Resmî Şirket ve Vergi Numarası (VKN)</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.4rem' }}>Resmî Şirket ve Vergi Numarası (VKN)</h3>
               <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.94rem', lineHeight: 1.6, margin: 0 }}>
                 Bireysel şahıslar için reklam hesabı açılamaz; geçerli bir vergi kimlik numarası (veya şahıs şirketi TC kimlik no) ve yasal unvan beyan edilmelidir.
               </p>
             </div>
             <div style={{ background: 'var(--chat-surface)', padding: '1.4rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.4rem' }}>Kurumsal E-posta ve 2FA Güvenliği</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.4rem' }}>Kurumsal E-posta ve 2FA Güvenliği</h3>
               <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.94rem', lineHeight: 1.6, margin: 0 }}>
                 Genel ücretsiz e-postalar (gmail/yahoo) yerine şirket alan adına bağlı e-posta adresi ve iki adımlı doğrulama (2FA) zorunludur.
               </p>
             </div>
             <div style={{ background: 'var(--chat-surface)', padding: '1.4rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.4rem' }}>Uluslararası Ödeme Yöntemi</h3>
+              <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.4rem' }}>Uluslararası Ödeme Yöntemi</h3>
               <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.94rem', lineHeight: 1.6, margin: 0 }}>
                 Yurt dışı internet harcamalarına açık kurumsal kredi kartı ve 2 No'lu KDV / stopaj vergi mevzuatına uyumlu fatura profili yapılandırılmalıdır.
               </p>
@@ -1505,7 +1505,7 @@ export function ChatGptReklamAjansiNasilSecilirPage({ Detail, Arrow }: ArticlePr
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
             {checklist.map((item, idx) => (
               <div key={idx} style={{ background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '14px', padding: '1.4rem' }}>
-                <h3 style={{ color: 'var(--chat-green)', fontSize: '1.15rem', marginBottom: '0.4rem' }}>{item.q}</h3>
+                <h3 style={{ color: 'var(--chat-green-text)', fontSize: '1.15rem', marginBottom: '0.4rem' }}>{item.q}</h3>
                 <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.94rem', lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
               </div>
             ))}
@@ -1521,9 +1521,9 @@ export function ChatGptReklamAjansiNasilSecilirPage({ Detail, Arrow }: ArticlePr
             Organik GEO ile ücretli reklamları net biçimde ayırıyor, her kampanya için 25+ özgün context hint kütüphanesi hazırlıyoruz.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1.2rem' }}>
-            <a href="/yapay-zekada-reklam-ajansi/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>Ajans Hizmet Sayfamız ➔</a>
-            <a href="/chatgpt-reklamlari/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>ChatGPT Reklam Yönetimi ➔</a>
-            <a href="/chatgpt-reklam-fiyatlari/" style={{ color: 'var(--chat-green)', fontWeight: 600 }}>Fiyatlandırma Modelleri ➔</a>
+            <a href="/yapay-zekada-reklam-ajansi/" style={{ color: 'var(--chat-green-text)', fontWeight: 600 }}>Ajans Hizmet Sayfamız ➔</a>
+            <a href="/chatgpt-reklamlari/" style={{ color: 'var(--chat-green-text)', fontWeight: 600 }}>ChatGPT Reklam Yönetimi ➔</a>
+            <a href="/chatgpt-reklam-fiyatlari/" style={{ color: 'var(--chat-green-text)', fontWeight: 600 }}>Fiyatlandırma Modelleri ➔</a>
           </div>
         </section>
 

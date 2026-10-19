@@ -7,9 +7,15 @@
     "dev": "vite --host 127.0.0.1",
     "prebuild": "node scripts/generate-pages.mjs",
     "build": "tsc && vite build",
+    "postbuild": "node scripts/seo-audit.mjs --root dist --output output/seo/build-gate.json && node scripts/seo-bundle-audit.mjs",
+    "seo:audit": "node scripts/seo-audit.mjs",
+    "seo:live": "node scripts/seo-live-check.mjs",
+    "seo:bots": "node scripts/seo-bot-check.mjs",
+    "seo:bundle": "node scripts/seo-bundle-audit.mjs",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/node": "^26.6.5",
     "@types/nodemailer": "^8.0.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",

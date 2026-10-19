@@ -89,7 +89,8 @@ export interface AuditResult {
   prioritySteps: PriorityStep[];
 }
 
-export function AuditModule() {
+export function AuditModule({ standalone = false }: { standalone?: boolean }) {
+  const Heading = standalone ? 'h1' : 'h2';
   const containerRef = React.useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState<'form' | 'scanning' | 'result'>('form');
   const [formData, setFormData] = useState<AuditFormData>({
@@ -278,9 +279,9 @@ export function AuditModule() {
               <span className="live-dot-pulse"></span>
               <span>CANLI AI DENETİM MOTORU v4.2 // ÇEVRİMİÇİ</span>
             </div>
-            <h2 className="audit-hero-title">
+            <Heading className="audit-hero-title">
               Web Sitenizin <span className="text-emerald-400">Yapay Zekâ Görünürlüğünü</span> Test Edin
-            </h2>
+            </Heading>
             <p className="audit-hero-desc">
               ChatGPT, Perplexity, Gemini ve Claude motorlarında sektörünüz arandığında markanız tavsiye ediliyor mu?
               Aşağıdaki canlı tarayıcı konsoluna web sitenizi girin; 60 saniyede gerçek zamanlı teşhis edin.

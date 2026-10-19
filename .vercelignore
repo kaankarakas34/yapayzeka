@@ -1,0 +1,7 @@
+# Local SEO evidence, exports and tooling are not part of the website package.
+output/
+.playwright-cli/
+.openai/
+docs/
+x.type
+.env*

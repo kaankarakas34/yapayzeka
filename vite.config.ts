@@ -49,6 +49,7 @@ function apiMiddlewarePlugin() {
 export default defineConfig({
   plugins: [react(), apiMiddlewarePlugin()],
   build: {
+    manifest: true,
     rollupOptions: {
       input: [
         'index.html',
