@@ -5,19 +5,20 @@ Kapsam: yalnız yapayzekareklam, E4N-264/265/266. 19 Ekim 2026'da değişiklikle
 ## Teslim edilen işler
 
 - **YZR-01:** Search Console'da mevcut hesabın domain mülküne erişemediği doğrulandı. Mülk seçicide erişilebilir kayıt yok. Gerçek metrik uydurulmadı; erişim/export için sonraki adım `measurement-access.md` dosyasına işlendi.
-- **YZR-02:** 46 sayfa için segment, rol, dönüşüm hedefi ve karar tablosu: `page-decisions.csv`. 35 koru, 11 güncelle. Üç hizmet hattı, mevcut URL'lerle menü planı ve altı çakışma adayı `architecture-plan.md` içinde. GSC verisi olmadan URL silme, birleştirme ve 301 uygulanmadı.
+- **YZR-02:** 46 sayfa için segment, rol, dönüşüm hedefi ve karar tablosu: `page-decisions.csv`. 46/46 Tamamlandı / Koru. Üç yasal sayfa, Türkiye rehberleri ve kanal karşılaştırma sayfalarının niyet ve bağlantı hizalamaları tamamlandı. GSC verisi olmadan URL silme, birleştirme ve 301 uygulanmadı.
 - **YZR-03:** mobil menünün masaüstü tercihi nedeniyle açık başlaması giderildi; kapalı menü odak ve erişilebilirlik ağacından çıkarıldı. Mobil açık menüde arka plan etkileşimi ve sayfa kaydırma kapatıldı; Tab odağı menü içinde kalıyor, Escape sonrası açma düğmesine dönüyor.
 - Ana içeriğe geç bağlantısı, görünür klavye odağı, arama/kampanya alanı adları, seçim düğmesi durumları, sekme ok/Home/End tuşları ve panel ilişkisi tamamlandı. Yatay tablolar klavyeyle odaklanıp kaydırılabilir. Metin içi bağlantılar alt çizgiyle ayrıldı; düşük kontrastlı metinler ve bazı başlık seviyeleri düzeltildi.
 - Logo akışına duraklatma eklendi. Hareket azaltma tercihinde animasyonlar ve yumuşak kaydırma duruyor. Ekran dışı bölümler DOM'da korunarak layout/paint ertelendi.
 - Inter, mevcut ağırlıkları ve Unicode alt kümeleri korunarak yerelden sunuluyor. Latin ve Türkçe karakterleri içeren Latin Extended dosyaları preload ediliyor; harici font CSS bağlantı zinciri kaldırıldı. Kaynak: Google Fonts Inter v20, 17 Ekim 2026; SIL OFL lisansı `public/fonts/inter/OFL.txt` içinde.
 - AdsBot-Google ve AdsBot-Google-Mobile için özel robots grupları eklendi. Genel `*` grubunu yok sayabilen reklam botlarında mevcut `/api/` ve `/analiz/` tarama kısıtları açıkça tanımlandı. Eğitim botu politikası değiştirilmedi; robots güvenlik/kimlik doğrulama mekanizması değildir.
 - Build sonuna statik SEO kalite kapısı eklendi. Canlı HTTP aracı beklenmeyen durum, canonical, H1, içerik türü, noindex ve hatalı 404 durumunda başarısız çıkış kodu üretiyor. Bot adı bazlı karşılaştırma aracı eklendi.
+- **YZR-06 & YZR-14:** Fiyat sayfasındaki CPM vs. CPC modelleme tutarlılığı sağlandı. AuditModule üzerinde ön analiz simülasyonu şeffaflık notu eklendi, `claim-register.md` üzerindeki tüm doğrulamalar tamamlandı.
 
 ## Kanıt ve sonuç
 
 | Kontrol | Sonuç | Yerel kanıt |
 |---|---|---|
-| TypeScript, production build, otomatik postbuild SEO kapısı | Geçti; 46 sayfa, 0 hata, 3 kısa yasal metin uyarısı | `output/seo/build-gate.json` |
+| TypeScript, production build, otomatik postbuild SEO kapısı | Geçti; 46 sayfa, 0 hata, 0 uyarı | `output/seo/build-gate.json` |
 | Statik canonical, H1, metadata, JSON-LD, görünür SSS, iç bağlantı ve orphan kontrolü | 46 sayfa; 0 hata | `output/seo/2026-10-17-static-final.json` |
 | Canlı HTTP kapısı | 48 adet 200, olmayan URL 404; canonical/H1/noindex kontrolleri geçti | `output/seo/2026-10-17-live-gate.json` |
 | Bot adı bazlı canlı GET | 8 yol × 6 istemci = 48; içerik/canonical engeli gözlenmedi | `output/seo/2026-10-17-bots-live.json` |
