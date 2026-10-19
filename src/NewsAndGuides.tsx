@@ -779,31 +779,31 @@ export function ChatGPTPriceUpdatedPage({ Detail, Arrow }: NewsAndGuidesProps) {
                   <td style={{ padding: '0.8rem', fontWeight: 600, color: '#ffffff' }}>1. Gösterim (Impressions)</td>
                   <td style={{ padding: '0.8rem' }}>25.000 Gösterim</td>
                   <td style={{ padding: '0.8rem' }}>—</td>
-                  <td style={{ padding: '0.8rem' }}>CPM: ~$12.00</td>
+                  <td style={{ padding: '0.8rem' }}>Efektif CPM: ~$36.00 (veya ~$12 CPM bilinirlik modelinde)</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid var(--chat-border)' }}>
                   <td style={{ padding: '0.8rem', fontWeight: 600, color: '#ffffff' }}>2. Tıklama (Clicks)</td>
                   <td style={{ padding: '0.8rem' }}>500 Ziyaretçi</td>
                   <td style={{ padding: '0.8rem' }}>%2.00 CTR</td>
-                  <td style={{ padding: '0.8rem' }}>TBM: ~$1.80</td>
+                  <td style={{ padding: '0.8rem' }}>TBM (CPC): ~$1.80 (Toplam: $900)</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid var(--chat-border)' }}>
                   <td style={{ padding: '0.8rem', fontWeight: 600, color: '#ffffff' }}>3. Nitelikli Talep (Lead)</td>
                   <td style={{ padding: '0.8rem' }}>40 Form Başvurusu</td>
                   <td style={{ padding: '0.8rem' }}>%8.00 Sayfa CR</td>
-                  <td style={{ padding: '0.8rem' }}>CPL: $22.50</td>
+                  <td style={{ padding: '0.8rem' }}>CPL: $22.50 ($900 / 40)</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid var(--chat-border)' }}>
                   <td style={{ padding: '0.8rem', fontWeight: 600, color: '#ffffff' }}>4. Satış / Müşteri</td>
                   <td style={{ padding: '0.8rem' }}>6 Yeni Müşteri</td>
                   <td style={{ padding: '0.8rem' }}>%15 Satış Kapanış</td>
-                  <td style={{ padding: '0.8rem' }}>CAC: $150.00</td>
+                  <td style={{ padding: '0.8rem' }}>CAC: $150.00 ($900 / 6)</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6 }}>
-            *Yukarıdaki simülasyon B2B yazılım sektörü ortalamalarına dayalıdır. Gerçek rakamlar sektör rekabetine, açılış sayfası kalitesine ve teklifin gücüne göre farklılık gösterir.
+            *Birim maliyet ayrımı: TBM bazlı modelde $1.80 × 500 tıklama ile $900 toplam harcama ve ~$36 efektif CPM oluşur. Salt CPM (gösterim) hedefli bilinirlik kampanyalarında ise ~$12 CPM ile 25.000 gösterim maliyeti ~$300 seviyesindedir. Gerçek rakamlar sektör rekabetine, hedef kitleye ve teklifin gücüne göre farklılık gösterir.
           </p>
         </section>
 

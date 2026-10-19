@@ -1697,6 +1697,10 @@ function PillarGuide() {
 }
 
 function Legal({ title }: { title: string }) {
+  const isKvkk = title.includes('KVKK')
+  const isCerez = title.includes('Çerez')
+  const isGizlilik = title.includes('Gizlilik')
+
   return (
     <Detail
       eyebrow="Yasal Bilgilendirme"
@@ -1704,11 +1708,57 @@ function Legal({ title }: { title: string }) {
       summary="Yapay Zekâda Reklam yasal çerçeve, veri gizliliği ve kullanıcı hakları bilgilendirmesi."
     >
       <div style={{ maxWidth: '780px', margin: '0 auto', color: 'var(--chat-text-secondary)', lineHeight: 1.8 }}>
-        <h2 style={{ color: '#ffffff', marginBottom: '1rem' }}>Veri Güvenliği ve Şeffaflık</h2>
-        <p>
-          Yapay Zekâda Reklam olarak müşteri gizliliğine, KVKK ve ilgili uluslararası veri koruma mevzuatına tam uyum gösteriyoruz. 
-          Sitemiz üzerinden paylaşılan analiz talepleri yalnızca hizmet sunumu ve teklif hazırlığı amacıyla işlenmektedir.
-        </p>
+        {isGizlilik && (
+          <>
+            <h2 style={{ color: '#ffffff', marginBottom: '1rem', marginTop: '1.5rem' }}>Veri Güvenliği ve Şeffaflık</h2>
+            <p>
+              Yapay Zekâda Reklam olarak müşteri gizliliğine, KVKK ve ilgili uluslararası veri koruma mevzuatına tam uyum gösteriyoruz.
+              Sitemiz üzerinden paylaşılan analiz talepleri yalnızca hizmet sunumu ve teklif hazırlığı amacıyla işlenmektedir.
+            </p>
+            <h2 style={{ color: '#ffffff', marginBottom: '1rem', marginTop: '2rem' }}>Toplanan Bilgiler ve Amaçları</h2>
+            <p>
+              Web sitemizdeki yapay zekâ görünürlük analizi ve iletişim araçları üzerinden sağlanan ad, e-posta, telefon ve web sitesi URL'si gibi bilgiler; ön analiz raporunun oluşturulması ve reklam danışmanlığı teklif süreçlerinin yürütülmesi dışında hiçbir amaçla kullanılmaz.
+            </p>
+            <h2 style={{ color: '#ffffff', marginBottom: '1rem', marginTop: '2rem' }}>Üçüncü Taraflar ve Güvenlik</h2>
+            <p>
+              Toplanan veriler hiçbir surette ticari amaçlarla satılmaz, devredilmez veya kiralanmaz. Verileriniz, SSL/TLS şifreleme ve güvenlik duvarları ile korunan modern bulut altyapısında güvenle muhafaza edilir.
+            </p>
+          </>
+        )}
+
+        {isKvkk && (
+          <>
+            <h2 style={{ color: '#ffffff', marginBottom: '1rem', marginTop: '1.5rem' }}>Veri Sorumlusu ve Aydınlatma Metni</h2>
+            <p>
+              6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) uyarınca, veri sorumlusu sıfatıyla Yapay Zekâda Reklam tarafından toplanan kişisel verileriniz, kanuna uygun olarak işlenmekte ve korunmaktadır.
+            </p>
+            <h2 style={{ color: '#ffffff', marginBottom: '1rem', marginTop: '2rem' }}>İşlenen Kişisel Veriler ve Hukuki Sebep</h2>
+            <p>
+              İletişim ve ön analiz formlarında yer alan kimlik ve iletişim bilgileriniz; 6698 sayılı Kanun'un 5. maddesinde belirtilen sözleşmenin kurulması veya ifası ile veri sorumlusunun meşru menfaatleri hukuki sebeplerine dayalı olarak işlenmektedir.
+            </p>
+            <h2 style={{ color: '#ffffff', marginBottom: '1rem', marginTop: '2rem' }}>İlgili Kişinin Hakları</h2>
+            <p>
+              KVKK'nın 11. maddesi uyarınca veri sahipleri; kişisel verilerinin işlenip işlenmediğini öğrenme, işleme amacını ve aktarıldığı kişileri bilme, verilerin düzeltilmesini veya silinmesini talep etme hakkına sahiptir. Başvurularınızı iletişim sayfamız üzerinden iletebilirsiniz.
+            </p>
+          </>
+        )}
+
+        {isCerez && (
+          <>
+            <h2 style={{ color: '#ffffff', marginBottom: '1rem', marginTop: '1.5rem' }}>Çerez (Cookie) Politikası ve Kullanımı</h2>
+            <p>
+              Web sitemizde gezinme deneyiminizi optimize etmek, site performansını analiz etmek ve teknik altyapının kararlı çalışmasını sağlamak için çerezler ve yerel depolama teknolojileri kullanılmaktadır.
+            </p>
+            <h2 style={{ color: '#ffffff', marginBottom: '1rem', marginTop: '2rem' }}>Kullanılan Çerez Kategorileri</h2>
+            <p>
+              Sitemizde gezinme güvenliği ve form işlevleri için zorunlu teknik çerezler ile ziyaretçi etkileşimlerini anonim olarak ölçen analitik çerezler (örneğin Google Analytics) yer almaktadır. Bu çerezler doğrudan kimlik tespitine yol açmaz.
+            </p>
+            <h2 style={{ color: '#ffffff', marginBottom: '1rem', marginTop: '2rem' }}>Çerez Tercihlerinin Yönetimi</h2>
+            <p>
+              Kullandığınız internet tarayıcısının ayarları üzerinden dilediğiniz an çerezleri engelleyebilir, sınırlandırabilir veya mevcut çerezleri silebilirsiniz. Çerezleri engellemeniz halinde bazı dinamik analiz araçları kısıtlı çalışabilir.
+            </p>
+          </>
+        )}
       </div>
     </Detail>
   )

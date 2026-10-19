@@ -453,7 +453,7 @@ const pages = {
         <p>Medya bütçesi doğrudan işletmenizin kurumsal kartından OpenAI'a ödenir; ajansımız medya harcamanızdan komisyon almaz veya bütçeyi gizlemez. Ajans yönetim ücreti ise hesap kurulumu, semantik context hints kütüphanesi, CAPI entegrasyonu ve haftalık optimizasyon danışmanlığını kapsayan şeffaf hizmet bedelidir.</p>
 
         <h2>Örnek hesap: gösterim → tıklama → lead → satış</h2>
-        <p>Tipik bir B2B pilot kampanyası simülasyonu: 25.000 Gösterim (~$12 CPM) → 500 Tıklama (%2 CTR, ~$1.80 TBM) → 40 Nitelikli Form Lead (%8 CR, $22.50 CPL) → 6 Yeni Müşteri/Satış (%15 Kapanış, $150 CAC). Veriler sektör rekabetine göre değişiklik gösterir.</p>
+        <p>Tipik bir B2B pilot kampanyası simülasyonu (Tıklama/Dönüşüm odaklı ~$900 test bütçesi): 500 Tıklama (~$1.80 TBM) ve %2 CTR ile ~25.000 Gösterim (Efektif CPM: ~$36) → 40 Nitelikli Form Lead (%8 CR, $22.50 CPL) → 6 Yeni Müşteri/Satış (%15 Kapanış, $150 CAC). Salt gösterim/marka odaklı CPM modelinde ise ~$12 CPM ile 25.000 gösterim maliyeti ~$300 seviyesindedir. Veriler sektör rekabetine ve teklif yapısına göre değişiklik gösterir.</p>
 
         <h2>Güncel kampanya ve kredi koşulları</h2>
         <p>OpenAI zaman zaman yeni reklamverenlere teşvik kredileri sunabilir. Ancak doğrulanmamış spekülatif rakamlara itibar edilmemelidir; uygunluk, şirket tüzel kişiliği, harcama son tarihi ve kredi kullanım süreleri <a href="https://ads.openai.com" target="_blank" rel="noopener noreferrer">ads.openai.com</a> başlangıç ekranından yazılı olarak teyit edilmelidir.</p>
@@ -1078,17 +1078,82 @@ const pages = {
   'gizlilik': [
     'Gizlilik Politikası | Yapay Zekâda Reklam',
     'Yapay Zekâda Reklam veri güvenliği ve gizlilik politikası. Kullanıcı verilerinin işlenmesi, korunması ve haklarınız hakkında bilgilendirme.',
-    `<main><h1>Gizlilik Politikası</h1><p>Veri güvenliği ve gizlilik politikamız. Müşteri analiz talepleri yalnızca teklif ve denetim amacıyla işlenir.</p></main>`
+    `
+      <header class="site-header">
+        <nav><a href="/">Ana Sayfa</a> | <a href="/kvkk/">KVKK Metni</a> | <a href="/cerez-politikasi/">Çerez Politikası</a> | <a href="/iletisim/">İletişim</a></nav>
+      </header>
+      <main>
+        <h1>Gizlilik Politikası</h1>
+        <p>Yapay Zekâda Reklam olarak, web sitemizi ziyaret eden kullanıcılarımızın ve hizmetlerimizden yararlanan iş ortaklarımızın kişisel veri gizliliğine en üst düzeyde önem veriyoruz. Bu Gizlilik Politikası, sitemizi kullanımınız sırasında elde edilen verilerin nasıl toplandığını, işlendiğini ve korunduğunu açıklamaktadır.</p>
+
+        <h2>Toplanan Bilgiler ve Toplama Yöntemleri</h2>
+        <p>Web sitemiz üzerinden sunulan yapay zekâ görünürlük analizi ve iletişim formları aracılığıyla adınız, e-posta adresiniz, telefon numaranız ve analiz edilmesini talep ettiğiniz web sitesi URL'si gibi kurumsal bilgiler toplanabilir. Ayrıca sitemizi ziyaret ettiğinizde standart sunucu günlükleri, IP adresleri ve anonim analitik trafik verileri kaydedilmektedir.</p>
+
+        <h2>Bilgilerin Kullanım Amaçları</h2>
+        <p>Toplanan kişisel ve kurumsal bilgiler yalnızca aşağıdaki meşru amaçlar doğrultusunda işlenmektedir:</p>
+        <ul>
+          <li>Talep ettiğiniz yapay zekâ görünürlük analiz raporunun hazırlanması ve tarafınıza iletilmesi,</li>
+          <li>Reklam ve optimizasyon danışmanlığı teklif süreçlerinin yürütülmesi,</li>
+          <li>Hizmet kalitemizin artırılması ve web sitesi teknik güvenliğinin temin edilmesi.</li>
+        </ul>
+
+        <h2>Veri Paylaşımı ve Üçüncü Taraflar</h2>
+        <p>Yapay Zekâda Reklam, kullanıcı verilerini hiçbir koşulda üçüncü taraflara satmaz, kiralamaz veya ticari amaçla devretmez. Verileriniz yalnızca yasal bir zorunluluk bulunduğunda yetkili resmî kurumlarla veya hizmetin ifası için zorunlu olan güvenli teknik altyapı sağlayıcıları (sunucu, analitik sistemleri) ile sınırlı olarak paylaşılabilir.</p>
+
+        <h2>Veri Güvenliği ve İletişim</h2>
+        <p>Verilerinizin yetkisiz erişime, kaybolmaya veya kötüye kullanıma karşı korunması için endüstri standardı güvenlik protokolleri (SSL şifreleme, güvenlik duvarları) uygulanmaktadır. Gizlilik politikamıza dair tüm sorularınız için <a href="/iletisim/">İletişim</a> sayfamız üzerinden bize ulaşabilirsiniz.</p>
+      </main>
+    `
   ],
   'kvkk': [
     'KVKK Aydınlatma Metni | Yapay Zekâda Reklam',
     '6698 sayılı KVKK kapsamında kişisel verilerin işlenmesi, saklanması ve haklarınıza ilişkin Yapay Zekâda Reklam aydınlatma metni.',
-    `<main><h1>KVKK Aydınlatma Metni</h1><p>6698 sayılı Kişisel Verilerin Korunması Kanunu uyarınca aydınlatma metnimiz.</p></main>`
+    `
+      <header class="site-header">
+        <nav><a href="/">Ana Sayfa</a> | <a href="/gizlilik/">Gizlilik Politikası</a> | <a href="/cerez-politikasi/">Çerez Politikası</a> | <a href="/iletisim/">İletişim</a></nav>
+      </header>
+      <main>
+        <h1>KVKK Aydınlatma Metni</h1>
+        <p>Bu aydınlatma metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun (KVKK) 10. maddesi ile Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ uyarınca, veri sorumlusu sıfatıyla Yapay Zekâda Reklam tarafından hazırlanmıştır.</p>
+
+        <h2>Veri Sorumlusunun Kimliği</h2>
+        <p>Yapay Zekâda Reklam, web sitesi üzerinden toplanan kişisel veriler bakımından veri sorumlusu sıfatını haizdir.</p>
+
+        <h2>İşlenen Kişisel Veri Kategorileri ve Amaçları</h2>
+        <p>İletişim ve ön analiz formlarımız vasıtasıyla temin edilen kimlik (ad, soyad), iletişim (e-posta, telefon) ve kurumsal web sitesi verileri; ön inceleme ve görünürlük analizlerinin gerçekleştirilmesi, tarafınızla sözleşme öncesi iletişimin sağlanması ve teklif oluşturulması amacıyla sınırlı olarak işlenmektedir.</p>
+
+        <h2>Kişisel Verilerin İşlenmesinin Hukuki Sebebi</h2>
+        <p>Kişisel verileriniz, 6698 sayılı Kanun'un 5. maddesinin 2. fıkrasında yer alan 'Bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması kaydıyla, sözleşmenin taraflarına ait kişisel verilerin işlenmesinin gerekli olması' ve 'Veri sorumlusunun meşru menfaatleri için veri işlenmesinin zorunlu olması' hukuki sebeplerine dayalı olarak otomatik yollarla işlenmektedir.</p>
+
+        <h2>İlgili Kişinin Hakları</h2>
+        <p>Kanun'un 11. maddesi kapsamında kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, işlenme amacına uygun kullanılıp kullanılmadığını öğrenme, aktarıldığı üçüncü kişileri bilme, düzeltilmesini veya silinmesini isteme haklarına sahipsiniz. Haklarınıza ilişkin taleplerinizi <a href="/iletisim/">İletişim</a> sayfamızda belirtilen kanallar üzerinden tarafımıza iletebilirsiniz.</p>
+      </main>
+    `
   ],
   'cerez-politikasi': [
     'Çerez Politikası | Yapay Zekâda Reklam',
     'Yapay Zekâda Reklam web sitesinde kullanıcı deneyimini artırmak ve analiz yapmak için kullanılan çerez türleri ve yönetim rehberi.',
-    `<main><h1>Çerez Politikası</h1><p>Web sitemizde kullanıcı deneyimini iyileştirmek için kullanılan zorunlu ve analitik çerezler.</p></main>`
+    `
+      <header class="site-header">
+        <nav><a href="/">Ana Sayfa</a> | <a href="/gizlilik/">Gizlilik Politikası</a> | <a href="/kvkk/">KVKK Metni</a> | <a href="/iletisim/">İletişim</a></nav>
+      </header>
+      <main>
+        <h1>Çerez Politikası</h1>
+        <p>Yapay Zekâda Reklam olarak, web sitemizin performansını artırmak, kullanıcı deneyimini geliştirmek ve ziyaretçi etkileşimlerini analiz etmek amacıyla çerezlerden (cookies) ve benzeri izleme teknolojilerinden yararlanmaktayız.</p>
+
+        <h2>Çerez (Cookie) Nedir?</h2>
+        <p>Çerezler, bir internet sitesini ziyaret ettiğinizde tarayıcınız aracılığıyla cihazınıza kaydedilen küçük metin dosyalarıdır. Çerezler web sitesinin düzgün çalışmasını, oturum tercihlerinin hatırlanmasını ve site kullanımına ilişkin istatistiki verilerin toplanmasını sağlar.</p>
+
+        <h2>Kullanılan Çerez Türleri</h2>
+        <ul>
+          <li><strong>Zorunlu Çerezler:</strong> Web sitemizin güvenli çalışması, form iletimi ve temel gezinme işlevlerinin yerine getirilmesi için teknik olarak zorunlu olan çerezlerdir.</li>
+          <li><strong>Performans ve Analitik Çerezleri:</strong> Sitemizi kaç kişinin ziyaret ettiği, en çok hangi sayfaların okunduğu ve sitede geçirilen süre gibi anonim metrikleri ölçmek amacıyla kullanılır (örneğin Google Analytics). Bu çerezler kimliğinizi doğrudan açığa çıkarmaz.</li>
+        </ul>
+
+        <h2>Çerez Tercihlerini Yönetme ve Silme</h2>
+        <p>Tarayıcınızın ayarlarını değiştirerek çerezlerin kullanımını istediğiniz zaman engelleyebilir veya önceden kaydedilmiş çerezleri silebilirsiniz. Çerezleri devre dışı bırakmanız durumunda sitemizin bazı gelişmiş özellikleri tam performansla çalışmayabilir. Çerez politikası hakkında detaylı bilgi için <a href="/iletisim/">bize ulaşabilirsiniz</a>.</p>
+      </main>
+    `
   ],
   'haberler': [
     'Yapay Zekâ ve ChatGPT Reklam Haberleri | Güncel Gelişmeler',
