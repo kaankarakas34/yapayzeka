@@ -471,18 +471,21 @@ const pages = {
     'OpenAI Ads Manager Beta Türkiye durumu: Self-servis panel erişimi, tüzel kişilik, vergi ve faturalandırma gereksinimleri ve Türkçe kampanya yönetimi.',
     `
       <header class="site-header">
-        <nav><a href="/">Ana Sayfa</a> | <a href="/chatgpt-reklam-verme/">Reklam Kurulum Rehberi</a> | <a href="/blog/turkiyeden-chatgpt-reklam-hesabi/">Türkiye Hesap Açma</a></nav>
+        <nav><a href="/">Ana Sayfa</a> | <a href="/chatgpt-reklamlari/">ChatGPT Reklam Hizmeti</a> | <a href="/chatgpt-reklam-verme/">Reklam Kurulum Rehberi</a> | <a href="/blog/turkiyeden-chatgpt-reklam-hesabi/">Türkiye Hesap Açma</a></nav>
       </header>
       <main>
         <h1>ChatGPT Reklamları Türkiye: Erişim, Kurulum ve Uygunluk Rehberi</h1>
-        <p>2026 yılı itibarıyla Türkiye, OpenAI Ads Manager Beta programında self servis kullanılabilir ülke listesindedir. Türk şirketleri resmî vergi bilgileriyle doğrudan reklam açabilir.</p>
+        <p>2026 yılı itibarıyla Türkiye, OpenAI Ads Manager Beta programında self servis kullanılabilir ülke listesindedir. Türk şirketleri resmî vergi bilgileriyle doğrudan reklam açabilir. Kapsamlı ajans yönetim hizmetimiz için <a href="/chatgpt-reklamlari/">ChatGPT Reklamları</a> sayfamıza göz atın.</p>
         <h2>Türkiye'de ChatGPT Reklamları Durumu</h2>
         <p>Türkçe dil modellerinde diyalog bağlamına uygun reklam yerleşimleri yayınlanabilmektedir.</p>
         <h2>Başvuru ve Hesap Kurulumu İçin Gerekenler</h2>
         <p>Vergi levhası, şirket tüzel kişiliği, kurumsal ödeme kartı ve OpenAI reklam politikalarına uygunluk.</p>
         <h2>Faturalandırma ve 2 No'lu KDV</h2>
         <p>Yurt dışı kaynaklı reklam hizmeti faturası için Türkiye mevzuatına uygun 2 No'lu KDV beyannamesi süreçleri işletilir.</p>
-        <div class="actions"><a href="/iletisim/">Türkiye Kampanyanızı Başlatın</a></div>
+        <div class="actions">
+          <a href="/chatgpt-reklamlari/">ChatGPT Reklam Yönetimi</a>
+          <a href="/iletisim/">Türkiye Kampanyanızı Başlatın</a>
+        </div>
       </main>
     `
   ],
@@ -622,15 +625,32 @@ const pages = {
     'Türkiye merkezli işletmeler için OpenAI Ads Manager hesabı açma, tüzel kişilik doğrulaması, vergilendirme ve fatura süreci.',
     `
       <header class="site-header">
-        <nav><a href="/">Ana Sayfa</a> | <a href="/chatgpt-reklamlari-turkiye/">Türkiye Pazarı</a> | <a href="/chatgpt-reklam-verme/">Adım Adım Rehber</a></nav>
+        <nav><a href="/">Ana Sayfa</a> | <a href="/chatgpt-reklamlari/">ChatGPT Reklam Hizmeti</a> | <a href="/chatgpt-reklamlari-turkiye/">Türkiye Pazarı</a> | <a href="/chatgpt-reklam-verme/">Adım Adım Rehber</a></nav>
       </header>
       <main>
         <h1>Türkiye'den ChatGPT reklam hesabı nasıl açılır?</h1>
-        <p>Türkiye'deki işletmelerin OpenAI Ads Manager Beta üzerinden hesap açma, şirket doğrulama, ajans daveti ve fatura süreçleri rehberi.</p>
-        <h2>Türkiye'de erişim durumu</h2>
-        <p>2026 yılı itibarıyla Türkiye, self servis Ads Manager erişimine açıktır.</p>
-        <h2>Hesap ve ödeme kurulumu</h2>
-        <p>Kurumsal kredi kartı ve vergi numarası tanımlanarak hesap doğrulanır.</p>
+        <p>Türkiye'deki işletmelerin OpenAI Ads Manager Beta (<a href="https://ads.openai.com" target="_blank" rel="noopener noreferrer">ads.openai.com</a>) üzerinden hesap açma, şirket doğrulama, ajans daveti ve fatura süreçlerini adım adım açıklıyoruz. Profesyonel kampanya yönetimi için <a href="/chatgpt-reklamlari/">ChatGPT Reklam Yönetimi</a> sayfamızı inceleyebilirsiniz.</p>
+        
+        <h2>1. Türkiye'de self-servis erişim durumu</h2>
+        <p>2026 yılı itibarıyla Türkiye, OpenAI Ads Manager programında self servis kullanılabilir ülkeler arasındadır. Türkiye'de faaliyet gösteren kurumsal işletmeler bekleme listesine gerek kalmadan doğrudan hesap oluşturabilir.</p>
+
+        <h2>2. Şirket ve vergi bilgilerinin tanımlanması</h2>
+        <p>Hesap açılışında şirket resmî unvanı, vergi dairesi ve vergi kimlik numarası (VKN) eksiksiz girilmelidir. Fatura bilgileri daha sonra değiştirilemeyeceğinden vergi levhası ile birebir uyumlu olmalıdır.</p>
+
+        <h2>3. Ödeme yöntemi ve 2FA güvenliği</h2>
+        <p>Yurt dışı ve online harcamalara açık kurumsal şirket kredi kartı tanımlanır. OpenAI, reklamveren hesaplarında iki faktörlü kimlik doğrulamayı (2FA) zorunlu kılmaktadır.</p>
+
+        <h2>4. Ajans veya ekip üyesi yetkilendirme</h2>
+        <p>İşletmeler, ajans ortaklarına hesap şifresini paylaşmak yerine Ads Manager kullanıcı yönetiminden Admin veya Campaign Manager rolüyle davet göndermelidir.</p>
+
+        <h2>5. Faturalandırma ve 2 No'lu KDV süreci</h2>
+        <p>OpenAI tarafından kesilen faturalar yurt dışı dijital hizmet kapsamında değerlendirilir. Türkiye mevzuatı uyarınca şirket muhasebeniz tarafından 2 No'lu KDV beyannamesi ile beyan edilmelidir.</p>
+
+        <div class="actions">
+          <a href="/chatgpt-reklamlari/">ChatGPT Reklam Yönetimi</a>
+          <a href="/chatgpt-reklam-verme/">Kurulum Rehberi</a>
+          <a href="/iletisim/">Hesap Kurulum Danışmanlığı İsteyin</a>
+        </div>
       </main>
     `
   ],
@@ -907,14 +927,27 @@ const pages = {
     'Yapay zekâ ile reklam verme adımları: hedef, ölçüm, kanal seçimi, kreatif test, bütçe ve performans optimizasyonu rehberi.',
     `
       <header class="site-header">
-        <nav><a href="/">Ana Sayfa</a> | <a href="/blog/yapay-zekada-reklam-nasil-verilir/">Strateji Rehberi</a> | <a href="/chatgpt-reklam-verme/">ChatGPT Kurulumu</a></nav>
+        <nav><a href="/">Ana Sayfa</a> | <a href="/yapay-zeka-platformlarinda-reklam/">Platform Karşılaştırması</a> | <a href="/blog/yapay-zekada-reklam-nasil-verilir/">Strateji Rehberi</a> | <a href="/chatgpt-reklam-verme/">ChatGPT Kurulumu</a></nav>
       </header>
       <main>
         <h1>Yapay Zekâ ile Reklam Verme Nasıl Yapılır?</h1>
-        <p>Yapay zekâ ile reklam verme; hedef kitle modellemesi, teklif optimizasyonu ve içerik üretiminde AI araçlarını kullanırken kararları doğrulanmış iş verisiyle yönetmektir.</p>
+        <p>Yapay zekâ ile reklam verme; hedef kitle modellemesi, açık artırma teklif optimizasyonu ve içerik üretiminde AI teknolojilerini kullanırken kampanya kararlarını somut iş ve ciro verileriyle yönetmektir. Hangi platformun işletmenize uygun olduğunu görmek için <a href="/yapay-zeka-platformlarinda-reklam/">Yapay Zekâ Platformlarında Reklam</a> sayfamızı inceleyin.</p>
+        
         <h2>6 Temel Uygulama Aşaması</h2>
-        <p>Hedef kriterlerinin netleşmesi, AI okunabilirliği (GEO), kanal seçimi, context hints üretimi, pilot test ve iş verisiyle ölçekleme.</p>
-        <div class="actions"><a href="/geo-yapay-zeka-gorunurlugu/">GEO Hizmetini İnceleyin</a></div>
+        <ol>
+          <li><strong>Hedef ve Dönüşüm Tanımı:</strong> Kampanyanın form, doğrudan satış veya marka bilinirliği hedeflerinden hangisine odaklanacağının netleştirilmesi.</li>
+          <li><strong>Kanal Seçimi:</strong> ChatGPT içi sponsorlu yerleşimler, Google AI Overviews ve Meta Advantage+ algoritmaları arasından bütçeye uygun kanalın belirlenmesi.</li>
+          <li><strong>Açılış Sayfası ve AI Okunabilirliği (GEO):</strong> Reklamdan gelen kullanıcının aradığı cevabı 3 saniyede bulacağı, bot engeli bulunmayan hızlı sayfaların kurgulanması.</li>
+          <li><strong>Semantik Context Hints ve Kreatif Üretimi:</strong> Klasik anahtar kelimeler yerine doğal dil ile diyalog anlarını hedefleyen bağlam ipuçlarının tanımlanması.</li>
+          <li><strong>Kontrollü Pilot Test:</strong> İlk 30 günde model öğrenimini sağlayacak asgari dönüşüm hacmiyle kontrollü harcama yapılması.</li>
+          <li><strong>İş Verisi ve Satış Entegrasyonu:</strong> Tıklama metrikleri yerine CRM'e düşen nitelikli müşteri ve satış kapanış verileriyle optimizasyon sağlanması.</li>
+        </ol>
+
+        <div class="actions">
+          <a href="/yapay-zeka-platformlarinda-reklam/">Platform Karşılaştırması</a>
+          <a href="/chatgpt-reklam-verme/">ChatGPT Reklam Kurulumu</a>
+          <a href="/iletisim/">Ön Danışmanlık Alın</a>
+        </div>
       </main>
     `
   ],

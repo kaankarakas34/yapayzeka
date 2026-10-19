@@ -436,7 +436,10 @@ function ChatGPTTurkeyPage() {
           <p style={{ color: 'var(--chat-text-secondary)', marginBottom: '1.8rem', maxWidth: '600px', margin: '0 auto 1.8rem', lineHeight: 1.7 }}>
             Rakipleriniz henüz ChatGPT Ads'i keşfetmemişken sektörünüzdeki en kârlı arama ve karar anlarını kapatın.
           </p>
-          <a className="button primary" href="/iletisim/">Türkiye Kurulum Danışmanlığı Alın <Arrow /></a>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a className="button primary" href="/iletisim/">Türkiye Kurulum Danışmanlığı Alın <Arrow /></a>
+            <a className="button secondary" href="/chatgpt-reklamlari/">ChatGPT Reklam Yönetimi <Arrow /></a>
+          </div>
         </div>
       </div>
     </Detail>
@@ -1689,6 +1692,7 @@ function PillarGuide() {
         </p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <a className="button primary" href="/geo-yapay-zeka-gorunurlugu/">GEO Hizmetini İnceleyin <Arrow /></a>
+          <a className="button secondary" href="/yapay-zeka-platformlarinda-reklam/">Platform Karşılaştırması <Arrow /></a>
           <a className="button secondary" href="/iletisim/">Ücretsiz Ön Analiz İsteyin <Arrow /></a>
         </div>
       </div>
