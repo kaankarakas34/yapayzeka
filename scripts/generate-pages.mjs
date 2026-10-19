@@ -1524,7 +1524,7 @@ const allSlugs = Object.keys(pages)
 
 // Track pages for sitemap & llms.txt
 const sitemapEntries = [
-  { url: 'https://www.yapayzekadareklam.com/', priority: '1.0', changefreq: 'daily', lastmod: '2026-10-09' }
+  { url: 'https://www.yapayzekadareklam.com/', priority: '1.0', changefreq: 'daily', lastmod: '2026-10-19' }
 ]
 
 const categorizedForLlms = {
@@ -1545,7 +1545,7 @@ for (const [slug, [title, description, staticHtml]] of Object.entries(pages)) {
   // Prioritize sitemap
   const priority = isLegal ? '0.3' : isService ? '0.9' : slug.startsWith('blog/') || isNews ? '0.8' : '0.85'
   const changefreq = isNews ? 'daily' : slug.startsWith('blog/') ? 'weekly' : 'monthly'
-  sitemapEntries.push({ url, priority, changefreq, lastmod: '2026-10-09' })
+  sitemapEntries.push({ url, priority, changefreq, lastmod: '2026-10-19' })
 
   // Categorize for llms.txt
   if (isService) categorizedForLlms.hizmetler.push({ url, title, description })
@@ -1559,7 +1559,7 @@ for (const [slug, [title, description, staticHtml]] of Object.entries(pages)) {
     name: title,
     headline: isArticle ? title : undefined,
     datePublished: isArticle ? (isNews ? '2026-09-29' : '2026-09-29') : undefined,
-    dateModified: '2026-10-09',
+    dateModified: '2026-10-19',
     description,
     url,
     image: 'https://www.yapayzekadareklam.com/images/ai-karar-aninda-reklam.png',
