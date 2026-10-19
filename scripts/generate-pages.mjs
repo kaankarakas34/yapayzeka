@@ -374,6 +374,11 @@ const pages = {
         <p>Kullanıcının diyalogdaki problemine anında cevap veren şeffaf bir landing page kullanılır.</p>
         <h2>ChatGPT Ads ile GEO aynı şey mi?</h2>
         <p>Hayır. Sponsorlu reklam bütçeyle satın alınır; GEO ise organik anlaşılabilirlik çalışmasıdır. Detaylı ayrım için <a href="/blog/chatgpt-ads-geo-farki/">ChatGPT Ads ve GEO Farkı</a> yazımızı okuyun.</p>
+        <div class="actions">
+          <a href="/yapay-zeka-platformlarinda-reklam/">Yapay Zekâ Platformları Karşılaştırması</a>
+          <a href="/chatgpt-reklam-verme/">ChatGPT Reklam Verme Adımları</a>
+          <a href="/iletisim/">Strateji ve Teklif Alın</a>
+        </div>
       </main>
     `
   ],
@@ -505,6 +510,11 @@ const pages = {
         <p>Sektör rekabeti, coğrafi hedefleme ve kullanıcının satın alma niyetinin derinliği maliyetleri belirler.</p>
         <h2>Test bütçesi nasıl kurulur?</h2>
         <p>İlk 30 gün için kontrollü bir öğrenme bütçesiyle başlayıp kazanan bağlamlar ölçeklenir.</p>
+        <div class="actions">
+          <a href="/chatgpt-reklam-fiyatlari/">Fiyat Matrisi ve Paketler</a>
+          <a href="/chatgpt-reklamlari/">ChatGPT Reklam Yönetimi</a>
+          <a href="/iletisim/">Teklif ve Bütçe Planı</a>
+        </div>
       </main>
     `
   ],

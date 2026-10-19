@@ -1117,7 +1117,10 @@ function BlogCostPage() {
           <p style={{ color: 'var(--chat-text-secondary)', marginBottom: '1.8rem', maxWidth: '600px', margin: '0 auto 1.8rem', lineHeight: 1.7 }}>
             <a href="/chatgpt-reklamlari/">ChatGPT reklam yönetimi</a> hizmetimiz kapsamında bütçe simülasyonunuzu hazırlayalım.
           </p>
-          <a className="button primary" href="/iletisim/">Teklif ve Bütçe Planı İsteyin <Arrow /></a>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a className="button primary" href="/iletisim/">Teklif ve Bütçe Planı İsteyin <Arrow /></a>
+            <a className="button secondary" href="/chatgpt-reklam-fiyatlari/">Fiyat Matrisini İnceleyin <Arrow /></a>
+          </div>
         </div>
       </div>
     </Detail>
