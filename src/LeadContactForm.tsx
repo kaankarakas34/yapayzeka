@@ -76,11 +76,43 @@ function LeadContactForm({
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const fd = new FormData(e.currentTarget)
-    const name = fd.get('name') as string
-    const email = fd.get('email') as string
-    const phone = fd.get('phone') as string
-    const company = (fd.get('company') as string) || '-'
-    const message = (fd.get('message') as string) || '-'
+    const name = (fd.get('name') as string)?.trim()
+    const email = (fd.get('email') as string)?.trim()
+    const phone = (fd.get('phone') as string)?.trim()
+    const company = ((fd.get('company') as string) || '-').trim()
+    const message = ((fd.get('message') as string) || '-').trim()
+
+    // Persist lead to serverless backend
+    try {
+      fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          company,
+          service: selectedService,
+          budget: selectedBudget,
+          message,
+          sourceUrl: typeof window !== 'undefined' ? window.location.href : '',
+        }),
+        keepalive: true,
+      }).catch((err) => {
+        console.warn('Lead capture API error:', err)
+      })
+    } catch {
+      // ignore
+    }
+
+    // Trigger GA4 generate_lead conversion event
+    if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'generate_lead', {
+        event_category: 'lead_form',
+        event_label: selectedService,
+        value: selectedBudget,
+      })
+    }
 
     const formattedMessage = [
       '🚀 *Yapay Zekâda Reklam & ChatGPT Ön Analiz Talebi*',
@@ -123,9 +155,9 @@ function LeadContactForm({
             <div className="success-icon-wrap">
               <CheckCircleIcon />
             </div>
-            <h3>Talebiniz Başarıyla Hazırlandı!</h3>
+            <h3>Talebiniz Başarıyla Alındı ve Kaydedildi!</h3>
             <p>
-              Mesajınız hazırlandı. Talebinizin bize ulaşması için açılan WhatsApp penceresinde Gönder düğmesine basın.
+              Talebiniz ekibimize iletildi. Görüşmeyi WhatsApp üzerinden anında başlatmak için açılan pencerede Gönder düğmesine basabilirsiniz.
               Görüşme penceresi açılmadıysa aşağıdaki butonla devam edebilirsiniz:
             </p>
             <div className="success-actions">

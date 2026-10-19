@@ -40,7 +40,7 @@ node scripts/seo-live-check.mjs
 
 ## YZR-04: Ölçüm ve iddia kontrolü
 
-- WhatsApp formundaki “mesaj iletildi” metni düzeltildi. Form yalnız mesajı hazırlar; kullanıcı WhatsApp'ta Gönder'e basmalıdır. CRM kaydı ve nitelikli lead ölçümü henüz kurulmadı.
+- `src/LeadContactForm.tsx` formu sunucu taraflı `/api/lead` API endpoint'ine bağlandı. Form gönderildiğinde veriler arka planda SMTP ile iletilir, GA4 `generate_lead` dönüşüm olayı tetiklenir ve kullanıcı WhatsApp görüşmesine yönlendirilir.
 - Güncel resmî kaynakların kontrolüyle minimum bütçe iddiası düzeltildi: para birimine bağlı günlük minimum ile ajansın örnek aylık pilot bütçesi ayrıldı.
 - Context Hints'in negatif anahtar kelime gibi kesin hariç tutma yaptığı iddiası rehber/hizmet metinlerinden kaldırıldı. Ad Group ile Campaign alanlarının panel tablosundaki ayrımı düzeltildi.
 - Fiyat ve Context Hints sayfalarında hem görünen React içeriği hem generator'daki statik HTML güncellendi. Diğer ürün/politika iddialarının kontrol listesi `claim-register.md` içinde.

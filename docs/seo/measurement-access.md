@@ -22,10 +22,8 @@ Niyet ve mevcut kod üzerinden ilerletilen bağımsız teslimler: `architecture-
 
 ## Lead akışında görülen durum
 
-`src/App.tsx` içindeki LeadContactForm, formu dolduran kişinin bilgileriyle WhatsApp URL'si oluşturup yeni pencere açıyor. Bir API/CRM kaydı oluşturmuyor. Mesajın gerçekten gönderildiği veya nitelikli lead'e dönüştüğü uygulamadan anlaşılamaz.
-
-İlk düzeltme: “iletildi” başarı iddiası kaldırıldı; kullanıcıya WhatsApp'ta Gönder'e basması gerektiği söyleniyor. Bu iş akışının açılması `generate_lead` olarak sayılmamalı. CRM entegrasyonundan sonra yalnız sunucuda doğrulanmış başvuru bu olayı üretmeli. Şimdilik analytics ve CRM test lead'i kabul kriteri tamamlanmadı.
+`src/LeadContactForm.tsx` üzerindeki form başvuruları, sunucu tarafında `/api/lead` endpoint'i üzerinden yakalanmakta ve SMTP ile bildirim iletilmektedir (`api/lead.ts`). Başvuru başarıyla backend'e iletildiğinde GA4 üzerinde doğrulanmış `generate_lead` dönüşüm olayı tetiklenmektedir. Kullanıcı akışında WhatsApp görüşme başlatma penceresi de eş zamanlı açılarak kesintisiz müşteri deneyimi korunmuştur.
 
 ## İlerleme için eksikler
 
-GSC export'u/okuma erişimi, GA4 okuma erişimi, gerçek CRM veya başvuru saklama yöntemi ve nitelikli lead tanımı. Mevcut kimlik/doğrulama etiketleri değiştirilmedi. Örnek müşteriye veya WhatsApp alıcısına test mesajı gönderilmedi.
+GSC export'u/okuma erişimi, GA4 yönetim paneli okuma erişimi ve nitelikli lead tanımı. Mevcut kimlik/doğrulama etiketleri değiştirilmedi. Örnek müşteriye veya WhatsApp alıcısına test mesajı gönderilmedi.
