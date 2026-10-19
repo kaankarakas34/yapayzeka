@@ -1,0 +1,17 @@
+{
+  "name": "Yapay Zekâda Reklam",
+  "short_name": "YZR",
+  "description": "ChatGPT Ads ve Yapay Zekâ Reklam Ajansı",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0f17",
+  "theme_color": "#10a37f",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
