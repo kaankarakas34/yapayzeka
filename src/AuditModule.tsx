@@ -277,14 +277,14 @@ export function AuditModule({ standalone = false }: { standalone?: boolean }) {
           <div className="audit-form-hero">
             <div className="live-engine-pill">
               <span className="live-dot-pulse"></span>
-              <span>CANLI AI DENETİM MOTORU v4.2 // ÇEVRİMİÇİ</span>
+              <span>AI GÖRÜNÜRLÜK DENETİM SİMÜLATÖRÜ v4.2 // ÇEVRİMİÇİ</span>
             </div>
             <Heading className="audit-hero-title">
               Web Sitenizin <span className="text-emerald-400">Yapay Zekâ Görünürlüğünü</span> Test Edin
             </Heading>
             <p className="audit-hero-desc">
               ChatGPT, Perplexity, Gemini ve Claude motorlarında sektörünüz arandığında markanız tavsiye ediliyor mu?
-              Aşağıdaki canlı tarayıcı konsoluna web sitenizi girin; 60 saniyede gerçek zamanlı teşhis edin.
+              Aşağıdaki simülasyon konsoluna web sitenizi girin; 60 saniyede algoritmik teşhis raporunuzu oluşturun.
             </p>
           </div>
 
@@ -701,6 +701,13 @@ export function AuditModule({ standalone = false }: { standalone?: boolean }) {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Metodoloji ve Şeffaflık Notu (YZR-14) */}
+          <div style={{ marginTop: '2.5rem', marginBottom: '2.5rem', padding: '1.2rem 1.6rem', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '12px', border: '1px solid var(--chat-border)', fontSize: '0.88rem', color: 'var(--chat-text-muted)', lineHeight: 1.65 }}>
+            <p style={{ margin: 0 }}>
+              <strong style={{ color: '#ffffff' }}>Metodoloji ve Şeffaflık Notu (YZR-14):</strong> Bu denetim aracı, web sitenizin varlık netliği (Entity), taranabilirlik, Answer Engine mimarisi ve EEAT güven kriterlerini sektörel parametrelerle modelleyen bir ön analiz simülasyonudur. Büyük dil modelleri (LLM) dinamik ve olasılıksal çalıştığından gerçek kullanıcı yanıtları prompt yapısına, arama geçmişine ve modele göre değişkenlik gösterebilir; bu rapor deterministik bir sıralama taahhüdü değil, aksiyona dönüştürülebilir bir optimizasyon yol haritasıdır.
+            </p>
           </div>
 
           {/* CTA Dönüşüm Kartı */}
