@@ -7,7 +7,7 @@ const origin = option('--origin', 'https://www.yapayzekadareklam.com')
 const output = resolve(option('--output', 'output/seo/live-baseline.json'))
 const sitemap = await readFile('public/sitemap.xml', 'utf8')
 const paths = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => new URL(m[1]).pathname)
-paths.push('/robots.txt', '/sitemap.xml', '/yzr-seo-nonexistent-check/')
+paths.push('/robots.txt', '/sitemap.xml', '/llms.txt', '/yzr-seo-nonexistent-check/')
 const results = []
 const robotsMeta = (html) => [...html.matchAll(/<meta\b[^>]*>/gi)].flatMap(([tag]) => {
   const attributes = Object.fromEntries([...tag.matchAll(/([\w-]+)\s*=\s*(["'])(.*?)\2/g)].map(match => [match[1].toLowerCase(), match[3]]))
