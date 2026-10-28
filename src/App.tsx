@@ -1,5 +1,7 @@
 import type { ComponentType } from 'react'
 import type { ArticleProps } from './NewArticles'
+import newsRoutePaths from './content/news-route-paths.json'
+import guideRoutePaths from './content/guide-route-paths.json'
 
 const articleRoutes: Record<string, () => Promise<ComponentType<ArticleProps>>> = {
   '/chatgpt-reklam-verme': () => import('./NewsAndGuides').then(module => module.ChatGPTGuideUpdatedPage),
@@ -8,7 +10,6 @@ const articleRoutes: Record<string, () => Promise<ComponentType<ArticleProps>>> 
   '/chatgpt-reklam-fiyatlari': () => import('./NewsAndGuides').then(module => module.ChatGPTPriceUpdatedPage),
   '/haberler/chatgpt-ads-60-ulkeye-ulasti': () => import('./NewsAndGuides').then(module => module.ChatGptAds60UlkePage),
   '/haberler/sponsored-agents-duyuruldu': () => import('./NewsAndGuides').then(module => module.SponsoredAgentsPage),
-  '/haberler': () => import('./NewsAndGuides').then(module => module.HaberlerIndexPage),
   '/blog/markam-chatgptde-neden-gorunmuyor': () => import('./NewArticles').then(module => module.MarkamNedenGorunmuyorPage),
   '/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir': () => import('./NewArticles').then(module => module.KaynakGosterilmekIcinSitePage),
   '/blog/geo-performansi-nasil-olculur': () => import('./NewArticles').then(module => module.GeoPerformansiNasilOlculurPage),
@@ -27,6 +28,7 @@ const articleRoutes: Record<string, () => Promise<ComponentType<ArticleProps>>> 
 export async function loadPage(): Promise<ComponentType> {
   const path = location.pathname.replace(/\/+$/, '') || '/'
   if (path === '/') return (await import('./Home')).default
+  if (path === '/haberler' || path === '/rehber' || newsRoutePaths.includes(path) || guideRoutePaths.includes(path)) return (await import('./NewsPages')).default
   const loadArticle = articleRoutes[path]
   if (loadArticle) {
     const [{ Detail, Arrow }, Article] = await Promise.all([import('./DetailLayout'), loadArticle()])

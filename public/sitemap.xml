@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.yapayzekadareklam.com/</loc>
     <lastmod>2026-10-19</lastmod>
@@ -20,7 +20,8 @@
   </url>
   <url>
     <loc>https://www.yapayzekadareklam.com/chatgptde-markam-nasil-cikar/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/rehber/chatgpt-markami-nasil-onerir.png</image:loc></image:image>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -32,13 +33,15 @@
   </url>
   <url>
     <loc>https://www.yapayzekadareklam.com/chatgpt-seo/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/rehber/yapay-zeka-seo-teknikleri.png</image:loc></image:image>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.yapayzekadareklam.com/chatgptde-web-sitem-neden-cikmiyor/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/rehber/chatgptde-cikmak.png</image:loc></image:image>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -68,12 +71,6 @@
   </url>
   <url>
     <loc>https://www.yapayzekadareklam.com/chatgpt-reklam-fiyatlari/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.yapayzekadareklam.com/chatgpt-reklamlari-turkiye/</loc>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -117,12 +114,14 @@
   <url>
     <loc>https://www.yapayzekadareklam.com/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/</loc>
     <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/rehber/llms-txt-robots-schema.png</image:loc></image:image>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.yapayzekadareklam.com/blog/geo-performansi-nasil-olculur/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/rehber/yapay-zeka-gorunurluk-olcumu.png</image:loc></image:image>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -235,14 +234,8 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.yapayzekadareklam.com/haberler/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://www.yapayzekadareklam.com/haberler/chatgpt-ads-60-ulkeye-ulasti/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -273,6 +266,214 @@
   <url>
     <loc>https://www.yapayzekadareklam.com/chatgpt-reklam-ajansi-nasil-secilir/</loc>
     <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/haberler/chatgpt-ads-89-ulke-100-bin-reklamveren/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/haberler/chatgpt-ads-89-ulke-100-bin-reklamveren.png</image:loc></image:image>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/haberler/chatgpt-reklam-algoritmasi-nasil-calisiyor/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/haberler/chatgpt-reklam-algoritmasi-nasil-calisiyor.png</image:loc></image:image>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/haberler/chatgpt-ads-otomatik-reklam-iyilestirmeleri/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/haberler/chatgpt-ads-otomatik-reklam-iyilestirmeleri.png</image:loc></image:image>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/haberler/chatgpt-gorsel-reklam-formati/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/haberler/chatgpt-gorsel-reklam-formati.png</image:loc></image:image>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/haberler/chatgpt-ads-reklam-olcumu/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/haberler/chatgpt-ads-reklam-olcumu.png</image:loc></image:image>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/haberler/google-ai-mode-kaynak-baglantilari/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/haberler/google-ai-mode-kaynak-baglantilari.png</image:loc></image:image>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/haberler/google-ai-overviews-ticari-aramalar-2026/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/haberler/google-ai-overviews-ticari-aramalar-2026.png</image:loc></image:image>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/haberler/chatgpt-ve-google-ai-trafik-arastirmasi/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/haberler/chatgpt-ve-google-ai-trafik-arastirmasi.png</image:loc></image:image>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/haberler/gemini-isletmeler-pazarlama-araclari-2026/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/haberler/gemini-isletmeler-pazarlama-araclari-2026.png</image:loc></image:image>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/haberler/google-ads-yapay-zeka-yorum-ozetleri/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/haberler/google-ads-yapay-zeka-yorum-ozetleri.png</image:loc></image:image>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/haberler/google-smart-bidding-exploration-pmax-shopping/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/haberler/google-smart-bidding-exploration-pmax-shopping.png</image:loc></image:image>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/haberler/chatgpt-sanal-kiyafet-deneme-alisveris/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/haberler/chatgpt-sanal-kiyafet-deneme-alisveris.png</image:loc></image:image>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/haberler/gpt-6-intelligent-ui-chatgpt/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/haberler/gpt-6-intelligent-ui-chatgpt.png</image:loc></image:image>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/haberler/gemini-4-argon-ekim-2026/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/haberler/gemini-4-argon-ekim-2026.png</image:loc></image:image>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/haberler/claude-haiku-5-5-ai-agent-maliyeti/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/haberler/claude-haiku-5-5-ai-agent-maliyeti.png</image:loc></image:image>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/haberler/facebook-algoritmasi-yapay-zeka-ilgi-alanlari/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/haberler/facebook-algoritmasi-yapay-zeka-ilgi-alanlari.png</image:loc></image:image>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/chatgpt-reklamlari-turkiye/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/haberler/chatgpt-ads-turkiye-2026.png</image:loc></image:image>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/haberler/openai-devday-2026-chatgpt-ai-agent/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/haberler/openai-devday-2026-chatgpt-ai-agent.png</image:loc></image:image>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/rehber/geo-nedir/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/rehber/geo-nedir.png</image:loc></image:image>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/rehber/yapay-zekada-nasil-cikarim/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/rehber/yapay-zekada-nasil-cikarim.png</image:loc></image:image>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/rehber/marka-otoritesi-yapay-zeka/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/rehber/marka-otoritesi-yapay-zeka.png</image:loc></image:image>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/rehber/chatgpt-urun-onerileri/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/rehber/chatgpt-urun-onerileri.png</image:loc></image:image>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/rehber/google-ai-mode-geo/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/rehber/google-ai-mode-geo.png</image:loc></image:image>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/rehber/perplexityde-cikmak/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/rehber/perplexityde-cikmak.png</image:loc></image:image>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/rehber/yerel-isletmeler-yapay-zeka/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/rehber/yerel-isletmeler-yapay-zeka.png</image:loc></image:image>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/rehber/b2b-geo/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/rehber/b2b-geo.png</image:loc></image:image>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/rehber/geo-ajansi-nasil-secilir/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/rehber/geo-ajansi-nasil-secilir.png</image:loc></image:image>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/rehber/geo-30-gunluk-plan/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <image:image><image:loc>https://www.yapayzekadareklam.com/images/rehber/geo-30-gunluk-plan.png</image:loc></image:image>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/haberler/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.yapayzekadareklam.com/rehber/</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>

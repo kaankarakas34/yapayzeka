@@ -7,11 +7,12 @@
     "dev": "vite --host 127.0.0.1",
     "prebuild": "node scripts/generate-pages.mjs",
     "build": "tsc && vite build",
-    "postbuild": "node scripts/seo-audit.mjs --root dist --output output/seo/build-gate.json && node scripts/seo-bundle-audit.mjs",
+    "postbuild": "node scripts/seo-audit.mjs --root dist --output output/seo/build-gate.json && node scripts/seo-bundle-audit.mjs && node scripts/seo-news-audit.mjs",
     "seo:audit": "node scripts/seo-audit.mjs",
     "seo:live": "node scripts/seo-live-check.mjs",
     "seo:bots": "node scripts/seo-bot-check.mjs",
     "seo:bundle": "node scripts/seo-bundle-audit.mjs",
+    "seo:news": "node scripts/seo-news-audit.mjs",
     "preview": "vite preview"
   },
   "devDependencies": {

@@ -225,6 +225,10 @@ function ChatGptSidebar({
               <LibraryIcon />
               <span>Bilgi Merkezi & Rehberler</span>
             </a>
+            <a href="/rehber/" className={`sidebar-quick-link ${isItemActive('/rehber/') ? 'active' : ''}`} onClick={handleLinkClick}>
+              <LibraryIcon />
+              <span>GEO Uygulama Rehberleri</span>
+            </a>
             <a href="/haberler/" className={`sidebar-quick-link ${isItemActive('/haberler/') ? 'active' : ''}`} onClick={handleLinkClick}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2" />
@@ -403,6 +407,7 @@ function Footer() {
           <a href="/haberler/">Haberler & Resmî Duyurular</a>
           <a href="/hakkimizda/">Hakkımızda</a>
           <a href="/blog/">Bilgi Merkezi</a>
+          <a href="/rehber/">GEO Rehberleri</a>
           <a href="/sozluk/">SEO, GEO ve Reklam Sözlüğü</a>
           <a href="/chatgpt-reklamlari-nerede-gorunur/">Reklamlar Nerede Görünür?</a>
           <a href="/chatgpt-reklam-verme-sartlari/">Reklam Verme Şartları</a>

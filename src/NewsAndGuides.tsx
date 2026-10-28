@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { NewsUpdateNotice } from './NewsUpdateNotice'
 
 export interface NewsAndGuidesProps {
   Detail: React.ComponentType<{ eyebrow: string; title: string; summary: string; children: ReactNode; cta?: string }>
@@ -497,6 +498,7 @@ export function ChatGptAds60UlkePage({ Detail, Arrow }: NewsAndGuidesProps) {
       summary="OpenAI, ChatGPT Ads platformunun 60'tan fazla ülkede kullanılabilir olduğunu duyurdu. Güneydoğu Asya'daki 7 yeni pazar, Türkiye merkezli reklamverenlerin durumu ve ihracatçı markalar için stratejik adımlar."
       cta="Global ChatGPT Reklam Planı İsteyin"
     >
+      <NewsUpdateNotice />
       <div style={{ maxWidth: '920px', margin: '0 auto' }}>
         {/* Haber Meta Kutusu */}
         <div style={{ background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '14px', padding: '1.4rem 1.8rem', marginBottom: '2.5rem', display: 'flex', flexWrap: 'wrap', gap: '1.5rem', alignItems: 'center' }}>
@@ -983,125 +985,3 @@ export function SponsoredAgentsPage({ Detail, Arrow }: NewsAndGuidesProps) {
 }
 
 // ============================================================================
-// 6. HABERLER İNDEKS SAYFASI: /haberler/
-// ============================================================================
-export function HaberlerIndexPage({ Detail, Arrow }: NewsAndGuidesProps) {
-  const newsList = [
-    {
-      title: "ChatGPT Ads 60'tan Fazla Ülkeye Ulaştı: Türkiye İçin Ne Değişiyor?",
-      href: "/haberler/chatgpt-ads-60-ulkeye-ulasti/",
-      date: "29 Eylül 2026",
-      officialDate: "23 Eylül 2026",
-      tag: "KÜRESEL GENİŞLEME",
-      desc: "OpenAI, Güneydoğu Asya'daki 7 yeni pazara açıldığını ve ChatGPT Ads'in 60'tan fazla ülkede kullanılabilir olduğunu duyurdu. Türkiye merkezli şirketlerin erişim durumu ve ihracatçılar için etkileri."
-    },
-    {
-      title: "OpenAI Sponsored Agents'ı Duyurdu: Reklamdan Markayla Sohbete",
-      href: "/haberler/sponsored-agents-duyuruldu/",
-      date: "29 Eylül 2026",
-      officialDate: "16 Eylül 2026",
-      tag: "YENİ REKLAM FORMATI",
-      desc: "OpenAI, kullanıcıların reklama tıkladığında web sitesi yerine doğrudan markanın özel yapay zekâ asistanıyla sohbet başlattığı yeni Sponsored Agents formatını duyurdu. Kapsam ve alpha test detayları."
-    }
-  ]
-
-  return (
-    <Detail
-      eyebrow="Haberler & Analiz Masası"
-      title="Yapay Zekâ Reklamcılığı Haberleri & Resmî Duyurular"
-      summary="OpenAI Ads Manager, ChatGPT reklam ekosistemi, küresel pazar erişimleri ve üretken yapay zekâ pazarlamasına dair en güncel haberler, analizler ve resmî duyurular."
-      cta="Haber Bültenine Katılın"
-    >
-      <div style={{ maxWidth: '980px', margin: '0 auto' }}>
-        {/* Editoryal Standart Kutusu */}
-        <div style={{ background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '16px', padding: '1.8rem', marginBottom: '3rem', borderLeft: '4px solid var(--chat-green)' }}>
-          <h3 style={{ color: '#ffffff', fontSize: '1.2rem', marginBottom: '0.6rem' }}>📰 Editoryal Haber İlkelerimiz ve Kaynak Doğrulama</h3>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '0.98rem', marginBottom: '1rem' }}>
-            Yapay Zekâda Reklam Haber Masası, üretken yapay zekâ ve arama ekosistemindeki gelişmeleri bağımsız bir gözle izler. Haberlerimizde doğrulanmamış söylentilere, abartılı pazarlama iddialarına veya spekülasyonlara kesinlikle yer vermeyiz.
-          </p>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '0.98rem', margin: 0 }}>
-            Her haber analizimizde dört temel sorunun cevabını belgeleriyle ortaya koyarız: <strong>(1) Ne oldu?</strong> OpenAI veya ilgili platformun resmî açıklaması nedir? <strong>(2) Kimi etkiler?</strong> Hangi sektörler ve reklamverenler doğrudan etkilenir? <strong>(3) Türkiye'ye etkisi nedir?</strong> Yerel şirketler için hesap açılışı, fatura ve hedefleme durumu nedir? <strong>(4) Resmî kaynak neresidir?</strong> Doğrudan OpenAI resmî belgelerine veya yardım sayfalarına verilen bağlantılarla teyit edilir.
-          </p>
-        </div>
-
-        {/* Haber Listesi */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1.8rem', marginBottom: '3.5rem' }}>
-          {newsList.map((item) => (
-            <article key={item.href} style={{ background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '16px', padding: '1.8rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-              <div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem', gap: '0.5rem', flexWrap: 'wrap' }}>
-                  <span style={{ background: 'rgba(16, 163, 127, 0.15)', color: 'var(--chat-green-text)', padding: '0.3rem 0.7rem', borderRadius: '6px', fontSize: '0.75rem', fontWeight: 700 }}>
-                    {item.tag}
-                  </span>
-                  <span style={{ fontSize: '0.8rem', color: 'var(--chat-text-secondary)' }}>
-                    Duyuru: {item.officialDate}
-                  </span>
-                </div>
-                <h2 style={{ fontSize: '1.3rem', fontWeight: 700, lineHeight: 1.4, marginBottom: '0.8rem' }}>
-                  <a href={item.href} style={{ color: '#ffffff', textDecoration: 'none' }}>{item.title}</a>
-                </h2>
-                <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.95rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
-                  {item.desc}
-                </p>
-              </div>
-              <div>
-                <a href={item.href} style={{ color: 'var(--chat-green-text)', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
-                  Haberi Oku <Arrow />
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        {/* Yapay Zekâ Reklam Masası Neleri Takip Ediyor? */}
-        <section style={{ marginBottom: '3.5rem' }}>
-          <h2 style={{ fontSize: '1.6rem', fontWeight: 700, marginBottom: '1.2rem', color: '#ffffff' }}>
-            Yapay Zekâ Reklam Masası Hangi Gelişmeleri Takip Eder?
-          </h2>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.02rem', marginBottom: '1.5rem' }}>
-            Dijital reklamcılık, arama motoru sonuç sayfalarından (SERP) doğrudan yapay zekâ modellerinin konuşma pencerelerine doğru evrilmektedir. Ekibimiz bu geçiş sürecinde reklamverenleri ilgilendiren beş kritik alanı kesintisiz takip eder:
-          </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.2rem', marginBottom: '2rem' }}>
-            <div style={{ background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '12px', padding: '1.3rem' }}>
-              <h4 style={{ color: '#ffffff', margin: '0 0 0.5rem 0', fontSize: '1.05rem' }}>1. OpenAI Ads Manager Güncellemeleri</h4>
-              <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, margin: 0 }}>
-                Açılan yeni ülkeler, self-servis erişim listeleri, faturalandırma kuralları ve kampanya yönetim araçları.
-              </p>
-            </div>
-            <div style={{ background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '12px', padding: '1.3rem' }}>
-              <h4 style={{ color: '#ffffff', margin: '0 0 0.5rem 0', fontSize: '1.05rem' }}>2. Yeni Reklam Formatları & Alpha Programları</h4>
-              <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, margin: 0 }}>
-                Sponsorlu konuşma ajanları (Sponsored Agents), ürün feed entegrasyonları ve doğrudan satın alma butonları.
-              </p>
-            </div>
-            <div style={{ background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '12px', padding: '1.3rem' }}>
-              <h4 style={{ color: '#ffffff', margin: '0 0 0.5rem 0', fontSize: '1.05rem' }}>3. GEO & LLM Kaynak Gösterme Algoritmaları</h4>
-              <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, margin: 0 }}>
-                ChatGPT Search, Perplexity ve Google Gemini gibi modellerin markaları tavsiye etme ve kaynak gösterme kriterleri.
-              </p>
-            </div>
-            <div style={{ background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '12px', padding: '1.3rem' }}>
-              <h4 style={{ color: '#ffffff', margin: '0 0 0.5rem 0', fontSize: '1.05rem' }}>4. Türkiye Mevzuat ve Vergi Uyumu</h4>
-              <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, margin: 0 }}>
-                Yurt dışı reklam faturaları, 2 No'lu KDV beyannamesi, kurumsal kart harcamaları ve stopaj düzenlemeleri.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Diğer Rehberlere Bağlantı */}
-        <div style={{ background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '16px', padding: '2rem', textAlign: 'center' }}>
-          <h3 style={{ color: '#ffffff', fontSize: '1.4rem', marginBottom: '0.8rem' }}>Teknik Rehberlerimizi İncelediniz mi?</h3>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, maxWidth: '600px', margin: '0 auto 1.5rem' }}>
-            Haberlerin ötesinde uygulama adımlarını merak ediyorsanız kapsamlı kurulum rehberlerimizi inceleyin:
-          </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="/chatgpt-reklam-verme/" className="button secondary" style={{ fontSize: '0.9rem' }}>ChatGPT Reklam Kurulumu <Arrow /></a>
-            <a href="/openai-ads-manager/" className="button secondary" style={{ fontSize: '0.9rem' }}>OpenAI Ads Manager Paneli <Arrow /></a>
-            <a href="/chatgpt-reklam-fiyatlari/" className="button secondary" style={{ fontSize: '0.9rem' }}>Reklam Fiyatları 2026 <Arrow /></a>
-          </div>
-        </div>
-      </div>
-    </Detail>
-  )
-}

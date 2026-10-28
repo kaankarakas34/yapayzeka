@@ -207,6 +207,7 @@ export function KaynakGosterilmekIcinSitePage({ Detail, Arrow }: ArticleProps) {
         <p className="technical-geo-meta">
           Hazırlayan: <a href={guide.author.url}>{guide.author.name}</a> · Yayın: <time dateTime={guide.publishedAt}>{guide.publishedLabel}</time> · Güncelleme ve kaynak kontrolü: <time dateTime={guide.modifiedAt}>{guide.modifiedLabel}</time>
         </p>
+        <figure className="technical-geo-cover"><img src={guide.cover.src.replace('.png', '.webp')} alt={guide.cover.alt} width={1200} height={630} fetchPriority="high" /><figcaption>Konuya özel açıklayıcı illüstrasyon; platform ekran görüntüsü değildir.</figcaption></figure>
         <section className="note"><h2>Kısa yanıt</h2><p>{guide.answer}</p></section>
         <nav aria-label="Rehber içindekiler">
           <h2>Bu rehberde</h2>

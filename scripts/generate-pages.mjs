@@ -1,7 +1,23 @@
-import { mkdir, readFile, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, writeFile as writeFileRaw } from 'node:fs/promises'
 import { renderTechnicalGeo } from './render-technical-geo.mjs'
+import { renderNews, renderNewsIndex, renderGuideIndex, newsSchema, newsCollectionSchema, renderRss } from './render-news.mjs'
+
+// Avoid needless OneDrive writes; retry brief Windows file locks without hiding failures.
+const writeFile = async (file, content) => {
+  try { if (await readFile(file, 'utf8') === content) return } catch (error) { if (!['ENOENT','EBUSY','EPERM','UNKNOWN'].includes(error.code)) throw error }
+  for (let attempt = 0; ; attempt++) {
+    try { return await writeFileRaw(file, content) } catch (error) {
+      if (attempt >= 2 || !['EBUSY','EPERM','UNKNOWN'].includes(error.code)) throw error
+      await new Promise(resolve => setTimeout(resolve, 150 * (attempt + 1)))
+    }
+  }
+}
 
 const technicalGeoGuide = JSON.parse(await readFile('src/content/technical-geo-guide.json', 'utf8'))
+const newsCatalog = JSON.parse(await readFile('src/content/news-2026-10.json', 'utf8'))
+const guideCatalog = JSON.parse(await readFile('src/content/geo-guides-2026-10.json', 'utf8'))
+const editorialCatalog = [...newsCatalog, ...guideCatalog.filter(item => item.sourceNumber !== 7)]
+const newsBySlug = new Map(editorialCatalog.map(item => [item.slug, item]))
 
 const pages = {
   'chatgpt-reklamlari': [
@@ -470,29 +486,6 @@ const pages = {
           <a href="/iletisim/">Sektörünüze Özel Bütçe Senaryosu İsteyin</a>
           <a href="/chatgpt-reklam-verme/">ChatGPT Reklam Kurulum Rehberi</a>
           <a href="/openai-ads-manager/">OpenAI Ads Manager Rehberi</a>
-        </div>
-      </main>
-    `
-  ],
-  'chatgpt-reklamlari-turkiye': [
-    'ChatGPT Reklamları Türkiye: Erişim, Kurulum ve Uygunluk Rehberi',
-    'OpenAI Ads Manager Beta Türkiye durumu: Self-servis panel erişimi, tüzel kişilik, vergi ve faturalandırma gereksinimleri ve Türkçe kampanya yönetimi.',
-    `
-      <header class="site-header">
-        <nav><a href="/">Ana Sayfa</a> | <a href="/chatgpt-reklamlari/">ChatGPT Reklam Hizmeti</a> | <a href="/chatgpt-reklam-verme/">Reklam Kurulum Rehberi</a> | <a href="/blog/turkiyeden-chatgpt-reklam-hesabi/">Türkiye Hesap Açma</a></nav>
-      </header>
-      <main>
-        <h1>ChatGPT Reklamları Türkiye: Erişim, Kurulum ve Uygunluk Rehberi</h1>
-        <p>2026 yılı itibarıyla Türkiye, OpenAI Ads Manager Beta programında self servis kullanılabilir ülke listesindedir. Türk şirketleri resmî vergi bilgileriyle doğrudan reklam açabilir. Kapsamlı ajans yönetim hizmetimiz için <a href="/chatgpt-reklamlari/">ChatGPT Reklamları</a> sayfamıza göz atın.</p>
-        <h2>Türkiye'de ChatGPT Reklamları Durumu</h2>
-        <p>Türkçe dil modellerinde diyalog bağlamına uygun reklam yerleşimleri yayınlanabilmektedir.</p>
-        <h2>Başvuru ve Hesap Kurulumu İçin Gerekenler</h2>
-        <p>Vergi levhası, şirket tüzel kişiliği, kurumsal ödeme kartı ve OpenAI reklam politikalarına uygunluk.</p>
-        <h2>Faturalandırma ve 2 No'lu KDV</h2>
-        <p>Yurt dışı kaynaklı reklam hizmeti faturası için Türkiye mevzuatına uygun 2 No'lu KDV beyannamesi süreçleri işletilir.</p>
-        <div class="actions">
-          <a href="/chatgpt-reklamlari/">ChatGPT Reklam Yönetimi</a>
-          <a href="/iletisim/">Türkiye Kampanyanızı Başlatın</a>
         </div>
       </main>
     `
@@ -1182,51 +1175,6 @@ const pages = {
       </main>
     `
   ],
-  'haberler': [
-    'Yapay Zekâ ve ChatGPT Reklam Haberleri | Güncel Gelişmeler',
-    'OpenAI Ads Manager, ChatGPT reklam ekosistemi, küresel pazar erişimleri ve üretken yapay zekâ pazarlamasına dair en güncel haberler, analizler ve resmî duyurular.',
-    `
-      <header class="site-header">
-        <nav><a href="/">Ana Sayfa</a> | <a href="/chatgpt-reklam-verme/">ChatGPT Reklam Kurulumu</a> | <a href="/openai-ads-manager/">OpenAI Ads Manager</a> | <a href="/blog/">Bilgi Merkezi</a></nav>
-      </header>
-      <main>
-        <h1>Yapay Zekâ Reklamcılığı Haberleri & Resmî Duyurular</h1>
-        <p>OpenAI Ads Manager, ChatGPT reklam ekosistemi, küresel pazar erişimleri ve üretken yapay zekâ pazarlamasına dair en güncel haberler, analizler ve resmî duyurular.</p>
-        
-        <h2>Editoryal Haber Standartlarımız ve Doğrulama İlkelerimiz</h2>
-        <p>Yapay Zekâda Reklam Haber Masası, üretken yapay zekâ ve arama ekosistemindeki gelişmeleri bağımsız bir gözle izler. Haberlerimizde spekülasyonlara ve doğrulanmamış söylentilere yer vermeyiz. Yayın tarihi ile resmî duyuru tarihlerini şeffaf olarak belirtir; 'Ne oldu, kimi etkiler, Türkiye'ye etkisi nedir ve resmî kaynak neresidir?' metodolojisiyle sektörel analiz sunarız.</p>
-        <p>Her haber analizimiz doğrudan OpenAI yardım merkezi (help.openai.com) ve resmi duyuru bültenleriyle teyit edilir; Türkiye merkezli tüzel kişilerin vergi, hesap açılışı ve hedefleme hakları netleştirilir.</p>
-
-        <section class="articles-list">
-          <article>
-            <h3><a href="/haberler/chatgpt-ads-60-ulkeye-ulasti/">ChatGPT Ads 60'tan Fazla Ülkeye Ulaştı: Türkiye İçin Ne Değişiyor?</a></h3>
-            <p><strong>Yayın:</strong> 29 Eylül 2026 | <strong>Duyuru:</strong> 23 Eylül 2026</p>
-            <p>OpenAI, Güneydoğu Asya'daki 7 yeni pazara açıldığını ve ChatGPT Ads'in 60'tan fazla ülkede kullanılabilir olduğunu duyurdu. Türkiye merkezli şirketlerin erişim durumu ve ihracatçılar için yeni imkanlar.</p>
-          </article>
-          <article>
-            <h3><a href="/haberler/sponsored-agents-duyuruldu/">OpenAI Sponsored Agents'ı Duyurdu: Reklamdan Markayla Sohbete</a></h3>
-            <p><strong>Yayın:</strong> 29 Eylül 2026 | <strong>Duyuru:</strong> 16 Eylül 2026</p>
-            <p>OpenAI, kullanıcıların reklama tıkladığında harici web sitesi yerine doğrudan markanın özel yapay zekâ asistanıyla sohbet başlattığı yeni Sponsored Agents formatını duyurdu. Kapsam ve alpha test detayları.</p>
-          </article>
-        </section>
-
-        <h2>Yapay Zekâ Reklam Masası Neleri Takip Ediyor?</h2>
-        <p>Dijital reklamcılık, arama motoru sonuç sayfalarından (SERP) doğrudan yapay zekâ modellerinin konuşma pencerelerine doğru evrilmektedir. Ekibimiz bu geçiş sürecinde reklamverenleri ilgilendiren dört kritik alanı kesintisiz takip eder:</p>
-        <ul>
-          <li><strong>1. OpenAI Ads Manager Güncellemeleri:</strong> Açılan yeni ülkeler, self-servis erişim listeleri, faturalandırma kuralları ve kampanya yönetim araçları.</li>
-          <li><strong>2. Yeni Reklam Formatları & Alpha Programları:</strong> Sponsorlu konuşma ajanları (Sponsored Agents), ürün feed entegrasyonları ve doğrudan satın alma butonları.</li>
-          <li><strong>3. GEO & LLM Kaynak Gösterme Algoritmaları:</strong> ChatGPT Search, Perplexity ve Google Gemini gibi modellerin markaları tavsiye etme ve kaynak gösterme kriterleri.</li>
-          <li><strong>4. Türkiye Mevzuat ve Vergi Uyumu:</strong> Yurt dışı reklam faturaları, 2 No'lu KDV beyannamesi, kurumsal kart harcamaları ve stopaj düzenlemeleri.</li>
-        </ul>
-
-        <div class="actions">
-          <a href="/chatgpt-reklam-verme/">ChatGPT Reklam Verme Rehberi</a>
-          <a href="/openai-ads-manager/">OpenAI Ads Manager Rehberi</a>
-          <a href="/chatgpt-reklam-fiyatlari/">ChatGPT Reklam Fiyatları</a>
-        </div>
-      </main>
-    `
-  ],
   'haberler/chatgpt-ads-60-ulkeye-ulasti': [
     'ChatGPT Ads 60\'tan Fazla Ülkeye Ulaştı: Türkiye İçin Ne Değişiyor?',
     'ChatGPT Ads 60\'tan fazla ülkede açıldı. Güneydoğu Asya pazarları, Türkiye merkezli şirketlerin erişim durumu ve ihracatçılar için kritik etkiler.',
@@ -1488,6 +1436,13 @@ const pages = {
   ],
 }
 
+// Current news and the existing Türkiye guide share one reviewed content registry.
+for (const item of editorialCatalog) pages[item.slug] = [item.seoTitle, item.description, renderNews(item)]
+pages.haberler = ['Yapay Zekâ Reklam Haberleri: ChatGPT Ads, SEO ve GEO', 'ChatGPT Ads, Google, Meta ve AI aramalarındaki gelişmeleri kaynakları, tarihleri ve işletmeniz için uygulanabilir değerlendirmeleriyle takip edin.', renderNewsIndex(newsCatalog)]
+pages.rehber = ['GEO ve Yapay Zekâda Marka Görünürlüğü Rehberleri', 'GEO nedir, ChatGPT markanızı nasıl önerir? Teknik erişim, marka otoritesi, e-ticaret, yerel ve B2B görünürlük için kaynaklı uygulama rehberleri.', renderGuideIndex(guideCatalog)]
+const historicalNewsSlug = 'haberler/chatgpt-ads-60-ulkeye-ulasti'
+pages[historicalNewsSlug][2] = pages[historicalNewsSlug][2].replace(/(<h1[^>]*>[\s\S]*?<\/h1>)/, '$1<aside class="note" aria-label="Güncel gelişme"><p><strong>28 Ekim 2026 güncellemesi:</strong> Bu yazı Eylül ayındaki ülke genişlemesinin kaydıdır. OpenAI’ın 21 Ekim duyurusundaki 89 ülke ve 100 binden fazla reklamveren bilgisi için <a href="/haberler/chatgpt-ads-89-ulke-100-bin-reklamveren/">yeni genişleme haberini okuyun</a>.</p></aside>')
+
 let source = await readFile('index.html', 'utf8')
 const homeFaqs = JSON.parse(await readFile('src/content/home-faq.json', 'utf8'))
 const escapeHtml = (value) => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
@@ -1522,7 +1477,8 @@ const categorizedForLlms = {
 for (const [slug, [title, description, staticHtml]] of Object.entries(pages)) {
   const url = `https://www.yapayzekadareklam.com/${slug}/`
   const isTechnicalGeo = slug === technicalGeoGuide.slug
-  const modifiedAt = isTechnicalGeo ? technicalGeoGuide.modifiedAt : '2026-10-19'
+  const newsItem = newsBySlug.get(slug)
+  const modifiedAt = newsItem?.modifiedAt ?? (isTechnicalGeo ? technicalGeoGuide.modifiedAt : ['haberler','rehber',historicalNewsSlug].includes(slug) ? '2026-10-28' : '2026-10-19')
   const isService = slug.startsWith('hizmetler/') || ['chatgpt-reklamlari','geo-yapay-zeka-gorunurlugu','yapay-zeka-ile-reklam-uretimi','yapay-zeka-platformlarinda-reklam','yapay-zekada-reklam-ajansi'].includes(slug)
   const isNews = slug.startsWith('haberler/') && slug !== 'haberler'
   const isArticle = isNews || slug.startsWith('blog/') || ['chatgptde-markam-nasil-cikar','chatgpt-reklam-verme','chatgpt-reklam-fiyatlari','chatgpt-reklamlari-turkiye','openai-ads-manager','chatgpt-seo','chatgptde-web-sitem-neden-cikmiyor','sozluk','chatgpt-reklamlari-nerede-gorunur','chatgpt-reklam-verme-sartlari','chatgpt-reklam-ajansi-nasil-secilir'].includes(slug)
@@ -1531,7 +1487,7 @@ for (const [slug, [title, description, staticHtml]] of Object.entries(pages)) {
   // Prioritize sitemap
   const priority = isLegal ? '0.3' : isService ? '0.9' : slug.startsWith('blog/') || isNews ? '0.8' : '0.85'
   const changefreq = isNews ? 'daily' : slug.startsWith('blog/') ? 'weekly' : 'monthly'
-  sitemapEntries.push({ url, priority, changefreq, lastmod: modifiedAt })
+  sitemapEntries.push({ url, priority, changefreq, lastmod: modifiedAt, image: newsItem?.cover.src ?? (isTechnicalGeo ? technicalGeoGuide.cover.src : undefined) })
 
   // Categorize for llms.txt
   if (isService) categorizedForLlms.hizmetler.push({ url, title, description })
@@ -1540,15 +1496,17 @@ for (const [slug, [title, description, staticHtml]] of Object.entries(pages)) {
   else if (isLegal) categorizedForLlms.diger.push({ url, title, description })
   else categorizedForLlms.rehberler.push({ url, title, description })
 
-  const primarySchema = {
+  const primarySchema = newsItem ? newsSchema(newsItem) : slug === 'haberler' ? newsCollectionSchema(newsCatalog) : slug === 'rehber' ? newsCollectionSchema(guideCatalog, 'rehber') : {
     '@type': isNews ? 'NewsArticle' : isArticle ? 'Article' : isService ? 'Service' : 'WebPage',
     name: title,
     headline: isArticle ? title : undefined,
+    mainEntityOfPage: isTechnicalGeo ? { '@type': 'WebPage', '@id': url } : undefined,
+    inLanguage: isTechnicalGeo ? 'tr-TR' : undefined,
     datePublished: isArticle ? (isTechnicalGeo ? technicalGeoGuide.publishedAt : '2026-09-29') : undefined,
     dateModified: modifiedAt,
     description,
     url,
-    image: 'https://www.yapayzekadareklam.com/images/ai-karar-aninda-reklam.png',
+    image: isTechnicalGeo ? { '@type': 'ImageObject', url: `https://www.yapayzekadareklam.com${technicalGeoGuide.cover.src}`, width: 1200, height: 630 } : 'https://www.yapayzekadareklam.com/images/ai-karar-aninda-reklam.png',
     author: isArticle ? {
       '@type': 'Organization',
       name: isTechnicalGeo ? technicalGeoGuide.author.name : 'Yapay Zekâda Reklam',
@@ -1564,7 +1522,10 @@ for (const [slug, [title, description, staticHtml]] of Object.entries(pages)) {
     { '@type': 'ListItem', position: 1, name: 'Ana sayfa', item: 'https://www.yapayzekadareklam.com/' }
   ]
 
-  if (slug.startsWith('blog/') && slug !== 'blog') {
+  if (newsItem?.collection === 'guide') {
+    breadcrumbElements.push({ '@type': 'ListItem', position: 2, name: 'Rehberler', item: 'https://www.yapayzekadareklam.com/rehber/' })
+    breadcrumbElements.push({ '@type': 'ListItem', position: 3, name: title, item: url })
+  } else if (slug.startsWith('blog/') && slug !== 'blog') {
     breadcrumbElements.push({ '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.yapayzekadareklam.com/blog/' })
     breadcrumbElements.push({ '@type': 'ListItem', position: 3, name: title, item: url })
   } else if (slug.startsWith('haberler/') && slug !== 'haberler') {
@@ -1599,6 +1560,17 @@ for (const [slug, [title, description, staticHtml]] of Object.entries(pages)) {
     .replace(/<script id="page-schema" type="application\/ld\+json">[\s\S]*?<\/script>/, `<script id="page-schema" type="application/ld+json">${JSON.stringify(schema)}</script>`)
     .replace(/\s*<script id="faq-schema" type="application\/ld\+json">[\s\S]*?<\/script>/, '')
 
+  const imageItem = newsItem ?? (isTechnicalGeo ? technicalGeoGuide : null)
+  if (imageItem) {
+    const image = `https://www.yapayzekadareklam.com${imageItem.cover.src}`
+    html = html
+      .replace(/<meta property="og:type" content=".*?"\s*\/>/, '<meta property="og:type" content="article" />')
+      .replace(/<meta property="og:image" content=".*?"\s*\/>/, `<meta property="og:image" content="${image}" />\n    <meta property="og:image:width" content="1200" />\n    <meta property="og:image:height" content="630" />\n    <meta property="og:image:alt" content="${escapeHtml(imageItem.cover.alt)}" />`)
+      .replace(/<meta name="twitter:image" content=".*?"\s*\/>/, `<meta name="twitter:image" content="${image}" />`)
+      .replace('</head>', `    <meta property="article:published_time" content="${imageItem.publishedAt}" />\n    <meta property="article:modified_time" content="${imageItem.modifiedAt}" />\n    <meta name="twitter:image:alt" content="${escapeHtml(imageItem.cover.alt)}" />\n  </head>`)
+  }
+  if (newsItem || ['haberler','rehber'].includes(slug)) html = html.replace('</head>', '    <link rel="stylesheet" href="/src/news.css" />\n    <link rel="alternate" type="application/rss+xml" title="Yapay Zekâda Reklam Haberleri" href="/haberler/rss.xml" />\n  </head>')
+
   // Pre-render static semantic HTML into <div id="app"> so that curl/crawlers without JS see full content and H1
   if (staticHtml) {
     html = html.replace(/<div id="app">[\s\S]*?<\/div>\s*<script/i, `<div id="app">${staticHtml.trim()}</div>\n    <script`)
@@ -1610,16 +1582,18 @@ for (const [slug, [title, description, staticHtml]] of Object.entries(pages)) {
 
 // 1. Auto-generate public/sitemap.xml with lastmod dates
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${sitemapEntries.map(e => `  <url>
     <loc>${e.url}</loc>
-    <lastmod>${e.lastmod}</lastmod>
+    <lastmod>${e.lastmod}</lastmod>${e.image ? `\n    <image:image><image:loc>https://www.yapayzekadareklam.com${e.image}</image:loc></image:image>` : ''}
     <changefreq>${e.changefreq}</changefreq>
     <priority>${e.priority}</priority>
   </url>`).join('\n')}
 </urlset>
 `
 await writeFile('public/sitemap.xml', sitemapXml)
+await mkdir('public/haberler', { recursive: true })
+await writeFile('public/haberler/rss.xml', renderRss(newsCatalog))
 
 // 2. Auto-generate public/llms.txt with complete, categorized index
 let llmsTxt = `# Yapay Zekâda Reklam

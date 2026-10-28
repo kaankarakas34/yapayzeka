@@ -21,7 +21,7 @@ const entryKey = Object.keys(manifest).find(key => manifest[key].file === entryF
 if (!entryKey) throw new Error('Home HTML entry module is missing from the build manifest')
 visit(entryKey)
 visit('src/Home.tsx')
-const deferred = ['src/AuditModule.tsx', 'src/NewArticles.tsx', 'src/NewsAndGuides.tsx', 'src/DetailPages.tsx']
+const deferred = ['src/AuditModule.tsx', 'src/NewArticles.tsx', 'src/NewsAndGuides.tsx', 'src/DetailPages.tsx', 'src/NewsPages.tsx']
 const failures = deferred.filter(key => !manifest[key] || initial.has(key)).map(key => `Expected a separate, deferred chunk: ${key}`)
 const files = []
 for (const key of initial) {

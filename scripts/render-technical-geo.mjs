@@ -19,6 +19,7 @@ export function renderTechnicalGeo(guide) {
   <main id="main-content"><h1>${escapeHtml(guide.title)}</h1><p>${escapeHtml(guide.description)}</p>
   <article class="technical-geo-guide" aria-label="Teknik GEO uygulama rehberi">
     <p class="technical-geo-meta">Hazırlayan: ${link({ href: guide.author.url, label: guide.author.name })} · Yayın: <time datetime="${guide.publishedAt}">${escapeHtml(guide.publishedLabel)}</time> · Güncelleme ve kaynak kontrolü: <time datetime="${guide.modifiedAt}">${escapeHtml(guide.modifiedLabel)}</time></p>
+    <figure class="technical-geo-cover"><img src="${guide.cover.src.replace('.png', '.webp')}" alt="${escapeHtml(guide.cover.alt)}" width="1200" height="630" fetchpriority="high"><figcaption>Konuya özel açıklayıcı illüstrasyon; platform ekran görüntüsü değildir.</figcaption></figure>
     <section class="note"><h2>Kısa yanıt</h2><p>${escapeHtml(guide.answer)}</p></section>
     <nav aria-label="Rehber içindekiler"><h2>Bu rehberde</h2><ol>${guide.sections.map((section) => `<li>${link({ href: '#' + section.id, label: section.title.replace(/^\d+\.\s*/, '') })}</li>`).join('')}</ol></nav>
     ${sections}

@@ -1,0 +1,2450 @@
+[
+  {
+    "number": 101,
+    "sourceNumber": 1,
+    "collection": "guide",
+    "slug": "rehber/geo-nedir",
+    "proposedSlug": "rehber/geo-nedir",
+    "headline": "GEO Nedir? Yapay Zekâ Aramalarında Görünür Olmanın Yeni Kuralları",
+    "seoTitle": "GEO Nedir? SEO ile Farkı ve GEO Teknikleri | 2026",
+    "description": "GEO nedir, nasıl yapılır? ChatGPT, Google AI Mode ve diğer yapay zekâ aramalarında görünürlüğü artırmaya yönelik gerçekçi teknikler.",
+    "group": "geo",
+    "category": "Temel Rehber",
+    "kind": "Article",
+    "eventDate": "2026-10-28",
+    "eventLabel": "Kaynak kontrolü",
+    "publishedAt": "2026-10-28",
+    "modifiedAt": "2026-10-28",
+    "checkedAt": "2026-10-28",
+    "author": {
+      "name": "Yapay Zekâda Reklam",
+      "url": "/hakkimizda/"
+    },
+    "lead": "GEO, markaların ve içeriklerin üretken yapay zekâ yanıtlarında doğru biçimde bulunmasını, anlaşılmasını ve uygun bağlamlarda kaynak veya seçenek olarak değerlendirilmesini hedefleyen optimizasyon yaklaşımıdır.",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "GEO nedir ve neden konuşuluyor?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bir kullanıcı eskiden “en iyi CRM yazılımları” diye arama yapar, birden fazla sayfayı açar ve karşılaştırmayı kendisi yapardı. Şimdi aynı ihtiyacı “20 kişilik satış ekibim için WhatsApp entegrasyonu olan, Türkçe destek veren CRM öner” şeklinde bir yapay zekâya anlatabiliyor. Yanıt yalnızca bağlantı listesi değil; gereksinimleri yorumlayan bir özet, karşılaştırma ve bazen ürün önerisi olabiliyor. GEO (Generative Engine Optimization) tam bu yeni keşif biçimiyle ilgilenir."
+      },
+      {
+        "type": "paragraph",
+        "text": "GEO'nun amacı bir modele reklam metni ezberletmek değildir. Amaç, markayı ve sunduğu değeri dijital dünyada açık, doğrulanabilir ve ilgili sorulara cevap verebilir hâle getirmektir. Princeton araştırmacılarının 2024'te yayımladığı çalışmada bazı içerik düzenleme tekniklerinin araştırma ortamında üretken motorlarda görünürlüğü artırabildiği gösterildi. Çalışmadaki “%40'a kadar” sonucu bütün sektörler, modeller veya siteler için garanti değildir; deneyin koşullarına bağlı bir üst bulgudur."
+      },
+      {
+        "type": "heading",
+        "text": "SEO, AEO ve GEO aynı şey mi?"
+      },
+      {
+        "type": "paragraph",
+        "text": "SEO, arama motorlarının web sayfalarını keşfetmesi, anlaması ve uygun aramalarda göstermesi için yapılan çalışmaları kapsar. AEO, sorulara doğrudan yanıt veren kaynak olmayı hedefler. GEO ise bu bilgilerin üretken yapay zekâ cevaplarında nasıl kullanılabildiğini de izler. Üçünün ortak temeli iyi bilgi mimarisi, güvenilir içerik ve erişilebilir sayfalardır."
+      },
+      {
+        "type": "paragraph",
+        "text": "Google, AI Overviews ve AI Mode için ayrı bir “sihirli GEO işaretlemesi” gerekmediğini açıkça belirtiyor. Önemli olan Google Search'e uygun şekilde indekslenebilen, gerçek kullanıcıya katkı sunan içerikler üretmek. ChatGPT tarafında ise arama amacıyla kullanılan OAI-SearchBot'a erişim ve içeriklerin anlaşılabilirliği ayrı kontroller gerektirebiliyor."
+      },
+      {
+        "type": "heading",
+        "text": "Başlangıç için altı GEO tekniği"
+      },
+      {
+        "type": "list",
+        "text": "",
+        "ordered": true,
+        "items": [
+          "Arama niyetini tanımlayın. “En iyi yazılım” tek başına yetersizdir. Hangi kullanıcı, hangi bütçe, hangi ülkede, hangi probleme çözüm arıyor? Bunu kategori sayfalarında görünür kılın.",
+          "Marka varlığını netleştirin. Hakkımızda, ürün, hizmet, fiyatlandırma veya teklif koşulları, desteklenen bölgeler ve iletişim bilgileri çelişmesin.",
+          "Karşılaştırılabilir bilgi yayınlayın. Kimler için uygun, kimler için uygun değil, sınırlamalar, alternatifler ve seçim kriterleri anlaşılır olsun.",
+          "İlk elden kanıt ekleyin. Gerçek vaka, deney, metodoloji, ürün ekranı, ölçüm yöntemi ve tarihli veri; genel öneri listesinden daha değerlidir.",
+          "Teknik erişimi doğrulayın. Robots.txt, noindex, kanonik URL, metinsel içerik, iç bağlantılar ve sunucu yanıtlarını kontrol edin.",
+          "Görünürlüğü ölçün. Yapay zekâ kaynak bağlantısı, marka anılması ve tavsiye bağlamını ayrı ayrı kaydedin."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "GEO neden yalnızca blog yazmak değildir?"
+      },
+      {
+        "type": "paragraph",
+        "text": "İyi yazılmış bir makale, kötü yapılandırılmış bir markanın sorununu tek başına çözemez. Kullanıcı “İstanbul'da Almanca destek veren bir yazılım firması” aradığında sitenizde hizmet kapsamı veya dil seçenekleri yer almıyorsa model sizin uygunluğunuzu doğrulamakta zorlanabilir. E-ticarette güncel stok ve fiyat, yerel hizmetlerde konum, B2B'de referans verilebilir uzmanlık kritik olabilir."
+      },
+      {
+        "type": "heading",
+        "text": "GEO çalışması ne zaman sonuç verir?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Belirli bir gün veya sıralama garantisi yoktur. Tarama, indeksleme, dış kaynakların güncellenmesi, sorgu bağlamı ve model davranışı zamanla değişir. İlk 30 günde teknik eksikleri ve içerik boşluklarını azaltmak; sonraki dönemlerde atıf, önerilme bağlamı ve dönüşüm sinyallerini izlemek daha sağlıklı bir beklentidir."
+      }
+    ],
+    "editorial": "GEO'yu “ChatGPT'ye kendimizi nasıl söyletiriz?” sorusuyla sınırlamak, kullanıcıyı düşünmeden algoritmaya konuşmak demektir. Daha güçlü soru şu: “Bir alıcı bizim hakkımızda karar vermek için hangi kanıtlara ihtiyaç duyar ve bunları nerede bulur?” İşe o yanıtı düzenlemekle başlayın.",
+    "faq": [
+      {
+        "question": "GEO ile SEO birbirinin rakibi mi?",
+        "answer": "Hayır. GEO, sağlam SEO altyapısı üzerine markanın yapay zekâ yanıtlarında anlaşılması ve ölçülmesine odaklanır."
+      },
+      {
+        "question": "GEO yapmak için özel bir kod şart mı?",
+        "answer": "Hayır. Google AI özelliklerinde özel GEO işaretlemesi gerekmiyor. Geçerli yapılandırılmış veri ve teknik SEO yalnızca ilgili bilgileri daha anlaşılır kılabilir."
+      },
+      {
+        "question": "GEO ile ChatGPT beni kesin önerir mi?",
+        "answer": "Hayır. Öneriler kullanıcı ihtiyacına ve kullanılan kaynaklara göre değişir; görünürlük için garanti verilemez."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Google Search Central — Generative AI optimization guide",
+        "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — AI features and your website",
+        "url": "https://developers.google.com/search/docs/appearance/ai-features",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Princeton/ACM KDD 2024 — GEO: Generative Engine Optimization",
+        "url": "https://collaborate.princeton.edu/en/publications/geo-generative-engine-optimization/",
+        "kind": "Akademik araştırma"
+      }
+    ],
+    "related": [
+      {
+        "href": "/chatgptde-markam-nasil-cikar/",
+        "label": "ChatGPT Markamı Nasıl Önerir? Marka Önerilerinde Görünür Olma Rehberi"
+      },
+      {
+        "href": "/rehber/geo-30-gunluk-plan/",
+        "label": "30 Günde GEO Başlangıç Planı: Yapay Zekâda Görünürlük İçin Kontrol Listesi"
+      },
+      {
+        "href": "/blog/geo-performansi-nasil-olculur/",
+        "label": "Yapay Zekâ Görünürlüğü Nasıl Ölçülür? GEO KPI ve Raporlama Rehberi"
+      }
+    ],
+    "pillar": {
+      "href": "/geo-yapay-zeka-gorunurlugu/",
+      "label": "GEO danışmanlığı ve hizmet kapsamı"
+    },
+    "actions": [
+      "İlgili sayfalarınızda rehberdeki kontrolleri uygulayın; eksikleri URL ve tarih bilgisiyle kaydedin.",
+      "Değişiklikten sonra aynı sorgu ve ölçüm koşullarıyla tekrar kontrol edin; gözlem ile varsayımı ayrı raporlayın."
+    ],
+    "facts": [
+      [
+        "İçerik türü",
+        "Temel Rehber"
+      ],
+      [
+        "Amaç",
+        "GEO nedir"
+      ],
+      [
+        "Kapsam",
+        "Platformlara göre erişim, bilgi kalitesi ve ölçüm; tavsiye garantisi yok"
+      ]
+    ],
+    "scope": "GEO araştırmalarının sonuçları deney koşullarıyla sınırlıdır. %40’a kadar bulgu, her model veya site için beklenen artış değildir.",
+    "cover": {
+      "src": "/images/rehber/geo-nedir.png",
+      "alt": "GEO: Cevaplarda görünürlük: SEO, AEO ve GEO rehberi konulu özgün açıklayıcı illüstrasyon",
+      "lines": [
+        "GEO",
+        "Cevaplarda görünürlük",
+        "SEO, AEO ve GEO rehberi"
+      ]
+    }
+  },
+  {
+    "number": 102,
+    "sourceNumber": 2,
+    "collection": "guide",
+    "slug": "chatgptde-markam-nasil-cikar",
+    "proposedSlug": "rehber/chatgpt-markami-nasil-onerir",
+    "headline": "ChatGPT Markamı Nasıl Önerir? Marka Önerilerinde Görünür Olma Rehberi",
+    "seoTitle": "ChatGPT Markamı Nasıl Önerir? 12 Uygulanabilir Adım",
+    "description": "ChatGPT markamı nasıl önerir? Marka bilgisi, güven sinyalleri, karşılaştırma içerikleri ve teknik görünürlük adımları.",
+    "group": "geo",
+    "category": "Yüksek Niyetli Rehber",
+    "kind": "Article",
+    "eventDate": "2026-10-28",
+    "eventLabel": "Kaynak kontrolü",
+    "publishedAt": "2026-09-29",
+    "modifiedAt": "2026-10-28",
+    "checkedAt": "2026-10-28",
+    "author": {
+      "name": "Yapay Zekâda Reklam",
+      "url": "/hakkimizda/"
+    },
+    "lead": "ChatGPT tarafından önerilmenin garantili bir kayıt formu yoktur. Bir markanın ilgili kullanıcı ihtiyacına uygun, anlaşılabilir, erişilebilir ve güvenilir bilgiyle temsil edilmesi önerilme ihtimalini destekleyebilir.",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "ChatGPT bir markayı neden önerir?"
+      },
+      {
+        "type": "paragraph",
+        "text": "“İstanbul'da küçük işletmelere uygun CRM öner” ile “Almanya'ya satış yapan, 24 saat çağrı karşılayabilen yapay zekâ çözümü öner” soruları aynı markaları gerektirmez. Kullanıcının verdiği koşullar öneri setini değiştirebilir. Üstelik ChatGPT'nin genel metin üretimi, web araması ve alışveriş sonuçları aynı mekanizma değildir. Bir sayfanın kaynak olarak gösterilmesi, markanın doğrudan tavsiye edilmesi ya da ürününün alışveriş kartına alınması da ayrı olaylardır."
+      },
+      {
+        "type": "paragraph",
+        "text": "Bu nedenle amaç yalnızca “marka adım cevapta geçsin” olmamalı. Önce markanın hangi problem için, hangi müşteri tipi için, hangi ülkelerde ve hangi kanıtlarla iyi bir seçenek olduğunu anlatmak gerekir."
+      },
+      {
+        "type": "heading",
+        "text": "Bir markanın dijital kanıt haritası"
+      },
+      {
+        "type": "paragraph",
+        "text": "Markanız için aşağıdaki soruların açık cevaplarını tek bir dokümana çıkarın: Hizmetin tam adı nedir? Hangi sorunu çözer? Rakiplerinden hangi somut özelliklerle ayrılır? Hangi ölçekte işletmelere uygundur? Kimler için uygun değildir? Fiyat modeli nedir? Hangi dilleri veya bölgeleri destekler? Müşteriler hangi uygulama ve entegrasyonlardan yararlanır? Bu cevaplar sitenizin ana sayfası, hizmet sayfaları, SSS ve doğrulanabilir dış profillerinde tutarlı olmalıdır."
+      },
+      {
+        "type": "paragraph",
+        "text": "Örneğin “en iyi yapay zekâ satış asistanı” demek, ölçülemeyen bir iddiadır. Buna karşılık “inbound çağrıları karşılar, CRM'e görüşme özeti aktarır, uygun müşteriyi insan temsilciye devreder” gibi özellikler daha belirgin bir karşılaştırma zemini sunar. Sadece gerçekten var olan, test edilmiş yetenekleri yazın."
+      },
+      {
+        "type": "heading",
+        "text": "ChatGPT önerilerinde görünürlük için 12 adım"
+      },
+      {
+        "type": "list",
+        "text": "",
+        "ordered": true,
+        "items": [
+          "Hedef müşteri ve kullanım senaryosunu belirleyin.",
+          "Kurumsal tanımınızı tek bir net paragrafta yazın.",
+          "Hizmet ve ürün sayfalarını kullanım senaryosuna göre ayrıştırın.",
+          "Avantajların yanında gerçek sınırları da açıklayın.",
+          "Ekip, yazar, uzman, kuruluş ve iletişim bilgilerini doğrulanabilir kılın.",
+          "Mümkünse isimli müşteri izniyle yayımlanmış vaka analizi hazırlayın.",
+          "Fiyat veya teklif modelinin belirsizliklerini giderin.",
+          "Üçüncü taraflarda doğru ve tutarlı kurumsal profiller oluşturun.",
+          "Sitenin indekslenebilir ve metin olarak okunabilir olduğundan emin olun.",
+          "ChatGPT araması için OAI-SearchBot engellerini kontrol edin.",
+          "Aynı kullanıcı niyetini farklı biçimlerde sorarak görünürlüğü düzenli test edin.",
+          "Alıntılanan sayfaların yalnız trafik değil, nitelikli talep oluşturup oluşturmadığını ölçün."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "“ChatGPT'ye markamı öğretmek” mümkün mü?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Tek bir form doldurarak genel ChatGPT modeline bir şirketi kalıcı biçimde tavsiye ettiremezsiniz. Bir Custom GPT oluşturmak veya bir sohbet içinde markayı anlatmak da tüm kullanıcıların yanıtlarında markanın önerilmesini sağlamaz. Bunun yerine doğru kaynakların erişilebilirliğini ve markanın dijital ayak izini geliştirmek gerekir."
+      },
+      {
+        "type": "heading",
+        "text": "Ne tür içerikler daha anlamlıdır?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bir mali müşavirlik şirketi için “2026'da şirket kuruluşunda mali müşavir seçimi” rehberi; bir SaaS şirketi için “20 kişilik satış ekibi için CRM değerlendirme tablosu”; bir turizm şirketi için “havayolu, konaklama ve transfer kapsamı karşılaştırması” çok daha somut sorgulara cevap verir. İçeriğin çözüm odaklı olması ve satış sayfasına gerektiğinde bağlantı sunması önemlidir."
+      }
+    ],
+    "editorial": "Markalar yapay zekâya kendilerini övdürmeye değil, kullanıcıların onları doğru sebeplerle tercih edebilmesine yatırım yapmalı. Yanlış vaatlerle alınan bir görünürlük, potansiyel müşteri geldiğinde güven kaybına dönüşür.",
+    "faq": [
+      {
+        "question": "ChatGPT şirketleri neye göre önerir?",
+        "answer": "Tek bir kamuya açık evrensel sıralama formülü yoktur. Sorgu niyeti, bağlam ve kullanılan kaynaklar öneriyi etkileyebilir."
+      },
+      {
+        "question": "ChatGPT’ye para ödeyerek organik öneri alabilir miyim?",
+        "answer": "Organik öneri ile açıkça etiketlenen reklam ayrı ürünlerdir; reklam satın almak organik öneri garantisi değildir."
+      },
+      {
+        "question": "ChatGPT bizi neden tanımıyor?",
+        "answer": "Marka bilgileri yeni, parçalı, erişilemez veya doğrulanması zor olabilir. Önce web erişimi ve kurumsal bilgi tutarlılığını kontrol edin."
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenAI Developers — Overview of OpenAI Crawlers",
+        "url": "https://developers.openai.com/api/docs/bots",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "OpenAI Help — Shopping with ChatGPT Search",
+        "url": "https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — Organization structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/organization",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — Generative AI optimization guide",
+        "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        "kind": "Resmî belge"
+      }
+    ],
+    "related": [
+      {
+        "href": "/chatgptde-web-sitem-neden-cikmiyor/",
+        "label": "ChatGPT’de Çıkmak İçin Ne Yapılmalı? OAI-SearchBot ve SEO Kontrol Listesi"
+      },
+      {
+        "href": "/rehber/marka-otoritesi-yapay-zeka/",
+        "label": "Yapay Zekâ Markaları Nereden Tanır? Dijital Otorite ve Güven Sinyalleri"
+      },
+      {
+        "href": "/blog/geo-performansi-nasil-olculur/",
+        "label": "Yapay Zekâ Görünürlüğü Nasıl Ölçülür? GEO KPI ve Raporlama Rehberi"
+      }
+    ],
+    "pillar": {
+      "href": "/rehber/geo-nedir/",
+      "label": "GEO nedir? Ana rehber"
+    },
+    "actions": [
+      "İlgili sayfalarınızda rehberdeki kontrolleri uygulayın; eksikleri URL ve tarih bilgisiyle kaydedin.",
+      "Değişiklikten sonra aynı sorgu ve ölçüm koşullarıyla tekrar kontrol edin; gözlem ile varsayımı ayrı raporlayın."
+    ],
+    "facts": [
+      [
+        "İçerik türü",
+        "Yüksek Niyetli Rehber"
+      ],
+      [
+        "Amaç",
+        "ChatGPT markamı nasıl önerir"
+      ],
+      [
+        "Kapsam",
+        "Platformlara göre erişim, bilgi kalitesi ve ölçüm; tavsiye garantisi yok"
+      ]
+    ],
+    "scope": "Bu rehber uygulama ve değerlendirme yöntemini açıklar. Belirli bir AI yanıtı, sıralama, atıf veya satış sonucu garanti edilmez; örnekler gerçekleşmiş müşteri sonucu değildir.",
+    "cover": {
+      "src": "/images/rehber/chatgpt-markami-nasil-onerir.png",
+      "alt": "Markanı: doğru anlat: 12 uygulanabilir adım konulu özgün açıklayıcı illüstrasyon",
+      "lines": [
+        "Markanı",
+        "doğru anlat",
+        "12 uygulanabilir adım"
+      ]
+    }
+  },
+  {
+    "number": 103,
+    "sourceNumber": 3,
+    "collection": "guide",
+    "slug": "rehber/yapay-zekada-nasil-cikarim",
+    "proposedSlug": "rehber/yapay-zekada-nasil-cikarim",
+    "headline": "Yapay Zekâda Nasıl Çıkarım? ChatGPT, Gemini ve Copilot İçin Yol Haritası",
+    "seoTitle": "Yapay Zekâda Nasıl Çıkarım? 2026 Marka Görünürlük Rehberi",
+    "description": "Yapay zekâ arama sonuçlarında nasıl çıkılır? Teknik SEO, içerik stratejisi, kaynak gösterilme ve marka önerileri için uygulamalı rehber.",
+    "group": "geo",
+    "category": "Yüksek Niyetli Rehber",
+    "kind": "Article",
+    "eventDate": "2026-10-28",
+    "eventLabel": "Kaynak kontrolü",
+    "publishedAt": "2026-10-28",
+    "modifiedAt": "2026-10-28",
+    "checkedAt": "2026-10-28",
+    "author": {
+      "name": "Yapay Zekâda Reklam",
+      "url": "/hakkimizda/"
+    },
+    "lead": "Yapay zekâda görünür olmak için sayfaların erişilebilir olması, şirket ve ürün bilgilerinin net anlatılması, özgün kanıtlar sunulması ve sonuçların platform bazında ölçülmesi gerekir.",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Önce “çıkmak” derken neyi kastettiğinizi belirleyin"
+      },
+      {
+        "type": "paragraph",
+        "text": "Yapay zekâda çıkmak dört farklı anlama gelebilir: Bir yanıtın kaynak bağlantılarında sitenizin yer alması; şirket adınızın alternatifler arasında geçmesi; ürününüzün alışveriş kartında görünmesi; yapay zekâ üzerinden sitenize ziyaretçi gelmesi. Hepsi aynı KPI değildir. Kaynak olarak bir kez gösterilmek, düzenli tavsiye edilen marka olduğunuz anlamına gelmez."
+      },
+      {
+        "type": "heading",
+        "text": "Temel altyapı: tarama ve indeksleme"
+      },
+      {
+        "type": "paragraph",
+        "text": "Google Search Console'da indeks kapsamını, kanonik URL'leri ve Google'ın sayfayı gerçekten gördüğünü kontrol edin. Google AI Overviews ve AI Mode'da kaynak olabilmek için sayfanın Google Search'te indekslenebilir ve snippet gösterimine uygun olması gerekir. ChatGPT aramasında OAI-SearchBot erişimine bakın. Bing tarafında Bing Webmaster Tools doğrulamasını ve sayfaların indeks durumunu inceleyin."
+      },
+      {
+        "type": "paragraph",
+        "text": "Bir web sitesi tamamen istemci tarafında oluşturuluyorsa içerikler tarayıcı tarafından üretilene kadar görünmeyebilir; önemli metinlerin sunucu tarafında veya taranabilir HTML içinde mevcut olması, farklı sistemlerde okunurluğu kolaylaştırır. Bu, bütün JavaScript sitelerinin görünmez olduğu anlamına gelmez."
+      },
+      {
+        "type": "heading",
+        "text": "İçerik: tek kelime değil, karar sorusu hedefleyin"
+      },
+      {
+        "type": "paragraph",
+        "text": "“CRM” kelimesini yüz kez tekrar etmek yerine “WhatsApp destekli CRM seçerken KVKK, entegrasyon, kullanıcı sayısı ve maliyet nasıl değerlendirilir?” sorusuna cevap veren bir rehber hazırlayın. Ardından bu rehberden, konuyla ilgili ürün sayfasına net bir bağlantı verin. Her yazının farklı bir niyeti karşılaması önemlidir: tanım, yöntem, karşılaştırma, satın alma, ölçüm."
+      },
+      {
+        "type": "heading",
+        "text": "Dış kaynaklar: tanıtım mı, doğrulama mı?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Markanın kendi sitesinde yer alan iddialar değerlidir ama tek kanıt olmamalıdır. Gerçek müşteri değerlendirmesi, bağımsız inceleme, sektör yayını, lisans, sertifika ve doğrulanabilir ortaklıklar markanın kimliğini sağlamlaştırabilir. Bu kaynaklar için belirli bir tavsiye ağırlığı garanti edilemez. Sahte haber, satın alınmış değerlendirme ve kitlesel yapay mention üretimi sürdürülebilir bir strateji değildir."
+      },
+      {
+        "type": "heading",
+        "text": "Platform bazlı iş sırası"
+      },
+      {
+        "type": "paragraph",
+        "text": "ChatGPT: OAI-SearchBot, kurum ve ürün sayfaları, güncel özellikler, kullanım örnekleri ve e-ticaretse ürün feed uygunluğunu inceleyin. Google Gemini/AI Mode: Geleneksel Google SEO, Search Console, AI performans görünümü, yapılandırılmış veri tutarlılığı ve varsa Merchant Center/Business Profile durumuna bakın. Bing/Copilot: Bing Webmaster Tools AI Performance ve alıntılanan URL'lerden başlayın. Perplexity: Kaynak bağlantılarını kullanıcı oturumlarında elle doğrulayın; platform davranışını Bing veya Google ile aynı varsaymayın."
+      },
+      {
+        "type": "heading",
+        "text": "İlk 30 günün çıktısı ne olmalı?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bir teknik denetim raporu, 20–40 temsilî kullanıcı sorusundan oluşan test listesi, marka bilgi haritası, en az iki özgün araştırma veya vaka sayfası ve basit bir görünürlük panosu hazırlayın. Sitenin büyüklüğüne göre sayılar değişebilir. Mesele ilk ay yüzlerce makale yayımlamak değil, hangi sorular için güvenilir yanıt üretebildiğinizi kanıtlamaktır."
+      }
+    ],
+    "editorial": "Yapay zekâ aramasında sonuçlar her kullanıcıda aynı olmayabilir. Bu nedenle ekran görüntüsüyle tek seferlik başarı ilan etmek yerine tekrar edilebilir testler ve gerçek müşteri talepleri üzerinden değerlendirme yapılmalı.",
+    "faq": [
+      {
+        "question": "Yapay zekâda çıkmak ücretli mi?",
+        "answer": "Web sayfanızı arama sistemlerinin erişimine açmak için bir reklam satın almanız gerekmez. İçerik, teknik çalışma ve ölçümün operasyonel maliyeti olabilir."
+      },
+      {
+        "question": "Google’da görünmek ChatGPT’de görünmeyi garanti eder mi?",
+        "answer": "Hayır. Ayrı sistemler, erişim kuralları ve kaynak seçimleri söz konusu olabilir."
+      },
+      {
+        "question": "Yeni site yapay zekâda çıkabilir mi?",
+        "answer": "Evet, teknik olarak mümkündür; ancak keşif, indeksleme, güven ve kaynak kullanımının oluşması zaman alabilir."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Google Search Central — AI features and your website",
+        "url": "https://developers.google.com/search/docs/appearance/ai-features",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — Generative AI optimization guide",
+        "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "OpenAI Developers — Overview of OpenAI Crawlers",
+        "url": "https://developers.openai.com/api/docs/bots",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Microsoft Bing — AI Performance in Bing Webmaster Tools",
+        "url": "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/",
+        "kind": "Resmî belge"
+      }
+    ],
+    "related": [
+      {
+        "href": "/rehber/geo-30-gunluk-plan/",
+        "label": "30 Günde GEO Başlangıç Planı: Yapay Zekâda Görünürlük İçin Kontrol Listesi"
+      },
+      {
+        "href": "/chatgptde-web-sitem-neden-cikmiyor/",
+        "label": "ChatGPT’de Çıkmak İçin Ne Yapılmalı? OAI-SearchBot ve SEO Kontrol Listesi"
+      },
+      {
+        "href": "/rehber/google-ai-mode-geo/",
+        "label": "Google AI Overviews ve AI Mode’da Nasıl Çıkılır? 2026 GEO Rehberi"
+      }
+    ],
+    "pillar": {
+      "href": "/rehber/geo-nedir/",
+      "label": "GEO nedir? Ana rehber"
+    },
+    "actions": [
+      "İlgili sayfalarınızda rehberdeki kontrolleri uygulayın; eksikleri URL ve tarih bilgisiyle kaydedin.",
+      "Değişiklikten sonra aynı sorgu ve ölçüm koşullarıyla tekrar kontrol edin; gözlem ile varsayımı ayrı raporlayın."
+    ],
+    "facts": [
+      [
+        "İçerik türü",
+        "Yüksek Niyetli Rehber"
+      ],
+      [
+        "Amaç",
+        "yapay zekada nasıl çıkarım"
+      ],
+      [
+        "Kapsam",
+        "Platformlara göre erişim, bilgi kalitesi ve ölçüm; tavsiye garantisi yok"
+      ]
+    ],
+    "scope": "Bu rehber uygulama ve değerlendirme yöntemini açıklar. Belirli bir AI yanıtı, sıralama, atıf veya satış sonucu garanti edilmez; örnekler gerçekleşmiş müşteri sonucu değildir.",
+    "cover": {
+      "src": "/images/rehber/yapay-zekada-nasil-cikarim.png",
+      "alt": "Birden fazla: AI platformu: Marka görünürlüğü yol haritası konulu özgün açıklayıcı illüstrasyon",
+      "lines": [
+        "Birden fazla",
+        "AI platformu",
+        "Marka görünürlüğü yol haritası"
+      ]
+    }
+  },
+  {
+    "number": 104,
+    "sourceNumber": 4,
+    "collection": "guide",
+    "slug": "chatgptde-web-sitem-neden-cikmiyor",
+    "proposedSlug": "rehber/chatgptde-cikmak",
+    "headline": "ChatGPT’de Çıkmak İçin Ne Yapılmalı? OAI-SearchBot ve SEO Kontrol Listesi",
+    "seoTitle": "ChatGPT’de Çıkmak: OAI-SearchBot, SEO ve 10 Kontrol",
+    "description": "ChatGPT arama sonuçlarında çıkmak için OAI-SearchBot, robots.txt, indekslenebilir sayfalar ve içerik optimizasyonu adımlarını öğrenin.",
+    "group": "geo",
+    "category": "Teknik Rehber",
+    "kind": "Article",
+    "eventDate": "2026-10-28",
+    "eventLabel": "Kaynak kontrolü",
+    "publishedAt": "2026-09-29",
+    "modifiedAt": "2026-10-28",
+    "checkedAt": "2026-10-28",
+    "author": {
+      "name": "Yapay Zekâda Reklam",
+      "url": "/hakkimizda/"
+    },
+    "lead": "ChatGPT aramasına uygun olmak için OpenAI’ın arama tarayıcısı OAI-SearchBot’un erişimini, engelleyici altyapıyı ve sayfalarınızın kamuya açık okunabilirliğini kontrol etmek gerekir; bu tek başına sonuç garantisi değildir.",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "ChatGPT araması siteleri nasıl keşfedebilir?"
+      },
+      {
+        "type": "paragraph",
+        "text": "OpenAI'ın resmî robot dokümanında OAI-SearchBot, ChatGPT aramasında web sitelerinin gösterilmesi için kullanılan tarayıcı olarak tanımlanıyor. GPTBot ise model eğitimiyle ilgili farklı bir kullanım amacı taşıyor. Bu iki tercihi bir tutmak önemli bir teknik hata: Eğitim için taramaya izin vermemek, arama görünürlüğünden de vazgeçmek zorunda olduğunuz anlamına gelmiyor."
+      },
+      {
+        "type": "paragraph",
+        "text": "ChatGPT'deki arama sonuçlarında yer almak ile her ChatGPT yanıtına girmek ayrı şeylerdir. Siteniz teknik açıdan erişilebilir olsa bile belirli bir sorguda gösterilmesi garanti değildir."
+      },
+      {
+        "type": "heading",
+        "text": "Robots.txt örneği"
+      },
+      {
+        "type": "paragraph",
+        "text": "Aşağıdaki örnek, sitenin başka güvenlik politikalarıyla çelişmediği varsayımıyla yalnızca ChatGPT arama tarayıcısına erişim izni göstermek içindir:"
+      },
+      {
+        "type": "code",
+        "text": "User-agent: OAI-SearchBot\r\nAllow: /\r\n\r\nUser-agent: GPTBot\r\nDisallow: /"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bu örnekte arama taramasına izin verilirken, eğitim amaçlı GPTBot taraması engelleniyor. Her sitenin mevcut robots.txt dosyasında farklı kurallar olabilir; sırf bu metni yapıştırıp mevcut yönergeleri silmeyin. Özellikle özel path'ler, giriş sayfaları, ödeme alanları ve kişisel bilgiler korunmalı."
+      },
+      {
+        "type": "heading",
+        "text": "İlk bakılacak 10 teknik kontrol"
+      },
+      {
+        "type": "list",
+        "text": "",
+        "ordered": true,
+        "items": [
+          "robots.txt gerçekten sunuluyor mu ve OAI-SearchBot'u engelliyor mu?",
+          "CDN veya WAF tarafından bot talepleri yanlışlıkla bloke ediliyor mu?",
+          "Sayfa 200 HTTP durum koduyla açılıyor mu?",
+          "Sayfada noindex veya erişimi sınırlayan başlık bulunuyor mu?",
+          "İçeriğin ana bölümü HTML'de veya taranabilir çıktıda mevcut mu?",
+          "Canonical URL doğru mu ve kopyalar azaltılmış mı?",
+          "Hedef sayfaya menü, kategori veya ilgili makalelerden bağlantı var mı?",
+          "Ürün/hizmet bilgileri güncel mi?",
+          "Şirket kimliği, yazar, iletişim ve açıklama sayfaları mevcut mu?",
+          "Test sorularında markanız hangi bağlamda ve hangi bağlantılarla yer alıyor?"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Bot erişimi neden karıştırılıyor?"
+      },
+      {
+        "type": "paragraph",
+        "text": "ChatGPT-User, kullanıcı tarafından tetiklenen bazı erişimler için kullanılan farklı bir ajandır. OAI-AdsBot ise ChatGPT reklamları için sunulan açılış sayfalarının incelenmesine hizmet eder. ChatGPT aramasında görünmek isteyen bir şirketin yalnızca reklam tarayıcısını açması yeterli değildir. Bu ayrımı güncel OpenAI dokümanından teyit edin."
+      },
+      {
+        "type": "heading",
+        "text": "ChatGPT'ye uygun içerik mimarisi"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bir hizmet sayfasının ilk ekranında kullanıcı problemi, çözümün kapsamı, kime uygun olduğu ve bir sonraki adım yer almalı. “Geleceği değiştiriyoruz” gibi sloganların yanında gerçek ürün açıklamasına ihtiyaç var. “Fiyatlandırma nasıl işliyor?”, “Kurulum ne kadar sürer?”, “Hangi sistemlerle entegre?” gibi soruları açıkça yanıtlayın."
+      },
+      {
+        "type": "paragraph",
+        "text": "Yayınladıktan sonra sitenizi ChatGPT'de farklı kullanıcı sorularıyla deneyin; fakat tek bir yanıtı istikrarlı sıralama kanıtı saymayın. Teste tarih, dil, ülke, niyet ve sonuç bağlantılarını ekleyin."
+      }
+    ],
+    "editorial": "Bir sitenin “AI görünürlüğü” kazanmasının ilk şartı reklam ajansından slogan satın almak değil, erişim ve bilgi doğruluğunu denetlemektir. En pahalı içerik paketi bile 403 engeline takılan sayfayı görünür kılamaz.",
+    "faq": [
+      {
+        "question": "GPTBot’u engellersem ChatGPT Search’ten çıkar mıyım?",
+        "answer": "Zorunlu olarak hayır. OpenAI, OAI-SearchBot ile GPTBot kontrollerinin bağımsız olduğunu belirtiyor."
+      },
+      {
+        "question": "OAI-SearchBot’u açmak görünme garantisi mi?",
+        "answer": "Hayır. Erişim yalnızca teknik uygunluğu destekler; kaynak seçimi garanti değildir."
+      },
+      {
+        "question": "Robots.txt tek başına yeterli mi?",
+        "answer": "Hayır. CDN, HTML, erişim kodları, içerik ve marka bilgileri de kontrol edilmelidir."
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenAI Developers — Overview of OpenAI Crawlers",
+        "url": "https://developers.openai.com/api/docs/bots",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — Generative AI optimization guide",
+        "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        "kind": "Resmî belge"
+      }
+    ],
+    "related": [
+      {
+        "href": "/rehber/yapay-zekada-nasil-cikarim/",
+        "label": "Yapay Zekâda Nasıl Çıkarım? ChatGPT, Gemini ve Copilot İçin Yol Haritası"
+      },
+      {
+        "href": "/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/",
+        "label": "llms.txt, Robots.txt ve Schema: GEO İçin Hangisi Gerçekten Gerekli?"
+      },
+      {
+        "href": "/chatgptde-markam-nasil-cikar/",
+        "label": "ChatGPT Markamı Nasıl Önerir? Marka Önerilerinde Görünür Olma Rehberi"
+      }
+    ],
+    "pillar": {
+      "href": "/rehber/geo-nedir/",
+      "label": "GEO nedir? Ana rehber"
+    },
+    "actions": [
+      "İlgili sayfalarınızda rehberdeki kontrolleri uygulayın; eksikleri URL ve tarih bilgisiyle kaydedin.",
+      "Değişiklikten sonra aynı sorgu ve ölçüm koşullarıyla tekrar kontrol edin; gözlem ile varsayımı ayrı raporlayın."
+    ],
+    "facts": [
+      [
+        "İçerik türü",
+        "Teknik Rehber"
+      ],
+      [
+        "Amaç",
+        "ChatGPT’de çıkmak"
+      ],
+      [
+        "Kapsam",
+        "Platformlara göre erişim, bilgi kalitesi ve ölçüm; tavsiye garantisi yok"
+      ]
+    ],
+    "scope": "Kod örneği erişim tercihlerinin ayrımını gösterir; sitenin mevcut robots politikasını değiştirmek için doğrudan kopyalanmamalı. Robots kuralları kimlik doğrulama değildir.",
+    "cover": {
+      "src": "/images/rehber/chatgptde-cikmak.png",
+      "alt": "Önce: teknik erişim: ChatGPT araması için kontrol konulu özgün açıklayıcı illüstrasyon",
+      "lines": [
+        "Önce",
+        "teknik erişim",
+        "ChatGPT araması için kontrol"
+      ]
+    }
+  },
+  {
+    "number": 105,
+    "sourceNumber": 5,
+    "collection": "guide",
+    "slug": "chatgpt-seo",
+    "proposedSlug": "rehber/yapay-zeka-seo-teknikleri",
+    "headline": "Yapay Zekâ SEO Teknikleri: GEO İçerik Optimizasyonu Nasıl Yapılır?",
+    "seoTitle": "Yapay Zekâ SEO Teknikleri: GEO İçerik Rehberi",
+    "description": "Yapay zekâ SEO teknikleri nelerdir? Araştırma, özgün veri, sayfa yapısı, karşılaştırma, uzmanlık ve kaynak görünürlüğü için yöntemler.",
+    "group": "geo",
+    "category": "İçerik Rehberi",
+    "kind": "Article",
+    "eventDate": "2026-10-28",
+    "eventLabel": "Kaynak kontrolü",
+    "publishedAt": "2026-09-29",
+    "modifiedAt": "2026-10-28",
+    "checkedAt": "2026-10-28",
+    "author": {
+      "name": "Yapay Zekâda Reklam",
+      "url": "/hakkimizda/"
+    },
+    "lead": "GEO içerik optimizasyonu; sorunun doğrudan yanıtlanması, özgün kanıtların gösterilmesi, tutarlı marka bilgisi ve açık sayfa yapısının bir arada uygulanmasıdır.",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Yapay zekâ için içerik yazmak: cevabı öne, kanıtı yanına koymak"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bir kullanıcı “GEO nedir?” diye sorarsa sayfanın ilk paragrafında tanımı bulmalı. “GEO ajansına ne kadar bütçe ayrılmalı?” diye sorarsa önce maliyeti oluşturan kalemleri görmeli. Kullanıcıyı cevaba ulaşmak için uzun bir tanıtım metninden geçirmek hem insan deneyimini hem de içeriğin yeniden kullanılabilirliğini zayıflatır."
+      },
+      {
+        "type": "paragraph",
+        "text": "Ancak kısa paragraf tek başına GEO tekniği değildir. Google'ın 2026 kılavuzu, sırf yapay zekâ için metni mekanik parçalara ayırmak gibi yöntemlerin özel avantajı olduğuna dair iddialara itibar edilmemesini söylüyor. Başlıkları makine için değil, okurun karar sürecini düzenlemek için kurun."
+      },
+      {
+        "type": "heading",
+        "text": "Yedi adımlı içerik geliştirme modeli"
+      },
+      {
+        "type": "paragraph",
+        "text": "1. Sorunun arkasındaki kararı bulun. “AI CRM” aramasının arkasında ürün seçimi, maliyet hesabı veya uygulama riski olabilir. Her yazı tek bir ana niyetle başlamalı."
+      },
+      {
+        "type": "paragraph",
+        "text": "2. 40–80 kelimelik net bir cevap yazın. Bir tanım veya uygulanabilir öneri verin. Genel kavramlarda bu cevap sayfanın en üstünde bulunmalı. Bu uzunluk editoryal bir başlangıç önerisidir; Google veya OpenAI için bir sıralama koşulu değildir."
+      },
+      {
+        "type": "paragraph",
+        "text": "3. Karşılaştırma ölçütlerini açıklayın. Örneğin AI chatbot seçerken bilgi tabanı, canlıya devir, güvenlik, desteklenen diller, entegrasyon ve sahip olma maliyeti ayrı başlıklar olsun."
+      },
+      {
+        "type": "paragraph",
+        "text": "4. İlk elden bulgu sunun. Ölçülen sonuçlar varsa ölçüm zamanı, örneklem, kullanılan yöntem ve sınırlama da yazılmalı. “Müşteri adaylarını %300 artırdık” gibi kaynaksız iddialar yerine “şu segmentte, şu tarihlerde, şu tanımla ölçtük” yaklaşımı güven yaratır."
+      },
+      {
+        "type": "paragraph",
+        "text": "5. Uygun alt soruları içerikle bütünleştirin. SSS bölümünün amacı şema işaretlemesi yapmak değil, kullanıcının gerçek itiraz ve belirsizliklerini gidermektir."
+      },
+      {
+        "type": "paragraph",
+        "text": "6. İç bağlantıları mantıklı kurun. Tanım rehberinden teknik kurulum rehberine, oradan sektör örneğine ve hizmet sayfasına geçiş olsun."
+      },
+      {
+        "type": "paragraph",
+        "text": "7. Güncelleme nedenini açıklayın. Yeni özellik, yeni mevzuat veya değişen test verisi varsa hangi bölümün değiştiği belli olsun. Yalnızca tarihi yenilemek içerik kalitesini artırmaz."
+      },
+      {
+        "type": "heading",
+        "text": "Hangi içerik türleri değerlidir?"
+      },
+      {
+        "type": "paragraph",
+        "text": "İsimli vaka analizleri, bağımsız yöntemle hazırlanmış karşılaştırmalar, veri setinin nasıl üretildiğini açıklayan araştırmalar, hesaplayıcılar, sektör bazlı karar rehberleri ve kamuya açık teknik şablonlar. Bunlar başka bir siteden kolayca kopyalanabilen genellemelere göre daha ayırt edici bir değer sunabilir."
+      },
+      {
+        "type": "heading",
+        "text": "Kaç tane anahtar kelime yerleştirmeliyim?"
+      },
+      {
+        "type": "paragraph",
+        "text": "“ChatGPT'de görünmek” ifadesinin her paragrafta bulunması gerekmez. Ana kavram, H1, başlık, giriş ve alakalı alt başlıklarda doğal biçimde anlatılsın. “Yapay zekâ arama sonuçları”, “marka önerisi” veya “AI görünürlük ölçümü” gibi ilişkili ifadeler gerektiği yerde kullanılabilir. Aynı ifadeyi farklı URL'lerde aynı niyetle hedefleyip kendinizle rekabet etmeyin."
+      }
+    ],
+    "editorial": "GEO içeriğinin kalitesi, bir algoritmayı ikna etmeye ne kadar çalıştığıyla değil, kullanıcının belirsizliğini ne kadar azalttığıyla ölçülmeli.",
+    "faq": [
+      {
+        "question": "Soru-cevap eklemek GEO için zorunlu mu?",
+        "answer": "Hayır. İyi düzenlenmiş, doğrudan cevap veren içerikler yararlıdır; ancak SSS bir görünürlük garantisi değildir."
+      },
+      {
+        "question": "Yapay zekâ ile yazılmış içerikler sıralanabilir mi?",
+        "answer": "Üretim aracından bağımsız olarak içerik kalitesi, özgün katkı ve arama politikalarına uygunluk önemlidir."
+      },
+      {
+        "question": "Tek makalede kaç anahtar kelime hedeflenmeli?",
+        "answer": "Tek bir baskın kullanıcı niyeti ve onu doğal biçimde tamamlayan ilişkili sorgular hedeflenmelidir."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Google Search Central — Generative AI optimization guide",
+        "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — AI features and your website",
+        "url": "https://developers.google.com/search/docs/appearance/ai-features",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Princeton/ACM KDD 2024 — GEO: Generative Engine Optimization",
+        "url": "https://collaborate.princeton.edu/en/publications/geo-generative-engine-optimization/",
+        "kind": "Akademik araştırma"
+      }
+    ],
+    "related": [
+      {
+        "href": "/rehber/geo-nedir/",
+        "label": "GEO Nedir? Yapay Zekâ Aramalarında Görünür Olmanın Yeni Kuralları"
+      },
+      {
+        "href": "/rehber/marka-otoritesi-yapay-zeka/",
+        "label": "Yapay Zekâ Markaları Nereden Tanır? Dijital Otorite ve Güven Sinyalleri"
+      },
+      {
+        "href": "/rehber/geo-30-gunluk-plan/",
+        "label": "30 Günde GEO Başlangıç Planı: Yapay Zekâda Görünürlük İçin Kontrol Listesi"
+      }
+    ],
+    "pillar": {
+      "href": "/rehber/geo-nedir/",
+      "label": "GEO nedir? Ana rehber"
+    },
+    "actions": [
+      "İlgili sayfalarınızda rehberdeki kontrolleri uygulayın; eksikleri URL ve tarih bilgisiyle kaydedin.",
+      "Değişiklikten sonra aynı sorgu ve ölçüm koşullarıyla tekrar kontrol edin; gözlem ile varsayımı ayrı raporlayın."
+    ],
+    "facts": [
+      [
+        "İçerik türü",
+        "İçerik Rehberi"
+      ],
+      [
+        "Amaç",
+        "yapay zeka seo teknikleri"
+      ],
+      [
+        "Kapsam",
+        "Platformlara göre erişim, bilgi kalitesi ve ölçüm; tavsiye garantisi yok"
+      ]
+    ],
+    "scope": "Bu rehber uygulama ve değerlendirme yöntemini açıklar. Belirli bir AI yanıtı, sıralama, atıf veya satış sonucu garanti edilmez; örnekler gerçekleşmiş müşteri sonucu değildir.",
+    "cover": {
+      "src": "/images/rehber/yapay-zeka-seo-teknikleri.png",
+      "alt": "Cevap.: Kanıt. Kapsam.: GEO içerik geliştirme yöntemi konulu özgün açıklayıcı illüstrasyon",
+      "lines": [
+        "Cevap.",
+        "Kanıt. Kapsam.",
+        "GEO içerik geliştirme yöntemi"
+      ]
+    }
+  },
+  {
+    "number": 106,
+    "sourceNumber": 6,
+    "collection": "guide",
+    "slug": "rehber/marka-otoritesi-yapay-zeka",
+    "proposedSlug": "rehber/marka-otoritesi-yapay-zeka",
+    "headline": "Yapay Zekâ Markaları Nereden Tanır? Dijital Otorite ve Güven Sinyalleri",
+    "seoTitle": "Yapay Zekâ Marka Otoritesi: Nasıl Güçlendirilir?",
+    "description": "Yapay zekâ markaları hangi kaynaklardan tanır? Kurumsal bilgi, bağımsız kaynak, referans, sektör otoritesi ve marka tutarlılığı rehberi.",
+    "group": "geo",
+    "category": "Marka Stratejisi",
+    "kind": "Article",
+    "eventDate": "2026-10-28",
+    "eventLabel": "Kaynak kontrolü",
+    "publishedAt": "2026-10-28",
+    "modifiedAt": "2026-10-28",
+    "checkedAt": "2026-10-28",
+    "author": {
+      "name": "Yapay Zekâda Reklam",
+      "url": "/hakkimizda/"
+    },
+    "lead": "Yapay zekâ sistemleri markalarla ilgili bilgileri farklı kaynaklardan edinebilir. Güçlü marka temsili için doğrulanabilir kurumsal kimlik, özgün kanıtlar ve kaynaklar arasında tutarlılık gerekir.",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Bir yapay zekâ markanızı nereden öğrenir?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bu sorunun tek bir cevabı yok. Bazı yanıtlar modelin daha önce öğrendiği örüntülere dayanabilir; güncel arama özellikleri web sayfaları, ürün verileri veya başka kaynaklarla yanıtı destekleyebilir. Bu nedenle “ChatGPT'ye markamı tanıtma” vaadi tek bir işlem gibi satıldığında dikkatli olunmalı."
+      },
+      {
+        "type": "paragraph",
+        "text": "Marka hakkında web'de üç ayrı kanıt katmanı vardır. Birinci katman: Markanın kendi açıklamaları; ürün, hizmet, ekip, iletişim ve koşullar. İkinci katman: Müşterilerin gerçek deneyimleri ve bağımsız ürün değerlendirmeleri. Üçüncü katman: Sektör birlikleri, yetki veya sertifika doğrulamaları, kamu kaynakları, yayınlar ve bağlama uygun uzman görüşleri. Hepsi birlikte daha sağlam bir dijital kimlik oluşturabilir. Hiçbiri tek başına bir yapay zekâda öneri garantilemez."
+      },
+      {
+        "type": "heading",
+        "text": "Marka bilgi tutarlılığı denetimi"
+      },
+      {
+        "type": "paragraph",
+        "text": "Şirket adı eski bir sitede farklı, LinkedIn'de farklı, Google Business Profile'da başka yazılıyorsa; hizmet kapsamınız güncellenmemişse; kurumsal web sayfanızda ülke bilgisi yer almıyorsa marka belirsizleşir. Önce temel varlıkları eşleştirin: ticari ad, web adresi, telefon, iletişim, temel sektör tanımı, ürün aileleri, faaliyet ülkeleri, varsa doğrulanabilir şirket kimliği."
+      },
+      {
+        "type": "paragraph",
+        "text": "Google, Organization yapılandırılmış verisinin kuruluş detaylarının anlaşılması ve benzer isimli kuruluşlardan ayrıştırılmasına yardımcı olabildiğini söylüyor. sameAs alanında gerçekten size ait profilleri belirtmek kullanılabilir; yüzlerce ilgisiz bağlantı eklemek yerine az ve doğru referans daha anlamlıdır."
+      },
+      {
+        "type": "heading",
+        "text": "Üçüncü taraf görünürlüğünü nasıl artırabilirsiniz?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bağımsız meslek kuruluşları, gerçek sektör konferansları, editoryal incelemeler, uzman makaleleri ve uygun ürün dizinleri üzerinden gerçek varlığınızı görünür kılın. Bu kanalların seçimini “buradan kesin AI atfı gelir” iddiasıyla değil, hedef müşterinizin güven duyacağı kaynaklar olup olmadıklarıyla yapın."
+      },
+      {
+        "type": "paragraph",
+        "text": "Örnek: Bir B2B yazılım firması, kullandığı entegrasyonları teknik belgeleriyle açıklar, birkaç müşterisinin ölçülebilir kullanım senaryolarını izniyle yayımlar ve ürün kategorisindeki karşılaştırma kriterlerini dürüstçe belirtirse potansiyel müşterinin karar sürecini kolaylaştırır. Bu çalışma aynı zamanda arama sistemlerinin şirketi hangi problemle ilişkilendirebileceğini netleştirir."
+      },
+      {
+        "type": "heading",
+        "text": "Sahte otorite neden risklidir?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Satın alınmış sahte değerlendirmeler, var olmayan müşteriler, uydurulmuş ödüller, yapay forum yorumları ve kendini bağımsızmış gibi gösteren karşılaştırma siteleri güvene zarar verir. Sadece çok sayıda mention üretmek yerine kaynakların gerçekliğine ve alaka düzeyine bakın. Google'ın güncel AI arama kılavuzu da yapay mention kampanyalarını özel bir GEO kestirmesi olarak görmüyor."
+      }
+    ],
+    "editorial": "Bir marka hakkında çok şey söylenmesiyle, doğru şeylerin güvenilir biçimde söylenmesi aynı şey değildir. İkinci yaklaşım, hem satış öncesi güven hem de sürdürülebilir görünürlük açısından daha sağlıklıdır.",
+    "faq": [
+      {
+        "question": "Wikipedia sayfası açmak markayı otomatik önerdirir mi?",
+        "answer": "Hayır. Böyle bir garanti yoktur; Wikipedia’nın bağımsız kayda değerlik ve kaynak politikaları da ayrıca geçerlidir."
+      },
+      {
+        "question": "Marka mention sayısı tek başına KPI olabilir mi?",
+        "answer": "Hayır. Anmanın bağlamı, kaynak güvenilirliği, doğru marka eşleşmesi ve ticari sonuca katkısı birlikte değerlendirilmelidir."
+      },
+      {
+        "question": "Organization schema marka otoritesini garanti eder mi?",
+        "answer": "Hayır. Yapılandırılmış veri kuruluş bilgilerinin anlaşılmasına yardımcı olabilir, sıralama veya öneri garantisi vermez."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Google Search Central — Organization structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/organization",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — Generative AI optimization guide",
+        "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — Structured data policies",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+        "kind": "Resmî belge"
+      }
+    ],
+    "related": [
+      {
+        "href": "/chatgptde-markam-nasil-cikar/",
+        "label": "ChatGPT Markamı Nasıl Önerir? Marka Önerilerinde Görünür Olma Rehberi"
+      },
+      {
+        "href": "/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/",
+        "label": "llms.txt, Robots.txt ve Schema: GEO İçin Hangisi Gerçekten Gerekli?"
+      },
+      {
+        "href": "/rehber/b2b-geo/",
+        "label": "B2B Şirketler Yapay Zekâ Tarafından Nasıl Önerilir? GEO ve Lead Generation"
+      }
+    ],
+    "pillar": {
+      "href": "/rehber/geo-nedir/",
+      "label": "GEO nedir? Ana rehber"
+    },
+    "actions": [
+      "İlgili sayfalarınızda rehberdeki kontrolleri uygulayın; eksikleri URL ve tarih bilgisiyle kaydedin.",
+      "Değişiklikten sonra aynı sorgu ve ölçüm koşullarıyla tekrar kontrol edin; gözlem ile varsayımı ayrı raporlayın."
+    ],
+    "facts": [
+      [
+        "İçerik türü",
+        "Marka Stratejisi"
+      ],
+      [
+        "Amaç",
+        "yapay zeka marka otoritesi"
+      ],
+      [
+        "Kapsam",
+        "Platformlara göre erişim, bilgi kalitesi ve ölçüm; tavsiye garantisi yok"
+      ]
+    ],
+    "scope": "Bu rehber uygulama ve değerlendirme yöntemini açıklar. Belirli bir AI yanıtı, sıralama, atıf veya satış sonucu garanti edilmez; örnekler gerçekleşmiş müşteri sonucu değildir.",
+    "cover": {
+      "src": "/images/rehber/marka-otoritesi-yapay-zeka.png",
+      "alt": "Dijital: kanıt haritası: Marka kimliği ve kaynak tutarlılığı konulu özgün açıklayıcı illüstrasyon",
+      "lines": [
+        "Dijital",
+        "kanıt haritası",
+        "Marka kimliği ve kaynak tutarlılığı"
+      ]
+    }
+  },
+  {
+    "number": 107,
+    "sourceNumber": 7,
+    "collection": "guide",
+    "slug": "blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir",
+    "proposedSlug": "rehber/llms-txt-robots-schema",
+    "headline": "ChatGPT’de Kaynak Olarak Gösterilmek İçin Site Nasıl Hazırlanır?",
+    "seoTitle": "ChatGPT’de Kaynak Olarak Gösterilmek İçin Site Nasıl Hazırlanır?",
+    "description": "Teknik GEO ve AEO kontrol listesi: bot erişimi, okunabilir HTML, kaynaklı cevaplar, schema ve ölçüm. Uygulama örneği ve sınırlarıyla site hazırlığı.",
+    "group": "geo",
+    "category": "Teknik Rehber",
+    "kind": "Article",
+    "eventDate": "2026-10-28",
+    "eventLabel": "Kaynak kontrolü",
+    "publishedAt": "2026-09-29",
+    "modifiedAt": "2026-10-28",
+    "checkedAt": "2026-10-28",
+    "author": {
+      "name": "Yapay Zekâda Reklam",
+      "url": "/hakkimizda/"
+    },
+    "lead": "GEO için özel bir llms.txt dosyası zorunlu değildir. Robots.txt erişim tercihlerini, JSON-LD ise sayfadaki bilgilerin yapılandırılmış tanımını yönetir; üçü birbirinin yerine geçmez.",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Üç farklı dosya, üç farklı görev"
+      },
+      {
+        "type": "paragraph",
+        "text": "GEO tartışmalarında robots.txt, llms.txt ve schema.org çoğu zaman tek bir “yapay zekâya kayıt” paketiymiş gibi anlatılıyor. Oysa görevleri farklı. Robots.txt hangi tarayıcıların hangi yolları taramasına izin verildiğini düzenler. JSON-LD / Schema.org sayfa veya kuruluş hakkında makinelerce okunabilir bilgiler sunar. llms.txt ise bazı geliştirici ve yayıncıların metin içeriklerine yönlendirme amacıyla kullandığı öneri niteliğindeki bir dosya yaklaşımıdır."
+      },
+      {
+        "type": "paragraph",
+        "text": "Google 2026 kılavuzunda AI Overviews ve AI Mode için yeni AI metin dosyalarının gerekmediğini belirtiyor. Bu nedenle llms.txt oluşturmayı Google'da yükselme veya ChatGPT'de tavsiye edilme garantisi olarak sunmak doğru değildir."
+      },
+      {
+        "type": "heading",
+        "text": "Robots.txt: Arama ve eğitim erişimini ayırın"
+      },
+      {
+        "type": "paragraph",
+        "text": "OpenAI'ın bot dokümanına göre OAI-SearchBot, arama özelliği; GPTBot, model eğitimi amaçlı tarama ile ilişkilidir. Bunlar ayrı tercihler olarak yönetilebilir. Teknik ekibiniz, mevcut robots kurallarıyla yeni yönergelerin etkileşimini kontrol etmeli. Ayrıca bir CDN'nin yanlışlıkla engellediği istekler robots.txt satırını doğru yazmakla düzelmeyebilir."
+      },
+      {
+        "type": "heading",
+        "text": "JSON-LD: Var olan gerçekleri doğru temsil edin"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bir kurumsal sitede Organization ve gerekliyse LocalBusiness bilgileri; haber ve rehber sayfalarında Article işaretlemesi kullanılabilir. E-ticaret ürünlerinde uygun Product işaretlemeleri değerlendirilebilir. İşaretleme, sayfada bulunmayan “yıldız”, “fiyat”, “ödül” veya “müşteri” yaratmak için kullanılmamalı. Google'ın yapılandırılmış veri politikaları görünen içerikle uyum bekliyor."
+      },
+      {
+        "type": "paragraph",
+        "text": "Aşağıdaki örnek gerçek sayfadaki bilgilerle doldurulmadan yayımlanmamalıdır:"
+      },
+      {
+        "type": "code",
+        "text": "{\r\n  \"@context\": \"https://schema.org\",\r\n  \"@type\": \"Organization\",\r\n  \"name\": \"MARKA ADI\",\r\n  \"url\": \"https://ornekalanadi.com/\",\r\n  \"logo\": \"https://ornekalanadi.com/logo.png\",\r\n  \"sameAs\": [\"https://www.linkedin.com/company/gercek-kurumsal-profil\"]\r\n}"
+      },
+      {
+        "type": "heading",
+        "text": "FAQ schema hakkında yanlış bilinen konu"
+      },
+      {
+        "type": "paragraph",
+        "text": "Sık sorulan sorular kullanıcı için yararlı olabilir. Google, FAQ zengin sonucunu 7 Mayıs 2026’dan itibaren göstermediğini güncelleme kaydında açıklıyor. SSS ekleme kararını okurun sorularını yanıtlama ihtiyacına göre verin; Google görünümü veya AI tavsiyesi vaat etmeyin."
+      },
+      {
+        "type": "heading",
+        "text": "Öncelik sırası ne olmalı?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Önce tarama ve indeksleme; sonra sayfanın gerçekten okunabilirliği; ardından doğru kurumsal bilgi; sonra uygun structured data; en sonunda deneysel ek formatlar. Bir site noindex durumundayken llms.txt üzerinde çalışmak yanlış önceliktir."
+      }
+    ],
+    "editorial": "Teknik SEO'da işin değeri kaç etiket eklendiğinde değil, sayfadaki gerçek bilginin doğru kullanıcıya ve doğru sisteme sorunsuz ulaşmasında yatar.",
+    "faq": [
+      {
+        "question": "llms.txt dosyası ChatGPT için şart mı?",
+        "answer": "OpenAI tarafından ChatGPT arama görünürlüğü için zorunlu evrensel bir llms.txt şartı açıklanmış değildir."
+      },
+      {
+        "question": "FAQ schema koyarsam yapay zekâ beni önerir mi?",
+        "answer": "Hayır. SSS işaretlemesi öneri garantisi vermez; görünen içeriği doğru temsil etmelidir."
+      },
+      {
+        "question": "Schema eklemek sıralamayı artırır mı?",
+        "answer": "Yapılandırılmış veri sayfanın daha iyi anlaşılmasına yardımcı olabilir; görünürlük veya sıralama garantisi değildir."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Google Search Central — Generative AI optimization guide",
+        "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "OpenAI Developers — Overview of OpenAI Crawlers",
+        "url": "https://developers.openai.com/api/docs/bots",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — Organization structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/organization",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — Structured data policies",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — FAQ zengin sonucunun kaldırılması",
+        "url": "https://developers.google.com/search/updates#may-2026",
+        "kind": "Resmî belge"
+      }
+    ],
+    "related": [
+      {
+        "href": "/chatgptde-web-sitem-neden-cikmiyor/",
+        "label": "ChatGPT’de Çıkmak İçin Ne Yapılmalı? OAI-SearchBot ve SEO Kontrol Listesi"
+      },
+      {
+        "href": "/chatgpt-seo/",
+        "label": "Yapay Zekâ SEO Teknikleri: GEO İçerik Optimizasyonu Nasıl Yapılır?"
+      },
+      {
+        "href": "/rehber/geo-30-gunluk-plan/",
+        "label": "30 Günde GEO Başlangıç Planı: Yapay Zekâda Görünürlük İçin Kontrol Listesi"
+      }
+    ],
+    "pillar": {
+      "href": "/rehber/geo-nedir/",
+      "label": "GEO nedir? Ana rehber"
+    },
+    "actions": [
+      "İlgili sayfalarınızda rehberdeki kontrolleri uygulayın; eksikleri URL ve tarih bilgisiyle kaydedin.",
+      "Değişiklikten sonra aynı sorgu ve ölçüm koşullarıyla tekrar kontrol edin; gözlem ile varsayımı ayrı raporlayın."
+    ],
+    "facts": [
+      [
+        "İçerik türü",
+        "Teknik Rehber"
+      ],
+      [
+        "Amaç",
+        "llms.txt gerekli mi"
+      ],
+      [
+        "Kapsam",
+        "Platformlara göre erişim, bilgi kalitesi ve ölçüm; tavsiye garantisi yok"
+      ]
+    ],
+    "scope": "SSS kullanıcıya cevap vermek içindir. Google’ın FAQ zengin sonucu 7 Mayıs 2026’dan beri gösterilmez; özel AI schema’sı gerekmez.",
+    "cover": {
+      "src": "/images/rehber/llms-txt-robots-schema.png",
+      "alt": "robots.txt: llms.txt ve schema: Üç araç, farklı görevler konulu özgün açıklayıcı illüstrasyon",
+      "lines": [
+        "robots.txt",
+        "llms.txt ve schema",
+        "Üç araç, farklı görevler"
+      ]
+    }
+  },
+  {
+    "number": 108,
+    "sourceNumber": 8,
+    "collection": "guide",
+    "slug": "rehber/chatgpt-urun-onerileri",
+    "proposedSlug": "rehber/chatgpt-urun-onerileri",
+    "headline": "ChatGPT Ürün Önerilerinde Nasıl Çıkılır? E-Ticaret için GEO Rehberi",
+    "seoTitle": "ChatGPT Ürün Önerileri: E-Ticaret GEO Rehberi",
+    "description": "ChatGPT alışveriş sonuçlarında ürünler nasıl gösterilir? Ürün verisi, stok, fiyat, görsel, Shopify ve OpenAI ürün feed adımları.",
+    "group": "geo",
+    "category": "E-Ticaret",
+    "kind": "Article",
+    "eventDate": "2026-10-28",
+    "eventLabel": "Kaynak kontrolü",
+    "publishedAt": "2026-10-28",
+    "modifiedAt": "2026-10-28",
+    "checkedAt": "2026-10-28",
+    "author": {
+      "name": "Yapay Zekâda Reklam",
+      "url": "/hakkimizda/"
+    },
+    "lead": "ChatGPT ürün görünürlüğü, genel marka anılmasından farklıdır. Doğru ürün verisi, güncel fiyat ve stok, açıklayıcı görseller ve uygun satıcı entegrasyonları önemlidir.",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Ürün önerisi, reklam ve organik kaynak aynı değil"
+      },
+      {
+        "type": "paragraph",
+        "text": "Kullanıcı “1.500 TL altında dayanıklı laptop çantası öner” dediğinde ChatGPT ilgili ürün seçeneklerini görselleri ve satıcı bağlantılarıyla sunabilir. OpenAI, alışveriş ürün sonuçlarının reklam olmadığını ve reklamların ayrı gösterildiğini açıklıyor. Bu nedenle “ChatGPT reklamı verince ürünüm organik önerilir” iddiası doğru bir varsayım değildir."
+      },
+      {
+        "type": "heading",
+        "text": "E-ticaret mağazasının açıklaması gereken ürün verileri"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ürün başlığı, marka, model, varyant, fiyat, para birimi, stok durumu, beden/ölçü, görsel, malzeme, renk, garanti, kargo ve iade koşulları güncel ve tutarlı olmalı. Örneğin “65W powerbank” ürününde yalnızca toplam çıkış gücü değil, tek USB-C portundan verilebilen güç de karar sorularında kritik olabilir. Eksik teknik özellik, ürünü doğru senaryoda görünmez kılabilir veya yanlış eşleşmeye neden olabilir."
+      },
+      {
+        "type": "paragraph",
+        "text": "OpenAI'ın alışveriş yardım belgeleri, satıcıların ve ürünlerin seçilmesinde ürün ve satıcı metaverilerinin rol oynayabildiğini; fiyat, erişilebilirlik, kalite ve üretici/birincil satıcı olma gibi faktörlerin değerlendirilebildiğini belirtiyor. Bu liste sabit bir sıralama formülü değildir."
+      },
+      {
+        "type": "heading",
+        "text": "OpenAI ürün feed desteği"
+      },
+      {
+        "type": "paragraph",
+        "text": "OpenAI'ın geliştirici dokümanında doğrudan ürün feed erişiminin onaylı iş ortakları üzerinden ilerlediği belirtiliyor. Ürün feed'leri katalog başlığı, açıklama, fiyat, stok ve görsel gibi verileri iletebiliyor. Her e-ticaret sitesinin doğrudan erişimi varmış gibi yazılmamalı. Shopify kullanan satıcılar için OpenAI, Shopify Catalog üzerinden ürün verisi entegrasyonuna da işaret ediyor."
+      },
+      {
+        "type": "heading",
+        "text": "Uygulanabilir kontrol listesi"
+      },
+      {
+        "type": "list",
+        "text": "",
+        "ordered": true,
+        "items": [
+          "Her ürünün tek bir ana URL'si olsun.",
+          "Varyantların yanlış kanonik kurgu nedeniyle kaybolmadığını test edin.",
+          "Stok ve fiyat bilgilerini sayfa ile feed arasında tutarlı tutun.",
+          "Teknik özellikleri metin hâlinde eksiksiz açıklayın.",
+          "Yüksek kaliteli ürün görsellerini taranabilir biçimde sunun.",
+          "Müşteri değerlendirmelerinde yalnızca gerçek yorumları yayınlayın.",
+          "Kargo, iade, garanti ve satıcı bilgilerini görünür tutun.",
+          "Uygun Product işaretlemesini sayfadaki gerçek bilgilerle eşleştirin.",
+          "Google Merchant Center ve diğer satıcı veri kanallarını ayrı ayrı yönetin.",
+          "Farklı kullanıcı sorularında ürünün hangi özellik için önerildiğini test edin."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "E-ticarette özel GEO içerikleri"
+      },
+      {
+        "type": "paragraph",
+        "text": "“Çelik termos alırken nelere bakılır?”, “65W ve 100W şarjın farkı”, “Kabin bagajına uygun çanta ölçüleri” gibi karar rehberleri kullanıcıya fayda sağlar. Bu içeriklerde yalnız kendi ürününüzü övmek yerine seçim kriterlerini tarafsız açıklayın ve ilgili ürünlerin teknik verilerine bağlayın."
+      }
+    ],
+    "editorial": "Yapay zekâda ürün keşfi, katalog disiplinini daha görünür hâle getiriyor. Ürün veri kalitesi kötü olan bir mağazanın sorunu yalnız SEO metni yazarak çözülemez.",
+    "faq": [
+      {
+        "question": "ChatGPT ürün listesi ücretli reklam mı?",
+        "answer": "OpenAI ürün önerilerini reklamlardan ayrı olarak tanımlıyor. Sponsorlu gösterimler açıkça ayrılmalıdır."
+      },
+      {
+        "question": "OpenAI product feed herkes için açık mı?",
+        "answer": "Geliştirici belgelerinde doğrudan ürün feed katılımının onaylı ortaklarla ilerlediği belirtiliyor."
+      },
+      {
+        "question": "Shopify ürünleri otomatik görünür mü?",
+        "answer": "Shopify Catalog entegrasyonu veri erişimini destekler; her ürünün her sorguda gösterileceği garantisi yoktur."
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenAI Help — Shopping with ChatGPT Search",
+        "url": "https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "OpenAI Developers — Agentic Commerce, Get Started",
+        "url": "https://developers.openai.com/commerce/guides/get-started",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — AI features and your website",
+        "url": "https://developers.google.com/search/docs/appearance/ai-features",
+        "kind": "Resmî belge"
+      }
+    ],
+    "related": [
+      {
+        "href": "/chatgptde-markam-nasil-cikar/",
+        "label": "ChatGPT Markamı Nasıl Önerir? Marka Önerilerinde Görünür Olma Rehberi"
+      },
+      {
+        "href": "/chatgpt-seo/",
+        "label": "Yapay Zekâ SEO Teknikleri: GEO İçerik Optimizasyonu Nasıl Yapılır?"
+      },
+      {
+        "href": "/blog/geo-performansi-nasil-olculur/",
+        "label": "Yapay Zekâ Görünürlüğü Nasıl Ölçülür? GEO KPI ve Raporlama Rehberi"
+      }
+    ],
+    "pillar": {
+      "href": "/rehber/geo-nedir/",
+      "label": "GEO nedir? Ana rehber"
+    },
+    "actions": [
+      "İlgili sayfalarınızda rehberdeki kontrolleri uygulayın; eksikleri URL ve tarih bilgisiyle kaydedin.",
+      "Değişiklikten sonra aynı sorgu ve ölçüm koşullarıyla tekrar kontrol edin; gözlem ile varsayımı ayrı raporlayın."
+    ],
+    "facts": [
+      [
+        "İçerik türü",
+        "E-Ticaret"
+      ],
+      [
+        "Amaç",
+        "ChatGPT ürün önerilerinde çıkmak"
+      ],
+      [
+        "Kapsam",
+        "Platformlara göre erişim, bilgi kalitesi ve ölçüm; tavsiye garantisi yok"
+      ]
+    ],
+    "scope": "Doğrudan ürün feed katılımı uygunluk ve onaya bağlıdır; katalog iletilmesi her ürüne veya sorguya görünürlük garantilemez.",
+    "cover": {
+      "src": "/images/rehber/chatgpt-urun-onerileri.png",
+      "alt": "Üründen: doğru öneriye: E-ticaret veri kalitesi konulu özgün açıklayıcı illüstrasyon",
+      "lines": [
+        "Üründen",
+        "doğru öneriye",
+        "E-ticaret veri kalitesi"
+      ]
+    }
+  },
+  {
+    "number": 109,
+    "sourceNumber": 9,
+    "collection": "guide",
+    "slug": "rehber/google-ai-mode-geo",
+    "proposedSlug": "rehber/google-ai-mode-geo",
+    "headline": "Google AI Overviews ve AI Mode’da Nasıl Çıkılır? 2026 GEO Rehberi",
+    "seoTitle": "Google AI Mode’da Çıkmak: GEO ve SEO Rehberi",
+    "description": "Google AI Overviews ve AI Mode görünürlüğü için teknik SEO, özgün içerik, Search Console AI raporları ve sık yapılan hatalar.",
+    "group": "geo",
+    "category": "Google AI",
+    "kind": "Article",
+    "eventDate": "2026-10-28",
+    "eventLabel": "Kaynak kontrolü",
+    "publishedAt": "2026-10-28",
+    "modifiedAt": "2026-10-28",
+    "checkedAt": "2026-10-28",
+    "author": {
+      "name": "Yapay Zekâda Reklam",
+      "url": "/hakkimizda/"
+    },
+    "lead": "Google AI Overviews ve AI Mode için ayrıca bir GEO dosyası veya özel işaretleme zorunlu değil. İndekslenebilir, snippet göstermeye uygun ve kullanıcıya özgün değer veren içerik esastır.",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "AI Overviews ile AI Mode farkı"
+      },
+      {
+        "type": "paragraph",
+        "text": "Google'ın üretken arama deneyimleri, klasik arama sonuçlarından farklı cevap ve kaynak düzenleri sunabilir. AI Overviews belirli sorgularda özet yanıtlar gösterirken AI Mode daha etkileşimli, takip sorularına uygun bir arama deneyimidir. Her aramada aynı özellik çıkmaz ve iki deneyimin gösterdiği kaynaklar farklı olabilir."
+      },
+      {
+        "type": "heading",
+        "text": "Google'ın 2026 kılavuzu ne diyor?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Google, üretken arama özelliklerinin çekirdek arama ve kalite sistemleriyle bağlantılı olduğunu; RAG (dış kaynaklarla dayanaklandırılmış yanıt üretimi) ve query fan-out (ilgili alt sorgulara ayrılma) gibi yöntemlerden yararlanılabildiğini anlatıyor. Bundan çıkarılacak sonuç, her alt soruya ayrı kopya sayfa açmak değildir. Google ayrıca sırf çok sayıda varyasyon sayfası üretmenin spam politikalarına aykırı olabileceğini vurguluyor."
+      },
+      {
+        "type": "heading",
+        "text": "Görünürlük için altı uygulama"
+      },
+      {
+        "type": "paragraph",
+        "text": "Teknik uygunluk: Sayfanın Google tarafından indekslenebilir, taranabilir ve snippet gösterimine uygun olduğundan emin olun. Benzersiz katkı: Başka kaynaklarda olmayan gözlem, deneyim, veri veya uzman görüşü ekleyin. Açık bilgi mimarisi: Ana konu, alt başlıklar, karar ölçütleri ve ilgili bağlantılar kullanıcıyı yönlendirsin. Çoklu ortam: Gerçek ürün ve süreç görselleri, açıklayıcı video veya grafik ilgili olduğunda destek sunsun. Tutarlı veri: Structured data, fiyat ve kurumsal bilgiler sayfayla çelişmesin. İzleme: Search Console'daki üretken AI performans görünümünde hangi sayfaların görünürlük kazandığını kontrol edin."
+      },
+      {
+        "type": "heading",
+        "text": "Gemini için de aynı çalışma yeterli mi?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Google AI Mode ve bağımsız Gemini sohbet deneyimini teknik olarak birebir aynı sistem kabul etmeyin. Google Search odaklı öneriler özellikle AI Overviews ve AI Mode içindir. Gemini uygulamasının yanıtlarını ayrıca test edin; bir platformda görünür olmak diğerinde sabit sonuç anlamına gelmez."
+      },
+      {
+        "type": "heading",
+        "text": "Çok sayıda SSS sayfası açmak doğru mu?"
+      },
+      {
+        "type": "paragraph",
+        "text": "“AI Mode nedir?”, “AI Mode nasıl çalışır?” ve “AI Mode özellikleri nelerdir?” gibi çok yakın niyetler için ayrı zayıf sayfalar yerine bir güçlü rehber çoğu zaman daha anlamlıdır. Kullanıcı niyeti gerçekten değiştiğinde ayrı sayfa oluşturun; örneğin “AI Mode'da ölçüm” teknik ve farklı bir sorgu olabilir."
+      },
+      {
+        "type": "heading",
+        "text": "Ölçümde hangi rapor kullanılmalı?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Google Haziran 2026'da ayrı üretken AI raporlarını duyurdu ve 31 Ağustos 2026 itibarıyla dünya genelindeki sitelere dağıtıldığını belirtti. Bu raporlar, üretken AI özelliklerinde gösterim görünürlüğünü izlemede yararlı; fakat her bir marka tavsiyesinin bağlamını veya nedenini tek başına açıklamaz."
+      }
+    ],
+    "editorial": "Google AI aramasında “yeni SEO”nun büyük bölümü hâlâ temel SEO'nun iyi yapılmasından geçiyor. Asıl değişiklik, kullanıcının tek bir aramadan çok, kararını derinleştiren çok adımlı sorular sorması.",
+    "faq": [
+      {
+        "question": "AI Overviews için özel schema gerekli mi?",
+        "answer": "Hayır. Google, AI özelliklerinde görünmek için özel yapılandırılmış veri şartı olmadığını belirtiyor."
+      },
+      {
+        "question": "AI Mode’a nasıl kayıt olunur?",
+        "answer": "Genel bir kayıt formu yerine arama için indekslenebilir ve uygun sayfalar oluşturulur; gösterim garanti edilmez."
+      },
+      {
+        "question": "Google AI sonuçlarını Search Console’da ölçebilir miyim?",
+        "answer": "Evet. Google’ın 2026’da duyurduğu üretken AI performans raporları bu görünürlüğü izlemek için kullanılabilir."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Google Search Central — Generative AI optimization guide",
+        "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — AI features and your website",
+        "url": "https://developers.google.com/search/docs/appearance/ai-features",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — Search Generative AI performance reports (3 Haziran 2026)",
+        "url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports",
+        "kind": "Resmî belge"
+      }
+    ],
+    "related": [
+      {
+        "href": "/rehber/yapay-zekada-nasil-cikarim/",
+        "label": "Yapay Zekâda Nasıl Çıkarım? ChatGPT, Gemini ve Copilot İçin Yol Haritası"
+      },
+      {
+        "href": "/blog/geo-performansi-nasil-olculur/",
+        "label": "Yapay Zekâ Görünürlüğü Nasıl Ölçülür? GEO KPI ve Raporlama Rehberi"
+      },
+      {
+        "href": "/chatgpt-seo/",
+        "label": "Yapay Zekâ SEO Teknikleri: GEO İçerik Optimizasyonu Nasıl Yapılır?"
+      }
+    ],
+    "pillar": {
+      "href": "/rehber/geo-nedir/",
+      "label": "GEO nedir? Ana rehber"
+    },
+    "actions": [
+      "İlgili sayfalarınızda rehberdeki kontrolleri uygulayın; eksikleri URL ve tarih bilgisiyle kaydedin.",
+      "Değişiklikten sonra aynı sorgu ve ölçüm koşullarıyla tekrar kontrol edin; gözlem ile varsayımı ayrı raporlayın."
+    ],
+    "facts": [
+      [
+        "İçerik türü",
+        "Google AI"
+      ],
+      [
+        "Amaç",
+        "Google AI Mode’da nasıl çıkılır"
+      ],
+      [
+        "Kapsam",
+        "Platformlara göre erişim, bilgi kalitesi ve ölçüm; tavsiye garantisi yok"
+      ]
+    ],
+    "scope": "Bu rehber uygulama ve değerlendirme yöntemini açıklar. Belirli bir AI yanıtı, sıralama, atıf veya satış sonucu garanti edilmez; örnekler gerçekleşmiş müşteri sonucu değildir.",
+    "cover": {
+      "src": "/images/rehber/google-ai-mode-geo.png",
+      "alt": "Google AI: arama görünürlüğü: AI Mode ve AI Overviews konulu özgün açıklayıcı illüstrasyon",
+      "lines": [
+        "Google AI",
+        "arama görünürlüğü",
+        "AI Mode ve AI Overviews"
+      ]
+    }
+  },
+  {
+    "number": 110,
+    "sourceNumber": 10,
+    "collection": "guide",
+    "slug": "rehber/perplexityde-cikmak",
+    "proposedSlug": "rehber/perplexityde-cikmak",
+    "headline": "Perplexity’de Nasıl Çıkılır? Kaynak Gösterilme Odaklı GEO Stratejisi",
+    "seoTitle": "Perplexity’de Çıkmak: Kaynak ve GEO Rehberi",
+    "description": "Perplexity yapay zekâ yanıtlarında kaynak olmak için özgün içerik, erişilebilir sayfalar, marka bilgisi ve sistematik test yöntemleri.",
+    "group": "geo",
+    "category": "Platform Rehberi",
+    "kind": "Article",
+    "eventDate": "2026-10-28",
+    "eventLabel": "Kaynak kontrolü",
+    "publishedAt": "2026-10-28",
+    "modifiedAt": "2026-10-28",
+    "checkedAt": "2026-10-28",
+    "author": {
+      "name": "Yapay Zekâda Reklam",
+      "url": "/hakkimizda/"
+    },
+    "lead": "Perplexity görünürlüğü için erişilebilir, dayanaklı, konuya odaklı kaynak sayfaları oluşturmak ve sonuçlarda alıntıların doğru olup olmadığını test etmek anlamlı bir başlangıçtır.",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Perplexity'de görünür olmak ne anlama gelir?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Perplexity gibi kaynak bağlantılarıyla yanıt oluşturan araştırma araçlarında bir markanın iki görünümünü ayırmak gerekir: Sitenin bilgi kaynağı olarak alıntılanması ve markanın kullanıcının talebine uygun bir seçenek olarak anılması. Her kaynak bağlantısı ticari tavsiye anlamına gelmez; tersi de her marka anılması doğrudan web sitenizden gelmeyebilir."
+      },
+      {
+        "type": "heading",
+        "text": "İçeriği hangi sorulara göre hazırlamalı?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Sektörünüzde müşterinin satın alma öncesinde sorduğu üç soru ailesini araştırın. Tanımlama soruları: “Çağrı merkezi AI agent nedir?” Karşılaştırma soruları: “Çağrı botu ile insan temsilciyi nasıl karşılaştırırım?” Risk soruları: “Yapay zekâ çağrı sisteminde kişisel veriler nasıl korunur?” Her biri farklı derinlikte bilgi ve kanıt ister. Bu soruları birbiriyle bağlantılı, konuya odaklanan sayfalarda yanıtlayın."
+      },
+      {
+        "type": "heading",
+        "text": "Kaynak gösterilmeye uygun sayfanın özellikleri"
+      },
+      {
+        "type": "paragraph",
+        "text": "Sayfa herkese açık olmalı; asıl bilgi kısa, net paragraflarla açıklanmalı; iddiaların dayanağı belirtilmeli; yayın ve güncelleme bilgisi doğru olmalı. Yazar veya uzmanlık bilgisi bulunması okurun güven değerlendirmesine yardım eder. Bir metodoloji veya veri kullanıyorsanız hangi dönemi kapsadığını açıklayın."
+      },
+      {
+        "type": "paragraph",
+        "text": "Özellikle araştırma ve teknik konularda bir paragraf “Nasıl ölçtük?” açıklaması büyük fark yaratır. Sadece “yapay zekâ işletmelere verimlilik sağlar” yazmak yerine verimlilik ölçütünüzü ve hangi koşullarda geçerli olduğunu gösterin. Kendi sitenizdeki bilgiyle bağımsız kaynaklardan gelen bilgiyi karıştırmayın."
+      },
+      {
+        "type": "heading",
+        "text": "Beş aşamalı test protokolü"
+      },
+      {
+        "type": "list",
+        "text": "",
+        "ordered": true,
+        "items": [
+          "Aynı konu için genel, ticari ve dar kullanım senaryolu sorular hazırlayın.",
+          "Sonuçları aynı gün ve aynı dilde kaydedin.",
+          "Markanın geçtiği bağlamı ve varsa kaynak URL'lerini not edin.",
+          "Yanıttaki şirket, ürün, fiyat ve yetenek bilgilerinin doğruluğunu kontrol edin.",
+          "Düzenleme yaptıktan sonra aynı soruları tekrarlayın; tek bir iyi yanıtı başarı kanıtı saymayın."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Perplexity'de sıralama garantisi neden gerçekçi değil?"
+      },
+      {
+        "type": "paragraph",
+        "text": "AI araştırma araçları farklı kaynaklar, kullanıcı bağlamı ve yanıt biçimleri kullanabilir. Google veya ChatGPT için açıklanmış bot kurallarını Perplexity'ye aynen uygulamak doğru değildir. Değişebilen platform davranışları için güncel resmî dokümanı ayrıca kontrol edin. Bu yazı, özel bir Perplexity algoritma formülü veya kesin bir bot ayarı önermez."
+      }
+    ],
+    "editorial": "Kaynak olmak için güvenilir bilgi üretmek ile marka tavsiyesi almak aynı hedef değildir. Perplexity çalışmalarında ikisini ayrı bir gösterge olarak izlemek ölçüm yanılgısını azaltır.",
+    "faq": [
+      {
+        "question": "Perplexity’ye site ekleyebileceğim garantili bir form var mı?",
+        "answer": "Bu yazı böyle bir garantiye dayanmıyor; görünürlük için erişilebilir kaynaklar ve platform içi test öneriyor."
+      },
+      {
+        "question": "Kaynak gösterilmek satış getirir mi?",
+        "answer": "Her kaynak gösterimi satışa dönüşmez; yönlendirme ve lead kalitesi ayrıca ölçülmelidir."
+      },
+      {
+        "question": "Perplexity için ChatGPT bot ayarı yeterli mi?",
+        "answer": "Hayır. Sistemler ve erişim koşulları ayrı ele alınmalıdır."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Google Search Central — Generative AI optimization guide",
+        "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Microsoft Bing — AI Performance in Bing Webmaster Tools",
+        "url": "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Princeton/ACM KDD 2024 — GEO: Generative Engine Optimization",
+        "url": "https://collaborate.princeton.edu/en/publications/geo-generative-engine-optimization/",
+        "kind": "Akademik araştırma"
+      }
+    ],
+    "related": [
+      {
+        "href": "/blog/geo-performansi-nasil-olculur/",
+        "label": "Yapay Zekâ Görünürlüğü Nasıl Ölçülür? GEO KPI ve Raporlama Rehberi"
+      },
+      {
+        "href": "/chatgpt-seo/",
+        "label": "Yapay Zekâ SEO Teknikleri: GEO İçerik Optimizasyonu Nasıl Yapılır?"
+      },
+      {
+        "href": "/rehber/marka-otoritesi-yapay-zeka/",
+        "label": "Yapay Zekâ Markaları Nereden Tanır? Dijital Otorite ve Güven Sinyalleri"
+      }
+    ],
+    "pillar": {
+      "href": "/rehber/geo-nedir/",
+      "label": "GEO nedir? Ana rehber"
+    },
+    "actions": [
+      "İlgili sayfalarınızda rehberdeki kontrolleri uygulayın; eksikleri URL ve tarih bilgisiyle kaydedin.",
+      "Değişiklikten sonra aynı sorgu ve ölçüm koşullarıyla tekrar kontrol edin; gözlem ile varsayımı ayrı raporlayın."
+    ],
+    "facts": [
+      [
+        "İçerik türü",
+        "Platform Rehberi"
+      ],
+      [
+        "Amaç",
+        "Perplexity’de çıkmak"
+      ],
+      [
+        "Kapsam",
+        "Platformlara göre erişim, bilgi kalitesi ve ölçüm; tavsiye garantisi yok"
+      ]
+    ],
+    "scope": "Bu rehber uygulama ve değerlendirme yöntemini açıklar. Belirli bir AI yanıtı, sıralama, atıf veya satış sonucu garanti edilmez; örnekler gerçekleşmiş müşteri sonucu değildir.",
+    "cover": {
+      "src": "/images/rehber/perplexityde-cikmak.png",
+      "alt": "Perplexity: Kaynak olarak görünmek: Erişim, içerik ve test yöntemi konulu özgün açıklayıcı illüstrasyon",
+      "lines": [
+        "Perplexity",
+        "Kaynak olarak görünmek",
+        "Erişim, içerik ve test yöntemi"
+      ]
+    }
+  },
+  {
+    "number": 111,
+    "sourceNumber": 11,
+    "collection": "guide",
+    "slug": "blog/geo-performansi-nasil-olculur",
+    "proposedSlug": "rehber/yapay-zeka-gorunurluk-olcumu",
+    "headline": "Yapay Zekâ Görünürlüğü Nasıl Ölçülür? GEO KPI ve Raporlama Rehberi",
+    "seoTitle": "GEO Ölçümü: ChatGPT ve AI Görünürlük KPI Rehberi",
+    "description": "GEO performansı nasıl ölçülür? Yapay zekâ atıfları, marka anılmaları, kaynak URL’leri, Search Console ve dönüşüm KPI’ları.",
+    "group": "geo",
+    "category": "Ölçüm Rehberi",
+    "kind": "Article",
+    "eventDate": "2026-10-28",
+    "eventLabel": "Kaynak kontrolü",
+    "publishedAt": "2026-09-29",
+    "modifiedAt": "2026-10-28",
+    "checkedAt": "2026-10-28",
+    "author": {
+      "name": "Yapay Zekâda Reklam",
+      "url": "/hakkimizda/"
+    },
+    "lead": "GEO performansını sadece marka adının yanıt içinde geçmesiyle değil; kaynak atfı, önerilme bağlamı, doğru bilgi oranı, organik yönlendirme ve nitelikli taleplerle izlemek gerekir.",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Ölçmediğiniz GEO çalışmasının sonucunu bilemezsiniz"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bir ajans “markanızı ChatGPT'de 1 numara yaptık” diyorsa önce şu soruyu sorun: Hangi kullanıcı sorusu? Hangi model veya arama modu? Hangi ülkede? Hangi tarihte? Yanıt kaç kez tekrarlandı? Birden fazla markanın önerildiği yanıtlar nasıl sayıldı? Bu ayrıntılar olmadan tek ekran görüntüsü performans raporu değildir."
+      },
+      {
+        "type": "heading",
+        "text": "GEO için altı KPI"
+      },
+      {
+        "type": "paragraph",
+        "text": "1. Marka anılma oranı: Önceden belirlenmiş sorgu setinin kaçında markanız geçiyor? 2. Nitelikli öneri oranı: Marka yalnız örnek diye mi anılıyor, yoksa kullanıcı ihtiyacına uygun bir alternatif olarak mı öneriliyor? 3. Kaynak atıf oranı: Hangi sorgularda sitenize link veriliyor? 4. Doğruluk oranı: Ürün adı, fiyat, hizmet kapsamı veya lokasyon doğru mu? 5. Referans trafik: AI kaynaklı ölçülebilen oturumlar var mı? 6. Ticari çıktı: Bu trafiğin veya ilişkilendirilen müşteri talebinin niteliği nedir?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bu göstergeleri tek bir “AI puanı”na indirgemek yerine ayrı izlemek daha güvenilirdir. Özellikle görünürlük trendi ve ticari performans farklı hızlarda değişebilir."
+      },
+      {
+        "type": "heading",
+        "text": "Basit bir ölçüm tablosu"
+      },
+      {
+        "type": "table",
+        "text": "Örnek ölçüm tablosu",
+        "headers": [
+          "Tarih",
+          "Platform",
+          "Soru",
+          "Dil/Ülke",
+          "Marka anıldı mı?",
+          "Kaynak URL",
+          "Öneri bağlamı",
+          "Doğruluk"
+        ],
+        "rows": [
+          [
+            "2026-10-28",
+            "ChatGPT Search",
+            "Örnek soru",
+            "TR/TR",
+            "Test edilecek",
+            "Test edilecek",
+            "Test edilecek",
+            "Test edilecek"
+          ]
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Buradaki örnek satır gerçek test verisi değildir. Sorgularınızı her dönemde aynı tutun; yeni sorguları ayrı kohort olarak ekleyin. Modelin yanıt değişkenliği nedeniyle tek testin mutlak bir sıralama ifade etmediğini rapora not edin."
+      },
+      {
+        "type": "heading",
+        "text": "Resmî araçlarda ne görülebiliyor?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Microsoft'un Bing Webmaster Tools AI Performance görünümü, desteklenen Microsoft AI deneyimlerindeki toplam atıfları, kaynak URL'lerini ve grounding sorgularından örnekleri gösterebiliyor. Bu verilerin doğrudan tüm ChatGPT yanıtlarını kapsadığını varsaymayın."
+      },
+      {
+        "type": "paragraph",
+        "text": "Google, Search Console üretken AI performans raporları ile AI Overviews ve AI Mode gibi arama özellikleri için görünürlük verileri sunuyor. Bunlar da tek başına hangi markanın neden önerildiğini açıklayan evrensel ölçümler değil."
+      },
+      {
+        "type": "heading",
+        "text": "Örnek rapor mantığı"
+      },
+      {
+        "type": "paragraph",
+        "text": "Aynı 30 sorguyu bir ay içinde dört kez test ettiğinizi düşünün. İlk dönemde 30 sorgunun 6'sında, son dönemde 10'unda marka geçiyorsa görünürlük oranı test örneğinde %20'den yaklaşık %33'e çıkar. Bu temsili bir hesaplamadır, platformun tüm kullanıcıları için pazar payı veya gerçek sıralama değildir. Ayrıca yanlış marka bilgileri ve etkisiz trafik varsa iyi görünürlük oranı tek başına başarı sayılmaz."
+      },
+      {
+        "type": "heading",
+        "text": "Dönüşüm takibi"
+      },
+      {
+        "type": "paragraph",
+        "text": "AI platformlarından gelen yönlendirmeler farklı referrer biçimleri kullanabilir; bazı ziyaretlerin kaynağı eksik veya doğrudan trafik gibi görünebilir. Web analitiği, CRM'de “Bizi nereden duydunuz?” alanı ve satış görüşmelerindeki açık müşteri beyanlarını birlikte değerlendirin. Bunu kesin nedensellik gibi değil, kanıtların birleşimi olarak yorumlayın."
+      }
+    ],
+    "editorial": "İyi GEO raporu, pazarlama sunumunda güzel görünen bir ekran görüntüsü değil; sonraki ay hangi sayfayı geliştireceğinizi söyleyen karar aracıdır.",
+    "faq": [
+      {
+        "question": "ChatGPT için resmî sıralama raporu var mı?",
+        "answer": "Bütün sohbetleri ve tüm önerileri kapsayan tek bir genel marka sıralama raporu varsayılmamalı; platform araçları ile örneklem testleri ayrı kullanılmalı."
+      },
+      {
+        "question": "GEO KPI olarak tıklama yeterli mi?",
+        "answer": "Hayır. Atıf, anılma, doğru bağlam, marka doğruluğu ve nitelikli dönüşümler birlikte izlenmelidir."
+      },
+      {
+        "question": "Bing AI Performance ChatGPT’yi ölçer mi?",
+        "answer": "Microsoft’un raporu desteklenen Microsoft AI deneyimlerine odaklanır; tüm ChatGPT yanıtlarını ölçen bir rapor değildir."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Microsoft Bing — AI Performance in Bing Webmaster Tools",
+        "url": "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — Search Generative AI performance reports (3 Haziran 2026)",
+        "url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — Generative AI optimization guide",
+        "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        "kind": "Resmî belge"
+      }
+    ],
+    "related": [
+      {
+        "href": "/rehber/geo-30-gunluk-plan/",
+        "label": "30 Günde GEO Başlangıç Planı: Yapay Zekâda Görünürlük İçin Kontrol Listesi"
+      },
+      {
+        "href": "/chatgptde-markam-nasil-cikar/",
+        "label": "ChatGPT Markamı Nasıl Önerir? Marka Önerilerinde Görünür Olma Rehberi"
+      },
+      {
+        "href": "/rehber/geo-ajansi-nasil-secilir/",
+        "label": "GEO Ajansı Nasıl Seçilir? ChatGPT Görünürlük Hizmeti Alırken Sorulacaklar"
+      }
+    ],
+    "pillar": {
+      "href": "/rehber/geo-nedir/",
+      "label": "GEO nedir? Ana rehber"
+    },
+    "actions": [
+      "İlgili sayfalarınızda rehberdeki kontrolleri uygulayın; eksikleri URL ve tarih bilgisiyle kaydedin.",
+      "Değişiklikten sonra aynı sorgu ve ölçüm koşullarıyla tekrar kontrol edin; gözlem ile varsayımı ayrı raporlayın."
+    ],
+    "facts": [
+      [
+        "İçerik türü",
+        "Ölçüm Rehberi"
+      ],
+      [
+        "Amaç",
+        "yapay zeka görünürlük ölçümü"
+      ],
+      [
+        "Kapsam",
+        "Platformlara göre erişim, bilgi kalitesi ve ölçüm; tavsiye garantisi yok"
+      ]
+    ],
+    "scope": "Örnek ölçüm satırı ve oran hesabı temsili açıklamadır; sitemizin veya bir müşterimizin gerçek sonucu değildir.",
+    "cover": {
+      "src": "/images/rehber/yapay-zeka-gorunurluk-olcumu.png",
+      "alt": "Anılma.: Atıf. Talep.: GEO ölçüm ve raporlama konulu özgün açıklayıcı illüstrasyon",
+      "lines": [
+        "Anılma.",
+        "Atıf. Talep.",
+        "GEO ölçüm ve raporlama"
+      ]
+    }
+  },
+  {
+    "number": 112,
+    "sourceNumber": 12,
+    "collection": "guide",
+    "slug": "rehber/yerel-isletmeler-yapay-zeka",
+    "proposedSlug": "rehber/yerel-isletmeler-yapay-zeka",
+    "headline": "Yapay Zekâ Yerel İşletmeleri Nasıl Önerir? Klinik ve Hizmet İşletmeleri için GEO",
+    "seoTitle": "Yerel İşletmeler İçin GEO: AI Önerilerinde Görünmek",
+    "description": "Klinik, restoran ve yerel hizmet işletmeleri için yapay zekâda görünürlük: doğru konum verisi, uzmanlık, yorumlar ve yerel SEO.",
+    "group": "geo",
+    "category": "Sektörel Rehber",
+    "kind": "Article",
+    "eventDate": "2026-10-28",
+    "eventLabel": "Kaynak kontrolü",
+    "publishedAt": "2026-10-28",
+    "modifiedAt": "2026-10-28",
+    "checkedAt": "2026-10-28",
+    "author": {
+      "name": "Yapay Zekâda Reklam",
+      "url": "/hakkimizda/"
+    },
+    "lead": "Yerel işletmelerin AI destekli keşfinde açık konum, hizmet kapsamı, güncel işletme bilgisi ve doğrulanabilir uzmanlık önemlidir; her sistem aynı yerel veri kaynağını kullanmayabilir.",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "“Yakınımdaki en iyi işletme” sorusunu farklı kılan ne?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bir kullanıcı “Kadıköy'de akşam açık veteriner” diye sorduğunda cevapta yalnızca kurum adı yetmez; ilçe, hizmet saatleri, hangi vakaların kabul edildiği ve iletişim bilgileri gerekir. “İstanbul'da çocuk diş hekimi” sorusunda ise uzmanlık, hasta grubu, meslekî nitelikler ve konum kritik olabilir. Yapay zekâ ürünleri bu bilgileri her zaman aynı kaynaktan veya aynı doğrulukla kullanmaz."
+      },
+      {
+        "type": "heading",
+        "text": "Önce temel yerel veri temizliği"
+      },
+      {
+        "type": "paragraph",
+        "text": "İşletmenin yasal/ticari adı, adresi, telefonu, çalışma saatleri, web sitesi, hizmet alanları ve desteklenen dilleri web'de tutarlı gösterin. Google Business Profile'da güncel bilgi kullanın. Google, Business Profile bilgilerinin işletmenin eklediği verilerin yanında farklı kaynaklarla da güncellenebildiğini belirtiyor; bu nedenle düzenli kontrol gerekir."
+      },
+      {
+        "type": "heading",
+        "text": "Sektörel hizmet sayfası nasıl olmalı?"
+      },
+      {
+        "type": "paragraph",
+        "text": "“Veterinerlik hizmetlerimiz” gibi genel tek sayfa yerine gerçekten verilen hizmetleri açıkça anlatan bölümler oluşturun. Acil müdahale, rutin kontrol, görüntüleme gibi farklı konuların kapsam ve sınırlamalarını açıklayın. Şube veya lokasyon sayfalarını yalnız ilçe adını değiştirerek çoğaltmayın; ilgili lokasyonun gerçek farkları olmalı."
+      },
+      {
+        "type": "paragraph",
+        "text": "Klinik ve sağlık içeriklerinde doğruluk yükü daha yüksektir. Uzmanlık ve yetki alanını açıkça belirtin; garanti sonuç, doğrulanmamış üstünlük ve yanıltıcı hasta vaadi kullanmayın. Yerel mevzuata ve sağlık alanındaki reklam sınırlamalarına ayrıca uyun."
+      },
+      {
+        "type": "heading",
+        "text": "Yorumlar konusunda doğru yaklaşım"
+      },
+      {
+        "type": "paragraph",
+        "text": "Gerçek deneyimlerden gelen değerlendirmeler potansiyel müşteriler için karar desteği sağlayabilir. Ancak sahte yorum satın almak, hastalara teşvik karşılığı yanıltıcı puan verdirmek veya gerçekte sunulmayan hizmet için değerlendirme üretmek güvenilirliği zedeler. Yanıt verirken kişisel verileri ve sağlık mahremiyetini koruyun."
+      },
+      {
+        "type": "heading",
+        "text": "Yerel GEO için kontrol adımları"
+      },
+      {
+        "type": "list",
+        "text": "",
+        "ordered": true,
+        "items": [
+          "İşletme profillerini doğrulayın.",
+          "İl/ilçe ve hizmet bilgilerini gerçek duruma göre açıklayın.",
+          "Şube bazlı sayfalarda adres ve çalışma saatlerini güncel tutun.",
+          "Uygunsa LocalBusiness verilerini görünür içerikle eşleştirin.",
+          "Gerçek ekip ve yetkinlik sayfaları oluşturun.",
+          "Yasal uyarıları ve tüketici bilgilerini açık gösterin.",
+          "“Yakınımda”, “hafta sonu açık”, “İngilizce hizmet” gibi senaryoları test edin.",
+          "Hatalı AI yanıtlarını not ederek kaynak veriyi düzeltin."
+        ]
+      }
+    ],
+    "editorial": "Yerel GEO, çok sayıda ilçenin adını doldurmak değildir. İnsanların fiziksel olarak gidecekleri veya hizmet alacakları kurum hakkında doğru karar verebilmesini sağlamaktır.",
+    "faq": [
+      {
+        "question": "Google Business Profile ChatGPT’ye doğrudan kayıt mıdır?",
+        "answer": "Hayır. Google Business Profile özellikle Google ekosistemi için önemlidir; başka AI sistemleriyle eşitlenmemelidir."
+      },
+      {
+        "question": "Her ilçe için sayfa açmak gerekir mi?",
+        "answer": "Hayır. Yalnız gerçek hizmet alanını ve kullanıcıya özgü değeri yansıtan konum sayfaları oluşturulmalıdır."
+      },
+      {
+        "question": "Kliniklere GEO yapılabilir mi?",
+        "answer": "Bilgilendirme ve teknik görünürlük çalışılabilir; sağlık reklam mevzuatı, yetki ve etik sınırlar ayrıca gözetilmelidir."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Google Business Profile — How Google sources local business information",
+        "url": "https://support.google.com/business/answer/2721884",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — AI features and your website",
+        "url": "https://developers.google.com/search/docs/appearance/ai-features",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — Organization structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/organization",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — Generative AI optimization guide",
+        "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        "kind": "Resmî belge"
+      }
+    ],
+    "related": [
+      {
+        "href": "/rehber/marka-otoritesi-yapay-zeka/",
+        "label": "Yapay Zekâ Markaları Nereden Tanır? Dijital Otorite ve Güven Sinyalleri"
+      },
+      {
+        "href": "/rehber/yapay-zekada-nasil-cikarim/",
+        "label": "Yapay Zekâda Nasıl Çıkarım? ChatGPT, Gemini ve Copilot İçin Yol Haritası"
+      },
+      {
+        "href": "/rehber/geo-ajansi-nasil-secilir/",
+        "label": "GEO Ajansı Nasıl Seçilir? ChatGPT Görünürlük Hizmeti Alırken Sorulacaklar"
+      }
+    ],
+    "pillar": {
+      "href": "/rehber/geo-nedir/",
+      "label": "GEO nedir? Ana rehber"
+    },
+    "actions": [
+      "İlgili sayfalarınızda rehberdeki kontrolleri uygulayın; eksikleri URL ve tarih bilgisiyle kaydedin.",
+      "Değişiklikten sonra aynı sorgu ve ölçüm koşullarıyla tekrar kontrol edin; gözlem ile varsayımı ayrı raporlayın."
+    ],
+    "facts": [
+      [
+        "İçerik türü",
+        "Sektörel Rehber"
+      ],
+      [
+        "Amaç",
+        "yerel işletme GEO"
+      ],
+      [
+        "Kapsam",
+        "Platformlara göre erişim, bilgi kalitesi ve ölçüm; tavsiye garantisi yok"
+      ]
+    ],
+    "scope": "Bu rehber uygulama ve değerlendirme yöntemini açıklar. Belirli bir AI yanıtı, sıralama, atıf veya satış sonucu garanti edilmez; örnekler gerçekleşmiş müşteri sonucu değildir.",
+    "cover": {
+      "src": "/images/rehber/yerel-isletmeler-yapay-zeka.png",
+      "alt": "Doğru yer.: Güncel bilgi.: Yerel işletmeler için GEO konulu özgün açıklayıcı illüstrasyon",
+      "lines": [
+        "Doğru yer.",
+        "Güncel bilgi.",
+        "Yerel işletmeler için GEO"
+      ]
+    }
+  },
+  {
+    "number": 113,
+    "sourceNumber": 13,
+    "collection": "guide",
+    "slug": "rehber/b2b-geo",
+    "proposedSlug": "rehber/b2b-geo",
+    "headline": "B2B Şirketler Yapay Zekâ Tarafından Nasıl Önerilir? GEO ve Lead Generation",
+    "seoTitle": "B2B GEO: AI Önerilerinden Nitelikli Talep Kazanmak",
+    "description": "B2B yazılım, ajans ve hizmet şirketlerinin ChatGPT ve AI aramalarında doğru karar vericiye ulaşması için GEO stratejisi.",
+    "group": "geo",
+    "category": "B2B Stratejisi",
+    "kind": "Article",
+    "eventDate": "2026-10-28",
+    "eventLabel": "Kaynak kontrolü",
+    "publishedAt": "2026-10-28",
+    "modifiedAt": "2026-10-28",
+    "checkedAt": "2026-10-28",
+    "author": {
+      "name": "Yapay Zekâda Reklam",
+      "url": "/hakkimizda/"
+    },
+    "lead": "B2B GEO, şirketin yalnız adını duyurmak değil; karar vericinin teknik, finansal ve operasyonel ihtiyaçlarına karşı doğrulanabilir bir çözüm olarak anlaşılmasını sağlamaktır.",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "B2B satın alma soruları neden farklıdır?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bir kurucu “CRM öner” diyebilir; satış direktörü “12 kişilik ekipte WhatsApp ve çağrı kayıtlarıyla çalışan CRM”, bilgi işlem yöneticisi ise “veri saklama, entegrasyon ve erişim logları olan çözüm” arayabilir. Üç soru da aynı ürün kategorisindedir ama karar kriterleri farklıdır. B2B GEO çalışması bu farklı bakış açılarını ürünün gerçek yetenekleriyle eşleştirmelidir."
+      },
+      {
+        "type": "heading",
+        "text": "Karar verici matrisi hazırlayın"
+      },
+      {
+        "type": "paragraph",
+        "text": "Her müşteri rolü için problem, mevcut alternatif, satın alma riski, ölçüm kriteri ve itirazlar belirleyin. CEO toplam verimlilik ve yatırım geri dönüşünü; operasyon yöneticisi uygulama süresini; teknik ekip entegrasyon ve güvenliği sorgulayabilir. Bir marka sayfasında bunların hepsini birbirine karıştırmak yerine ana çözüm sayfasından alt karar rehberlerine bağlantı verin."
+      },
+      {
+        "type": "heading",
+        "text": "Üç katmanlı içerik sistemi"
+      },
+      {
+        "type": "paragraph",
+        "text": "Kategori içeriği: “AI call agent nedir?” gibi kavramı açıklayan kaynak sayfa. Karşılaştırma içeriği: “Geleneksel IVR ile AI call agent farkı” gibi seçenekleri belirleyen rehber. Satın alma içeriği: “AI çağrı sisteminde PoC kontrol listesi”, “CRM entegrasyonu için teknik sorular” gibi teklif öncesi pratik belgeler. Her biri tek bir araştırma aşamasına hitap etmeli."
+      },
+      {
+        "type": "heading",
+        "text": "Gerçek vaka analizi nasıl yazılır?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Sadece “müşterimize %80 verim kazandırdık” demeyin. Sektör, başlangıç problemi, uygulanan çözüm, kapsanan süreç, ölçüm dönemi, karşılaştırma yöntemi, rakamların sınırları ve müşteri onayı varsa bunları yayımlayın. Gizlilik nedeniyle rakamları paylaşamıyorsanız bunu belirtin; anonim örnekleri doğrulanmış bağımsız başarı gibi sunmayın."
+      },
+      {
+        "type": "heading",
+        "text": "GEO ve lead generation bağını kurmak"
+      },
+      {
+        "type": "paragraph",
+        "text": "Rehberlerin sonunda yalnız “Hemen teklif al” yer almamalı. Kullanıcı önce durumunu değerlendirebilsin: kısa kontrol listesi, değerlendirme formu veya entegrasyon gereksinimleri sayfası sunun. CRM'de AI kaynağı beyanını, hangi makaleden geldiğini ve hangi ürünle ilgilendiğini ayrı alanlarda tutmak, satış ekibine daha anlamlı bilgi sağlayabilir."
+      },
+      {
+        "type": "heading",
+        "text": "Rakip karşılaştırması yaparken"
+      },
+      {
+        "type": "paragraph",
+        "text": "Rakiplerle ilgili güncel ve doğrulanabilir farkları yazın. Fiyat, özellik, ülke kapsamı veya sertifika gibi değişebilen veriler tarihli olmalı. “Piyasadaki tek” veya “kesin en iyi” gibi iddialar yerine kimin için hangi seçeneğin daha uygun olabileceğini açıklayın."
+      }
+    ],
+    "editorial": "B2B'de amaç mümkün olduğunca çok yapay zekâ yanıtında görünmek değil, satışla gerçekten ilgisi olan dar sorularda anlaşılır bir alternatif olmak. Bir nitelikli fırsat, yüzlerce ilgisiz mention'dan değerli olabilir.",
+    "faq": [
+      {
+        "question": "B2B GEO ile doğrudan lead gelir mi?",
+        "answer": "Görünürlük satın alma araştırmasını etkileyebilir; ancak lead ve satış etkisi ayrıca CRM ve analitik verileriyle doğrulanmalıdır."
+      },
+      {
+        "question": "B2B GEO için en önemli içerik türü ne?",
+        "answer": "Kullanım senaryosu, teknik uygunluk, karşılaştırma kriterleri ve izinli gerçek vaka analizleri yüksek değerli olabilir."
+      },
+      {
+        "question": "Rakip isimlerini içerikte geçirmek gerekir mi?",
+        "answer": "Gerektiğinde dürüst ve kaynaklı karşılaştırma yapılabilir; yanıltıcı veya güncel olmayan iddialardan kaçınılmalıdır."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Google Search Central — Generative AI optimization guide",
+        "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Princeton/ACM KDD 2024 — GEO: Generative Engine Optimization",
+        "url": "https://collaborate.princeton.edu/en/publications/geo-generative-engine-optimization/",
+        "kind": "Akademik araştırma"
+      },
+      {
+        "label": "Microsoft Bing — AI Performance in Bing Webmaster Tools",
+        "url": "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/",
+        "kind": "Resmî belge"
+      }
+    ],
+    "related": [
+      {
+        "href": "/chatgptde-markam-nasil-cikar/",
+        "label": "ChatGPT Markamı Nasıl Önerir? Marka Önerilerinde Görünür Olma Rehberi"
+      },
+      {
+        "href": "/rehber/geo-ajansi-nasil-secilir/",
+        "label": "GEO Ajansı Nasıl Seçilir? ChatGPT Görünürlük Hizmeti Alırken Sorulacaklar"
+      },
+      {
+        "href": "/blog/geo-performansi-nasil-olculur/",
+        "label": "Yapay Zekâ Görünürlüğü Nasıl Ölçülür? GEO KPI ve Raporlama Rehberi"
+      }
+    ],
+    "pillar": {
+      "href": "/rehber/geo-nedir/",
+      "label": "GEO nedir? Ana rehber"
+    },
+    "actions": [
+      "İlgili sayfalarınızda rehberdeki kontrolleri uygulayın; eksikleri URL ve tarih bilgisiyle kaydedin.",
+      "Değişiklikten sonra aynı sorgu ve ölçüm koşullarıyla tekrar kontrol edin; gözlem ile varsayımı ayrı raporlayın."
+    ],
+    "facts": [
+      [
+        "İçerik türü",
+        "B2B Stratejisi"
+      ],
+      [
+        "Amaç",
+        "B2B GEO"
+      ],
+      [
+        "Kapsam",
+        "Platformlara göre erişim, bilgi kalitesi ve ölçüm; tavsiye garantisi yok"
+      ]
+    ],
+    "scope": "Bu rehber uygulama ve değerlendirme yöntemini açıklar. Belirli bir AI yanıtı, sıralama, atıf veya satış sonucu garanti edilmez; örnekler gerçekleşmiş müşteri sonucu değildir.",
+    "cover": {
+      "src": "/images/rehber/b2b-geo.png",
+      "alt": "B2B: Karar vericiye ulaşmak: Kullanım senaryosu ve nitelikli talep konulu özgün açıklayıcı illüstrasyon",
+      "lines": [
+        "B2B",
+        "Karar vericiye ulaşmak",
+        "Kullanım senaryosu ve nitelikli talep"
+      ]
+    }
+  },
+  {
+    "number": 114,
+    "sourceNumber": 14,
+    "collection": "guide",
+    "slug": "rehber/geo-ajansi-nasil-secilir",
+    "proposedSlug": "rehber/geo-ajansi-nasil-secilir",
+    "headline": "GEO Ajansı Nasıl Seçilir? ChatGPT Görünürlük Hizmeti Alırken Sorulacaklar",
+    "seoTitle": "GEO Ajansı Seçimi: 15 Soru ve Hizmet Kapsamı",
+    "description": "GEO ajansı seçerken teknik kapsam, içerik kalitesi, AI görünürlük ölçümü, raporlama ve gerçekçi sonuç beklentisi nasıl değerlendirilir?",
+    "group": "geo",
+    "category": "Ticari Araştırma",
+    "kind": "Article",
+    "eventDate": "2026-10-28",
+    "eventLabel": "Kaynak kontrolü",
+    "publishedAt": "2026-10-28",
+    "modifiedAt": "2026-10-28",
+    "checkedAt": "2026-10-28",
+    "author": {
+      "name": "Yapay Zekâda Reklam",
+      "url": "/hakkimizda/"
+    },
+    "lead": "GEO ajansı seçerken kesin öneri garantisi yerine teknik denetim, içerik üretim yöntemi, kaynak stratejisi ve şeffaf ölçüm planı talep edin.",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "GEO hizmeti satın alırken ne beklemelisiniz?"
+      },
+      {
+        "type": "paragraph",
+        "text": "“30 günde ChatGPT'de ilk sıraya çıkarıyoruz” gibi vaatler satın alma kararını kolaylaştırıyor görünebilir. Fakat yapay zekâ yanıtları kullanıcı sorusuna, bağlama ve platforma göre değiştiğinden kalıcı, evrensel bir “birinci sıra” vaadi çoğu zaman ölçülebilir değildir. Bunun yerine ajansın hangi veriyle başlayacağını ve hangi çıktıları teslim edeceğini sorun."
+      },
+      {
+        "type": "heading",
+        "text": "Ajansa sorulacak 15 soru"
+      },
+      {
+        "type": "list",
+        "text": "",
+        "ordered": true,
+        "items": [
+          "Hangi AI platformlarında neyi ölçüyorsunuz?",
+          "Kaynak gösterilme ile marka tavsiyesini ayırıyor musunuz?",
+          "Teknik SEO denetimine neleri dahil ediyorsunuz?",
+          "OAI-SearchBot ve diğer bot erişimlerini nasıl kontrol ediyorsunuz?",
+          "İlk 30 günün somut teslimleri nelerdir?",
+          "Hedef kullanıcı sorularını nasıl oluşturuyorsunuz?",
+          "Tekrar testlerinde yanıt değişkenliğini nasıl ele alıyorsunuz?",
+          "İçeriklerin yazarı ve uzman denetçisi kim?",
+          "Sektör özelinde gerçek vaka ve veri nasıl topluyorsunuz?",
+          "Ürettiğiniz içeriklerin özgünlük kontrolü var mı?",
+          "Üçüncü taraf görünürlük çalışmalarında hangi etik ilkeler uygulanıyor?",
+          "Hangi sonuçların garanti edilemeyeceğini açıkça söylüyor musunuz?",
+          "Raporlarda ham test kayıtlarına erişebiliyor muyuz?",
+          "Analitik ile CRM arasında sonuç bağlantısı kurabiliyor musunuz?",
+          "Sözleşme sona erdiğinde içerik, veri ve raporların sahipliği kimde kalıyor?"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Fiyatı hangi işler belirler?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Site büyüklüğü, desteklenen ülke ve dil sayısı, teknik altyapı karmaşıklığı, içerik üretim hacmi, sektörün doğruluk gereksinimleri, ölçüm araçları ve dış kaynak doğrulama çalışmaları maliyeti belirleyebilir. Tek bir uluslararası fiyat standardı yoktur; bu nedenle “GEO hizmeti şu kadar tutar” diye dayanaksız sabit fiyat vermek yanıltıcı olur."
+      },
+      {
+        "type": "paragraph",
+        "text": "Teklifte tek seferlik denetim, sürekli içerik ve teknik optimizasyon, ölçüm ve raporlama, kurumsal veri düzenleme ayrı kalemler hâlinde gösterilmeli. Gerekli olmayan onlarca sayfanın üretimini peşin satın almak yerine öncelikli konulara göre aşamalı kapsam daha kontrollüdür."
+      },
+      {
+        "type": "heading",
+        "text": "İyi rapor nasıl görünür?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Dönem başındaki teknik engeller, düzeltilen sayfalar, yayımlanan özgün içerikler, belirlenmiş prompt setinde marka anılma/atıf oranları, yanlış öneri örnekleri ve satışa yansıyan nitelikli talepler. Bir ajans yalnız en iyi çıktının ekran görüntüsünü sunuyorsa raporun temsil kabiliyeti sorgulanmalı."
+      },
+      {
+        "type": "heading",
+        "text": "GEO ajansı mı, içerik ajansı mı?"
+      },
+      {
+        "type": "paragraph",
+        "text": "GEO; içerik, teknik SEO, dijital PR, ürün bilgisi ve analitiğin kesişiminde yer alır. Sadece metin yazan ekibin teknik engelleri düzeltmekte zorlanabileceği gibi, sadece şema ekleyen ekibin de marka güvenini tek başına kurması beklenmemeli."
+      }
+    ],
+    "editorial": "Hizmet sağlayıcının değeri “ChatGPT'yi ikna eden gizli tekniği”nde değil, doğruluğu kontrol edilebilir bir büyüme sistemi kurabilmesindedir.",
+    "faq": [
+      {
+        "question": "GEO ajansı ChatGPT’de ilk sırayı garanti edebilir mi?",
+        "answer": "Her sorgu ve kullanıcı için kalıcı birinci sıra garantisi güvenilir değildir."
+      },
+      {
+        "question": "GEO için yalnız blog içerikleri yeterli mi?",
+        "answer": "Genellikle hayır. Teknik erişim, marka bilgisi, kaynak tutarlılığı ve ölçüm de değerlendirilmelidir."
+      },
+      {
+        "question": "GEO teklifinde hangi raporu istemeliyim?",
+        "answer": "Sorgu seti, tarih, platform, atıf/öneri bağlamı, yapılan teknik değişiklikler ve iş hedefiyle ilişkili sonuçlar bulunmalıdır."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Google Search Central — Generative AI optimization guide",
+        "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "OpenAI Developers — Overview of OpenAI Crawlers",
+        "url": "https://developers.openai.com/api/docs/bots",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Microsoft Bing — AI Performance in Bing Webmaster Tools",
+        "url": "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — Search Generative AI performance reports (3 Haziran 2026)",
+        "url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports",
+        "kind": "Resmî belge"
+      }
+    ],
+    "related": [
+      {
+        "href": "/rehber/geo-nedir/",
+        "label": "GEO Nedir? Yapay Zekâ Aramalarında Görünür Olmanın Yeni Kuralları"
+      },
+      {
+        "href": "/blog/geo-performansi-nasil-olculur/",
+        "label": "Yapay Zekâ Görünürlüğü Nasıl Ölçülür? GEO KPI ve Raporlama Rehberi"
+      },
+      {
+        "href": "/rehber/geo-30-gunluk-plan/",
+        "label": "30 Günde GEO Başlangıç Planı: Yapay Zekâda Görünürlük İçin Kontrol Listesi"
+      }
+    ],
+    "pillar": {
+      "href": "/rehber/geo-nedir/",
+      "label": "GEO nedir? Ana rehber"
+    },
+    "actions": [
+      "İlgili sayfalarınızda rehberdeki kontrolleri uygulayın; eksikleri URL ve tarih bilgisiyle kaydedin.",
+      "Değişiklikten sonra aynı sorgu ve ölçüm koşullarıyla tekrar kontrol edin; gözlem ile varsayımı ayrı raporlayın."
+    ],
+    "facts": [
+      [
+        "İçerik türü",
+        "Ticari Araştırma"
+      ],
+      [
+        "Amaç",
+        "GEO ajansı"
+      ],
+      [
+        "Kapsam",
+        "Platformlara göre erişim, bilgi kalitesi ve ölçüm; tavsiye garantisi yok"
+      ]
+    ],
+    "scope": "Bu rehber uygulama ve değerlendirme yöntemini açıklar. Belirli bir AI yanıtı, sıralama, atıf veya satış sonucu garanti edilmez; örnekler gerçekleşmiş müşteri sonucu değildir.",
+    "cover": {
+      "src": "/images/rehber/geo-ajansi-nasil-secilir.png",
+      "alt": "15 soru: GEO ajansı seçimi: Kapsam, kanıt ve raporlama konulu özgün açıklayıcı illüstrasyon",
+      "lines": [
+        "15 soru",
+        "GEO ajansı seçimi",
+        "Kapsam, kanıt ve raporlama"
+      ]
+    }
+  },
+  {
+    "number": 115,
+    "sourceNumber": 15,
+    "collection": "guide",
+    "slug": "rehber/geo-30-gunluk-plan",
+    "proposedSlug": "rehber/geo-30-gunluk-plan",
+    "headline": "30 Günde GEO Başlangıç Planı: Yapay Zekâda Görünürlük İçin Kontrol Listesi",
+    "seoTitle": "30 Günde GEO Planı: Teknik ve İçerik Kontrolü",
+    "description": "GEO çalışmalarına nasıl başlanır? ChatGPT, Google AI ve Copilot için 4 haftalık teknik, içerik, otorite ve ölçüm planı.",
+    "group": "geo",
+    "category": "Operasyonel Rehber",
+    "kind": "Article",
+    "eventDate": "2026-10-28",
+    "eventLabel": "Kaynak kontrolü",
+    "publishedAt": "2026-10-28",
+    "modifiedAt": "2026-10-28",
+    "checkedAt": "2026-10-28",
+    "author": {
+      "name": "Yapay Zekâda Reklam",
+      "url": "/hakkimizda/"
+    },
+    "lead": "İlk 30 günde hedef, bir yapay zekâda birinci olmak değil; erişim engellerini kaldırmak, markayı doğru anlatmak, özgün içerikleri yayımlamak ve ölçüm düzeni kurmaktır.",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Başlangıç koşulu: neyi ölçmek istediğinizi yazın"
+      },
+      {
+        "type": "paragraph",
+        "text": "“ChatGPT'de görünür olmak” tek başına iş hedefi değildir. Bir yazılım şirketi demo talebi, bir e-ticaret sitesi ürün keşfi, bir yerel hizmet şirketi randevu bekler. Bu nedenle ilk gün bir sayfalık hedef kartı hazırlayın: hedef müşteri, temel sorun, hedef ülke/dil, ana kategori, rakip kümesi ve satış göstergesi."
+      },
+      {
+        "type": "heading",
+        "text": "1. Hafta — Teknik denetim ve görünürlük baz çizgisi"
+      },
+      {
+        "type": "paragraph",
+        "text": "Google Search Console ve Bing Webmaster Tools erişimlerini doğrulayın. Önemli URL'ler için HTTP durum kodu, canonical, noindex, XML sitemap, mobil kullanılabilirlik ve bağlantı mimarisini kontrol edin. ChatGPT araması için OpenAI bot belgelerine göre OAI-SearchBot erişimini ve güvenlik duvarı engellerini inceleyin. Ardından 20–40 örnek kullanıcı sorusundan oluşan bir test seti oluşturun. Bu rakam ölçüm tasarımı için pratik bir başlangıç önerisidir; platform standardı değildir."
+      },
+      {
+        "type": "paragraph",
+        "text": "Teslim: Teknik hata listesi, öncelik seviyesi, ilk prompt ölçümü, kritik sayfa envanteri."
+      },
+      {
+        "type": "heading",
+        "text": "2. Hafta — Marka bilgi haritası"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ana sayfa, hakkımızda, ürün/hizmet, destek, iletişim, varsa fiyat ve sektör sayfalarının birbiriyle tutarlı olduğundan emin olun. Ürün kabiliyetleri, sektör deneyimi, hedef müşteri, diller, lokasyon, veri işleme/entegrasyon ayrıntıları gibi doğrulanabilir bilgileri bir referans dokümanda toplayın. Dış kurumsal profillerdeki yanlış ve eski bilgileri tespit edin."
+      },
+      {
+        "type": "paragraph",
+        "text": "Teslim: Onaylanmış kurumsal tanım, özellik matrisi, güncelleme listesi, gerçek referans kaynakları."
+      },
+      {
+        "type": "heading",
+        "text": "3. Hafta — Özgün bilgi ve içerik üretimi"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bir ana kategori rehberi, iki satın alma sorusu ve bir gerçek vaka veya teknik uygulama sayfası seçin. İçerik sayısını değil değerini optimize edin. Her sayfada net cevap, açıklama, kanıt, sınırlamalar ve doğal sonraki adım bulunmalı. Uygun makale ve kuruluş işaretlemelerini yalnız sayfadaki gerçek bilgilerle eşleştirin. URL'lerin indeks durumunu kontrol edin."
+      },
+      {
+        "type": "paragraph",
+        "text": "Teslim: 3–4 güçlü içerik, iç bağlantı planı, metaveriler, tarihli kaynaklar."
+      },
+      {
+        "type": "heading",
+        "text": "4. Hafta — Tekrar testleri ve karar"
+      },
+      {
+        "type": "paragraph",
+        "text": "İlk hafta belirlediğiniz sorguları aynı yöntemle yeniden çalıştırın. Kaynak bağlantıları, marka anılmaları, doğru bilgi oranı ve varsa yönlendirme trafiğini karşılaştırın. Her farkı içerik çalışmasına bağlamayın; platformların kendi değişkenliği de etkili olabilir. Sonraki 60 gün için eksik konu kümeleri, teknik geliştirmeler ve olası ölçüm iyileştirmelerini belirleyin."
+      },
+      {
+        "type": "paragraph",
+        "text": "Teslim: Karşılaştırmalı GEO raporu, güncelleme planı ve iş hedeflerine bağlanan takip göstergeleri."
+      },
+      {
+        "type": "heading",
+        "text": "Önceliklendirme formülü"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bir görevin önceliğini üç boyutta değerlendirin: Etkisi, kanıt gücü, uygulama eforu. Örneğin tüm hizmet sayfalarını yanlışlıkla engelleyen WAF kuralını düzeltmek yüksek etkili ve hızlıdır. Kimsenin sormadığı 40 benzer blog yazısı üretmek ise düşük önceliklidir."
+      },
+      {
+        "type": "heading",
+        "text": "30 günün sonunda ne beklenmeli?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Daha temiz bir teknik altyapı, daha açık marka tanımı, gerçek kullanıcı sorularını karşılayan yayınlar ve tekrarlanabilir ölçüm. Belirli sayıda atıf, tavsiye veya satış garanti edilmez. İlk ayın değeri sistem kurmasındadır; iyileştirmenin hızı sektör ve mevcut dijital varlıklara göre değişir."
+      }
+    ],
+    "editorial": "Yapay zekâ görünürlüğünde hız yarışı içerik sayısıyla kazanılmaz. İlk önce yanlış bilgileri, teknik engelleri ve ölçülemeyen iddiaları azaltan şirketler daha sağlam bir zeminde ilerler.",
+    "faq": [
+      {
+        "question": "30 günde ChatGPT önerisi garantilenir mi?",
+        "answer": "Hayır. İlk ay teknik ve editoryal temel kurulur; görünürlük ve tavsiye sonuçları garanti edilemez."
+      },
+      {
+        "question": "İlk hafta neye bakılmalı?",
+        "answer": "İndeks, tarayıcı erişimi, sunucu/CDN engelleri ve ilk görünürlük ölçümüne."
+      },
+      {
+        "question": "Ne kadar içerik yayımlamak gerekir?",
+        "answer": "Sabit sayı yoktur. Birkaç iyi araştırılmış sayfa, birbirini tekrarlayan onlarca zayıf sayfadan daha faydalı olabilir."
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenAI Developers — Overview of OpenAI Crawlers",
+        "url": "https://developers.openai.com/api/docs/bots",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — Generative AI optimization guide",
+        "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Google Search Central — Search Generative AI performance reports (3 Haziran 2026)",
+        "url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports",
+        "kind": "Resmî belge"
+      },
+      {
+        "label": "Microsoft Bing — AI Performance in Bing Webmaster Tools",
+        "url": "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/",
+        "kind": "Resmî belge"
+      }
+    ],
+    "related": [
+      {
+        "href": "/rehber/geo-nedir/",
+        "label": "GEO Nedir? Yapay Zekâ Aramalarında Görünür Olmanın Yeni Kuralları"
+      },
+      {
+        "href": "/blog/geo-performansi-nasil-olculur/",
+        "label": "Yapay Zekâ Görünürlüğü Nasıl Ölçülür? GEO KPI ve Raporlama Rehberi"
+      },
+      {
+        "href": "/chatgpt-seo/",
+        "label": "Yapay Zekâ SEO Teknikleri: GEO İçerik Optimizasyonu Nasıl Yapılır?"
+      }
+    ],
+    "pillar": {
+      "href": "/rehber/geo-nedir/",
+      "label": "GEO nedir? Ana rehber"
+    },
+    "actions": [
+      "İlgili sayfalarınızda rehberdeki kontrolleri uygulayın; eksikleri URL ve tarih bilgisiyle kaydedin.",
+      "Değişiklikten sonra aynı sorgu ve ölçüm koşullarıyla tekrar kontrol edin; gözlem ile varsayımı ayrı raporlayın."
+    ],
+    "facts": [
+      [
+        "İçerik türü",
+        "Operasyonel Rehber"
+      ],
+      [
+        "Amaç",
+        "GEO 30 günlük plan"
+      ],
+      [
+        "Kapsam",
+        "Platformlara göre erişim, bilgi kalitesi ve ölçüm; tavsiye garantisi yok"
+      ]
+    ],
+    "scope": "Bu rehber uygulama ve değerlendirme yöntemini açıklar. Belirli bir AI yanıtı, sıralama, atıf veya satış sonucu garanti edilmez; örnekler gerçekleşmiş müşteri sonucu değildir.",
+    "cover": {
+      "src": "/images/rehber/geo-30-gunluk-plan.png",
+      "alt": "30 gün: Dört haftalık plan: Teknik, içerik ve ölçüm konulu özgün açıklayıcı illüstrasyon",
+      "lines": [
+        "30 gün",
+        "Dört haftalık plan",
+        "Teknik, içerik ve ölçüm"
+      ]
+    }
+  }
+]

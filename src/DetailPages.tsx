@@ -313,139 +313,6 @@ function ChatGPTAdsPage() {
   )
 }
 
-function ChatGPTTurkeyPage() {
-  return (
-    <Detail
-      eyebrow="Türkiye Pazarı & Yasal Çerçeve"
-      title="ChatGPT Reklamları Türkiye: Erişim, Kurulum ve Uygunluk Rehberi"
-      summary="OpenAI Ads Manager Beta Türkiye durumu: Self-servis panel erişimi, şirket tüzel kişilik evrakları, fatura ve 2 No'lu KDV vergilendirmesi ile Türkçe dil modellerinde reklam optimizasyonu."
-      cta="Türkiye Kampanyanızı Başlatın"
-    >
-      <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-        <section style={{ marginBottom: '3.5rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.2rem', color: '#ffffff' }}>
-            Türkiye'de ChatGPT Reklamları Durumu: 2026 Son Durum
-          </h2>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1rem' }}>
-            Türkiye, yapay zekâ adaptasyonunda dünyanın en hızlı büyüyen pazarlarından biridir. Milyonlarca profesyonel, öğrenci ve karar verici her gün ChatGPT'yi araştırma, satın alma ve analiz aracı olarak kullanmaktadır.
-          </p>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem' }}>
-            <strong>Resmî Durum:</strong> 23 Eylül 2026 tarihi itibarıyla OpenAI Ads Manager Beta programında Türkiye, reklamveren self-servis erişimine açık ülkeler arasında yer almaktadır. Türk şirketleri resmî vergi ve fatura bilgileriyle doğrudan OpenAI Ads Manager hesabı açabilir ve Türkiye veya global hedef kitlelere yönelik kampanyalarını başlatabilir.
-          </p>
-        </section>
-
-        <section style={{ marginBottom: '3.5rem', background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '16px', padding: '2rem' }}>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1.2rem', color: '#ffffff' }}>
-            Başvuru ve Hesap Kurulumu İçin Gerekenler
-          </h2>
-          <ul style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, paddingLeft: '1.5rem' }}>
-            <li><strong>Tüzel Kişilik:</strong> Anonim Şirket (A.Ş.), Limited Şirket (Ltd. Şti.) veya tescilli Şahıs Şirketi kaydı.</li>
-            <li><strong>Vergi Kimlik Numarası (VKN) & Vergi Dairesi:</strong> Faturanın yasal muhasebe kaydı için eksiksiz şirket unvanı ve VKN bilgisi.</li>
-            <li><strong>Kurumsal Alan Adı & E-posta:</strong> @sirketiniz.com uzantılı resmî iş e-posta adresi (ücretsiz genel servisler onay gecikmesine neden olabilir).</li>
-            <li><strong>Web Sitesi ve Açılış Sayfası:</strong> SSL sertifikalı, çalışan iletişim bilgileri, gizlilik politikası ve KVKK aydınlatma metnine sahip kurumsal web sitesi.</li>
-          </ul>
-        </section>
-
-        <section style={{ marginBottom: '3.5rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem', color: '#ffffff' }}>
-            Faturalandırma, Vergi ve 2 No'lu KDV Süreci
-          </h2>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, fontSize: '1.05rem', marginBottom: '1rem' }}>
-            OpenAI merkezli harcamalar uluslararası dijital hizmet alımı kapsamındadır. Türkiye'deki mali mevzuat uyarınca:
-          </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginTop: '1rem' }}>
-            <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <strong style={{ color: '#ffffff', display: 'block', marginBottom: '0.5rem', fontSize: '1.1rem' }}>2 No'lu KDV Beyanı</strong>
-              <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.92rem', lineHeight: 1.6, margin: 0 }}>
-                Yurtdışından alınan dijital reklam hizmeti için şirketiniz tarafından sorumlu sıfatıyla 2 No'lu KDV beyannamesi verilerek KDV tahakkuk ettirilir ve 1 No'lu KDV'de indirim konusu yapılır.
-              </p>
-            </div>
-            <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <strong style={{ color: '#ffffff', display: 'block', marginBottom: '0.5rem', fontSize: '1.1rem' }}>Stopaj Yükümlülüğü</strong>
-              <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.92rem', lineHeight: 1.6, margin: 0 }}>
-                Cumhurbaşkanı Kararı uyarınca yurtdışı mukimi firmalara yapılan dijital reklam ödemelerinde geçerli stopaj oranları dikkate alınarak muhtasar beyanname ile beyan edilir.
-              </p>
-            </div>
-          </div>
-          <p style={{ color: 'var(--chat-text-muted)', fontSize: '0.85rem', marginTop: '1rem' }}>
-            *Not: Vergi mevzuatı güncellemeleri için mali müşaviriniz veya muhasebe departmanınızla teyit etmeniz tavsiye edilir.
-          </p>
-        </section>
-
-        <section style={{ marginBottom: '3.5rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem', color: '#ffffff' }}>
-            Türkiye Pazarında Sektörel Uygunluk Matrisi
-          </h2>
-          <div className="table-wrap" tabIndex={0} style={{ overflowX: 'auto' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.95rem' }}>
-              <thead>
-                <tr style={{ borderBottom: '2px solid var(--chat-border)', color: '#ffffff' }}>
-                  <th style={{ padding: '0.9rem' }}>Sektör</th>
-                  <th style={{ padding: '0.9rem' }}>Uygunluk Derecesi</th>
-                  <th style={{ padding: '0.9rem' }}>Kullanım Senaryosu & Karar Anı</th>
-                </tr>
-              </thead>
-              <tbody style={{ color: 'var(--chat-text-secondary)' }}>
-                <tr style={{ borderBottom: '1px solid var(--chat-border)' }}>
-                  <td style={{ padding: '0.9rem', fontWeight: 600, color: '#ffffff' }}>B2B Yazılım & SaaS</td>
-                  <td style={{ padding: '0.9rem', color: 'var(--chat-green-text)', fontWeight: 600 }}>Çok Yüksek</td>
-                  <td style={{ padding: '0.9rem' }}>ERP, CRM, insan kaynakları ve muhasebe yazılımı araştırmalarında yüksek niyetli karar vericilere ulaşma.</td>
-                </tr>
-                <tr style={{ borderBottom: '1px solid var(--chat-border)' }}>
-                  <td style={{ padding: '0.9rem', fontWeight: 600, color: '#ffffff' }}>Kurumsal Danışmanlık & Hukuk</td>
-                  <td style={{ padding: '0.9rem', color: 'var(--chat-green-text)', fontWeight: 600 }}>Yüksek</td>
-                  <td style={{ padding: '0.9rem' }}>Vergi, gümrük, şirket kuruluşu ve strateji danışmanlığı arayan yöneticiler için uzmanlık teklifleri.</td>
-                </tr>
-                <tr style={{ borderBottom: '1px solid var(--chat-border)' }}>
-                  <td style={{ padding: '0.9rem', fontWeight: 600, color: '#ffffff' }}>Sağlık Turizmi & Yüksek Değerli Hizmet</td>
-                  <td style={{ padding: '0.9rem', color: 'var(--chat-green-text)', fontWeight: 600 }}>Yüksek</td>
-                  <td style={{ padding: '0.9rem' }}>Yurtdışından Türkiye'deki klinikleri araştıran hastalara yönelik yabancı dil context hints kampanyaları.</td>
-                </tr>
-                <tr style={{ borderBottom: '1px solid var(--chat-border)' }}>
-                  <td style={{ padding: '0.9rem', fontWeight: 600, color: '#ffffff' }}>E-Ticaret & Niş Tüketici Ürünleri</td>
-                  <td style={{ padding: '0.9rem', color: '#f59e0b', fontWeight: 600 }}>Orta - Yüksek</td>
-                  <td style={{ padding: '0.9rem' }}>Derin ürün karşılaştırması ve teknik inceleme yapılan lüks, teknoloji ve özel tasarım ürünler.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section style={{ marginBottom: '2rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem', color: '#ffffff' }}>
-            Sıkça Sorulan Sorular
-          </h2>
-          <div className="faq-list">
-            <div className="faq-item" style={{ borderBottom: '1px solid var(--chat-border)', paddingBottom: '1.2rem', marginBottom: '1.2rem' }}>
-              <h3 style={{ color: '#ffffff', fontSize: '1.1rem', marginBottom: '0.5rem' }}>Türkiye'den reklam verirken hedefleme nasıl yapılır?</h3>
-              <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, fontSize: '0.95rem' }}>
-                Kampanyanızı Türkiye'deki Türkçe konuşan kullanıcılara hedefleyebileceğiniz gibi, Türkiye'den yurtdışına (ABD, Avrupa, Körfez vb.) ihracat yapan firmalar için ilgili ülke ve dillerde de yayınlayabilirsiniz.
-              </p>
-            </div>
-            <div className="faq-item" style={{ borderBottom: '1px solid var(--chat-border)', paddingBottom: '1.2rem', marginBottom: '1.2rem' }}>
-              <h3 style={{ color: '#ffffff', fontSize: '1.1rem', marginBottom: '0.5rem' }}>Ödemeler Türk Lirası ile mi yapılır?</h3>
-              <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, fontSize: '0.95rem' }}>
-                OpenAI platformu faturalandırmayı genellikle USD bazında gerçekleştirir; kurumsal kredi kartınız bankanız tarafından güncel döviz kuru üzerinden Türk Lirası olarak ekstreye yansıtılır.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <div style={{ textAlign: 'center', marginTop: '3.5rem', padding: '2.5rem', background: 'var(--chat-surface)', borderRadius: '16px', border: '1px solid var(--chat-border)' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem', color: '#ffffff' }}>Türkiye Pazarında Erken Avantaj Elde Edin</h2>
-          <p style={{ color: 'var(--chat-text-secondary)', marginBottom: '1.8rem', maxWidth: '600px', margin: '0 auto 1.8rem', lineHeight: 1.7 }}>
-            Rakipleriniz henüz ChatGPT Ads'i keşfetmemişken sektörünüzdeki en kârlı arama ve karar anlarını kapatın.
-          </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a className="button primary" href="/iletisim/">Türkiye Kurulum Danışmanlığı Alın <Arrow /></a>
-            <a className="button secondary" href="/chatgpt-reklamlari/">ChatGPT Reklam Yönetimi <Arrow /></a>
-          </div>
-        </div>
-      </div>
-    </Detail>
-  )
-}
-
 function GEOPage() {
   return (
     <Detail
@@ -1786,7 +1653,6 @@ function App() {
   if (path === '/yapay-zekada-reklam-ajansi') return <YapayZekadaReklamAjansiPage />
   if (path === '/blog/yapay-zekada-reklam-nasil-verilir') return <YapayZekadaReklamNasilVerilirPage />
   if (path === '/chatgpt-reklamlari') return <ChatGPTAdsPage />
-  if (path === '/chatgpt-reklamlari-turkiye') return <ChatGPTTurkeyPage />
   if (path === '/geo-yapay-zeka-gorunurlugu') return <GEOPage />
   if (path === '/yapay-zeka-platformlarinda-reklam') return <AIPlatformsPage />
   if (path === '/blog/chatgpt-reklam-maliyeti') return <BlogCostPage />
@@ -1813,5 +1679,5 @@ function App() {
   )
 }
 
-export { Features, pages, GenericPage, ChatGPTAdsPage, ChatGPTTurkeyPage, GEOPage, AIPlatformsPage, YapayZekadaReklamAjansiPage, YapayZekadaReklamNasilVerilirPage, BlogCostPage, BlogGeoDiffPage, BlogContextHintsPage, BlogMeasurementPage, BlogTurkeyAccountPage, Contact, Blog, PillarGuide, Legal, AuditPage, App }
+export { Features, pages, GenericPage, ChatGPTAdsPage, GEOPage, AIPlatformsPage, YapayZekadaReklamAjansiPage, YapayZekadaReklamNasilVerilirPage, BlogCostPage, BlogGeoDiffPage, BlogContextHintsPage, BlogMeasurementPage, BlogTurkeyAccountPage, Contact, Blog, PillarGuide, Legal, AuditPage, App }
 export default App

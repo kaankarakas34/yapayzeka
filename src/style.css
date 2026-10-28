@@ -2224,6 +2224,8 @@ main p a:not(.button) {
 .technical-geo-guide a:not(.button) { color: var(--chat-green-text); text-decoration: underline; text-underline-offset: 0.2em; }
 .technical-geo-meta,
 .technical-geo-sources { font-size: 0.9rem; }
+.technical-geo-cover img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.technical-geo-cover figcaption { color: var(--chat-text-secondary); font-size: .8rem; margin-top: .5rem; }
 
 .technical-geo-guide pre {
   max-width: 100%;

@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'node:path'
+import newsRoutePaths from './src/content/news-route-paths.json' with { type: 'json' }
+import guideRoutePaths from './src/content/guide-route-paths.json' with { type: 'json' }
 
 // Vite dev server API middleware to handle /api/analyze locally
 function apiMiddlewarePlugin() {
@@ -52,6 +54,9 @@ export default defineConfig({
     manifest: true,
     rollupOptions: {
       input: [
+        ...newsRoutePaths.filter(path => path.startsWith('/haberler/')).map(path => path.slice(1) + '/index.html'),
+        ...guideRoutePaths.filter(path => path.startsWith('/rehber/')).map(path => path.slice(1) + '/index.html'),
+        'rehber/index.html',
         'index.html',
         'yapay-zeka-gorunurluk-analizi/index.html',
         'chatgpt-reklamlari/index.html',
