@@ -1,0 +1,94 @@
+{
+  "slug": "blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir",
+  "title": "ChatGPT’de Kaynak Olarak Gösterilmek İçin Site Nasıl Hazırlanır?",
+  "description": "Teknik GEO ve AEO kontrol listesi: bot erişimi, okunabilir HTML, kaynaklı cevaplar, schema ve ölçüm. Uygulama örneği ve sınırlarıyla site hazırlığı.",
+  "author": { "name": "Yapay Zekâda Reklam", "url": "/hakkimizda/" },
+  "publishedAt": "2026-09-29",
+  "publishedLabel": "29 Eylül 2026",
+  "modifiedAt": "2026-10-28",
+  "modifiedLabel": "28 Ekim 2026",
+  "answer": "ChatGPT’de kaynak olarak kullanılmaya hazırlanmak için sayfanızın erişimini doğrulayın, soruya doğrudan cevap verin ve cevabı tarihli kaynak veya kendi çalışmanızla destekleyin. Tarama izni, schema veya belirli bir metin biçimi tek başına kaynak gösterimi garantisi vermez.",
+  "sections": [
+    {
+      "id": "botlar",
+      "title": "1. Arama, eğitim ve kullanıcı isteğini ayırın",
+      "paragraphs": ["OpenAI belgelerinde OAI-SearchBot arama, GPTBot ise model eğitimiyle ilişkili tarama için tanımlanır. İzinleri bağımsızdır. ChatGPT-User kullanıcı tarafından başlatılan ziyaretleri temsil eder; otomatik arama taraması için OAI-SearchBot ayarını kullanın."],
+      "table": {
+        "headers": ["İstemci", "Kontrolün amacı", "Saklanacak kanıt"],
+        "rows": [
+          ["Googlebot", "Google araması için tarama ve indeksleme kontrolü", "URL Denetimi, robots kuralları ve doğrulanmış bot logu"],
+          ["OAI-SearchBot", "ChatGPT arama erişimi", "robots kuralı, HTTP yanıtı ve yayımlanan IP aralığıyla karşılaştırılan log"],
+          ["GPTBot", "Eğitim kullanımına ilişkin ayrı yayıncı tercihi", "Politika sahibi tarafından onaylanan robots kuralı"],
+          ["ChatGPT-User", "Kullanıcının başlattığı sayfa ziyareti", "Ziyaret zamanı ve yanıt; robots kuralları uygulanmayabilir"]
+        ]
+      },
+      "links": [{ "href": "https://developers.openai.com/api/docs/bots", "label": "Kaynak: OpenAI tarayıcıları ve bağımsız izinler" }]
+    },
+    {
+      "id": "erisim",
+      "title": "2. Sayfanın gerçekten okunabildiğini kontrol edin",
+      "paragraphs": ["İlk isteğin durumunu, yönlendirme varsa son URL ve son durumunu kaydedin. Ham yanıtta ana cevabı arayın; sonra tarayıcıdaki metinle karşılaştırın. Boş uygulama kabuğu, giriş ekranı veya hata sayfası dönüyorsa içerik eklemekten önce bunu çözün.", "robots.txt taramayı yönetir; kimlik doğrulama veya kesin indeks kaldırma aracı değildir. Google’ın noindex talimatını okuyabilmesi için sayfaya erişebilmesi gerekir. Yanıt başlıklarındaki X-Robots-Tag ile HTML içindeki robots etiketlerini birlikte inceleyin."],
+      "items": ["Canonical, site haritası ve iç bağlantıların aynı tercih edilen URL’ye işaret ettiğini kontrol edin.", "GSC URL Denetimi ile Google’ın gördüğü sayfayı inceleyin; yerel build sonucunu indekslenme kanıtı saymayın.", "WAF veya CDN challenge/403 yanıtını sunucu logundan araştırın. User-Agent adını değiştirmek gerçek bot kimliğini doğrulamaz."],
+      "code": "# PowerShell: kendi herkese açık URL’nizle çalıştırın\n$geoUrl = 'https://www.yapayzekadareklam.com/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/'\ncurl.exe -sS -L -D geo-headers.txt -o geo-page.html $geoUrl\nSelect-String -Path geo-headers.txt -Pattern 'HTTP/|location:|x-robots-tag:'\nSelect-String -Path geo-page.html -Pattern 'canonical|noindex|<h1|Kısa yanıt'",
+      "links": [{ "href": "https://developers.google.com/search/docs/crawling-indexing/robots/intro", "label": "Kaynak: robots.txt kapsamı" }, { "href": "https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag", "label": "Kaynak: noindex ve X-Robots-Tag" }]
+    },
+    {
+      "id": "robots-ornegi",
+      "title": "3. robots.txt örneğini kendi politikanıza uyarlayın",
+      "paragraphs": ["Aşağıdaki örnek yalnız arama tarayıcısı grubunu gösterir. Mevcut dosyanın tamamını bununla değiştirmeyin. GPTBot tercihini ayrıca belirleyin; arama izni için eğitim izni vermeniz gerekmez. Özel bot gruplarında gerekli yol kısıtlarını açıkça tutun."],
+      "code": "User-agent: OAI-SearchBot\nAllow: /\nDisallow: /api/\nDisallow: /analiz/",
+      "items": ["Dosyayı sitenin kökündeki /robots.txt adresinden alın; ilgili URL için en özgül kuralı kontrol edin.", "API ve özel analiz alanlarını ayrıca sunucu yetkilendirmesiyle koruyun.", "WAF erişim kararını, robots izinlerinden ayrı kaydedin."]
+    },
+    {
+      "id": "cevap-standardi",
+      "title": "4. Cevabı kanıt, yöntem ve sınırlarla tamamlayın",
+      "paragraphs": ["Bir karar sorusunu seçip ilk paragrafta cevaplayın. Ardından cevabın hangi koşullarda geçerli olduğunu, kaynağını ve sonraki adımı açıklayın. Cümle veya kelime sayısını bir sıralama kuralı gibi sunmayın. Tabloyu yalnız karşılaştırmayı kolaylaştırıyorsa kullanın.", "Yayınlayan kişi veya kurumun kimliğini görünür kılın. Test sonucu veriyorsanız URL, ortam, tarih, yöntem, örnek büyüklüğü ve ölçmediğiniz sonuçları yazın. Müşteri vakasında izinli gerçek veri kullanın; örnek hesaplamayı gerçekleşmiş sonuç gibi göstermeyin."],
+      "table": {
+        "headers": ["Alan", "Yayın öncesi cevaplanacak soru"],
+        "rows": [
+          ["Net cevap", "Okur hangi sorusuna cevap buluyor?"],
+          ["Kaynak ve tarih", "Ürün iddiası hangi resmî belgeye, hangi kontrol tarihine dayanıyor?"],
+          ["İlk el kanıt", "Ekip neyi kendisi ölçtü; yöntem ve çıktı nerede?"],
+          ["Sınır", "Bu test hangi ortamı ve hangi sonucu kapsamıyor?"],
+          ["Bakım", "Hangi belge veya ürün değişikliği yeniden incelemeyi tetikleyecek?"]
+        ]
+      }
+    },
+    {
+      "id": "uygulama-kaydi",
+      "title": "5. Bu siteden uygulama kaydı: 46 sayfalık yerel kontrol",
+      "paragraphs": ["28 Ekim 2026’da bu sitenin 46 sayfalık yerel HTML çıktısını kendi SEO kontrol aracımızla inceledik. Kontrol 0 hata ve 0 uyarı raporladı. Sayfa başlıkları, H1, canonical, görünür ana metin, iç bağlantılar, JSON-LD ve tanımlı robots kuralları tarandı.", "Aynı incelemede bu rehberin önceki sürümünde GPTBot izninin arama izniyle karıştırıldığını ve kısa cevapların alıntı kazanacağı yönünde kesin ifadeler bulunduğunu gördük. Rehberi bu ayrımları ve kontrol adımlarını gösterecek biçimde güncelledik.", "Bu, ekibin kendi sitesindeki dosya kontrolüdür. Canlı WAF davranışını, Google indeksini, ChatGPT’de kaynak gösterilmesini veya müşteri sonucu elde edildiğini kanıtlamaz. Sonuç siteye erişim ve içerik kontrolü kapsamındadır; görünürlük artışı ölçülmedi."],
+      "table": {
+        "headers": ["Gözlem", "Yöntem", "Sonuç / sınır"],
+        "rows": [
+          ["46 yerel HTML sayfası", "Site haritasındaki URL’ler için dosya ve etiket kontrolü", "0 hata, 0 uyarı; canlı HTTP kontrolü değil"],
+          ["Tanımlı bot grupları", "Herkese açık sayfalar ile /api/ ve /analiz/ kurallarının kontrolü", "Yerel politika kontrolü; gerçek bot ziyareti değil"],
+          ["Alıntı ve trafik etkisi", "Bu çalışmada ölçülmedi", "GSC, analitik ve tekrarlı soru seti gerekiyor"]
+        ]
+      }
+    },
+    {
+      "id": "schema-sss",
+      "title": "6. Schema ve SSS’yi görünen içerikle eşleştirin",
+      "paragraphs": ["Google’ın AI özellikleri rehberi özel bir AI schema’sı veya yeni AI metin dosyası gerektirmiyor. Mevcut llms.txt dosyanızı bir içerik listesi olarak tutabilirsiniz; bu dosya için alıntı veya sıralama etkisi vaat etmeyin.", "Bu rehberde Article kullanılır; yazar, tarih ve başlık sayfada görünen bilgilerle eşleşir. SSS okurun sorularına cevap vermek için görünürdür. Google’ın güncelleme kaydına göre FAQ zengin sonucu 7 Mayıs 2026’dan beri gösterilmiyor; SSS eklemek için böyle bir görünüm beklentisi oluşturmayın."],
+      "links": [{ "href": "https://developers.google.com/search/docs/appearance/ai-features", "label": "Kaynak: Google AI özellikleri ve teknik gereksinimler" }, { "href": "https://developers.google.com/search/docs/appearance/structured-data/article", "label": "Kaynak: Article işaretlemesi" }, { "href": "https://developers.google.com/search/updates#may-2026", "label": "Kaynak: FAQ zengin sonucu güncellemesi" }]
+    },
+    {
+      "id": "olcum-bakim",
+      "title": "7. Yayın sonrası görünürlüğü ayrı ölçün",
+      "paragraphs": ["Önceden belirlediğiniz soru setini aynı dil, ülke ve arama koşullarıyla tekrarlayın. Marka anılması, tıklanabilir kaynak bağlantısı ve tavsiyeyi ayrı kaydedin. Her gözleme tarih, platform, soru, kaynak URL ve yanıt kaydı ekleyin.", "Kaynak gösterilmesi tıklama değildir. Analitikte gerçekten gözlenen yönlendirme ve kampanya parametrelerini, açılış sayfasını ve doğrulanan lead olayını izleyin. Direct trafik veya referrer eksikliği tek başına ChatGPT trafiği kanıtı değildir. Önce/sonra kıyaslamasında aynı süreyi ve ölçüm yöntemini kullanın.", "Bot belgeleri, kaynak sayfalar veya uygulama değiştiğinde rehberi yeniden inceleyin. Yalnız inceleme yapıldıysa kontrol tarihini kaydedin; içeriği değiştirmeden yayın tarihini yenilemeyin."]
+    }
+  ],
+  "faq": [
+    { "question": "GPTBot’u engellersem ChatGPT aramasından çıkar mıyım?", "answer": "Arama ve eğitim izinleri bağımsızdır. ChatGPT arama taraması için OAI-SearchBot politikasını kontrol edin. GPTBot kararı eğitim kullanımına ilişkindir; her iki durumda da görünürlük garantisi yoktur." },
+    { "question": "200 yanıtı ve robots izni yeterli mi?", "answer": "Bunlar erişim kontrollerinin bir parçasıdır. Ana metin, canonical, indeksleme talimatları, WAF davranışı, kaynak kalitesi ve gerçek arama gözlemleri ayrıca incelenmelidir." },
+    { "question": "AEO için ayrı bir sayfa veya özel schema gerekir mi?", "answer": "Aynı kullanıcı sorusu mevcut sayfada karşılanabiliyorsa önce o sayfayı geliştirin. Bu rehber özel AI schema’sı kullanmaz; görünen içerikle uyumlu Article işaretlemesi kullanır." }
+  ],
+  "pillar": { "href": "/chatgptde-markam-nasil-cikar/", "label": "Ana rehber: ChatGPT’de markam nasıl çıkar?" },
+  "related": [
+    { "href": "/chatgpt-seo/", "label": "ChatGPT SEO kavramları ve yöntem" },
+    { "href": "/chatgptde-web-sitem-neden-cikmiyor/", "label": "Tarama ve görünürlük sorunlarını teşhis edin" },
+    { "href": "/blog/geo-performansi-nasil-olculur/", "label": "GEO performansı nasıl ölçülür?" }
+  ],
+  "cta": { "href": "/iletisim/", "label": "Siteniz için teknik GEO incelemesi isteyin" }
+}

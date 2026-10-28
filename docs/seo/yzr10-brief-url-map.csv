@@ -1,0 +1,25 @@
+id,cluster,question,target_url,section,decision,source_status
+C08-P01,Teknik erişim,OAI-SearchBot erişimi nasıl kontrol edilir?,/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/,botlar,Mevcut pilotta karşılandı; yeni URL yok,Öneri; özgün brief bekleniyor
+C08-P02,Teknik erişim,GPTBot eğitim izni aramadan nasıl ayrılır?,/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/,botlar,Mevcut pilotta karşılandı; yeni URL yok,Öneri; özgün brief bekleniyor
+C08-P03,Teknik erişim,ChatGPT-User ziyareti ne anlama gelir?,/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/,botlar,Mevcut pilotta karşılandı; yeni URL yok,Öneri; özgün brief bekleniyor
+C08-P04,Teknik erişim,Özel bot gruplarında robots kuralları nasıl korunur?,/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/,robots-ornegi,Mevcut pilotta karşılandı; yeni URL yok,Öneri; özgün brief bekleniyor
+C08-P05,Teknik erişim,WAF engeli ile robots izni nasıl ayrılır?,/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/,erisim,Kontrol yöntemi pilotta; gerçek bot logu bekleniyor,Öneri; özgün brief bekleniyor
+C08-P06,Teknik erişim,JavaScript olmadan ana cevap okunuyor mu?,/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/,erisim,Mevcut pilotta karşılandı; yeni URL yok,Öneri; özgün brief bekleniyor
+C08-P07,Teknik erişim,noindex ve X-Robots-Tag neden incelenir?,/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/,erisim,Mevcut pilotta karşılandı; yeni URL yok,Öneri; özgün brief bekleniyor
+C08-P08,Teknik erişim,Canonical ve yönlendirme nasıl kontrol edilir?,/chatgptde-web-sitem-neden-cikmiyor/,,Teşhis niyeti mevcut URL’de korunur; pilotta yönteme bağlantı,Öneri; özgün brief bekleniyor
+C08-P09,Teknik erişim,Site haritası indekslenmeyi kanıtlar mı?,/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/,erisim,Mevcut pilotta karşılandı; GSC doğrulaması ayrı,Öneri; özgün brief bekleniyor
+C08-P10,Teknik erişim,İç bağlantıyla rehber nasıl bulunabilir?,/chatgptde-markam-nasil-cikar/,,Ana rehberdeki niyet korunur; pilotun pillar bağlantısı,Öneri; özgün brief bekleniyor
+C08-P11,Teknik erişim,llms.txt zorunlu mu ve neyi kanıtlamaz?,/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/,schema-sss,Mevcut pilotta karşılandı; yeni URL yok,Öneri; özgün brief bekleniyor
+C08-P12,Teknik erişim,Özel AI schema gerekir mi?,/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/,schema-sss,Mevcut pilotta karşılandı; Article korundu,Öneri; özgün brief bekleniyor
+C09-P01,Cevap ve kanıt,Soruya doğrudan cevap nasıl yazılır?,/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/,cevap-standardi,Mevcut pilotta karşılandı; cümle sayısı garantisi yok,Öneri; özgün brief bekleniyor
+C09-P02,Cevap ve kanıt,Yazar kimliği nasıl gösterilir?,/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/,cevap-standardi,Pilotta kurum kimliği ve hakkımızda bağlantısı; uydurma kişi yok,Öneri; özgün brief bekleniyor
+C09-P03,Cevap ve kanıt,İlk el teknik kanıt nasıl belgelenir?,/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/,uygulama-kaydi,Pilotta kendi sitemizin 46 sayfalık yerel kontrolü,Öneri; özgün brief bekleniyor
+C09-P04,Cevap ve kanıt,Güncel ürün iddiası hangi kaynağa bağlanır?,/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/,cevap-standardi,Resmî kaynaklar ve kontrol tarihi pilotta; editoryal şablona işlendi,Öneri; özgün brief bekleniyor
+C09-P05,Cevap ve kanıt,Karşılaştırma tablosunda kapsam nasıl korunur?,/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/,uygulama-kaydi,Pilotta gözlem yöntem ve sınır tablosu,Öneri; özgün brief bekleniyor
+C09-P06,Cevap ve kanıt,SSS ve schema görünür metinle nasıl eşleşir?,/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/,schema-sss,Pilotta görünür SSS ve Article; FAQ rich result vaadi yok,Öneri; özgün brief bekleniyor
+C09-P07,Cevap ve kanıt,Bulguların sınırları nasıl açıklanır?,/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/,uygulama-kaydi,Pilotta yerel kontrol ile canlı görünürlük ayrımı,Öneri; özgün brief bekleniyor
+C09-P08,Cevap ve kanıt,İçerik hangi durumda yeniden incelenir?,/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/,olcum-bakim,Pilotta belge ve uygulama değişikliği tetikleyicileri,Öneri; özgün brief bekleniyor
+C09-P09,Cevap ve kanıt,Anılma kaynak ve tavsiye nasıl ayrılır?,/blog/geo-performansi-nasil-olculur/,,Ölçüm rehberi sahipliği korunur; pilotta özet ve destek bağlantısı,Öneri; özgün brief bekleniyor
+C09-P10,Cevap ve kanıt,Yönlendirme trafiği kaynak gösterimini kanıtlar mı?,/blog/geo-performansi-nasil-olculur/,,Ölçüm rehberi sahipliği korunur; pilotta direct/referrer sınırı,Öneri; özgün brief bekleniyor
+C09-P11,Cevap ve kanıt,Teknik rehberden hizmete sonraki adım nedir?,/geo-yapay-zeka-gorunurlugu/,,Ticari hizmet niyeti korunur; pilot CTA iletişime yönelir,Öneri; özgün brief bekleniyor
+C09-P12,Cevap ve kanıt,AEO ile ChatGPT SEO kavramlarının ilişkisi nedir?,/chatgpt-seo/,,Kavram niyeti mevcut URL’de korunur; pilotta destek bağlantısı,Öneri; özgün brief bekleniyor

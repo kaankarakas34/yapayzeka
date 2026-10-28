@@ -2195,6 +2195,60 @@ main p a:not(.button) {
   background: var(--chat-bg-main);
 }
 
+.technical-geo-guide {
+  max-width: 900px;
+  min-width: 0;
+  margin: 0 auto;
+  color: var(--chat-text-secondary);
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.technical-geo-guide > section,
+.technical-geo-guide > nav {
+  margin: 2.5rem 0;
+  scroll-margin-top: 6rem;
+}
+
+.technical-geo-guide h2 {
+  color: var(--chat-text-primary);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.technical-geo-guide p { margin: 1rem 0; }
+.technical-geo-guide ul,
+.technical-geo-guide ol { padding-left: 1.5rem; }
+.technical-geo-guide li { margin: 0.6rem 0; }
+.technical-geo-guide a:not(.button) { color: var(--chat-green-text); text-decoration: underline; text-underline-offset: 0.2em; }
+.technical-geo-meta,
+.technical-geo-sources { font-size: 0.9rem; }
+
+.technical-geo-guide pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 1.2rem;
+  background: var(--chat-surface);
+  border: 1px solid var(--chat-border);
+  border-radius: 10px;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  overflow-wrap: normal;
+}
+
+.technical-geo-table { max-width: 100%; overflow-x: auto; margin: 1.5rem 0; }
+.technical-geo-table table { border-collapse: collapse; width: 100%; min-width: 620px; }
+.technical-geo-table caption { text-align: left; padding-bottom: 0.75rem; font-weight: 600; }
+.technical-geo-table th,
+.technical-geo-table td { text-align: left; vertical-align: top; border: 1px solid var(--chat-border); padding: 0.8rem; overflow-wrap: normal; }
+.technical-geo-table th:first-child,
+.technical-geo-table td:first-child { min-width: 135px; }
+.technical-geo-table th { color: var(--chat-text-primary); background: var(--chat-surface); }
+.technical-geo-guide details { padding: 1rem 0; border-bottom: 1px solid var(--chat-border); }
+.technical-geo-guide summary { color: var(--chat-text-primary); font-weight: 600; cursor: pointer; }
+.technical-geo-guide .button { white-space: normal; }
+
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

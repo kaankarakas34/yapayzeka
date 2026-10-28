@@ -17,4 +17,18 @@ Kontrol tarihi: 11 Ekim 2026. Bu tablo, incelenen iddiaların kaydıdır; sitede
 
 Tüm iddia ve şeffaflık kontrolleri tamamlandı. Kaynak kontrolü, gerçek reklam hesabı erişiminin veya kampanya sonucunun yerini tutmaz.
 
+## YZR-10 — 28 Ekim 2026 teknik GEO pilotu
+
+Önceki tablonun kontrol kapsamından bağımsız ek inceleme. Yalnız `/blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir/` rehberi güncellendi; tüm sitenin güncel iddiaları yeniden denetlenmiş sayılmaz.
+
+| Önceki iddia | Düzeltme ve dayanak |
+|---|---|
+| Arama izni örneğinde GPTBot izni de gerekli gibi gösteriliyordu. | Arama ve eğitim tercihleri ayrıldı; mevcut robots politikası değiştirilmedi. [OpenAI tarayıcı belgeleri](https://developers.openai.com/api/docs/bots). |
+| İki cümlelik cevap veya tablo alıntı kazandırır; LLM bu cümleyi seçer. | Kesin seçim ve güven skoru iddiaları kaldırıldı. Yapı önerileri editoryal tercih olarak sunuldu; görünürlük etkisi bu çalışmada ölçülmedi. |
+| llms.txt OpenAI için faydalıdır. | Belgelenmemiş fayda iddiası kaldırıldı. Mevcut dosya içerik listesi olarak korunuyor. [Google AI özellikleri](https://developers.google.com/search/docs/appearance/ai-features). |
+| Belirsiz bir direct trafik kaynağı AI yönlendirmesi gibi gösteriliyordu. | Yalnız gerçekten gözlenen kaynak ve parametreler değerlendiriliyor; direct trafik tek başına AI kanıtı sayılmıyor. |
+| SSS zengin sonuç uygunluğu güncel belgeyle kontrol edilmemişti. | Pilot kullanıcı için görünür SSS ve Article içeriyor; Google FAQ zengin sonucu vaadi yok. [Google güncelleme kaydı](https://developers.google.com/search/updates#may-2026). |
+
+Tekrar kullanılabilir şablon ve kaynak kayıtları: `editorial-standard.md`. Asıl 24 brief dosyası sağlanmadığından eşleştirme öneri düzeyinde: `yzr10-brief-url-map.csv`.
+
 

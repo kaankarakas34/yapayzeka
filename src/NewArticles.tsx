@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import technicalGeoGuide from './content/technical-geo-guide.json'
 
 export interface ArticleProps {
   Detail: React.ComponentType<{ eyebrow: string; title: string; summary: string; children: ReactNode; cta?: string }>
@@ -187,97 +188,59 @@ export function MarkamNedenGorunmuyorPage({ Detail, Arrow }: ArticleProps) {
 }
 
 // 2. ChatGPT’de Kaynak Olarak Gösterilmek İçin Site Nasıl Hazırlanır?
+type GeoGuideSection = {
+  id: string
+  title: string
+  paragraphs?: string[]
+  items?: string[]
+  code?: string
+  table?: { headers: string[]; rows: string[][] }
+  links?: { href: string; label: string }[]
+}
+const geoGuideSections: GeoGuideSection[] = technicalGeoGuide.sections
+
 export function KaynakGosterilmekIcinSitePage({ Detail, Arrow }: ArticleProps) {
+  const guide = technicalGeoGuide
   return (
-    <Detail
-      eyebrow="Teknik & İçerik Mimarisi"
-      title="ChatGPT’de Kaynak Olarak Gösterilmek İçin Site Nasıl Hazırlanır?"
-      summary="OpenAI Search motorunun web sitenizi alıntılaması ve dipnot kaynak bağlantısı göstermesi için OAI-SearchBot erişimi, bilgi kazancı (information gain) ve referans takibi rehberi."
-      cta="Sitenizi Kaynak Gösterilmeye Hazırlayın"
-    >
-      <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-        <div style={{ background: 'var(--chat-surface)', border: '1px solid var(--chat-border)', borderRadius: '16px', padding: '1.8rem', marginBottom: '3rem', borderLeft: '4px solid var(--chat-green)' }}>
-          <h3 style={{ color: '#ffffff', fontSize: '1.2rem', marginBottom: '0.6rem' }}>📌 Kısa ve Doğrudan Yanıt</h3>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, margin: 0 }}>
-            ChatGPT web yanıtlarında sitenizi kaynak göstermek için rastgele web sayfaları seçmez. 
-            Doğrudan kullanıcının sorusuna net, tırnak içine alınabilir ve kanıtlanmış birinci el veri sunan sayfaları tercih eder. 
-            Teknik olarak <code>OAI-SearchBot</code> erişimine izin vermek şarttır; içerik tarafında ise jenerik tanımlar yerine spesifik rakamlar, tablolar ve süreç sınırları sunan sayfalar alıntı kazanır.
-          </p>
-        </div>
-
-        <section style={{ marginBottom: '3.5rem' }}>
-          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginBottom: '1.2rem', color: '#ffffff' }}>
-            1. OAI-SearchBot Erişimi ve Teknik Kontroller
-          </h2>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, marginBottom: '1rem' }}>
-            OpenAI'ın arama indeksleme süreçleri için özel botu <code>OAI-SearchBot</code>'tur. Bu bot sitenizi model eğitimi için değil, doğrudan kullanıcının canlı arama sorgularına güncel kaynak bulmak için ziyaret eder:
-          </p>
-          <pre style={{ background: '#0d1117', padding: '1.2rem', borderRadius: '10px', color: '#58a6ff', fontSize: '0.9rem', overflowX: 'auto', marginBottom: '1.2rem' }}>
-{`# robots.txt dosyanızda bulunması önerilen yapılandırma:
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: GPTBot
-Allow: /`}
-          </pre>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.7, fontSize: '0.95rem' }}>
-            Google’ın yapay zekâ arama kılavuzlarında da vurguladığı gibi, harici yapay zekâ arama botlarına özel bir <code>llms.txt</code> şartı Google dizini için zorunlu değildir; ancak OpenAI ekosisteminde içeriğin yapısını hızlı anlamak adına faydalıdır.
-          </p>
+    <Detail eyebrow="Teknik GEO ve AEO Uygulama Rehberi" title={guide.title} summary={guide.description} cta={guide.cta.label}>
+      <article className="technical-geo-guide" aria-label="Teknik GEO uygulama rehberi">
+        <p className="technical-geo-meta">
+          Hazırlayan: <a href={guide.author.url}>{guide.author.name}</a> · Yayın: <time dateTime={guide.publishedAt}>{guide.publishedLabel}</time> · Güncelleme ve kaynak kontrolü: <time dateTime={guide.modifiedAt}>{guide.modifiedLabel}</time>
+        </p>
+        <section className="note"><h2>Kısa yanıt</h2><p>{guide.answer}</p></section>
+        <nav aria-label="Rehber içindekiler">
+          <h2>Bu rehberde</h2>
+          <ol>{geoGuideSections.map(section => <li key={section.id}><a href={'#' + section.id}>{section.title.replace(/^\d+\.\s*/, '')}</a></li>)}</ol>
+        </nav>
+        {geoGuideSections.map(section => (
+          <section id={section.id} key={section.id}>
+            <h2>{section.title}</h2>
+            {section.paragraphs?.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+            {section.items ? <ul>{section.items.map(item => <li key={item}>{item}</li>)}</ul> : null}
+            {section.code ? <pre tabIndex={0} role="region" aria-label={section.title + ': kod örneği'}><code>{section.code}</code></pre> : null}
+            {section.table ? (
+              <div className="technical-geo-table" tabIndex={0} role="region" aria-label={section.title + ': tablo'}>
+                <table>
+                  <caption>{section.title}</caption>
+                  <thead><tr>{section.table.headers.map(header => <th scope="col" key={header}>{header}</th>)}</tr></thead>
+                  <tbody>{section.table.rows.map(row => <tr key={row[0]}>{row.map((cell, index) => <td key={index}>{cell}</td>)}</tr>)}</tbody>
+                </table>
+              </div>
+            ) : null}
+            {section.links ? <ul className="technical-geo-sources">{section.links.map(link => <li key={link.href}><a href={link.href}>{link.label}</a></li>)}</ul> : null}
+          </section>
+        ))}
+        <section id="sik-sorulan-sorular">
+          <h2>Sık sorulan sorular</h2>
+          {guide.faq.map(item => <details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}
         </section>
-
-        <section style={{ marginBottom: '3.5rem' }}>
-          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginBottom: '1.2rem', color: '#ffffff' }}>
-            2. Kaynak Gösterilmeye Uygun Özgün Bilgi ve Kanıt (Information Gain)
-          </h2>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, marginBottom: '1.2rem' }}>
-            İnternette zaten 100 farklı sitede bulunan genel geçer cümleleri tekrarlayan bir sayfayı yapay zekâ kaynak göstermez. Alıntı almak için 3 altın kural:
-          </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.2rem' }}>
-            <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <h4 style={{ color: '#ffffff', marginBottom: '0.5rem' }}>Doğrudan Tanım Cümlesi</h4>
-              <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6 }}>
-                Her bölümün ilk paragrafında lafı uzatmadan soruya 2 cümlelik kesin cevap verin. LLM bu cümleyi alıntı olarak seçer.
-              </p>
-            </div>
-            <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <h4 style={{ color: '#ffffff', marginBottom: '0.5rem' }}>Özgün Veri & Karşılaştırma</h4>
-              <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6 }}>
-                Kendi iş verinizden çıkarılmış fiyat aralıkları, başarı oranları veya karşılaştırma tabloları ekleyin.
-              </p>
-            </div>
-            <div style={{ background: 'var(--chat-surface)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--chat-border)' }}>
-              <h4 style={{ color: '#ffffff', marginBottom: '0.5rem' }}>Süreç ve Sınırlar</h4>
-              <p style={{ color: 'var(--chat-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6 }}>
-                "Her şeyi yaparız" iddiası yerine, hizmetin kimler için uygun olmadığını ve sınırlarını belirtin. Güvenilirlik skorunu artırır.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section style={{ marginBottom: '3.5rem' }}>
-          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginBottom: '1.2rem', color: '#ffffff' }}>
-            3. Kaynak Bağlantılarını ve Gelen Trafiği İzleme
-          </h2>
-          <p style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, marginBottom: '1rem' }}>
-            ChatGPT web aramasında kaynak gösterildiğinizde ziyaretçiler doğrudan sitenize yönlendirilir. Bu trafiği takip etmek için:
-          </p>
-          <ul style={{ color: 'var(--chat-text-secondary)', lineHeight: 1.8, paddingLeft: '1.2rem' }}>
-            <li>Analitik panelinizde <code>chatgpt.com / referral</code> veya <code>oaifunction / direct</code> kaynaklarını filtreleyin.</li>
-            <li>Kaynak gösterilen sayfalarınızın ortalama oturum süresini ve form doldurma oranını inceleyin; bu kullanıcılar genellikle satın alma kararına çok daha yakındır.</li>
-          </ul>
-        </section>
-
-        <div style={{ textAlign: 'center', marginTop: '3rem', padding: '2.5rem', background: 'var(--chat-surface)', borderRadius: '16px', border: '1px solid var(--chat-border)' }}>
-          <h3 style={{ fontSize: '1.5rem', color: '#ffffff', marginBottom: '0.8rem' }}>GEO Optimizasyonuyla Kaynak Görünürlüğünüzü Artırın</h3>
-          <p style={{ color: 'var(--chat-text-secondary)', marginBottom: '1.5rem' }}>
-            Sitenizin taranabilirlik, içerik otoritesi ve alıntı potansiyelini profesyonel ekibimizle optimize edin.
-          </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a className="button primary" href="/geo-yapay-zeka-gorunurlugu/">GEO Hizmetimizi İnceleyin <Arrow /></a>
-            <a className="button secondary" href="/yapay-zeka-gorunurluk-analizi/">Canlı AI Analizi Alın <Arrow /></a>
-          </div>
-        </div>
-      </div>
+        <nav aria-label="İlgili GEO rehberleri">
+          <h2>Sonraki adımlar</h2>
+          <p><a href={guide.pillar.href}>{guide.pillar.label}</a></p>
+          <ul>{guide.related.map(link => <li key={link.href}><a href={link.href}>{link.label}</a></li>)}</ul>
+        </nav>
+        <p><a className="button primary" href={guide.cta.href}>{guide.cta.label} <Arrow /></a></p>
+      </article>
     </Detail>
   )
 }

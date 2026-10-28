@@ -1,4 +1,7 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
+import { renderTechnicalGeo } from './render-technical-geo.mjs'
+
+const technicalGeoGuide = JSON.parse(await readFile('src/content/technical-geo-guide.json', 'utf8'))
 
 const pages = {
   'chatgpt-reklamlari': [
@@ -706,26 +709,7 @@ const pages = {
       </main>
     `
   ],
-  'blog/chatgptde-kaynak-gosterilmek-icin-site-nasil-hazirlanir': [
-    'ChatGPT’de Kaynak Olarak Gösterilmek İçin Site Nasıl Hazırlanır?',
-    'OpenAI Search motorunun web sitenizi alıntılaması ve dipnot kaynak bağlantısı göstermesi için OAI-SearchBot izinleri, bilgi kazancı ve referans takibi rehberi.',
-    `
-      <header class="site-header">
-        <nav><a href="/">Ana Sayfa</a> | <a href="/geo-yapay-zeka-gorunurlugu/">GEO Ajansı</a> | <a href="/yapay-zeka-gorunurluk-analizi/">Görünürlük Testi</a></nav>
-      </header>
-      <main>
-        <h1>ChatGPT’de Kaynak Olarak Gösterilmek İçin Site Nasıl Hazırlanır?</h1>
-        <p><strong>Kısa yanıt:</strong> ChatGPT'de kaynak gösterilmek OAI-SearchBot erişimine izin vermek, doğrudan soruya net 2 cümlelik cevaplar sunmak ve birinci el doğrulanabilir veriler paylaşmaktır. Google da özgün içerik ve sağlam SEO temellerini önerir; özel bir llms.txt zorunlu değildir.</p>
-        <h2>1. OAI-SearchBot erişimi ve teknik kontroller</h2>
-        <p>robots.txt dosyasında <code>User-agent: OAI-SearchBot Allow: /</code> yapılandırması doğrulanmalı ve ham HTML çıktısı temiz sunulmalıdır.</p>
-        <h2>2. Kaynak gösterilmeye uygun özgün bilgi ve kanıt</h2>
-        <p>Genel geçer tanımlar yerine doğrudan fiyat, süreç, sınır ve karşılaştırma tabloları sunan sayfalar alıntı kazanır.</p>
-        <h2>3. Kaynak bağlantılarını ve gelen trafiği izleme</h2>
-        <p>Analitik panellerinde <code>chatgpt.com / referral</code> trafiği ve dönüşüm oranları izlenmelidir.</p>
-        <div class="actions"><a href="/geo-yapay-zeka-gorunurlugu/">GEO Optimizasyon Danışmanlığı İsteyin</a></div>
-      </main>
-    `
-  ],
+  [technicalGeoGuide.slug]: [technicalGeoGuide.title, technicalGeoGuide.description, renderTechnicalGeo(technicalGeoGuide)],
   'blog/geo-performansi-nasil-olculur': [
     'GEO Performansı Nasıl Ölçülür? Marka, Rakip ve Kaynak Gösterimi',
     'Yapay zekâ yanıtlarındaki görünürlüğünüzü nasıl ölçeceksiniz? Marka anılması (mention), kaynak bağlantısı (citation) ve tavsiye (recommendation) takibi.',
@@ -1537,6 +1521,8 @@ const categorizedForLlms = {
 
 for (const [slug, [title, description, staticHtml]] of Object.entries(pages)) {
   const url = `https://www.yapayzekadareklam.com/${slug}/`
+  const isTechnicalGeo = slug === technicalGeoGuide.slug
+  const modifiedAt = isTechnicalGeo ? technicalGeoGuide.modifiedAt : '2026-10-19'
   const isService = slug.startsWith('hizmetler/') || ['chatgpt-reklamlari','geo-yapay-zeka-gorunurlugu','yapay-zeka-ile-reklam-uretimi','yapay-zeka-platformlarinda-reklam','yapay-zekada-reklam-ajansi'].includes(slug)
   const isNews = slug.startsWith('haberler/') && slug !== 'haberler'
   const isArticle = isNews || slug.startsWith('blog/') || ['chatgptde-markam-nasil-cikar','chatgpt-reklam-verme','chatgpt-reklam-fiyatlari','chatgpt-reklamlari-turkiye','openai-ads-manager','chatgpt-seo','chatgptde-web-sitem-neden-cikmiyor','sozluk','chatgpt-reklamlari-nerede-gorunur','chatgpt-reklam-verme-sartlari','chatgpt-reklam-ajansi-nasil-secilir'].includes(slug)
@@ -1545,7 +1531,7 @@ for (const [slug, [title, description, staticHtml]] of Object.entries(pages)) {
   // Prioritize sitemap
   const priority = isLegal ? '0.3' : isService ? '0.9' : slug.startsWith('blog/') || isNews ? '0.8' : '0.85'
   const changefreq = isNews ? 'daily' : slug.startsWith('blog/') ? 'weekly' : 'monthly'
-  sitemapEntries.push({ url, priority, changefreq, lastmod: '2026-10-19' })
+  sitemapEntries.push({ url, priority, changefreq, lastmod: modifiedAt })
 
   // Categorize for llms.txt
   if (isService) categorizedForLlms.hizmetler.push({ url, title, description })
@@ -1558,15 +1544,15 @@ for (const [slug, [title, description, staticHtml]] of Object.entries(pages)) {
     '@type': isNews ? 'NewsArticle' : isArticle ? 'Article' : isService ? 'Service' : 'WebPage',
     name: title,
     headline: isArticle ? title : undefined,
-    datePublished: isArticle ? (isNews ? '2026-09-29' : '2026-09-29') : undefined,
-    dateModified: '2026-10-19',
+    datePublished: isArticle ? (isTechnicalGeo ? technicalGeoGuide.publishedAt : '2026-09-29') : undefined,
+    dateModified: modifiedAt,
     description,
     url,
     image: 'https://www.yapayzekadareklam.com/images/ai-karar-aninda-reklam.png',
     author: isArticle ? {
       '@type': 'Organization',
-      name: 'Yapay Zekâda Reklam',
-      url: 'https://www.yapayzekadareklam.com/'
+      name: isTechnicalGeo ? technicalGeoGuide.author.name : 'Yapay Zekâda Reklam',
+      url: isTechnicalGeo ? new URL(technicalGeoGuide.author.url, url).href : 'https://www.yapayzekadareklam.com/'
     } : undefined,
     provider: isService ? {'@id':'https://www.yapayzekadareklam.com/#organization'} : undefined,
     publisher: {'@id':'https://www.yapayzekadareklam.com/#organization'},
